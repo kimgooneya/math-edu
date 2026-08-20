@@ -1,13 +1,15 @@
-# 중·고등 수학 학습 서비스 개발 계획
+# 미국 중·고등 수학 학습 서비스 개발 계획
 
-> 문서 상태: 초안 v0.1
+> 문서 상태: 초안 v0.2
 > 작성 기준일: 2026-08-20
 > 배포 환경: GitHub Pages
 > 기술 제약: 서버·데이터베이스·프레임워크 없이 HTML, CSS, JavaScript만 사용
 
 ## 1. 프로젝트 개요
 
-중학교 수학부터 고등학교 3학년 수준의 수학까지 스스로 학습할 수 있는 정적 웹 서비스를 만든다. 단원 목록과 문제만 나열하지 않고, 개념 이해 → 예제 관찰 → 단계별 연습 → 즉시 피드백 → 복습의 흐름을 제공하는 것이 핵심이다.
+미국 중·고등 수학의 대표 경로를 CCSS-M 참조 기준으로 스스로 학습할 수 있는 정적 웹 서비스를 만든다. Grade 6–8에서 Algebra I, Geometry, Algebra II, Precalculus로 이어지고, Honors, AP, IB DP, Post-AP/Dual Enrollment까지 확장되는 경로를 제공한다. 단원 목록만 나열하지 않고 개념 이해 → 예제 관찰 → 단계별 연습 → 즉시 피드백 → 복습의 흐름을 제공하는 것이 핵심이다.
+
+미국에는 단일 연방 교육과정이나 전 과목 연방 표준이 없다. 교육과정과 졸업 요건은 주·교육구·학교가 정하므로, 이 문서의 “미국 기준”은 연방 교육과정이 아니라 CCSS-M 및 각 심화 프로그램의 공식 문서에 대한 매핑을 뜻한다.
 
 서비스는 GitHub Pages에서 동작하며 사용자의 학습 기록은 우선 브라우저 `localStorage`에 저장한다. 로그인, 서버 동기화, 결제, 교사 관리 기능은 초기 범위에서 제외한다.
 
@@ -18,7 +20,7 @@
 ### 1.2 목표 사용자
 
 - 중학교 수학을 처음 배우거나 복습하는 학생
-- 고등학교 공통수학과 선택과목을 개념부터 다시 정리하려는 학생
+- Algebra I부터 Precalculus까지 고등학교 핵심 과정을 개념부터 다시 정리하려는 학생
 - 특정 단원만 빠르게 복습하려는 고등학생
 - 중등 내용부터 연결해 수학 기초를 회복하려는 학습자
 
@@ -36,22 +38,17 @@
 
 ### 2.1 최종 콘텐츠 범위
 
-2022 개정 교육과정을 기본 참조하되, 학습자가 익숙한 학년·과목명과 개념 영역을 함께 표시한다. 교육과정의 정확한 성취기준 코드는 콘텐츠 제작 시 국가교육과정정보센터 원문과 대조한다.
+CCSS-M을 중·고등 Core의 참조 기준으로 두고 심화 과정은 College Board와 IB의 공식 과정 문서를 따른다. Honors와 Dual Enrollment는 전국 단일 표준이 없으므로 각 단원에 사용한 공개 강의계획서·교재 출처를 기록한다.
 
-| 단계 | 주요 영역 | 대표 학습 내용 |
+| 단계 | 과정 | 최소 완전성 기준 |
 |---|---|---|
-| 중등 기초 | 수와 연산 | 소인수분해, 정수와 유리수, 유리수와 순환소수, 제곱근과 실수 |
-| 중등 대수 | 문자와 식 | 식의 계산, 일차방정식, 연립방정식, 일차부등식, 다항식, 인수분해, 이차방정식 |
-| 중등 함수 | 변화와 관계 | 좌표, 정비례·반비례, 일차함수, 이차함수 |
-| 중등 기하 | 도형과 측정 | 기본도형, 작도와 합동, 평면·입체도형, 삼각형과 사각형, 닮음, 피타고라스 정리, 삼각비, 원의 성질 |
-| 중등 자료 | 자료와 가능성 | 자료의 정리와 해석, 대표값과 산포도, 경우의 수, 확률, 상관관계 |
-| 고등 공통 | 공통수학 | 다항식, 방정식과 부등식, 경우의 수, 행렬, 도형의 방정식, 집합과 명제, 함수, 순열과 조합 |
-| 고등 대수 | 대수 | 지수와 로그, 삼각함수, 수열 |
-| 고등 해석 | 미적분Ⅰ·Ⅱ | 함수의 극한과 연속, 미분, 적분, 수열의 극한, 여러 함수의 미분과 적분 |
-| 고등 확률·통계 | 확률과 통계 | 경우의 수, 확률, 조건부확률, 확률분포, 통계적 추정 |
-| 고등 기하 | 기하 | 이차곡선, 공간도형과 공간좌표, 평면벡터·공간벡터 및 기하적 활용 |
+| Middle School | Grade 6, Grade 7, Grade 8 | 학년별 5개 이상 |
+| High School Core/Honors | Algebra I, Geometry, Algebra II, Precalculus | 각 과정 포함 |
+| College Board AP | AP Precalculus, AP Calculus AB, AP Calculus BC 확장, AP Statistics | 각각 4, 8, 2, 5개 이상 |
+| IB DP | Mathematics: Analysis and Approaches, Applications and Interpretation | 각 과정 SL 5개 이상 + HL 5개 이상 |
+| Post-AP / Dual Enrollment | Multivariable Calculus, Linear Algebra, Differential Equations, Discrete Mathematics | 과목별 4개 이상 |
 
-위 표는 서비스의 콘텐츠 분류 초안이다. 실제 공개 전에는 과목별 성취기준 및 적용 학년을 검수하고, 기존 교육과정 명칭으로 공부하는 사용자도 검색할 수 있도록 별칭을 둔다.
+AP Statistics는 2026–27학년도부터 Units 1–8을 5개로 통합한 College Board 개정 체계를 사용한다. 기존 9-unit 순서를 전제로 한 자료와 혼합하지 않는다.
 
 ### 2.2 초기 비범위
 
@@ -60,7 +57,7 @@
 - 교사용 학급·과제·성적 관리
 - 생성형 AI 자동 풀이 또는 자동 문항 생성
 - OCR을 이용한 손글씨 수식 인식
-- 수능 실전 모의고사 전체 회차 제공
+- SAT/ACT/AP/IB 기출문제 전체 회차의 무단 전재
 - 저작권이 있는 교과서·문제집·기출문제의 무단 전재
 
 ## 3. 학습 경험 설계
@@ -137,13 +134,14 @@ MVP에서는 안정적으로 자동 채점할 수 있는 유형부터 제공한�
 
 ## 4. 콘텐츠 정보 구조
 
-### 4.1 네 가지 탐색 축
+### 4.1 데이터 기반 탐색 축
 
-같은 콘텐츠를 중복 작성하지 않고 다음 네 축으로 찾아갈 수 있게 한다.
+같은 콘텐츠를 중복 작성하지 않고 다음 축으로 찾아갈 수 있게 한다.
 
-- **학교급·과목:** 중1, 중2, 중3, 공통수학, 대수, 미적분, 확률과 통계, 기하
-- **개념 영역:** 수와 연산, 대수, 함수, 기하, 확률·통계
-- **학습 목적:** 처음 배우기, 내신 복습, 기초 회복, 빠른 개념 확인
+- **과정·학년:** Grade 6–8, Algebra I, Geometry, Algebra II, Precalculus, AP, IB, Post-AP
+- **수준:** Core, Honors, AP, IB SL, IB HL, Post-AP
+- **개념 영역:** 수와 연산, 대수, 함수, 기하, 확률·통계, 미적분
+- **학습 목적과 경로:** 처음 배우기, 기초 회복, 대학과정 준비, 빠른 개념 확인
 - **선수개념 관계:** 이 개념을 배우기 전/후에 연결되는 개념
 
 ### 4.2 개념 그래프
@@ -336,8 +334,15 @@ math-edu/
   "id": "alg-linear-equation-balance",
   "title": "등식의 성질로 일차방정식 풀기",
   "stage": "middle",
-  "courseTags": ["중1", "대수"],
+  "grade": "Grade 7",
+  "course": "Grade 7 Mathematics",
   "domain": "algebra",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": ["CCSS.MATH.CONTENT.7.EE.B.4"],
+  "pathways": ["Middle School Algebra", "Algebra I Readiness"],
+  "sources": ["https://corestandards.org/mathematics-standards/"],
+  "aliases": ["linear equation balance"],
   "prerequisites": ["alg-like-terms", "num-rational-operations"],
   "objectives": [
     "등식의 성질을 설명할 수 있다.",
@@ -512,7 +517,7 @@ math-edu/
 ### 단계 0 — 제품 규칙 확정 (2~3일)
 
 - [ ] 서비스 이름과 대상 사용자 확정
-- [ ] 2022 개정 교육과정 원문 기준 과목·성취기준 목록 정리
+- [ ] CCSS-M, College Board AP, IB DP 공식 문서 기준 과목·성취기준 목록 정리
 - [ ] 콘텐츠 ID와 JSON 스키마 초안 확정
 - [ ] 외부 수식 렌더러 사용 여부 결정
 - [ ] 저작권·출처 표기 원칙 기록
@@ -581,12 +586,11 @@ math-edu/
 
 다음 순서로 콘텐츠 묶음을 추가한다.
 
-1. 중1~중3 핵심 개념 전체
-2. 공통수학 핵심 개념 전체
-3. 대수, 미적분Ⅰ
-4. 확률과 통계
-5. 기하 전체: 이차곡선, 평면벡터, 공간도형·공간좌표·공간벡터
-6. 미적분Ⅱ 및 심화·통합 문제
+1. Grade 6–8 CCSS-M 핵심 개념 전체
+2. Algebra I, Geometry, Algebra II, Precalculus Core/Honors
+3. AP Precalculus, AP Calculus AB/BC, AP Statistics
+4. IB Mathematics AA/AI의 SL 및 HL
+5. Multivariable Calculus, Linear Algebra, Differential Equations, Discrete Mathematics
 
 각 묶음은 작성 → 수학 검수 → 사용성 검수 → 공개의 독립된 릴리스로 운영한다.
 
@@ -702,7 +706,7 @@ math-edu/
 
 - [ ] 서비스의 주 대상: 중학생 중심 / 고등학생 중심 / 기초 회복 중심
 - [ ] 1차 공개 범위와 목표 학습 단위 수
-- [ ] 내신형과 개념형 콘텐츠의 비중
+- [ ] 주·교육구별 별칭과 범용 개념형 콘텐츠의 비중
 - [ ] 수식 렌더러: MathJax / KaTeX / 외부 의존성 없음
 - [ ] 그래프·기하 상호작용의 MVP 포함 여부
 - [ ] 디자인 톤과 서비스 이름
@@ -712,20 +716,27 @@ math-edu/
 
 ## 17. 바로 다음 행동
 
-1. 2022 개정 교육과정의 수학과 원문에서 과목·성취기준을 추출해 `curriculum-map.json` 초안을 만든다.
-2. `일차방정식`, `이차함수의 그래프`, `평면벡터의 성분과 연산`을 각각 3~5개의 작은 학습 단위로 나눈다.
-3. 한 단원의 설명·문항·힌트·해설을 완성해 콘텐츠 스키마를 검증한다.
-4. 모바일 기준의 학습 화면 와이어프레임을 만든다.
-5. 정적 앱 골격과 첫 학습 단위를 구현해 GitHub Pages에 시험 배포한다.
-6. 학습자 3~5명에게 관찰 테스트를 진행하고, 콘텐츠 확장 전에 문제점을 수정한다.
+1. 모든 단원을 `framework`, `level`, `standards`, `pathways`, `sources`, `aliases` 계약에 맞춘다.
+2. 재귀 manifest와 과정별 최소 범위 검사를 통과시킨다.
+3. 각 과정의 수학적 정답·힌트·해설을 독립 검수한다.
+4. 과정·학년·수준·영역 필터를 모바일과 키보드 환경에서 확인한다.
+5. GitHub Pages 시험 배포 후 모든 하위 manifest 및 단원 요청을 smoke test한다.
+6. 학습자 3~5명에게 과정별 대표 단원을 관찰 테스트하고 문제점을 수정한다.
 
 ## 18. 참고 자료
 
-- [NCIC 국가교육과정정보센터 — 2022 개정 초·중등학교 교육과정 고시 안내](https://ncic.go.kr/board/B0031.cs?act=read&bwrId=1271&pageIndex=1&pageUnit=15): 수학과 교육과정은 교육부 고시 제2022-33호 별책 8에 해당한다.
-- [교육부 — 2022 개정 초·중등학교 및 특수교육 교육과정 확정·발표](https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=93459&lev=0&m=020402&opType=N&page=1&s=moe&searchType=null&statusYN=W): 개념 기반의 깊이 있는 학습과 학생 맞춤형 교육이라는 방향을 확인하는 자료다.
+- [U.S. Department of Education — Federal Role in Education](https://www.ed.gov/about/ed-overview/federal-role-in-education): 미국 교육과정은 주·지역의 책임이며 단일 연방 교육과정이 없음을 확인한다.
+- [Common Core State Standards Initiative — Mathematics Standards](https://corestandards.org/mathematics-standards/): 미국 Common Core 수학 기준의 공식 진입점이다.
+- [Common Core State Standards for Mathematics (ADA Compliant PDF)](https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf): Grades 6-8과 High School 수학 내용 및 고등학교 전통/통합 경로를 확인한다.
+- [College Board — AP Precalculus](https://apcentral.collegeboard.org/courses/ap-precalculus): AP Precalculus의 단원과 요구 역량을 확인한다.
+- [College Board — AP Statistics](https://apcentral.collegeboard.org/courses/ap-statistics): AP Statistics의 단원 구조를 확인한다.
+- [College Board — AP Statistics Revisions](https://apcentral.collegeboard.org/courses/ap-statistics/future-revisions): 2026–27 적용 및 종전 Units 1–8의 5-unit 통합을 확인한다.
+- [College Board — AP Calculus AB](https://apstudents.collegeboard.org/courses/ap-calculus-ab): AP Calculus AB의 단원과 출제 범위를 확인한다.
+- [College Board — AP Calculus BC](https://apcentral.collegeboard.org/courses/ap-calculus-bc): AP Calculus BC의 확장 단원을 확인한다.
+- [International Baccalaureate — Diploma Programme Mathematics](https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/): Mathematics AA/AI 및 SL/HL 구조를 확인한다.
 - [GitHub Docs — What is GitHub Pages?](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages): HTML, CSS, JavaScript 정적 파일 게시 방식과 프로젝트 사이트 경로를 확인한다.
 - [GitHub Docs — GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits): 저장소·게시 사이트 크기, 대역폭, 빌드 등의 운영 한도를 확인한다.
 
 ---
 
-이 계획의 첫 번째 검증 목표는 “모든 수학 콘텐츠가 있는가”가 아니라 “서로 성격이 다른 세 단원을 같은 학습 엔진으로 효과적으로 배우고, 기록하고, 복습할 수 있는가”이다. 이 목표가 확인된 뒤 같은 구조로 중등 전 범위와 고등 대수·미적분·확률과 통계·기하를 확장한다.
+현재 검증 목표는 재귀 manifest가 전 과정을 빠짐없이 노출하고, 모든 단원이 같은 메타데이터·문제·선수개념 계약을 지키며, 과정별 독립 검수 결과를 추적할 수 있게 하는 것이다.
