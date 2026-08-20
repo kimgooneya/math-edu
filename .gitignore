@@ -1,0 +1,6 @@
+# Local agent/QA artifacts
+.omo/
+.playwright-mcp/
+/baseline-*.png
+/after-*.png
+/nav-*.png
