@@ -209,25 +209,9 @@ function appShell(root) {
   const inner = createElement("div", { className: "site-header__inner" });
   const brand = link("매듭수학", "#/", { className: "brand" });
   brand.setAttribute("aria-label", "매듭수학 홈");
-  const navToggle = createElement("button", {
-    className: "nav-toggle button ghost",
-    attrs: { type: "button", "aria-expanded": "false", "aria-controls": "main-navigation" },
-  });
-  navToggle.append(createElement("span", { className: "nav-toggle__label", text: "메뉴" }));
-  const nav = createElement("nav", { className: "main-nav", attrs: { id: "main-navigation", "aria-label": "주요 메뉴" } });
-  const navLinks = [
-    link("홈", "#/"),
-    link("전체 학습", "#/catalog"),
-    link("내 학습", "#/progress"),
-  ];
-  navLinks.forEach((item) => nav.append(item));
-  navToggle.addEventListener("click", () => {
-    const expanded = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!expanded));
-    nav.style.display = expanded ? "" : "flex";
-    root.classList.toggle("navigation-open", !expanded);
-  });
-  inner.append(brand, navToggle, nav);
+  const nav = createElement("nav", { className: "main-nav", attrs: { id: "main-navigation", "aria-label": "내 학습" } });
+  nav.append(link("내 학습", "#/progress"));
+  inner.append(brand, nav);
   header.append(inner);
   const main = createElement("main", { attrs: { id: "main-content", tabindex: "-1" } });
   const footer = createElement("footer", { className: "site-footer" });
@@ -875,7 +859,7 @@ function renderRoute(route, shouldFocus = true) {
   appState.renderNumber += 1;
   for (const anchor of appState.root?.querySelectorAll?.(".main-nav a") || []) {
     const href = anchor.getAttribute("href") || "";
-    const active = route.name === "home" ? href === "#/" : route.name === "catalog" ? href === "#/catalog" : route.name === "progress" ? href === "#/progress" : false;
+    const active = route.name === "progress" && href === "#/progress";
     if (active) anchor.setAttribute("aria-current", "page");
     else anchor.removeAttribute("aria-current");
   }
