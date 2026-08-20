@@ -1,0 +1,83 @@
+:root {
+  color-scheme: light;
+
+  --color-ink: #20313a;
+  --color-ink-soft: #53636a;
+  --color-ink-muted: #748187;
+  --color-navy: #1f3a4d;
+  --color-navy-dark: #142b3c;
+  --color-navy-soft: #e9f0f2;
+  --color-cream: #fffaf2;
+  --color-paper: #fffdf9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f6f1e9;
+  --color-line: #e5ded2;
+  --color-line-strong: #cfc4b5;
+  --color-accent: #e27750;
+  --color-accent-dark: #ad4d30;
+  --color-accent-soft: #fbe9df;
+  --color-mint: #3f857d;
+  --color-mint-dark: #23635e;
+  --color-mint-soft: #e1f2eb;
+  --color-gold: #c89436;
+  --color-gold-soft: #fff1cf;
+  --color-success: #2c7964;
+  --color-success-soft: #e1f2eb;
+  --color-danger: #b34843;
+  --color-danger-soft: #fbe5e1;
+  --color-info: #285b7c;
+  --color-info-soft: #e6f0f7;
+  --color-focus: #0b6f77;
+
+  --shadow-xs: 0 1px 2px rgba(28, 42, 48, 0.05);
+  --shadow-sm: 0 5px 16px rgba(50, 51, 42, 0.07);
+  --shadow-md: 0 12px 30px rgba(50, 51, 42, 0.1);
+  --shadow-lg: 0 22px 55px rgba(31, 58, 77, 0.14);
+
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --font-sans: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, -apple-system, sans-serif;
+  --font-display: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: clamp(1.75rem, 6vw, 2.5rem);
+  --text-3xl: clamp(2.375rem, 9vw, 4rem);
+  --leading-tight: 1.2;
+  --leading-normal: 1.65;
+  --leading-loose: 1.85;
+
+  --content-width: 74rem;
+  --reading-width: 49rem;
+  --header-height: 4.5rem;
+
+  --transition-fast: 140ms ease;
+  --transition-normal: 220ms ease;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --header-height: 5.25rem;
+  }
+}

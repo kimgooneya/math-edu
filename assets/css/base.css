@@ -1,0 +1,296 @@
+/* The base layer keeps the learning surface calm and predictable. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--color-cream);
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 86% 9%, rgba(242, 213, 190, 0.24), transparent 22rem),
+    var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+body::selection {
+  background: var(--color-navy);
+  color: var(--color-paper);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select,
+summary {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+figure,
+blockquote,
+dl,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+h4 {
+  font-size: var(--text-lg);
+}
+
+code,
+kbd,
+pre {
+  font-family: var(--font-mono);
+}
+
+code {
+  border-radius: var(--radius-xs);
+  background: var(--color-surface-muted);
+  padding: 0.1em 0.34em;
+  color: var(--color-navy-dark);
+  font-size: 0.9em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  margin: var(--space-8) 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: var(--space-3);
+  left: var(--space-3);
+  transform: translateY(-180%);
+  border: 2px solid var(--color-navy-dark);
+  border-radius: var(--radius-sm);
+  background: var(--color-paper);
+  padding: 0.65rem 0.9rem;
+  color: var(--color-navy-dark);
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.noscript-banner {
+  border-bottom: 1px solid #d6b06c;
+  background: var(--color-gold-soft);
+  padding: 0.85rem 1rem;
+  color: #5e4317;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  text-align: center;
+}
+
+.noscript-banner strong {
+  margin-right: 0.25rem;
+}
+
+.eyebrow {
+  color: var(--color-mint-dark);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-ink: #11191d;
+    --color-ink-soft: #26343a;
+    --color-ink-muted: #3a4a51;
+    --color-navy: #102c3c;
+    --color-line: #9d9589;
+    --color-line-strong: #665e52;
+    --color-accent-dark: #7e2d18;
+    --color-mint-dark: #0c514a;
+    --shadow-sm: 0 0 0 1px var(--color-line);
+    --shadow-md: 0 0 0 2px var(--color-line-strong);
+  }
+}
+
+@media (forced-colors: active) {
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+  }
+
+  :focus-visible {
+    outline: 3px solid Highlight;
+  }
+
+  .button,
+  .tag,
+  .mastery-badge,
+  .feedback,
+  .progress-bar,
+  .card,
+  .unit-card,
+  .theory-block,
+  .example,
+  .problem-card,
+  .hint-box {
+    border: 1px solid CanvasText;
+  }
+}
+
+@media print {
+  html,
+  body {
+    min-width: 0;
+    background: #fff;
+    color: #000;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .nav-toggle,
+  .hero-actions,
+  .filters,
+  .button,
+  .lesson-aside,
+  dialog,
+  .skip-link {
+    display: none !important;
+  }
+
+  .page,
+  .lesson-main,
+  .not-found {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  .card,
+  .theory-block,
+  .example,
+  .problem-card,
+  .hint-box {
+    border: 1px solid #999;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}

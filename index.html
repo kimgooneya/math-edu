@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="개념을 연결하고 풀이 과정을 따라가며 배우는 따뜻한 수학 학습 서비스">
+    <meta name="theme-color" content="#1f3a4d">
+    <title>매듭수학 — 개념을 잇는 수학 공부</title>
+    <link rel="stylesheet" href="./assets/css/tokens.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+
+    <noscript>
+      <div class="noscript-banner" role="status">
+        <strong>자바스크립트를 켜 주세요.</strong>
+        매듭수학은 풀이와 진도를 저장하기 위해 자바스크립트를 사용합니다. 브라우저 설정에서 자바스크립트를 허용한 뒤 다시 방문해 주세요.
+      </div>
+    </noscript>
+
+    <div id="app" class="app-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="./#/" aria-label="매듭수학 홈">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="brand-copy"><span class="brand-name">매듭수학</span><span class="brand-kicker">개념을 잇는 공부</span></span>
+          </a>
+          <button class="nav-toggle button ghost" type="button" aria-expanded="false" aria-controls="main-navigation">
+            <span class="nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="nav-toggle__label">메뉴</span>
+          </button>
+          <nav id="main-navigation" class="main-nav" aria-label="주요 메뉴">
+            <a href="./#/" aria-current="page">홈</a>
+            <a href="./#/learn">전체 학습</a>
+            <a href="./#/progress">복습·진도</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main-content" class="page">
+        <section class="hero" aria-labelledby="welcome-title">
+          <div class="hero__copy">
+            <p class="eyebrow">오늘도 한 매듭씩</p>
+            <h1 id="welcome-title">수학, 답보다<br><em>연결</em>을 배워요.</h1>
+            <p class="hero__lead">막힌 문제에서 멈추지 않도록 개념을 차근차근 잇고, 풀이의 이유까지 함께 살펴보세요.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="./#/learn">학습 시작하기 <span aria-hidden="true">→</span></a>
+              <a class="button secondary" href="./#/catalog">단원 둘러보기</a>
+            </div>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero-note hero-note--top"><span>개념</span><b>→</b><span>연습</span></div>
+            <div class="hero-orbit hero-orbit--outer"></div>
+            <div class="hero-orbit hero-orbit--inner"></div>
+            <div class="hero-equation"><span class="equation-dot"></span><span>x</span><span class="equation-sign">+</span><span>3</span><span class="equation-sign">=</span><span>11</span></div>
+            <div class="hero-note hero-note--bottom"><span class="hero-check" aria-hidden="true">✓</span><span>이해했어요</span></div>
+          </div>
+        </section>
+
+        <section class="dashboard-grid" aria-label="학습 요약">
+          <article class="card stat-card stat-card--progress">
+            <div class="stat-card__top"><span class="stat-label">전체 진도</span><span class="stat-icon" aria-hidden="true">↗</span></div>
+            <p class="stat-value">0<span class="stat-unit">%</span></p>
+            <div class="progress-bar" role="progressbar" aria-label="전체 학습 진도" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="progress-fill" style="width: 0%"></span></div>
+            <p class="stat-help">첫 단원을 시작해 보세요.</p>
+          </article>
+          <article class="card stat-card stat-card--streak">
+            <div class="stat-card__top"><span class="stat-label">학습 기록</span><span class="stat-icon" aria-hidden="true">✦</span></div>
+            <p class="stat-value">0<span class="stat-unit">일</span></p>
+            <p class="stat-help">짧게라도 매일 이어가요.</p>
+          </article>
+          <article class="card stat-card stat-card--review">
+            <div class="stat-card__top"><span class="stat-label">오늘의 복습</span><span class="stat-icon" aria-hidden="true">↺</span></div>
+            <p class="stat-value">0<span class="stat-unit">개</span></p>
+            <p class="stat-help">복습할 개념이 없습니다.</p>
+          </article>
+        </section>
+
+        <section class="card empty-state" aria-labelledby="empty-state-title">
+          <span class="empty-state__mark" aria-hidden="true">∵</span>
+          <div>
+            <p class="eyebrow">나에게 맞는 첫 걸음</p>
+            <h2 id="empty-state-title">아직 시작한 학습이 없어요.</h2>
+            <p>학년이나 개념을 골라 10분 학습을 시작하면 이곳에 이어서 공부할 단원이 표시됩니다.</p>
+            <a class="button primary" href="./#/catalog">첫 단원 고르기 <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./assets/js/app.js"></script>
+  </body>
+</html>
