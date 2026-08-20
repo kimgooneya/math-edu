@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-ai-sl-functions",
+  "title": "IB AI SL 함수",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Applications and Interpretation",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Functions",
+  "standards": ["IB AI SL: Functions"],
+  "pathways": ["AI: 실제 자료에 함수 모형을 적합하고 매개변수·교점·예측의 의미를 기술로 해석하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-applications-and-interpretations-en.pdf"],
+  "aliases": ["IB AI SL Topic 2", "AI SL Functions", "IB 응용과 해석 함수 표준"],
+  "description": "선형·이차·지수·정현 모형을 자료에 연결하고 그래프 기술로 교점, 매개변수와 예측 범위를 해석합니다.",
+  "estimatedMinutes": 70,
+  "prerequisites": ["ib-ai-sl-number-algebra"],
+  "objectives": ["실제 자료의 변화 양상에 맞는 함수족을 선택하고 매개변수를 맥락에서 해석할 수 있다.", "그래프와 수치 기술로 모형의 교점·최댓값·예측값을 구하고 한계를 설명할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "함수 모형의 변수", "body": "독립변수는 입력, 종속변수는 반응입니다. 정의역은 현실적으로 가능한 입력으로 제한하며 단위와 초기조건을 함께 기록합니다."},
+    {"type": "concept", "title": "선형·이차 모형", "body": "일정한 1차 변화는 선형모형, 방향이 한 번 바뀌는 곡선형 추세는 이차모형이 후보입니다. 잔차와 맥락으로 적합성을 확인합니다."},
+    {"type": "concept", "title": "지수 모형", "body": "y=ab^x에서 a는 초기값, b는 기간당 배율입니다. b>1이면 성장, 0<b<1이면 감소이며 두 배 시간과 반감기를 로그나 기술로 구합니다."},
+    {"type": "concept", "title": "정현 모형", "body": "y=a sin(b(x-c))+d에서 |a|는 진폭, 2π/|b|는 주기, d는 중심선입니다. 계절·조석처럼 반복되는 자료를 모델링합니다."}
+  ],
+  "problems": [
+    {"id": "ib-ai-sl-functions-p01", "type": "number", "prompt": "이동 서비스 A의 요금은 20+2d, B의 요금은 50+1.25d입니다(d는 km). 두 요금이 같아지는 거리 d를 구하세요.", "answer": 40, "hints": ["20+2d=50+1.25d로 두세요.", "0.75d=30을 푸세요."], "explanation": "d=40 km에서 두 요금은 모두 100입니다. 이보다 긴 거리에서는 B가 더 저렴합니다."},
+    {"id": "ib-ai-sl-functions-p02", "type": "choice", "prompt": "모형 P(t)=1200(1.04)^t에서 1.04의 의미를 고르세요.", "choices": [{"id": "a", "label": "기간당 4% 성장"}, {"id": "b", "label": "초기값 1.04"}, {"id": "c", "label": "기간당 104명 증가"}, {"id": "d", "label": "4기간마다 감소"}], "answer": "a", "hints": ["배율 1+r과 비교하세요.", "1.04=1+0.04입니다."], "explanation": "매 기간 이전 값의 1.04배가 되므로 4% 성장입니다."},
+    {"id": "ib-ai-sl-functions-p03", "type": "number", "prompt": "그래프 계산기의 선형회귀 결과가 y=3.2x+7.5입니다. x=8에서 실제 관측값이 35일 때 잔차(관측-예측)를 구하세요.", "answer": 1.9, "tolerance": 0.000001, "hints": ["회귀식의 예측값은 3.2×8+7.5입니다.", "35에서 예측값을 빼세요."], "explanation": "예측값은 33.1이고 잔차는 35-33.1=1.9입니다."},
+    {"id": "ib-ai-sl-functions-p04", "type": "number", "prompt": "24시간 주기의 온도 자료에서 최대 27°C, 최소 9°C가 관측되었습니다. 정현모형의 진폭을 구하세요.", "answer": 9, "hints": ["진폭은 범위의 절반입니다.", "(27-9)/2를 계산하세요."], "explanation": "진폭은 18/2=9°C이고 중심선은 18°C입니다."},
+    {"id": "ib-ai-sl-functions-p05", "type": "number", "prompt": "온도 모형 T(t)=6sin(πt/12)+18에서 t=18시간일 때 온도를 구하세요.", "answer": 12, "hints": ["π×18/12=3π/2입니다.", "sin(3π/2)=-1을 사용하세요."], "explanation": "T(18)=6(-1)+18=12°C입니다."},
+    {"id": "ib-ai-sl-functions-p06", "type": "choice", "prompt": "2015~2025 자료로 만든 인구 모형을 2080년까지 그대로 외삽할 때 가장 중요한 주의점을 고르세요.", "choices": [{"id": "a", "label": "관측 범위를 멀리 벗어나 관계가 유지되지 않을 수 있다"}, {"id": "b", "label": "함수는 미래값을 절대 계산할 수 없다"}, {"id": "c", "label": "모든 외삽값은 정확하다"}, {"id": "d", "label": "단위를 바꾸면 불확실성이 사라진다"}], "answer": "a", "hints": ["모형은 관측된 범위에서 적합되었습니다.", "장기간에는 환경과 추세가 달라질 수 있습니다."], "explanation": "먼 외삽은 과거 관계가 계속된다는 강한 가정에 의존하므로 불확실성이 큽니다."}
+  ]
+}

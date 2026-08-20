@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-ab-unit-1-limits-continuity","title":"Unit 1: Limits and Continuity","stage":"high","grade":"Grades 11–12","course":"AP Calculus AB","domain":"Limits and Continuity","framework":"College Board AP","level":"AP","standards":["AP Calculus AB Unit 1"],"aliases":["극한과 연속","AP Calculus AB U1"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-ab"],
+  "description":"표·그래프·대수식에서 극한을 추정하고, 연속성·점근선·중간값정리를 이용해 함수의 국소 거동을 분석합니다.","estimatedMinutes":55,"prerequisites":["ap-precalculus-unit-3-trigonometric-polar"],"pathways":["ap-calculus-ab-unit-2-differentiation-fundamentals"],
+  "objectives":["여러 표현에서 양쪽·한쪽 극한을 구하고 존재 여부를 정당화할 수 있다.","연속의 조건과 중간값정리를 적용하고 무한극한의 의미를 해석할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"극한","body":"lim(x→a)f(x)=L은 x가 a에 가까워질 때 함수값이 L에 가까워짐을 뜻합니다. f(a)의 존재나 값과 극한은 서로 다를 수 있습니다."},
+    {"type":"concept","title":"극한 법칙과 대수적 계산","body":"직접 대입이 0/0을 만들면 인수분해, 유리화, 공통분모를 사용해 a 근방에서 같은 식으로 바꿉니다."},
+    {"type":"concept","title":"연속과 중간값정리","body":"a에서 연속이려면 f(a)가 정의되고 lim(x→a)f(x)가 존재하며 둘이 같아야 합니다. 닫힌 구간에서 연속이면 양 끝 함수값 사이의 모든 값을 갖습니다."},
+    {"type":"concept","title":"무한극한과 점근선","body":"x가 a에 가까울 때 함수값의 크기가 끝없이 커지면 x=a는 수직점근선 후보입니다. 좌우 부호를 따로 확인해야 합니다."}
+  ],
+  "problems":[
+    {"id":"ap-calculus-ab-unit-1-limits-continuity-p01","type":"integer","prompt":"lim(x→2)(x²+3x)의 값은?","answer":10,"hints":["다항함수는 연속입니다.","x=2를 직접 대입하세요."],"explanation":"4+6=10입니다."},
+    {"id":"ap-calculus-ab-unit-1-limits-continuity-p02","type":"integer","prompt":"lim(x→3)(x²-9)/(x-3)의 값은?","answer":6,"hints":["분자를 인수분해하세요.","x≠3에서 x+3으로 약분됩니다."],"explanation":"(x-3)(x+3)/(x-3)=x+3이므로 극한은 6입니다."},
+    {"id":"ap-calculus-ab-unit-1-limits-continuity-p03","type":"choice","prompt":"lim(x→0-)1/x는?","choices":[{"id":"a","label":"음의 무한대"},{"id":"b","label":"양의 무한대"},{"id":"c","label":"0"},{"id":"d","label":"1"}],"answer":"a","hints":["0에 가까운 음수를 생각하세요.","그 역수는 큰 음수입니다."],"explanation":"x가 왼쪽에서 0으로 갈 때 1/x는 제한 없이 감소합니다."},
+    {"id":"ap-calculus-ab-unit-1-limits-continuity-p04","type":"choice","prompt":"f가 a에서 연속이기 위한 조건이 아닌 것은?","choices":[{"id":"a","label":"f(a)가 정의됨"},{"id":"b","label":"lim(x→a)f(x)가 존재함"},{"id":"c","label":"극한과 f(a)가 같음"},{"id":"d","label":"f'(a)=0"}],"answer":"d","hints":["연속은 미분계수가 0일 것을 요구하지 않습니다.","세 가지 연속 조건을 확인하세요."],"explanation":"연속인 함수의 도함수가 0일 필요는 없고, 미분 가능할 필요조차 없습니다."},
+    {"id":"ap-calculus-ab-unit-1-limits-continuity-p05","type":"integer","prompt":"lim(x→0) sin(5x)/x의 값은?","answer":5,"hints":["sin(5x)/(5x)의 극한은 1입니다.","식에 5를 곱한 꼴로 바꾸세요."],"explanation":"sin(5x)/x=5·sin(5x)/(5x)이므로 극한은 5입니다."},
+    {"id":"ap-calculus-ab-unit-1-limits-continuity-p06","type":"choice","prompt":"연속함수 f에 대해 f(1)=-2, f(4)=3이면 중간값정리가 보장하는 것은?","choices":[{"id":"a","label":"(1,4)에 f(c)=0인 c가 있다"},{"id":"b","label":"f는 증가함수다"},{"id":"c","label":"f'(c)=0이다"},{"id":"d","label":"영점은 정확히 하나다"}],"answer":"a","hints":["0은 -2와 3 사이입니다.","정리는 존재만 보장합니다."],"explanation":"연속성과 부호 변화로 (1,4)에 적어도 하나의 영점이 존재합니다."}
+  ]
+}

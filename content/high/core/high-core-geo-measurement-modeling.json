@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-measurement-modeling",
+  "title": "Measurement, Volume, and Geometric Modeling",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Modeling",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSG-GMD.A.1",
+    "HSG-GMD.A.3",
+    "HSG-GMD.B.4",
+    "HSG-MG.A.1",
+    "HSG-MG.A.2",
+    "HSG-MG.A.3"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math II",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "측정과 기하 모델링",
+    "Volume",
+    "Geometric Modeling",
+    "단면과 밀도"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "원기둥·각뿔·원뿔·구의 부피와 단면을 이해하고 밀도·비용·설계 같은 실제 문제를 기하 모형으로 해결합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-geo-similarity-trigonometry"
+  ],
+  "objectives": [
+    "입체도형의 부피 공식을 적용하고 단면의 모양을 분석할 수 있다.",
+    "면적·부피·밀도와 단위를 이용해 실제 설계 문제를 모델링할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "부피 공식의 관계",
+      "body": "각뿔과 원뿔의 부피는 같은 밑넓이와 높이를 가진 각기둥과 원기둥 부피의 1/3입니다. 구의 부피는 반지름의 세제곱에 비례합니다."
+    },
+    {
+      "type": "concept",
+      "title": "기하 모델링",
+      "body": "실제 물체를 단순한 도형 또는 도형의 합과 차로 근사합니다. 모형의 가정, 측정 오차, 단위 변환이 결과에 미치는 영향도 함께 점검해야 합니다."
+    },
+    {
+      "type": "formula",
+      "title": "대표 부피 공식",
+      "body": "B는 밑넓이, h는 높이, r은 반지름입니다.",
+      "formula": "V_prism=Bh, V_pyramid=Bh/3, V_cylinder=πr²h, V_sphere=4πr³/3"
+    },
+    {
+      "type": "example",
+      "title": "원기둥 용량",
+      "prompt": "반지름 3 cm, 높이 10 cm인 원기둥의 부피가 kπ cm³일 때 k를 구하세요.",
+      "steps": [
+        "V=πr²h를 사용합니다.",
+        "r²=9이고 h=10입니다.",
+        "V=90π이므로 k=90입니다."
+      ],
+      "answer": "90"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-measurement-modeling-p01",
+      "type": "number",
+      "prompt": "밑넓이 12, 높이 5인 각기둥의 부피를 구하세요.",
+      "answer": 60,
+      "hints": [
+        "V=Bh를 사용하세요.",
+        "12×5를 계산하세요."
+      ],
+      "explanation": "부피는 60입니다."
+    },
+    {
+      "id": "high-core-geo-measurement-modeling-p02",
+      "type": "number",
+      "prompt": "밑넓이 18, 높이 7인 각뿔의 부피를 구하세요.",
+      "answer": 42,
+      "hints": [
+        "각뿔 부피는 Bh/3입니다.",
+        "18×7÷3을 계산하세요."
+      ],
+      "explanation": "부피는 42입니다."
+    },
+    {
+      "id": "high-core-geo-measurement-modeling-p03",
+      "type": "number",
+      "prompt": "반지름 2, 높이 5인 원기둥의 부피가 kπ일 때 k를 구하세요.",
+      "answer": 20,
+      "hints": [
+        "πr²h를 사용하세요.",
+        "2²×5를 계산하세요."
+      ],
+      "explanation": "부피는 20π이므로 k=20입니다."
+    },
+    {
+      "id": "high-core-geo-measurement-modeling-p04",
+      "type": "choice",
+      "prompt": "원뿔을 밑면과 평행한 평면으로 자른 단면의 모양을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "밑면과 평행한 단면은 밑면과 닮았습니다.",
+        "원뿔의 밑면 모양을 보세요."
+      ],
+      "explanation": "밑면과 평행한 단면은 원입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "원"
+        },
+        {
+          "id": "B",
+          "label": "삼각형"
+        },
+        {
+          "id": "C",
+          "label": "직사각형"
+        },
+        {
+          "id": "D",
+          "label": "포물선만 가능"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-measurement-modeling-p05",
+      "type": "number",
+      "prompt": "인구 12,000명이 넓이 30 km²에 살 때 인구 밀도를 명/km²로 구하세요.",
+      "answer": 400,
+      "hints": [
+        "밀도=인구/넓이입니다.",
+        "12000÷30을 계산하세요."
+      ],
+      "explanation": "인구 밀도는 400명/km²입니다."
+    },
+    {
+      "id": "high-core-geo-measurement-modeling-p06",
+      "type": "number",
+      "prompt": "정육면체의 한 변을 2배로 늘리면 부피는 원래의 몇 배가 되나요?",
+      "answer": 8,
+      "hints": [
+        "부피는 길이의 세제곱에 비례합니다.",
+        "2³을 계산하세요."
+      ],
+      "explanation": "부피는 2³=8배가 됩니다."
+    }
+  ]
+}

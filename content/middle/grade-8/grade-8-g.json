@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-8-g",
+  "title": "Geometry",
+  "stage": "middle",
+  "grade": "Grade 8",
+  "course": "Grade 8 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "Geometry",
+  "standards": ["CCSS.Math.Content.8.G.A.1.a", "CCSS.Math.Content.8.G.A.1.b", "CCSS.Math.Content.8.G.A.1.c", "CCSS.Math.Content.8.G.A.2", "CCSS.Math.Content.8.G.A.3", "CCSS.Math.Content.8.G.A.4", "CCSS.Math.Content.8.G.A.5", "CCSS.Math.Content.8.G.B.6", "CCSS.Math.Content.8.G.B.7", "CCSS.Math.Content.8.G.B.8", "CCSS.Math.Content.8.G.C.9"],
+  "aliases": ["Grade 8 Geometry", "8.G", "8학년 기하", "변환·닮음·피타고라스·입체 부피"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/8/G/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "강체변환과 닮음, 좌표 변환과 각 관계, 피타고라스 정리, 원기둥·원뿔·구의 부피를 다룹니다.",
+  "estimatedMinutes": 65,
+  "prerequisites": ["middle-grade-7-g", "middle-grade-8-ee"],
+  "objectives": ["평행이동·회전·반사·확대를 좌표로 설명하고 합동과 닮음을 변환으로 판단할 수 있다.", "평행선의 각 관계와 피타고라스 정리를 적용하고 원기둥·원뿔·구의 부피 문제를 해결할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "강체변환과 합동", "body": "평행이동, 회전, 반사는 거리와 각의 크기를 보존합니다. 한 도형을 이런 강체변환의 연속으로 다른 도형에 정확히 겹칠 수 있으면 두 도형은 합동입니다."},
+    {"type": "concept", "title": "확대와 닮음", "body": "중심이 원점이고 배율이 k인 확대는 (x,y)를 (kx,ky)로 보냅니다. 확대와 강체변환의 연속으로 겹치는 도형은 닮음이며 대응각은 같고 대응변 길이는 같은 비율입니다."},
+    {"type": "concept", "title": "각과 피타고라스 정리", "body": "평행선을 횡단선이 자를 때 동위각과 엇각은 같습니다. 직각삼각형에서 두 직각변 a,b와 빗변 c는 a²+b²=c²를 만족하며, 역도 성립합니다."},
+    {"type": "concept", "title": "원기둥·원뿔·구의 부피", "body": "원기둥은 V=πr²h, 원뿔은 V=(1/3)πr²h, 구는 V=(4/3)πr³입니다. 반지름과 높이의 단위를 맞춘 뒤 세제곱 단위를 붙입니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-8-g-p01", "type": "orderedPair", "prompt": "점 (-2,3)을 오른쪽으로 5, 아래로 1만큼 평행이동한 점의 좌표를 쓰세요.", "answer": [3, 2], "hints": ["x좌표에 5를 더하세요.", "y좌표에서 1을 빼세요."], "explanation": "(-2+5, 3-1)=(3,2)입니다."},
+    {"id": "middle-grade-8-g-p02", "type": "choice", "prompt": "도형의 합동을 항상 보존하는 변환만으로 이루어진 것을 고르세요.", "choices": [{"id": "a", "label": "평행이동, 회전, 반사"}, {"id": "b", "label": "배율 2 확대, 회전"}, {"id": "c", "label": "가로만 2배 늘이기"}], "answer": "a", "hints": ["거리와 각의 크기를 모두 보존하는 변환을 찾으세요.", "확대는 크기를 바꿉니다."], "explanation": "평행이동, 회전, 반사는 모두 거리와 각을 보존하는 강체변환입니다."},
+    {"id": "middle-grade-8-g-p03", "type": "orderedPair", "prompt": "원점을 중심으로 점 (2,-3)을 배율 2로 확대한 좌표를 쓰세요.", "answer": [4, -6], "hints": ["두 좌표에 배율 2를 곱하세요.", "(2×2,-3×2)를 계산하세요."], "explanation": "원점 중심 배율 2 확대는 (2,-3)을 (4,-6)으로 보냅니다."},
+    {"id": "middle-grade-8-g-p04", "type": "integer", "prompt": "삼각형의 두 내각이 47°와 68°일 때 나머지 각의 크기는 몇 도인가요?", "answer": 65, "hints": ["삼각형 내각의 합은 180°입니다.", "180-47-68을 계산하세요."], "explanation": "나머지 각은 180-47-68=65°입니다."},
+    {"id": "middle-grade-8-g-p05", "type": "integer", "prompt": "두 직각변의 길이가 9와 12인 직각삼각형의 빗변 길이를 구하세요.", "answer": 15, "hints": ["피타고라스 정리를 사용하세요.", "√(9²+12²)=√225를 계산하세요."], "explanation": "빗변은 √(81+144)=√225=15입니다."},
+    {"id": "middle-grade-8-g-p06", "type": "integer", "prompt": "좌표평면의 두 점 (1,2)와 (7,10) 사이의 거리를 구하세요.", "answer": 10, "hints": ["가로 차는 6, 세로 차는 8입니다.", "√(6²+8²)를 계산하세요."], "explanation": "거리는 √(36+64)=√100=10입니다."},
+    {"id": "middle-grade-8-g-p07", "type": "choice", "prompt": "반지름 3, 높이 5인 원기둥의 부피를 고르세요.", "choices": [{"id": "a", "label": "15π"}, {"id": "b", "label": "30π"}, {"id": "c", "label": "45π"}, {"id": "d", "label": "90π"}], "answer": "c", "hints": ["원기둥의 부피는 πr²h입니다.", "π×3²×5를 계산하세요."], "explanation": "V=π×9×5=45π입니다."},
+    {"id": "middle-grade-8-g-p08", "type": "choice", "prompt": "반지름 3, 높이 5인 원뿔의 부피를 고르세요.", "choices": [{"id": "a", "label": "5π"}, {"id": "b", "label": "15π"}, {"id": "c", "label": "45π"}, {"id": "d", "label": "60π"}], "answer": "b", "hints": ["원뿔의 부피는 같은 밑면과 높이인 원기둥의 1/3입니다.", "(1/3)π×3²×5를 계산하세요."], "explanation": "V=(1/3)π×9×5=15π입니다."},
+    {"id": "middle-grade-8-g-p09", "type": "choice", "prompt": "반지름 3인 구의 부피를 고르세요.", "choices": [{"id": "a", "label": "12π"}, {"id": "b", "label": "27π"}, {"id": "c", "label": "36π"}, {"id": "d", "label": "108π"}], "answer": "c", "hints": ["구의 부피는 (4/3)πr³입니다.", "(4/3)π×27을 계산하세요."], "explanation": "V=(4/3)π×3³=(4/3)π×27=36π입니다."},
+    {"id": "middle-grade-8-g-p10", "type": "choice", "prompt": "삼각형 A를 배율 2로 확대한 뒤 평행이동하여 삼각형 B와 겹쳤습니다. 두 삼각형의 관계를 고르세요.", "choices": [{"id": "a", "label": "닮음이지만 일반적으로 합동은 아니다"}, {"id": "b", "label": "항상 합동이다"}, {"id": "c", "label": "닮음이 아니다"}], "answer": "a", "hints": ["확대는 각은 보존하지만 길이를 같은 배율로 바꿉니다.", "배율 2는 크기를 바꾸므로 강체변환만으로 이루어진 경우와 구별하세요."], "explanation": "확대와 강체변환으로 겹치는 도형은 닮음입니다. 배율이 1이 아닌 2이므로 대응변 길이가 달라 일반적으로 합동은 아닙니다."},
+    {"id": "middle-grade-8-g-p11", "type": "integer", "prompt": "삼각형의 한 외각과 마주 보는 두 내각이 35°와 72°입니다. 그 외각의 크기는 몇 도인가요?", "answer": 107, "hints": ["삼각형의 외각은 그와 이웃하지 않는 두 내각의 합과 같습니다.", "35+72를 계산하세요."], "explanation": "외각 정리에 따라 외각의 크기는 35+72=107°입니다."}
+  ]
+}

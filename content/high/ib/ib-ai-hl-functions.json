@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-ai-hl-functions",
+  "title": "IB AI HL 함수 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Applications and Interpretation",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Functions",
+  "standards": ["IB AI HL: Functions"],
+  "pathways": ["AI: Logistic·구간·비선형 회귀모형을 비교하고 매개변수와 잔차를 기술로 해석하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-applications-and-interpretations-en.pdf"],
+  "aliases": ["IB AI HL Topic 2", "AI HL Functions", "IB 응용과 해석 HL 함수"],
+  "description": "AI SL 함수 모형을 Logistic 성장, 구간별 모형, 역함수와 비선형 회귀의 비교·검증으로 확장합니다.",
+  "estimatedMinutes": 85,
+  "prerequisites": ["ib-ai-sl-functions", "ib-ai-hl-number-algebra"],
+  "objectives": ["Logistic·지수·정현·구간별 모형의 매개변수를 현실 맥락에서 해석할 수 있다.", "기술로 비선형 모형을 적합하고 잔차·정의역·장기 거동을 근거로 모형을 비교할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "Logistic 성장", "body": "P(t)=L/(1+Ae^(-kt))에서 L은 수용한계, k는 성장 속도를 조절합니다. 초기에는 지수적으로 보이지만 자원이 제한되며 성장률이 줄어 L에 접근합니다."},
+    {"type": "concept", "title": "구간별 모형", "body": "요금제·세율·제어 규칙처럼 조건에 따라 식이 바뀌는 현상은 구간별 함수로 나타냅니다. 경계점에서 함수값과 좌우 거동을 확인합니다."},
+    {"type": "concept", "title": "역함수와 해석", "body": "일대일 모형의 역함수는 출력에서 입력을 추정합니다. 현실에서는 치역을 역함수의 정의역으로 제한하고 단위의 역할도 뒤바뀝니다."},
+    {"type": "concept", "title": "모형 비교와 잔차", "body": "결정계수만으로 모형을 선택하지 않습니다. 잔차가 무작위인지, 매개변수가 현실적인지, 외삽의 장기 거동이 타당한지를 함께 비교합니다."}
+  ],
+  "problems": [
+    {"id": "ib-ai-hl-functions-p01", "type": "number", "prompt": "Logistic 모형 P(t)=5000/(1+9e^(-0.4t))에서 개체수가 수용한계의 절반인 2500에 처음 도달하는 시각을 구하세요.", "answer": 5.493061443340549, "tolerance": 0.000001, "hints": ["2500=5000/(1+9e^(-0.4t))에서 분모는 2입니다.", "9e^(-0.4t)=1을 로그로 푸세요."], "explanation": "t=ln9/0.4≈5.493061이며 이 시점은 Logistic 곡선의 변곡점입니다."},
+    {"id": "ib-ai-hl-functions-p02", "type": "number", "prompt": "P'=0.4P(1-P/5000)인 Logistic 모형에서 최대 성장률을 구하세요.", "answer": 500, "hints": ["성장률은 P=5000/2에서 최대입니다.", "0.4×2500×(1-1/2)를 계산하세요."], "explanation": "수용한계의 절반에서 최대 성장률은 500 개체/시간입니다."},
+    {"id": "ib-ai-hl-functions-p03", "type": "integer", "prompt": "구간별 함수가 x≤10에서 f(x)=2x+5, x>10에서 f(x)=kx-5입니다. x=10에서 연속이 되도록 k를 구하세요.", "answer": 3, "hints": ["왼쪽 식의 경계값은 25입니다.", "오른쪽 극한 10k-5를 25와 같게 두세요."], "explanation": "10k-5=25이므로 k=3입니다."},
+    {"id": "ib-ai-hl-functions-p04", "type": "choice", "prompt": "양의 정의역에서 y=7e^(0.2t)를 t에 대해 푼 식을 고르세요.", "choices": [{"id": "a", "label": "t=ln(y/7)/0.2"}, {"id": "b", "label": "t=0.2ln(7y)"}, {"id": "c", "label": "t=e^(y/7)/0.2"}, {"id": "d", "label": "t=ln(y-7)/0.2"}], "answer": "a", "hints": ["먼저 y/7=e^(0.2t)로 만드세요.", "양변에 자연로그를 취하세요."], "explanation": "ln(y/7)=0.2t이므로 t=ln(y/7)/0.2입니다."},
+    {"id": "ib-ai-hl-functions-p05", "type": "choice", "prompt": "시간에 따라 증가하다 포화되는 자료에 지수모형과 Logistic 모형을 적합했습니다. 큰 t에서 잔차 패턴과 현실적 상한을 함께 설명하는 모형을 고르세요.", "choices": [{"id": "a", "label": "Logistic 모형"}, {"id": "b", "label": "무제한 지수성장 모형"}, {"id": "c", "label": "상수 0 모형"}, {"id": "d", "label": "자료와 무관한 직선"}], "answer": "a", "hints": ["포화는 장기적으로 상한에 접근합니다.", "무제한 지수모형은 계속 증가합니다."], "explanation": "Logistic 모형은 수용한계를 포함하므로 포화 자료의 장기 거동을 더 타당하게 설명합니다."},
+    {"id": "ib-ai-hl-functions-p06", "type": "choice", "prompt": "회귀 잔차가 x가 커질수록 U자 모양을 보일 때 가장 적절한 판단을 고르세요.", "choices": [{"id": "a", "label": "선택한 모형이 곡률을 놓치고 있을 수 있다"}, {"id": "b", "label": "잔차가 무작위이므로 완벽하다"}, {"id": "c", "label": "모든 예측 오차가 0이다"}, {"id": "d", "label": "표본 크기는 반드시 1이다"}], "answer": "a", "hints": ["좋은 잔차 그림은 뚜렷한 패턴이 없어야 합니다.", "U자 패턴은 체계적인 굽음을 뜻합니다."], "explanation": "잔차의 곡선 패턴은 현재 모형이 자료의 비선형 구조를 충분히 반영하지 못한다는 신호입니다."}
+  ]
+}

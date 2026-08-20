@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-ab-unit-5-analytical-applications","title":"Unit 5: Analytical Applications of Differentiation","stage":"high","grade":"Grades 11–12","course":"AP Calculus AB","domain":"Analytical Applications of Differentiation","framework":"College Board AP","level":"AP","standards":["AP Calculus AB Unit 5"],"aliases":["미분의 해석적 응용","AP Calculus AB U5"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-ab"],
+  "description":"평균값정리, 극값, 증가·감소, 오목성, 그래프 분석과 최적화를 도함수의 부호로 정당화합니다.","estimatedMinutes":55,"prerequisites":["ap-calculus-ab-unit-4-contextual-applications"],"pathways":["ap-calculus-ab-unit-6-integration-accumulation"],
+  "objectives":["일계·이계도함수의 부호로 함수 그래프의 성질과 극값을 분석할 수 있다.","평균값정리와 최적화 조건을 확인하고 결론을 정당화할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"평균값정리","body":"f가 [a,b]에서 연속이고 (a,b)에서 미분 가능하면 f'(c)=[f(b)-f(a)]/(b-a)인 c가 존재합니다."},
+    {"type":"concept","title":"임계점과 극값","body":"f'=0이거나 f'가 존재하지 않는 정의역 내부점이 임계점입니다. 닫힌 구간의 절대극값은 임계점과 양 끝점 값을 모두 비교합니다."},
+    {"type":"concept","title":"증가와 오목성","body":"f'>0이면 증가, f'<0이면 감소합니다. f''>0이면 위로 오목하고 f''<0이면 아래로 오목합니다. 변곡점에서는 오목성이 실제로 바뀌어야 합니다."},
+    {"type":"concept","title":"최적화","body":"제약식으로 목적함수를 한 변수로 만든 뒤 임계점과 경계를 비교합니다. 도함수의 부호 또는 값 비교로 최댓값·최솟값을 정당화합니다."}
+  ],
+  "problems":[
+    {"id":"ap-calculus-ab-unit-5-analytical-applications-p01","type":"choice","prompt":"구간에서 f'(x)>0이면 f는?","choices":[{"id":"a","label":"증가한다"},{"id":"b","label":"감소한다"},{"id":"c","label":"항상 위로 오목하다"},{"id":"d","label":"상수다"}],"answer":"a","hints":["도함수는 접선 기울기입니다.","양의 기울기의 의미를 생각하세요."],"explanation":"도함수가 양수인 구간에서 함수는 증가합니다."},
+    {"id":"ap-calculus-ab-unit-5-analytical-applications-p02","type":"integer","prompt":"f(x)=x²-4x+1의 임계점 x좌표는?","answer":2,"hints":["f'(x)=2x-4입니다.","f'(x)=0을 푸세요."],"explanation":"2x-4=0에서 x=2입니다."},
+    {"id":"ap-calculus-ab-unit-5-analytical-applications-p03","type":"choice","prompt":"f''(x)>0인 구간에서 그래프는?","choices":[{"id":"a","label":"위로 오목"},{"id":"b","label":"아래로 오목"},{"id":"c","label":"반드시 감소"},{"id":"d","label":"직선"}],"answer":"a","hints":["f'가 증가하는 상황입니다.","접선 기울기가 커지는 굽음을 생각하세요."],"explanation":"이계도함수가 양수이면 그래프는 위로 오목합니다."},
+    {"id":"ap-calculus-ab-unit-5-analytical-applications-p04","type":"integer","prompt":"f(x)=x³-3x에서 f''(x)=0이 되는 x는?","answer":0,"hints":["f''(x)=6x입니다.","6x=0을 푸세요."],"explanation":"x=0에서 f''의 부호도 바뀌므로 변곡점의 x좌표는 0입니다."},
+    {"id":"ap-calculus-ab-unit-5-analytical-applications-p05","type":"integer","prompt":"둘레가 20인 직사각형의 최대 넓이는?","answer":25,"hints":["가로 x, 세로 10-x로 두세요.","A=x(10-x)의 꼭짓점을 찾으세요."],"explanation":"A=-x²+10x는 x=5에서 최대 25입니다."},
+    {"id":"ap-calculus-ab-unit-5-analytical-applications-p06","type":"choice","prompt":"f가 [0,2]에서 연속, (0,2)에서 미분 가능하고 f(0)=1, f(2)=5이면 평균값정리가 보장하는 f'(c)는?","choices":[{"id":"a","label":"1"},{"id":"b","label":"2"},{"id":"c","label":"3"},{"id":"d","label":"4"}],"answer":"b","hints":["평균변화율을 계산하세요.","(5-1)/(2-0)입니다."],"explanation":"평균변화율은 4/2=2이므로 어떤 c에서 f'(c)=2입니다."}
+  ]
+}

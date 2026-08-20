@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-de-linear-systems",
+  "title": "선형 미분방정식 시스템",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Differential Equations",
+  "domain": "Linear Systems and Phase Planes",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.03: first-order linear systems, eigenvalue methods, matrix exponentials, and phase planes"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["ODE Systems", "Phase Portraits", "Matrix Exponential"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 행렬과 고유값을 사용해 연립 미분방정식의 거동을 분석합니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/"],
+  "estimatedMinutes": 230,
+  "prerequisites": ["pa-de-laplace-series-numerics"],
+  "objectives": ["고유값과 고유벡터로 상수계수 선형 시스템을 풀 수 있다.", "위상평면에서 평형점의 안정성과 해의 장기 거동을 분류할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "벡터형 미분방정식", "body": "여러 1계 선형 미분방정식은 벡터식 x'=Ax로 묶을 수 있습니다. 각 성분의 변화가 다른 성분과 결합되는 현상을 행렬이 나타냅니다."},
+    {"type": "concept", "title": "고유모드", "body": "A의 고유벡터 방향에서 해는 대응 고유값의 지수함수만큼 변합니다. 독립인 고유벡터가 충분하면 일반해는 이러한 고유모드의 선형결합입니다."},
+    {"type": "concept", "title": "행렬지수", "body": "스칼라 지수함수를 행렬에 확장한 e^(At)는 초기값문제의 상태전이행렬입니다. 대각화할 수 있는 경우 고유값의 지수함수로 쉽게 계산할 수 있습니다."},
+    {"type": "concept", "title": "위상평면과 안정성", "body": "위상평면은 시간 대신 상태변수들의 궤적을 그립니다. 고유값의 실수부가 모두 음수이면 원점은 점근적으로 안정하고, 양수와 음수가 섞이면 안장점입니다."}
+  ],
+  "problems": [
+    {"id": "pa-de-linear-systems-p01", "type": "vector", "prompt": "시스템 x'=2x, y'=-y에서 (x(0),y(0))=(1,3)일 때 t=ln 2의 상태를 구하세요.", "answer": [4, 1.5], "hints": ["x=e^(2t), y=3e^(-t)입니다.", "e^(ln 2)=2를 사용하세요."], "explanation": "x=2^2=4이고 y=3/2=1.5이므로 상태는 (4,1.5)입니다."},
+    {"id": "pa-de-linear-systems-p02", "type": "unorderedSet", "prompt": "행렬 [[0,1],[-2,-3]]의 고유값 집합을 구하세요.", "answer": [-2, -1], "hints": ["특성다항식은 λ^2+3λ+2입니다.", "이를 인수분해하세요."], "explanation": "(λ+1)(λ+2)=0이므로 고유값은 -1과 -2입니다."},
+    {"id": "pa-de-linear-systems-p03", "type": "choice", "prompt": "두 고유값이 -1과 -2인 2차원 선형 시스템 원점의 유형을 고르세요.", "choices": [{"id": "a", "label": "점근적으로 안정한 절점"}, {"id": "b", "label": "불안정한 절점"}, {"id": "c", "label": "안장점"}, {"id": "d", "label": "중심"}], "answer": "a", "hints": ["두 고유값의 부호를 확인하세요.", "서로 다른 음의 실수 고유값은 모든 모드를 감쇠시킵니다."], "explanation": "두 모드가 모두 지수적으로 0에 가까워지므로 원점은 점근적으로 안정한 절점입니다."},
+    {"id": "pa-de-linear-systems-p04", "type": "choice", "prompt": "행렬 A=diag(2,-1)에 대한 e^(At)를 고르세요.", "choices": [{"id": "a", "label": "diag(e^(2t),e^(-t))"}, {"id": "b", "label": "diag(2e^t,-e^t)"}, {"id": "c", "label": "diag(e^t,e^t)"}, {"id": "d", "label": "diag(2t,-t)"}], "answer": "a", "hints": ["대각행렬의 지수는 각 대각성분을 지수함수에 넣습니다.", "두 고유모드는 서로 독립적으로 변합니다."], "explanation": "대각행렬의 행렬지수는 diag(e^(2t),e^(-t))입니다."},
+    {"id": "pa-de-linear-systems-p05", "type": "integer", "prompt": "비선형 시스템 x'=x(1-x), y'=-y의 평형점 개수를 구하세요.", "answer": 2, "hints": ["두 우변을 동시에 0으로 두세요.", "y=0이고 x는 0 또는 1입니다."], "explanation": "평형점은 (0,0)과 (1,0)의 두 개입니다."},
+    {"id": "pa-de-linear-systems-p06", "type": "choice", "prompt": "2×2 실수행렬의 행렬식이 음수일 때 원점의 선형 위상 유형을 고르세요.", "choices": [{"id": "a", "label": "안정한 절점"}, {"id": "b", "label": "안장점"}, {"id": "c", "label": "중심"}, {"id": "d", "label": "퇴화된 영점"}], "answer": "b", "hints": ["행렬식은 두 고유값의 곱입니다.", "곱이 음수이면 실수 고유값의 부호가 서로 다릅니다."], "explanation": "한 방향은 증가하고 다른 방향은 감소하므로 안장점입니다."}
+  ]
+}

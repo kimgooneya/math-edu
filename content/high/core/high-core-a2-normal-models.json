@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-normal-models",
+  "title": "Normal Distributions and Data Models",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Statistics and Probability",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": ["HSS-ID.A.4"],
+  "pathways": ["Traditional: Algebra II", "Integrated: Integrated Math III", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["정규분포", "Normal Distribution", "z점수", "경험법칙"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "대칭적인 한 봉우리 자료에 정규모형을 적합하고 평균·표준편차·z점수와 경험법칙으로 비율과 자료값을 추정합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": ["high-core-a1-descriptive-statistics"],
+  "objectives": ["자료의 모양을 보고 정규모형 사용이 적절한지 판단할 수 있다.", "평균과 표준편차를 사용해 z점수, 백분율, 경계값을 추정할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"정규모형의 조건","body":"정규분포는 평균을 중심으로 대칭이고 한 개의 봉우리를 가진 종 모양입니다. 심하게 치우치거나 뚜렷한 이상치가 있는 자료에는 정규모형이 적절하지 않을 수 있습니다."},
+    {"type":"formula","title":"표준화","body":"z점수는 자료값이 평균에서 몇 표준편차 떨어져 있는지를 나타냅니다.","formula":"z=(x-μ)/σ"},
+    {"type":"concept","title":"68-95-99.7 경험법칙","body":"정규모형에서 평균의 1표준편차 이내에는 약 68%, 2표준편차 이내에는 약 95%, 3표준편차 이내에는 약 99.7%가 놓입니다."},
+    {"type":"example","title":"경계값 찾기","prompt":"평균 70, 표준편차 5인 정규모형에서 평균보다 2표준편차 큰 값을 구하세요.","steps":["2표준편차는 2×5=10입니다.","평균보다 크므로 70에 10을 더합니다.","경계값은 80입니다."],"answer":"80"}
+  ],
+  "problems": [
+    {"id":"high-core-a2-normal-models-p01","type":"number","prompt":"평균 70, 표준편차 5인 분포에서 값 80의 z점수를 구하세요.","answer":2,"hints":["값에서 평균을 빼세요.","차이 10을 5로 나누세요."],"explanation":"z=(80-70)/5=2입니다."},
+    {"id":"high-core-a2-normal-models-p02","type":"number","prompt":"평균 50, 표준편차 4인 정규모형에서 평균보다 1표준편차 작은 값을 구하세요.","answer":46,"hints":["평균에서 표준편차를 빼세요.","50-4를 계산하세요."],"explanation":"경계값은 46입니다."},
+    {"id":"high-core-a2-normal-models-p03","type":"number","prompt":"정규모형에서 평균의 2표준편차 이내에 놓이는 자료의 백분율을 경험법칙으로 구하세요.","answer":95,"hints":["68-95-99.7 법칙을 떠올리세요.","두 번째 수를 사용하세요."],"explanation":"평균의 2표준편차 이내에는 약 95%가 놓입니다."},
+    {"id":"high-core-a2-normal-models-p04","type":"choice","prompt":"정규모형을 사용하기에 가장 적절한 분포를 고르세요.","answer":"A","hints":["대칭성과 봉우리 수를 보세요.","이상치가 심한 분포는 피하세요."],"explanation":"대칭이고 한 봉우리인 분포가 정규모형에 가장 적합합니다.","choices":[{"id":"A","label":"대칭이고 한 봉우리인 종 모양"},{"id":"B","label":"오른쪽으로 심하게 치우친 모양"},{"id":"C","label":"봉우리가 두 개인 모양"},{"id":"D","label":"큰 이상치가 여러 개인 모양"}]},
+    {"id":"high-core-a2-normal-models-p05","type":"number","prompt":"평균 100, 표준편차 15인 정규모형에서 값 85의 z점수를 구하세요.","answer":-1,"hints":["85-100을 계산하세요.","-15를 15로 나누세요."],"explanation":"z=(85-100)/15=-1입니다."},
+    {"id":"high-core-a2-normal-models-p06","type":"number","prompt":"평균 40, 표준편차 3인 정규모형에서 z=2에 해당하는 값을 구하세요.","answer":46,"hints":["x=μ+zσ로 바꾸세요.","40+2×3을 계산하세요."],"explanation":"x=40+6=46입니다."}
+  ]
+}

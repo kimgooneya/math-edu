@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-6-sp",
+  "title": "Statistics and Probability",
+  "stage": "middle",
+  "grade": "Grade 6",
+  "course": "Grade 6 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "Statistics and Probability",
+  "standards": ["CCSS.Math.Content.6.SP.A.1", "CCSS.Math.Content.6.SP.A.2", "CCSS.Math.Content.6.SP.A.3", "CCSS.Math.Content.6.SP.B.4", "CCSS.Math.Content.6.SP.B.5.a", "CCSS.Math.Content.6.SP.B.5.b", "CCSS.Math.Content.6.SP.B.5.c", "CCSS.Math.Content.6.SP.B.5.d"],
+  "aliases": ["Grade 6 Statistics and Probability", "6.SP", "6학년 통계와 확률", "통계적 변이와 분포"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/6/SP/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "통계적 질문과 변이, 분포의 중심·산포, 점도표·히스토그램·상자그림, 맥락에 맞는 요약을 다룹니다.",
+  "estimatedMinutes": 60,
+  "prerequisites": ["middle-grade-6-ns"],
+  "objectives": ["변이를 예상하는 통계적 질문을 구별하고 자료 분포를 그래프로 나타낼 수 있다.", "평균·중앙값과 범위·사분위범위·평균절대편차를 계산하고 맥락에서 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "통계적 질문과 변이", "body": "통계적 질문은 답이 하나로 고정되지 않고 자료의 변이를 예상합니다. '우리 반 학생들의 통학 시간은 얼마인가?'는 여러 값이 나올 수 있는 통계적 질문입니다."},
+    {"type": "concept", "title": "분포의 중심", "body": "평균은 모든 값을 더해 자료 수로 나눈 값이고, 중앙값은 정렬했을 때 가운데 값입니다. 치우침이나 이상값이 크면 중앙값이 전형적인 값을 더 잘 나타낼 수 있습니다."},
+    {"type": "concept", "title": "분포의 산포", "body": "범위는 최댓값-최솟값, 사분위범위는 Q3-Q1입니다. 평균절대편차는 각 값과 평균의 거리인 절댓값 편차들의 평균입니다."},
+    {"type": "concept", "title": "분포의 표현과 요약", "body": "점도표는 개별 값마다 점을 쌓고, 히스토그램은 겹치지 않는 수치 구간마다 빈도 막대를 그리며, 상자그림은 최솟값·Q1·중앙값·Q3·최댓값을 표시합니다. 그래프를 만들 때 축의 값과 측정 단위를 빠뜨리지 않고, 자료 수, 중심, 변이와 두드러진 특징을 함께 설명해야 합니다."},
+    {"type": "example", "title": "한 자료를 여러 그래프로 나타내기", "prompt": "자료 1, 2, 2, 3, 3, 3, 4를 점도표와 상자그림으로 나타내세요.", "steps": ["점도표에서는 1 위에 점 1개, 2 위에 2개, 3 위에 3개, 4 위에 1개를 쌓습니다.", "정렬된 자료의 중앙값은 3, 아래쪽 절반의 중앙값 Q1은 2, 위쪽 절반의 중앙값 Q3은 3입니다.", "상자그림은 수직선 1, 2, 3, 4에 맞춰 수염 끝 1과 4, 상자 2에서 3, 중앙선 3을 그립니다."], "answer": "점도표 빈도 (1,2,3,1), 다섯 수 요약 (1,2,3,3,4)"}
+  ],
+  "problems": [
+    {"id": "middle-grade-6-sp-p01", "type": "choice", "prompt": "다음 중 통계적 질문을 고르세요.", "choices": [{"id": "a", "label": "지민의 키는 몇 cm인가?"}, {"id": "b", "label": "우리 반 학생들의 키는 어떻게 분포하는가?"}, {"id": "c", "label": "1 m는 몇 cm인가?"}], "answer": "b", "hints": ["여러 사람에게서 서로 다른 답이 나올 수 있는지 생각하세요.", "자료의 변이를 예상하는 질문을 고르세요."], "explanation": "반 학생들의 키는 여러 값으로 나타나므로 변이를 예상하는 통계적 질문입니다."},
+    {"id": "middle-grade-6-sp-p02", "type": "integer", "prompt": "자료 4, 6, 8, 10의 평균을 구하세요.", "answer": 7, "hints": ["모든 값을 더하세요.", "합 28을 자료 수 4로 나누세요."], "explanation": "(4+6+8+10)÷4=28÷4=7입니다."},
+    {"id": "middle-grade-6-sp-p03", "type": "number", "prompt": "자료 2, 5, 7, 11의 중앙값을 구하세요.", "answer": 6, "hints": ["자료가 이미 작은 순서로 정렬되어 있습니다.", "가운데 두 값 5와 7의 평균을 구하세요."], "explanation": "자료 수가 짝수이므로 중앙값은 (5+7)÷2=6입니다."},
+    {"id": "middle-grade-6-sp-p04", "type": "integer", "prompt": "자료 3, 4, 9, 12, 15의 범위를 구하세요.", "answer": 12, "hints": ["최댓값에서 최솟값을 빼세요.", "15-3을 계산하세요."], "explanation": "범위는 15-3=12입니다."},
+    {"id": "middle-grade-6-sp-p05", "type": "integer", "prompt": "자료 2, 4, 5, 7, 9, 12에서 아래쪽 절반의 중앙값을 Q1, 위쪽 절반의 중앙값을 Q3로 정할 때 사분위범위를 구하세요.", "answer": 5, "hints": ["아래쪽 2,4,5의 중앙값과 위쪽 7,9,12의 중앙값을 찾으세요.", "Q3-Q1을 계산하세요."], "explanation": "Q1=4, Q3=9이므로 사분위범위는 9-4=5입니다."},
+    {"id": "middle-grade-6-sp-p06", "type": "rational", "prompt": "자료 2, 4, 6의 평균절대편차를 구하세요. 기약분수로 답하세요.", "answer": {"numerator": 4, "denominator": 3}, "hints": ["평균은 4입니다.", "평균과의 거리 2, 0, 2의 평균을 구하세요."], "explanation": "절댓값 편차의 합은 4이고 자료는 3개이므로 평균절대편차는 4/3입니다."},
+    {"id": "middle-grade-6-sp-p07", "type": "choice", "prompt": "학생 40명의 통학 시간을 5분 간격의 구간별 빈도로 나타내어 분포의 모양을 보고 싶습니다. 가장 알맞은 그래프를 고르세요.", "choices": [{"id": "a", "label": "히스토그램"}, {"id": "b", "label": "원그래프"}, {"id": "c", "label": "좌표평면의 직선"}], "answer": "a", "hints": ["수치 자료를 연속된 구간으로 묶어 빈도를 표시하는 그래프를 찾으세요.", "막대 사이가 붙어 있는 분포 그래프를 생각하세요."], "explanation": "히스토그램은 수치 자료를 구간별 빈도로 나타내어 분포의 봉우리, 치우침과 퍼짐을 보기 좋습니다."},
+    {"id": "middle-grade-6-sp-p08", "type": "choice", "prompt": "자료 5, 6, 6, 7, 40에서 전형적인 값을 더 잘 나타내는 중심 측도를 고르세요.", "choices": [{"id": "a", "label": "평균"}, {"id": "b", "label": "중앙값"}], "answer": "b", "hints": ["40은 나머지 값들과 멀리 떨어진 이상값입니다.", "이상값의 영향을 덜 받는 중심 측도를 고르세요."], "explanation": "40 때문에 평균은 12.8로 크게 끌려가지만 중앙값은 6입니다. 따라서 이 분포의 전형적인 값을 나타낼 때 중앙값이 더 적절합니다."},
+    {"id": "middle-grade-6-sp-p09", "type": "choice", "prompt": "두 자료집합의 평균은 모두 10이고 평균절대편차는 각각 A=1, B=4입니다. 옳은 해석을 고르세요.", "choices": [{"id": "a", "label": "B가 평균에서 더 넓게 퍼져 있다"}, {"id": "b", "label": "A가 평균에서 더 넓게 퍼져 있다"}, {"id": "c", "label": "두 자료의 퍼짐은 반드시 같다"}], "answer": "a", "hints": ["평균절대편차가 클수록 값들이 평균에서 보통 더 멀리 있습니다.", "1과 4를 비교하세요."], "explanation": "B의 평균절대편차 4가 A의 1보다 크므로 B의 값들이 평균 10에서 전형적으로 더 멀리 퍼져 있습니다."},
+    {"id": "middle-grade-6-sp-p10", "type": "choice", "prompt": "자료 1, 2, 2, 3, 3, 3, 4를 값마다 점을 쌓는 점도표로 옳게 나타낸 것을 고르세요.", "choices": [{"id": "a", "label": "1: ×, 2: ××, 3: ×××, 4: ×"}, {"id": "b", "label": "1: ×××, 2: ××, 3: ×, 4: ×"}, {"id": "c", "label": "1: ×, 2: ×, 3: ×, 4: ×"}], "answer": "a", "hints": ["각 값이 자료에 몇 번 나오는지 세세요.", "1, 2, 3, 4의 빈도는 차례로 1, 2, 3, 1입니다."], "explanation": "점도표는 각 관측값 위에 빈도만큼 점을 쌓으므로 1 위에 1개, 2 위에 2개, 3 위에 3개, 4 위에 1개가 있어야 합니다."},
+    {"id": "middle-grade-6-sp-p11", "type": "choice", "prompt": "점수 52, 57, 61, 64, 68, 72, 77, 83을 [50,60), [60,70), [70,80), [80,90) 구간의 히스토그램으로 그릴 때 막대 높이를 순서대로 고르세요.", "choices": [{"id": "a", "label": "2, 3, 2, 1"}, {"id": "b", "label": "1, 2, 3, 2"}, {"id": "c", "label": "2, 2, 2, 2"}], "answer": "a", "hints": ["각 점수를 하나의 구간에만 넣으세요.", "50점대 2명, 60점대 3명, 70점대 2명, 80점대 1명입니다."], "explanation": "각 구간의 빈도는 2, 3, 2, 1입니다. 가로축에는 점수 구간과 단위인 점, 세로축에는 학생 수를 표시합니다."},
+    {"id": "middle-grade-6-sp-p12", "type": "choice", "prompt": "자료 2, 4, 5, 7, 9, 12의 상자그림을 그릴 때 표시할 다섯 수 요약을 고르세요. 아래쪽과 위쪽 절반의 중앙값을 Q1과 Q3로 사용합니다.", "choices": [{"id": "a", "label": "(2, 4, 6, 9, 12)"}, {"id": "b", "label": "(2, 5, 6, 7, 12)"}, {"id": "c", "label": "(4, 5, 7, 9, 12)"}], "answer": "a", "hints": ["최솟값, Q1, 중앙값, Q3, 최댓값 순서입니다.", "중앙값은 (5+7)/2=6이고 Q1=4, Q3=9입니다."], "explanation": "다섯 수 요약은 (2,4,6,9,12)입니다. 수직선에서 2와 12에 수염 끝, 4와 9에 상자 끝, 6에 중앙선을 표시합니다."}
+  ]
+}

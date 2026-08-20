@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-honors-special-trig-values",
+  "title": "Honors Extension: Special-Angle Trigonometry",
+  "stage": "high", "grade": "Grades 9–12", "course": "Precalculus", "domain": "Functions", "framework": "CCSS-M", "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSF-TF.A.3", "HSF-TF.A.4"],
+  "pathways": ["Traditional: Honors Precalculus", "Integrated pathway extension: after Integrated Math III", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["특수각 삼각함수", "Special Angle Trigonometry", "단위원 대칭", "정확한 삼각함수값"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "특수직각삼각형에서 30°,45°,60°의 정확한 삼각함수값을 유도하고 단위원의 대칭과 주기성으로 모든 사분면에 확장합니다.",
+  "estimatedMinutes": 35, "prerequisites": ["high-core-precalc-unit-circle-trigonometry", "high-core-geo-similarity-trigonometry"],
+  "objectives": ["30-60-90 및 45-45-90 삼각형에서 정확한 삼각함수값을 유도할 수 있다.", "기준각과 단위원 대칭으로 임의 사분면의 정확한 값을 구할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"45-45-90 삼각형","body":"두 직각변을 1로 두면 빗변은 √2이므로 sin45°=cos45°=√2/2입니다."},
+    {"type":"concept","title":"30-60-90 삼각형","body":"변의 비 1:√3:2에서 sin30°=1/2, cos30°=√3/2이고 60°에서는 두 값이 바뀝니다."},
+    {"type":"concept","title":"기준각과 부호","body":"단위원의 대칭으로 절댓값은 기준각의 값과 같고 사분면에 따라 사인과 코사인의 부호가 정해집니다."},
+    {"type":"example","title":"제2사분면","prompt":"sin(2π/3), cos(2π/3)을 구하세요.","steps":["기준각은 π/3입니다.","제2사분면에서 사인은 양수, 코사인은 음수입니다.","따라서 sin=√3/2, cos=-1/2입니다."],"answer":"√3/2, -1/2"}
+  ],
+  "problems": [
+    {"id":"high-core-precalc-honors-special-trig-values-p01","type":"rational","prompt":"sin30°를 구하세요.","answer":{"numerator":1,"denominator":2},"hints":["30-60-90 삼각형을 사용하세요.","짧은 변/빗변입니다."],"explanation":"sin30°=1/2입니다."},
+    {"id":"high-core-precalc-honors-special-trig-values-p02","type":"rational","prompt":"cos60°를 구하세요.","answer":{"numerator":1,"denominator":2},"hints":["60°의 인접변을 보세요.","변의 비는 1:√3:2입니다."],"explanation":"cos60°=1/2입니다."},
+    {"id":"high-core-precalc-honors-special-trig-values-p03","type":"choice","prompt":"sin45°의 정확한 값을 고르세요.","answer":"B","hints":["45-45-90 삼각형을 사용하세요.","1/√2를 유리화하세요."],"explanation":"sin45°=√2/2입니다.","choices":[{"id":"A","label":"1/2"},{"id":"B","label":"√2/2"},{"id":"C","label":"√3/2"},{"id":"D","label":"1"}]},
+    {"id":"high-core-precalc-honors-special-trig-values-p04","type":"choice","prompt":"cos(2π/3)의 정확한 값을 고르세요.","answer":"A","hints":["기준각은 π/3입니다.","제2사분면에서 코사인은 음수입니다."],"explanation":"cos(2π/3)=-1/2입니다.","choices":[{"id":"A","label":"-1/2"},{"id":"B","label":"1/2"},{"id":"C","label":"√3/2"},{"id":"D","label":"-1"}]},
+    {"id":"high-core-precalc-honors-special-trig-values-p05","type":"choice","prompt":"sin(7π/6)의 정확한 값을 고르세요.","answer":"C","hints":["기준각은 π/6입니다.","제3사분면에서 사인은 음수입니다."],"explanation":"sin(7π/6)=-1/2입니다.","choices":[{"id":"A","label":"1"},{"id":"B","label":"1/2"},{"id":"C","label":"-1/2"},{"id":"D","label":"-√3/2"}]},
+    {"id":"high-core-precalc-honors-special-trig-values-p06","type":"choice","prompt":"tan45°의 값을 고르세요.","answer":"D","hints":["sin45°/cos45°를 계산하세요.","두 값이 같습니다."],"explanation":"tan45°=1입니다.","choices":[{"id":"A","label":"0"},{"id":"B","label":"1/2"},{"id":"C","label":"√3"},{"id":"D","label":"1"}]}
+  ],
+  "honorsBasis": "CCSS (+) standards HSF-TF.A.3-4."
+}

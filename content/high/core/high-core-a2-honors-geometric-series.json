@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-honors-geometric-series",
+  "title": "Honors Extension: Finite Geometric Series",
+  "stage": "high", "grade": "Grades 9–12", "course": "Algebra II", "domain": "Algebra", "framework": "CCSS-M", "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSA-SSE.B.4"],
+  "pathways": ["Traditional: Honors Algebra II", "Integrated: Integrated Math III extension", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["유한 등비급수", "Finite Geometric Series", "등비급수 공식", "시그마"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "등비급수 합 공식을 공비를 곱한 식과 원래 식의 차로 유도하고 금융·반복 변화 문제에 적용합니다.",
+  "estimatedMinutes": 35, "prerequisites": ["high-core-a2-sequences-series", "high-core-a1-exponential-modeling"],
+  "objectives": ["유한 등비급수 합 공식을 대수적으로 유도할 수 있다.", "첫째항, 공비, 항 수를 식별해 실제 문제의 유한합을 구할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"등비급수","body":"등비수열의 연속한 항을 더한 식이며 첫째항 a, 공비 r, 항 수 n으로 나타냅니다."},
+    {"type":"formula","title":"유한합 공식","body":"r≠1일 때 사용합니다.","formula":"Sₙ=a(1-r^n)/(1-r)"},
+    {"type":"concept","title":"공식 유도","body":"Sₙ=a+ar+…+ar^(n-1)에 r을 곱한 뒤 두 식을 빼면 (1-r)Sₙ=a(1-r^n)이 됩니다."},
+    {"type":"example","title":"다섯 항의 합","prompt":"1+2+4+8+16을 구하세요.","steps":["a=1, r=2, n=5입니다.","S₅=(1-2⁵)/(1-2)입니다.","S₅=31입니다."],"answer":"31"}
+  ],
+  "problems": [
+    {"id":"high-core-a2-honors-geometric-series-p01","type":"integer","prompt":"1+2+4+8+16의 합을 구하세요.","answer":31,"hints":["a=1,r=2,n=5입니다.","공식을 적용하세요."],"explanation":"합은 31입니다."},
+    {"id":"high-core-a2-honors-geometric-series-p02","type":"integer","prompt":"3+6+12+24의 합을 구하세요.","answer":45,"hints":["네 항을 더하세요.","또는 a=3,r=2,n=4를 사용하세요."],"explanation":"합은 45입니다."},
+    {"id":"high-core-a2-honors-geometric-series-p03","type":"integer","prompt":"5+5+5+5의 합을 구하세요.","answer":20,"hints":["공비가 1인 특별한 경우입니다.","5를 네 번 더하세요."],"explanation":"합은 20입니다."},
+    {"id":"high-core-a2-honors-geometric-series-p04","type":"number","prompt":"8+4+2+1의 합을 구하세요.","answer":15,"hints":["공비는 1/2입니다.","직접 더해도 됩니다."],"explanation":"합은 15입니다."},
+    {"id":"high-core-a2-honors-geometric-series-p05","type":"choice","prompt":"첫째항 a, 공비 r≠1, n개 항인 유한 등비급수 합을 고르세요.","answer":"A","hints":["분자에 1-r^n이 있습니다.","분모는 1-r입니다."],"explanation":"공식은 a(1-r^n)/(1-r)입니다.","choices":[{"id":"A","label":"a(1-r^n)/(1-r)"},{"id":"B","label":"a+(n-1)r"},{"id":"C","label":"ar^n"},{"id":"D","label":"nr"}]},
+    {"id":"high-core-a2-honors-geometric-series-p06","type":"integer","prompt":"첫 달 100달러를 저축하고 매달 직전 달의 2배를 저축할 때 4개월 총액을 구하세요.","answer":1500,"hints":["금액은 100,200,400,800입니다.","네 항을 더하세요."],"explanation":"총액은 1500달러입니다."}
+  ],
+  "honorsBasis": "CCSS (+) standard HSA-SSE.B.4."
+}

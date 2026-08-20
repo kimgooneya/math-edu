@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-ai-hl-calculus",
+  "title": "IB AI HL 미적분 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Applications and Interpretation",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Calculus",
+  "standards": ["IB AI HL: Calculus"],
+  "pathways": ["AI: 미분방정식·Euler 방법·위상도표를 사용해 동적 현실 시스템을 수치적으로 모델링하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-applications-and-interpretations-en.pdf"],
+  "aliases": ["IB AI HL Topic 5", "AI HL Calculus", "IB 응용과 해석 HL 미적분"],
+  "description": "AI SL 변화율·누적량을 고급 미분·적분, 미분방정식, Euler 수치해법과 동적 시스템의 평형 분석으로 확장합니다.",
+  "estimatedMinutes": 105,
+  "prerequisites": ["ib-ai-sl-calculus", "ib-ai-hl-functions"],
+  "objectives": ["분리형·Logistic 미분방정식을 세우고 해 또는 평형의 현실적 의미를 해석할 수 있다.", "Euler 방법과 방향장·위상도표를 사용해 해를 근사하고 수치 오차와 장기 거동을 평가할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "미분방정식 모형", "body": "미분방정식은 상태 자체가 아니라 상태의 변화 법칙을 정의합니다. 초기조건이 특정 해를 정하며 단위와 평형해가 모형의 현실성을 검토하는 기준이 됩니다."},
+    {"type": "concept", "title": "Euler 방법", "body": "간격 h에서 y_(n+1)=y_n+h f(x_n,y_n)으로 접선 방향을 따라갑니다. h를 줄이면 대개 정확도가 높아지지만 계산량과 누적 반올림도 고려해야 합니다."},
+    {"type": "concept", "title": "Logistic 미분방정식", "body": "dP/dt=kP(1-P/L)는 작은 P에서 거의 지수성장하고 수용한계 L에 가까워질수록 성장률이 줄어듭니다. P=0과 P=L은 평형해입니다."},
+    {"type": "concept", "title": "동적 시스템과 위상", "body": "둘 이상의 상태변수가 서로 영향을 주면 연립 미분방정식으로 모델링합니다. 위상도표의 궤적과 방향은 시간에 따른 안정·주기·발산 거동을 보여 줍니다."}
+  ],
+  "problems": [
+    {"id": "ib-ai-hl-calculus-p01", "type": "number", "prompt": "dy/dx=x+y, y(0)=1에 Euler 방법을 h=0.5로 세 단계 적용하여 y(1.5)를 근사하세요.", "answer": 4.25, "hints": ["첫 두 단계는 y(0.5)=1.5, y(1)=2.5입니다.", "세 번째 기울기는 f(1,2.5)=3.5입니다."], "explanation": "y(1.5)≈2.5+0.5×3.5=4.25입니다."},
+    {"id": "ib-ai-hl-calculus-p02", "type": "number", "prompt": "dP/dt=0.3P(1-P/1000)에서 가능한 최대 성장률을 구하세요.", "answer": 75, "hints": ["Logistic 성장률은 P=L/2=500에서 최대입니다.", "0.3×500×(1-0.5)를 계산하세요."], "explanation": "P=500에서 성장률은 75이며 수용한계 가까이에서는 다시 감소합니다."},
+    {"id": "ib-ai-hl-calculus-p03", "type": "unorderedSet", "prompt": "dP/dt=0.3P(1-P/1000)의 평형값들을 구하세요.", "answer": [0, 1000], "hints": ["평형에서는 dP/dt=0입니다.", "곱 0.3P(1-P/1000)=0을 푸세요."], "explanation": "P=0 또는 1-P/1000=0이므로 평형은 0과 1000입니다."},
+    {"id": "ib-ai-hl-calculus-p04", "type": "choice", "prompt": "같은 구간에 Euler 방법을 적용할 때 일반적으로 근사 오차를 줄이는 선택을 고르세요.", "choices": [{"id": "a", "label": "더 작은 단계 크기를 사용한다"}, {"id": "b", "label": "초기조건을 삭제한다"}, {"id": "c", "label": "기울기를 항상 0으로 둔다"}, {"id": "d", "label": "단계를 한 번만 계산한다"}], "answer": "a", "hints": ["각 단계는 접선으로 곡선을 근사합니다.", "더 짧은 구간마다 기울기를 갱신하면 곡률을 더 잘 따라갑니다."], "explanation": "단계 크기를 줄이면 기울기를 더 자주 갱신해 전역 근사 오차가 대개 감소합니다."},
+    {"id": "ib-ai-hl-calculus-p05", "type": "number", "prompt": "dy/dx=2y, y(0)=5의 해를 구한 뒤 y(1)을 계산하세요.", "answer": 36.945280494653254, "tolerance": 0.000001, "hints": ["변수분리하면 ln y=2x+C입니다.", "초기조건에서 y=5e^(2x)를 얻습니다."], "explanation": "y(1)=5e²≈36.945280입니다."},
+    {"id": "ib-ai-hl-calculus-p06", "type": "choice", "prompt": "자율방정식 dx/dt=f(x)에서 평형 x=a의 양쪽 화살표가 모두 a를 향할 때 그 평형을 고르세요.", "choices": [{"id": "a", "label": "안정 평형"}, {"id": "b", "label": "불안정 평형"}, {"id": "c", "label": "주기 0"}, {"id": "d", "label": "정의되지 않음"}], "answer": "a", "hints": ["가까운 초기값이 시간이 지나며 어디로 가는지 보세요.", "양쪽에서 평형으로 돌아옵니다."], "explanation": "작은 교란 뒤 궤적이 a로 되돌아오므로 안정 평형입니다."}
+  ]
+}

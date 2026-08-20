@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-ab-unit-3-composite-implicit-inverse","title":"Unit 3: Differentiation: Composite, Implicit, and Inverse Functions","stage":"high","grade":"Grades 11–12","course":"AP Calculus AB","domain":"Composite, Implicit, and Inverse Differentiation","framework":"College Board AP","level":"AP","standards":["AP Calculus AB Unit 3"],"aliases":["합성·음함수·역함수 미분","AP Calculus AB U3"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-ab"],
+  "description":"연쇄법칙, 음함수 미분, 역함수 미분과 고계도함수를 이용해 복합 관계의 변화율을 구합니다.","estimatedMinutes":55,"prerequisites":["ap-calculus-ab-unit-2-differentiation-fundamentals"],"pathways":["ap-calculus-ab-unit-4-contextual-applications"],
+  "objectives":["연쇄법칙을 합성함수와 여러 기본 초월함수에 적용할 수 있다.","음함수·역함수의 도함수와 이계도함수를 구하고 의미를 해석할 수 있다."],
+  "theory":[
+    {"type":"formula","title":"연쇄법칙","body":"바깥함수를 미분하고 안쪽함수는 그대로 둔 뒤 안쪽 도함수를 곱합니다.","formula":"d[f(g(x))]/dx=f'(g(x))g'(x)"},
+    {"type":"concept","title":"음함수 미분","body":"x와 y의 관계식을 x로 미분할 때 y를 포함한 항에는 dy/dx가 생깁니다. 미분 후 dy/dx에 대해 풉니다."},
+    {"type":"formula","title":"역함수 미분","body":"역함수의 기울기는 대응하는 원함수 기울기의 역수입니다.","formula":"(f^-1)'(a)=1/f'(f^-1(a))"},
+    {"type":"concept","title":"고계도함수","body":"f''는 f'의 변화율이며 위치의 이계도함수는 가속도입니다. 음함수의 이계도함수는 dy/dx를 다시 x로 미분해 구합니다."}
+  ],
+  "problems":[
+    {"id":"ap-calculus-ab-unit-3-composite-implicit-inverse-p01","type":"choice","prompt":"y=(3x+1)^4의 도함수는?","choices":[{"id":"a","label":"4(3x+1)^3"},{"id":"b","label":"12(3x+1)^3"},{"id":"c","label":"12(3x+1)^4"},{"id":"d","label":"(3x+1)^5/5"}],"answer":"b","hints":["바깥 거듭제곱을 미분하세요.","안쪽 3x+1의 도함수 3을 곱하세요."],"explanation":"연쇄법칙으로 4(3x+1)^3·3=12(3x+1)^3입니다."},
+    {"id":"ap-calculus-ab-unit-3-composite-implicit-inverse-p02","type":"choice","prompt":"y=sin(x²)의 도함수는?","choices":[{"id":"a","label":"cos(x²)"},{"id":"b","label":"2x sin(x²)"},{"id":"c","label":"2x cos(x²)"},{"id":"d","label":"cos(2x)"}],"answer":"c","hints":["바깥 sin을 미분하세요.","안쪽 x²의 도함수는 2x입니다."],"explanation":"y'=cos(x²)·2x입니다."},
+    {"id":"ap-calculus-ab-unit-3-composite-implicit-inverse-p03","type":"rational","prompt":"x²+y²=25에서 점 (3,4)의 dy/dx를 기약분수로 나타내세요.","answer":{"numerator":-3,"denominator":4},"hints":["2x+2y y'=0입니다.","y'=-x/y에 점을 대입하세요."],"explanation":"y'=-x/y이므로 (3,4)에서 -3/4입니다."},
+    {"id":"ap-calculus-ab-unit-3-composite-implicit-inverse-p04","type":"rational","prompt":"f(2)=5, f'(2)=4일 때 (f^-1)'(5)는?","answer":{"numerator":1,"denominator":4},"hints":["f^-1(5)=2입니다.","역함수 도함수는 대응 기울기의 역수입니다."],"explanation":"(f^-1)'(5)=1/f'(2)=1/4입니다."},
+    {"id":"ap-calculus-ab-unit-3-composite-implicit-inverse-p05","type":"integer","prompt":"s(t)=t³-3t²일 때 t=2의 가속도는?","answer":6,"hints":["가속도는 s''(t)입니다.","s''(t)=6t-6입니다."],"explanation":"s''(2)=12-6=6입니다."},
+    {"id":"ap-calculus-ab-unit-3-composite-implicit-inverse-p06","type":"choice","prompt":"y=ln(5x)의 도함수는?","choices":[{"id":"a","label":"1/x"},{"id":"b","label":"5/x"},{"id":"c","label":"1/(5x)"},{"id":"d","label":"ln 5"}],"answer":"a","hints":["ln u의 도함수는 u'/u입니다.","u=5x, u'=5입니다."],"explanation":"5/(5x)=1/x입니다."}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-sl-geometry-trigonometry",
+  "title": "IB AA SL 기하와 삼각법",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Geometry and trigonometry",
+  "standards": ["IB AA SL: Geometry and trigonometry"],
+  "pathways": ["AA: 삼각 항등식과 기하 관계를 기호적으로 유도하고 실제 맥락에 적용하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA SL Topic 3", "AA SL Geometry and trigonometry", "IB 분석과 접근 기하 삼각법 표준"],
+  "description": "라디안, 삼각비·정리·항등식과 2D·3D 기하의 측량·방위각 문제를 분석적 관점에서 다룹니다. 벡터는 AA HL 확장 단원에서 다룹니다.",
+  "estimatedMinutes": 70,
+  "prerequisites": ["ib-aa-sl-number-algebra", "ib-aa-sl-functions"],
+  "objectives": ["사인·코사인 법칙과 삼각 항등식을 사용해 삼각형과 주기 현상을 분석할 수 있다.", "2D·3D 맥락에서 삼각비와 방위각을 이용해 길이와 각을 구할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "라디안과 호", "body": "라디안은 호의 길이를 반지름으로 나눈 각입니다. 중심각 θ가 라디안이면 호의 길이는 rθ, 부채꼴 넓이는 r²θ/2입니다."},
+    {"type": "concept", "title": "사인·코사인 법칙", "body": "임의 삼각형에서 a/sin A=b/sin B=c/sin C이고 a²=b²+c²-2bc cos A입니다. SSA 자료에서는 두 삼각형이 가능한지 확인합니다."},
+    {"type": "concept", "title": "삼각함수와 항등식", "body": "단위원은 sin과 cos의 부호와 주기를 보여 줍니다. sin²θ+cos²θ=1 같은 항등식은 방정식 변형의 근거가 됩니다."},
+    {"type": "concept", "title": "3차원 기하와 방위각", "body": "공간 문제를 수직 단면과 수평 평면의 삼각형으로 나누면 삼각비와 사인·코사인 법칙을 적용할 수 있습니다. 방위각은 북쪽에서 시계 방향으로 재며, 방향과 거리 자료를 삼각형으로 모델링합니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-sl-geometry-trigonometry-p01", "type": "number", "prompt": "반지름 6, 중심각 2π/3인 부채꼴의 둘레를 구하세요.", "answer": 24.566370614359172, "tolerance": 0.000001, "hints": ["둘레는 두 반지름과 호의 길이의 합입니다.", "호의 길이는 6×2π/3=4π입니다."], "explanation": "둘레는 12+4π≈24.566371입니다."},
+    {"id": "ib-aa-sl-geometry-trigonometry-p02", "type": "integer", "prompt": "삼각형에서 A=30°, a=5, b=8입니다. 사인 법칙을 만족하는 서로 다른 삼각형의 개수를 구하세요.", "answer": 2, "hints": ["sinB=b sinA/a=0.8입니다.", "B와 180°-B 모두 A+B<180°인지 확인하세요."], "explanation": "B≈53.13°와 126.87°가 모두 A=30°와 삼각형을 이루므로 가능한 삼각형은 2개입니다."},
+    {"id": "ib-aa-sl-geometry-trigonometry-p03", "type": "unorderedSet", "prompt": "0≤x<2π에서 2sin²x-3sinx+1=0의 해를 π의 배수 계수로 쓰세요.", "answer": [0.16666666666666666, 0.5, 0.8333333333333334], "hints": ["식을 (2sinx-1)(sinx-1)=0으로 인수분해하세요.", "sinx=1/2 또는 1인 범위 내 각을 모두 찾으세요."], "explanation": "해는 π/6, π/2, 5π/6이므로 π의 계수는 1/6, 1/2, 5/6입니다."},
+    {"id": "ib-aa-sl-geometry-trigonometry-p04", "type": "integer", "prompt": "한 지점에서 건물 꼭대기를 올려다본 고도각이 30°이고 건물 밑면까지의 수평거리가 20√3 m입니다. 관측자의 눈높이를 무시할 때 건물 높이를 구하세요.", "answer": 20, "hints": ["높이와 수평거리는 직각삼각형의 두 변입니다.", "tan30°=높이/(20√3)을 사용하세요."], "explanation": "높이는 20√3·tan30°=20√3·(1/√3)=20 m입니다."},
+    {"id": "ib-aa-sl-geometry-trigonometry-p05", "type": "integer", "prompt": "A에서 B까지의 거리가 10 km이고 B의 방위각이 030°입니다. A에서 B까지 동쪽으로 이동한 거리를 구하세요.", "answer": 5, "hints": ["방위각은 북쪽에서 시계 방향으로 잽니다.", "동쪽 거리는 10sin30°입니다."], "explanation": "방위각 030°에서 동쪽 거리는 10sin30°=5 km입니다."},
+    {"id": "ib-aa-sl-geometry-trigonometry-p06", "type": "number", "prompt": "측량한 삼각형의 두 변이 7 m와 9 m이고 끼인각이 60°입니다. 넓이를 구하세요.", "answer": 27.279800219209818, "tolerance": 0.000001, "hints": ["넓이 공식 A=ab sinC/2를 쓰세요.", "63sin60°/2를 계산하세요."], "explanation": "넓이는 63√3/4≈27.279800 m²입니다."}
+  ]
+}

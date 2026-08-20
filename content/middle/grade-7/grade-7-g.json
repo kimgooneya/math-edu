@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-7-g",
+  "title": "Geometry",
+  "stage": "middle",
+  "grade": "Grade 7",
+  "course": "Grade 7 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "Geometry",
+  "standards": ["CCSS.Math.Content.7.G.A.1", "CCSS.Math.Content.7.G.A.2", "CCSS.Math.Content.7.G.A.3", "CCSS.Math.Content.7.G.B.4", "CCSS.Math.Content.7.G.B.5", "CCSS.Math.Content.7.G.B.6"],
+  "aliases": ["Grade 7 Geometry", "7.G", "7학년 기하", "축척·작도·원·입체도형"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/7/G/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "축척도, 조건에 따른 도형 작도, 입체도형의 단면, 원과 각, 넓이·겉넓이·부피를 다룹니다.",
+  "estimatedMinutes": 55,
+  "prerequisites": ["middle-grade-6-g", "middle-grade-7-rp"],
+  "objectives": ["축척도를 해석하고 주어진 조건으로 도형을 작도하며 입체도형의 평면 단면을 설명할 수 있다.", "원의 둘레와 넓이, 각의 관계, 복합도형의 넓이·겉넓이·부피 문제를 해결할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "축척도와 작도", "body": "축척 1:n은 그림의 길이 1이 실제 길이 n에 대응함을 뜻합니다. 삼각형은 세 변이나 두 변과 끼인각처럼 충분한 조건이 주어져야 하나로 결정됩니다."},
+    {"type": "concept", "title": "입체도형의 단면", "body": "입체도형을 평면으로 자른 단면은 자르는 방향에 따라 달라집니다. 직육면체를 면과 평행하게 자르면 직사각형 단면이 생깁니다."},
+    {"type": "concept", "title": "원과 각", "body": "원의 둘레는 C=2πr=πd, 넓이는 A=πr²입니다. 맞꼭지각은 같고, 한 직선 위의 이웃한 각과 삼각형의 내각 합은 각각 180°입니다."},
+    {"type": "concept", "title": "넓이·겉넓이·부피", "body": "복합도형은 익숙한 도형으로 분해합니다. 입체도형의 겉넓이는 모든 면의 넓이 합, 부피는 공간을 채우는 세제곱 단위의 수입니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-7-g-p01", "type": "integer", "prompt": "축척이 1:50인 도면에서 길이가 8 cm인 벽의 실제 길이는 몇 cm인가요?", "answer": 400, "hints": ["도면 1 cm가 실제 50 cm입니다.", "8×50을 계산하세요."], "explanation": "실제 길이는 8×50=400 cm입니다."},
+    {"id": "middle-grade-7-g-p02", "type": "choice", "prompt": "다음 중 하나의 삼각형을 유일하게 정하는 조건을 고르세요.", "choices": [{"id": "a", "label": "세 변의 길이 3, 4, 5"}, {"id": "b", "label": "한 각의 크기 60°"}, {"id": "c", "label": "한 변의 길이 5"}, {"id": "d", "label": "두 각의 합 100°"}], "answer": "a", "hints": ["조건이 충분해야 크기와 모양이 모두 정해집니다.", "세 변의 길이가 모두 정해진 경우를 찾으세요."], "explanation": "세 변 3, 4, 5는 삼각부등식을 만족하며 합동인 하나의 삼각형을 정합니다."},
+    {"id": "middle-grade-7-g-p03", "type": "choice", "prompt": "직육면체를 밑면과 평행한 평면으로 잘랐을 때 생기는 단면의 모양을 고르세요.", "choices": [{"id": "a", "label": "직사각형"}, {"id": "b", "label": "원"}, {"id": "c", "label": "삼각형"}, {"id": "d", "label": "오각형"}], "answer": "a", "hints": ["밑면과 평행한 단면은 밑면과 같은 모양입니다.", "직육면체의 밑면 모양을 떠올리세요."], "explanation": "직육면체의 밑면과 평행한 단면은 직사각형입니다."},
+    {"id": "middle-grade-7-g-p04", "type": "choice", "prompt": "반지름이 6인 원의 넓이를 고르세요.", "choices": [{"id": "a", "label": "12π"}, {"id": "b", "label": "36π"}, {"id": "c", "label": "6π"}, {"id": "d", "label": "72π"}], "answer": "b", "hints": ["원의 넓이는 πr²입니다.", "r=6을 대입하세요."], "explanation": "A=π×6²=36π입니다."},
+    {"id": "middle-grade-7-g-p05", "type": "integer", "prompt": "한 직선 위에서 이웃한 두 각 중 하나가 68°일 때 다른 각의 크기는 몇 도인가요?", "answer": 112, "hints": ["두 각의 합은 180°입니다.", "180-68을 계산하세요."], "explanation": "일직선 위의 이웃한 각은 보각이므로 180-68=112°입니다."},
+    {"id": "middle-grade-7-g-p06", "type": "integer", "prompt": "밑면이 가로 5 cm, 세로 4 cm이고 높이가 9 cm인 직육면체의 부피는 몇 cm³인가요?", "answer": 180, "hints": ["밑넓이에 높이를 곱하세요.", "5×4×9를 계산하세요."], "explanation": "부피는 5×4×9=180 cm³입니다."},
+    {"id": "middle-grade-7-g-p07", "type": "choice", "prompt": "밑면이 정사각형인 각뿔을 밑면과 평행한 평면으로 잘랐을 때 생기는 단면의 모양을 고르세요.", "choices": [{"id": "a", "label": "정사각형"}, {"id": "b", "label": "원"}, {"id": "c", "label": "삼각형"}, {"id": "d", "label": "오각형"}], "answer": "a", "hints": ["밑면과 평행한 단면은 밑면과 닮은 모양입니다.", "이 각뿔의 밑면은 정사각형입니다."], "explanation": "각뿔을 밑면과 평행하게 자르면 밑면과 닮은 정사각형 단면이 생깁니다."},
+    {"id": "middle-grade-7-g-p08", "type": "choice", "prompt": "지름이 10 cm인 원의 둘레를 고르세요.", "choices": [{"id": "a", "label": "5π cm"}, {"id": "b", "label": "10π cm"}, {"id": "c", "label": "20π cm"}, {"id": "d", "label": "100π cm"}], "answer": "b", "hints": ["원의 둘레는 C=πd입니다.", "지름 d=10을 대입하세요."], "explanation": "C=π×10=10π cm입니다."},
+    {"id": "middle-grade-7-g-p09", "type": "integer", "prompt": "가로 2 cm, 세로 3 cm, 높이 4 cm인 직육면체의 겉넓이는 몇 cm²인가요?", "answer": 52, "hints": ["서로 다른 세 면의 넓이는 2×3, 3×4, 2×4입니다.", "각 모양의 면이 두 개씩 있으므로 2(6+12+8)을 계산하세요."], "explanation": "겉넓이는 2(2×3+3×4+2×4)=2(6+12+8)=52 cm²입니다."},
+    {"id": "middle-grade-7-g-p10", "type": "integer", "prompt": "가로 10 cm, 세로 6 cm인 직사각형의 한 변 바깥쪽에 밑변 4 cm, 높이 3 cm인 삼각형을 겹치지 않게 붙였습니다. 합성도형의 넓이는 몇 cm²인가요?", "answer": 66, "hints": ["직사각형과 삼각형의 넓이를 각각 구하세요.", "10×6+(4×3÷2)를 계산하세요."], "explanation": "직사각형 넓이는 60 cm², 삼각형 넓이는 6 cm²이므로 전체 넓이는 66 cm²입니다."}
+  ]
+}

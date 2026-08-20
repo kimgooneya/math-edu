@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-honors-tangent-construction",
+  "title": "Honors Extension: Tangent Construction",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSG-C.A.4"],
+  "pathways": ["Traditional: Honors Geometry", "Integrated: Integrated Math II extension", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["접선 작도", "Tangent Construction", "탈레스 원", "외부점 접선"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "원 밖의 점에서 접선을 작도하고 지름을 보는 원주각과 직각삼각형 합동으로 작도의 타당성과 두 접선의 성질을 증명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": ["high-core-geo-circles", "high-core-geo-lines-angles-proof"],
+  "objectives": ["외부점과 원의 중심을 지름으로 하는 보조원을 이용해 접선을 작도할 수 있다.", "작도된 선이 접선인 이유와 한 외부점에서 그은 두 접선의 길이가 같은 이유를 증명할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"보조원 작도","body":"원 밖의 점 P와 중심 O를 잇고 OP의 중점 M을 작도합니다. M을 중심으로 O와 P를 지나는 보조원을 그립니다."},
+    {"type":"concept","title":"접점 찾기","body":"보조원과 원래 원의 교점을 T라 하면 ∠OTP는 지름 OP를 보는 원주각이므로 90°입니다. 따라서 OT⊥PT이고 PT는 접선입니다."},
+    {"type":"concept","title":"두 접선","body":"두 교점 T₁,T₂는 P에서 그은 두 접선의 접점입니다. OT₁=OT₂, OP는 공통이고 두 삼각형은 직각이므로 합동이며 PT₁=PT₂입니다."},
+    {"type":"example","title":"접선 길이","prompt":"OP=13, 반지름 OT=5일 때 PT를 구하세요.","steps":["OT⊥PT이므로 OPT는 직각삼각형입니다.","PT²=OP²-OT²=169-25=144입니다.","PT=12입니다."],"answer":"12"}
+  ],
+  "problems": [
+    {"id":"high-core-geo-honors-tangent-construction-p01","type":"choice","prompt":"외부점 P에서 접선을 작도할 때 처음 작도할 선분을 고르세요.","answer":"A","hints":["외부점과 중심을 연결합니다.","보조원의 지름이 될 선분입니다."],"explanation":"먼저 OP를 작도합니다.","choices":[{"id":"A","label":"OP"},{"id":"B","label":"임의의 현"},{"id":"C","label":"임의의 접선"},{"id":"D","label":"평행한 두 직선"}]},
+    {"id":"high-core-geo-honors-tangent-construction-p02","type":"choice","prompt":"보조원의 중심을 고르세요.","answer":"B","hints":["보조원은 O와 P를 모두 지납니다.","OP의 양 끝에서 같은 거리인 점을 찾으세요."],"explanation":"OP의 중점 M이 보조원의 중심입니다.","choices":[{"id":"A","label":"O"},{"id":"B","label":"OP의 중점"},{"id":"C","label":"P"},{"id":"D","label":"원래 원 위의 임의의 점"}]},
+    {"id":"high-core-geo-honors-tangent-construction-p03","type":"integer","prompt":"작도된 접점 T에서 ∠OTP의 크기를 구하세요.","answer":90,"hints":["OP는 보조원의 지름입니다.","지름을 보는 원주각을 사용하세요."],"explanation":"∠OTP=90°입니다."},
+    {"id":"high-core-geo-honors-tangent-construction-p04","type":"number","prompt":"OP=10, 원의 반지름이 6일 때 접선 길이 PT를 구하세요.","answer":8,"hints":["OPT는 직각삼각형입니다.","√(10²-6²)을 계산하세요."],"explanation":"PT=√64=8입니다."},
+    {"id":"high-core-geo-honors-tangent-construction-p05","type":"choice","prompt":"PT가 접선임을 보이는 핵심 조건을 고르세요.","answer":"C","hints":["접점의 반지름을 생각하세요.","접선은 반지름과 수직입니다."],"explanation":"OT⊥PT이므로 PT는 접선입니다.","choices":[{"id":"A","label":"OT와 PT의 길이가 같다"},{"id":"B","label":"O,P,T가 한 직선 위다"},{"id":"C","label":"OT⊥PT"},{"id":"D","label":"OP가 원의 반지름이다"}]},
+    {"id":"high-core-geo-honors-tangent-construction-p06","type":"number","prompt":"같은 외부점 P에서 두 접선 PA,PB를 그었고 PA=9일 때 PB를 구하세요.","answer":9,"hints":["두 접선 삼각형의 합동을 사용하세요.","한 외부점에서 그은 접선 길이는 같습니다."],"explanation":"PA=PB이므로 PB=9입니다."}
+  ],
+  "honorsBasis": "CCSS (+) standard HSG-C.A.4."
+}

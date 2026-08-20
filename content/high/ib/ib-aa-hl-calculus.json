@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-hl-calculus",
+  "title": "IB AA HL 미적분 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Calculus",
+  "standards": ["IB AA HL: Calculus"],
+  "pathways": ["AA: 극한·급수·고급 미분과 적분·미분방정식을 해석적으로 유도하는 핵심 심화 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA HL Topic 5", "AA HL Calculus", "IB 분석과 접근 HL 미적분"],
+  "description": "AA SL 미적분을 음함수·고계도함수, 로피탈·급수, 치환·부분적분, 미분방정식까지 해석적으로 확장합니다.",
+  "estimatedMinutes": 105,
+  "prerequisites": ["ib-aa-sl-calculus", "ib-aa-hl-functions"],
+  "objectives": ["음함수·매개변수 함수와 고계도함수를 사용해 변화 관계를 분석할 수 있다.", "고급 적분법, 급수 전개와 미분방정식으로 함수와 모형을 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "음함수와 고계도함수", "body": "x와 y가 한 식에 섞이면 양변을 x로 미분하고 y항에 dy/dx를 곱합니다. 이계도함수는 기울기의 변화율로 오목성과 변곡점을 분석합니다."},
+    {"type": "concept", "title": "극한과 급수", "body": "0/0 또는 ∞/∞ 꼴은 조건이 맞을 때 로피탈 법칙을 적용할 수 있습니다. Maclaurin 급수는 도함숫값으로 함수를 0 주변의 거듭제곱 다항식으로 근사합니다."},
+    {"type": "concept", "title": "고급 적분법", "body": "치환적분은 연쇄법칙을 역으로, 부분적분은 곱의 미분법을 역으로 사용합니다. 유리함수는 부분분수 분해 후 기본 적분으로 바꿉니다."},
+    {"type": "concept", "title": "미분방정식", "body": "변수분리형 dy/dx=g(x)h(y)는 y와 x 항을 분리해 적분합니다. 초기조건으로 적분상수를 정하고 해의 정의역과 장기 거동을 해석합니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-hl-calculus-p01", "type": "number", "prompt": "곡선 x²+y²=25에서 점 (3,4)의 d²y/dx²을 구하세요.", "answer": -0.390625, "tolerance": 0.000001, "hints": ["먼저 y'=-x/y를 구한 뒤 다시 미분하세요.", "y''=-(x²+y²)/y³로 정리할 수 있습니다."], "explanation": "점에서 y''=-25/4³=-25/64=-0.390625입니다."},
+    {"id": "ib-aa-hl-calculus-p02", "type": "number", "prompt": "x가 0으로 갈 때 (e^x-1-x)/x²의 극한을 구하세요.", "answer": 0.5, "hints": ["처음과 한 번 미분한 뒤에도 0/0 꼴입니다.", "두 번 로피탈 법칙을 적용하면 e^x/2입니다."], "explanation": "극한은 e^0/2=1/2입니다. Maclaurin 전개의 x²/2 항으로도 확인됩니다."},
+    {"id": "ib-aa-hl-calculus-p03", "type": "choice", "prompt": "∫x e^x dx의 부정적분을 고르세요.", "choices": [{"id": "a", "label": "e^x(x-1)+C"}, {"id": "b", "label": "xe^x+C"}, {"id": "c", "label": "e^x(x+1)+C"}, {"id": "d", "label": "x²e^x/2+C"}], "answer": "a", "hints": ["부분적분에서 u=x, dv=e^x dx로 두세요.", "uv-∫vdu를 적용하세요."], "explanation": "∫xe^x dx=xe^x-∫e^x dx=e^x(x-1)+C입니다."},
+    {"id": "ib-aa-hl-calculus-p04", "type": "number", "prompt": "미분방정식 dy/dx=2xy, y(0)=3의 해에서 y(1)의 값을 구하세요.", "answer": 8.154845485377136, "tolerance": 0.000001, "hints": ["dy/y=2x dx로 분리하세요.", "ln y=x²+C이고 초기조건에서 C=ln3입니다."], "explanation": "해는 y=3e^(x²)이므로 y(1)=3e≈8.154845입니다."},
+    {"id": "ib-aa-hl-calculus-p05", "type": "number", "prompt": "e^x의 Maclaurin 전개를 x³항까지 사용하여 e^0.2를 근사하세요.", "answer": 1.2213333333333334, "tolerance": 0.000001, "hints": ["근사는 1+x+x²/2+x³/6입니다.", "x=0.2를 대입하고 네 항을 더하세요."], "explanation": "1+0.2+0.04/2+0.008/6=1.221333...입니다."},
+    {"id": "ib-aa-hl-calculus-p06", "type": "number", "prompt": "0부터 1까지 1/((x+1)(x+2))을 정적분한 값을 구하세요.", "answer": 0.2876820724517809, "tolerance": 0.000001, "hints": ["1/((x+1)(x+2))=1/(x+1)-1/(x+2)입니다.", "원시함수 ln(x+1)-ln(x+2)를 양 끝에서 계산하세요."], "explanation": "값은 (ln2-ln3)-(ln1-ln2)=ln(4/3)≈0.287682입니다."}
+  ]
+}

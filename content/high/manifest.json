@@ -1,12 +1,10 @@
 {
   "schemaVersion": 1,
-  "title": "고등학교 수학",
-  "units": [
-    "polynomial-factorization.json",
-    "exponents-logarithms.json",
-    "trigonometric-functions.json",
-    "derivative-change.json",
-    "conditional-probability.json",
-    "plane-vectors.json"
+  "title": "U.S. High School Mathematics",
+  "manifests": [
+    "core/manifest.json",
+    "ap/manifest.json",
+    "ib/manifest.json",
+    "post-ap/manifest.json"
   ]
 }

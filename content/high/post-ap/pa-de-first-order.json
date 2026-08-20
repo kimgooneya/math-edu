@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-de-first-order",
+  "title": "1계 미분방정식과 모델링",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Differential Equations",
+  "domain": "First-Order Differential Equations",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.03: first-order ODEs by analytical, graphical, and numerical methods"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["First Order ODE", "방향장", "Euler Method"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 1계 미분방정식의 해법과 모델링을 다룹니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/"],
+  "estimatedMinutes": 200,
+  "prerequisites": [],
+  "objectives": ["분리형과 1계 선형 미분방정식의 초기값문제를 풀 수 있다.", "방향장, 평형해와 Euler 방법으로 해의 거동을 해석하고 근사할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "미분방정식과 초기값", "body": "미분방정식은 미지 함수와 그 도함수 사이의 관계를 나타냅니다. 초기값을 함께 주면 많은 경우 가능한 해들의 모음에서 하나의 해를 선택할 수 있습니다."},
+    {"type": "concept", "title": "분리형 방정식", "body": "변수의 함수들을 양변으로 분리할 수 있으면 각각 적분해 해를 구합니다. 적분 뒤 생기는 상수는 초기조건으로 정하며, 나눌 때 잃을 수 있는 평형해도 따로 확인합니다."},
+    {"type": "concept", "title": "1계 선형식과 적분인자", "body": "1계 선형식은 표준형 y'+p(x)y=q(x)로 나타냅니다. 적분인자를 곱하면 좌변이 곱의 도함수가 되어 한 번의 적분으로 풀 수 있습니다."},
+    {"type": "concept", "title": "방향장과 Euler 방법", "body": "방향장은 각 점에서 해곡선의 기울기를 짧은 선분으로 보여 줍니다. Euler 방법은 현재 기울기를 이용해 작은 간격만큼 직선으로 전진하는 수치 근사법입니다."}
+  ],
+  "problems": [
+    {"id": "pa-de-first-order-p01", "type": "integer", "prompt": "y'=2x, y(0)=1일 때 y(2)를 구하세요.", "answer": 5, "hints": ["2x를 적분하세요.", "초기조건으로 적분상수를 정하세요."], "explanation": "y=x^2+C이고 y(0)=1이므로 C=1, 따라서 y(2)=5입니다."},
+    {"id": "pa-de-first-order-p02", "type": "integer", "prompt": "y'=y, y(0)=2일 때 x=ln 3에서 y의 값을 구하세요.", "answer": 6, "hints": ["해는 초기값에 e^x를 곱한 형태입니다.", "e^(ln 3)=3입니다."], "explanation": "y=2e^x이므로 x=ln 3에서 y=2·3=6입니다."},
+    {"id": "pa-de-first-order-p03", "type": "integer", "prompt": "y'+y=0, y(0)=3일 때 x=ln 3에서 y의 값을 구하세요.", "answer": 1, "hints": ["해는 감소하는 지수함수입니다.", "y=3e^(-x)에 x=ln 3을 대입하세요."], "explanation": "3e^(-ln 3)=3/3=1입니다."},
+    {"id": "pa-de-first-order-p04", "type": "unorderedSet", "prompt": "자율방정식 y'=y(2-y)의 평형해 값을 모두 구하세요.", "answer": [0, 2], "hints": ["평형해에서는 y'=0입니다.", "y(2-y)=0을 푸세요."], "explanation": "우변이 0이 되는 y=0과 y=2가 평형해입니다."},
+    {"id": "pa-de-first-order-p05", "type": "number", "prompt": "y'=x+y, y(0)=1에 Euler 방법을 간격 0.5로 한 번 적용해 y(0.5)를 근사하세요.", "answer": 1.5, "hints": ["시작점에서 기울기는 0+1=1입니다.", "새 값은 이전 값+간격×기울기입니다."], "explanation": "y(0.5)≈1+0.5·1=1.5입니다."},
+    {"id": "pa-de-first-order-p06", "type": "integer", "prompt": "미분방정식 y'=x-y의 방향장에서 점 (1,2)에 표시될 기울기를 구하세요.", "answer": -1, "hints": ["우변에 x=1, y=2를 대입하세요.", "1-2를 계산하세요."], "explanation": "그 점의 기울기는 1-2=-1입니다."}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-dm-number-theory-cryptography",
+  "title": "정수론, 합동식과 기초 암호",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Discrete Mathematics",
+  "domain": "Number Theory and Cryptography",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 6.1200: elementary number theory, modular arithmetic, and cryptography"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["Modular Arithmetic", "합동식", "RSA Basics"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 나눗셈·합동식·소수와 공개키 암호의 수학적 기초를 다룹니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/6/", "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"],
+  "estimatedMinutes": 210,
+  "prerequisites": ["pa-dm-logic-proofs"],
+  "objectives": ["Euclid 알고리즘과 합동식을 사용해 최대공약수와 모듈러 역원을 구할 수 있다.", "빠른 모듈러 거듭제곱과 RSA의 작은 예를 계산하고 암호화 원리를 설명할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "나눗셈과 Euclid 알고리즘", "body": "정수 a를 양의 정수 n으로 나누면 유일한 몫과 0 이상 n 미만의 나머지가 정해집니다. Euclid 알고리즘은 나눗셈의 나머지를 반복해 두 정수의 최대공약수를 효율적으로 구합니다."},
+    {"type": "concept", "title": "합동식", "body": "a와 b를 n으로 나눈 나머지가 같으면 n을 법으로 합동이라고 합니다. 합동식은 덧셈과 곱셈에 대해 보존되므로 큰 정수 계산을 작은 나머지 계산으로 바꿀 수 있습니다."},
+    {"type": "concept", "title": "모듈러 역원과 소수", "body": "a와 n이 서로소일 때에만 a의 법 n에 대한 곱셈 역원이 존재합니다. 소수와 소인수분해는 모듈러 구조를 이해하는 핵심이며, 확장 Euclid 알고리즘은 역원을 계산합니다."},
+    {"type": "concept", "title": "공개키 암호의 원리", "body": "RSA에서는 두 소수의 곱을 공개 법으로 사용하고, 공개 지수와 비밀 지수를 Euler 파이 함수에 대한 역원 관계로 정합니다. 실제 보안은 매우 큰 정수와 안전한 패딩에 의존하며 작은 예는 원리 학습용일 뿐입니다."}
+  ],
+  "problems": [
+    {"id": "pa-dm-number-theory-cryptography-p01", "type": "integer", "prompt": "17을 5로 나눈 나머지를 구하세요.", "answer": 2, "hints": ["17보다 작거나 같은 5의 가장 큰 배수를 찾으세요.", "17=3·5+2입니다."], "explanation": "17을 5로 나눈 나머지는 2입니다."},
+    {"id": "pa-dm-number-theory-cryptography-p02", "type": "integer", "prompt": "합동식 3x≡1 (mod 7)을 만족하는 0 이상 7 미만의 x를 구하세요.", "answer": 5, "hints": ["3의 배수를 7로 나눈 나머지를 확인하세요.", "3·5=15는 7로 나눈 나머지가 1입니다."], "explanation": "15≡1 (mod 7)이므로 x=5입니다."},
+    {"id": "pa-dm-number-theory-cryptography-p03", "type": "integer", "prompt": "2^10을 7로 나눈 나머지를 구하세요.", "answer": 2, "hints": ["2^3≡1 (mod 7)을 이용하세요.", "2^10=2·(2^3)^3입니다."], "explanation": "2^10≡2·1^3≡2 (mod 7)입니다."},
+    {"id": "pa-dm-number-theory-cryptography-p04", "type": "integer", "prompt": "gcd(252,105)를 구하세요.", "answer": 21, "hints": ["252=2·105+42입니다.", "105=2·42+21이고 42는 21로 나누어집니다."], "explanation": "Euclid 알고리즘의 마지막 영이 아닌 나머지는 21입니다."},
+    {"id": "pa-dm-number-theory-cryptography-p05", "type": "integer", "prompt": "11의 법 26에 대한 곱셈 역원을 0 이상 26 미만에서 구하세요.", "answer": 19, "hints": ["11x를 26으로 나눈 나머지가 1이어야 합니다.", "11·19=209이고 209=8·26+1입니다."], "explanation": "11·19≡1 (mod 26)이므로 역원은 19입니다."},
+    {"id": "pa-dm-number-theory-cryptography-p06", "type": "integer", "prompt": "작은 RSA 예에서 p=5, q=11, 공개지수 e=3일 때 0<d<40이며 3d≡1 (mod 40)을 만족하는 비밀지수 d를 구하세요.", "answer": 27, "hints": ["φ(55)=(5-1)(11-1)=40입니다.", "3·27=81은 40으로 나눈 나머지가 1입니다."], "explanation": "d는 3의 법 40에 대한 역원이므로 27입니다."},
+    {"id": "pa-dm-number-theory-cryptography-p07", "type": "integer", "prompt": "RSA 공개키 (n,e)=(55,3)으로 메시지 m=4를 암호화할 때 4^3을 55로 나눈 나머지를 구하세요.", "answer": 9, "hints": ["4^3=64입니다.", "64에서 55를 빼세요."], "explanation": "암호문은 64 mod 55=9입니다."}
+  ]
+}

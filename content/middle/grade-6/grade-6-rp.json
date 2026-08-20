@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-6-rp",
+  "title": "Ratios and Proportional Relationships",
+  "stage": "middle",
+  "grade": "Grade 6",
+  "course": "Grade 6 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "Ratios and Proportional Relationships",
+  "standards": [
+    "CCSS.Math.Content.6.RP.A.1",
+    "CCSS.Math.Content.6.RP.A.2",
+    "CCSS.Math.Content.6.RP.A.3.a",
+    "CCSS.Math.Content.6.RP.A.3.b",
+    "CCSS.Math.Content.6.RP.A.3.c",
+    "CCSS.Math.Content.6.RP.A.3.d"
+  ],
+  "aliases": ["Grade 6 Ratios and Proportional Relationships", "6.RP", "6학년 비와 비례 관계", "비·비율·단위비율"],
+  "sources": [
+    "https://www.thecorestandards.org/Math/Content/6/RP/",
+    "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"
+  ],
+  "description": "비의 언어, 단위비율, 동치비 표, 퍼센트와 단위 변환을 사용하여 실제 문제를 해결합니다.",
+  "estimatedMinutes": 45,
+  "prerequisites": [],
+  "objectives": [
+    "두 양의 관계를 비와 단위비율로 설명하고 여러 표현 사이를 연결할 수 있다.",
+    "동치비, 단위가격, 속력, 퍼센트, 단위 변환 문제를 비례 추론으로 해결할 수 있다."
+  ],
+  "theory": [
+    {"type": "concept", "title": "비와 비의 언어", "body": "비 a:b는 한 양 a를 다른 양 b와 곱셈적으로 비교합니다. 순서가 중요하며, 8:12와 2:3처럼 두 항에 같은 수를 곱하거나 나눈 비는 서로 동치입니다."},
+    {"type": "concept", "title": "단위비율", "body": "a:b에서 b가 0이 아닐 때 a/b는 한 단위당 양을 나타냅니다. 3시간에 24 km를 이동하면 단위비율은 시간당 8 km입니다."},
+    {"type": "concept", "title": "비례 표현", "body": "동치비는 표, 이중 수직선, 좌표, 식으로 나타낼 수 있습니다. y=kx에서 k는 단위비율이며 그래프는 원점을 지납니다."},
+    {"type": "concept", "title": "퍼센트와 단위 변환", "body": "p%는 p/100의 비율입니다. 단위 변환에서는 값에 변환비를 곱하고, 분자와 분모의 단위가 약분되는지 확인합니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-6-rp-p01", "type": "choice", "prompt": "비 8:12와 동치인 비를 고르세요.", "choices": [{"id": "a", "label": "2:3"}, {"id": "b", "label": "3:2"}, {"id": "c", "label": "4:5"}, {"id": "d", "label": "6:8"}], "answer": "a", "hints": ["두 항을 같은 수로 나누세요.", "8과 12를 모두 4로 나눠 보세요."], "explanation": "8÷4=2이고 12÷4=3이므로 8:12=2:3입니다."},
+    {"id": "middle-grade-6-rp-p02", "type": "integer", "prompt": "3시간에 24 km를 이동했습니다. 한 시간당 이동 거리는 몇 km인가요?", "answer": 8, "hints": ["전체 거리를 시간으로 나누세요.", "24÷3을 계산하세요."], "explanation": "24÷3=8이므로 단위비율은 시간당 8 km입니다."},
+    {"id": "middle-grade-6-rp-p03", "type": "integer", "prompt": "연필 5자루가 15달러일 때 같은 비율로 연필 8자루의 가격은 몇 달러인가요?", "answer": 24, "hints": ["먼저 연필 한 자루의 가격을 구하세요.", "15÷5=3이고 3×8을 계산하세요."], "explanation": "한 자루는 3달러이므로 8자루는 3×8=24달러입니다."},
+    {"id": "middle-grade-6-rp-p04", "type": "integer", "prompt": "80의 35%는 얼마인가요?", "answer": 28, "hints": ["35%를 35/100으로 나타내세요.", "80×0.35를 계산하세요."], "explanation": "80×35/100=28이므로 80의 35%는 28입니다."},
+    {"id": "middle-grade-6-rp-p05", "type": "integer", "prompt": "2.5 m는 몇 cm인가요?", "answer": 250, "hints": ["1 m=100 cm입니다.", "2.5×100을 계산하세요."], "explanation": "2.5 m×100 cm/m=250 cm입니다."},
+    {"id": "middle-grade-6-rp-p06", "type": "choice", "prompt": "A 혼합물은 물 12컵에 농축액 3컵, B 혼합물은 물 18컵에 농축액 6컵을 사용합니다. 농축액 1컵당 물이 더 많은 것은 무엇인가요?", "choices": [{"id": "a", "label": "A 혼합물"}, {"id": "b", "label": "B 혼합물"}, {"id": "c", "label": "두 혼합물이 같다"}], "answer": "a", "hints": ["농축액 1컵당 물의 양을 각각 구하세요.", "A는 12÷3, B는 18÷6입니다."], "explanation": "A는 4컵/컵, B는 3컵/컵이므로 A 혼합물의 물 비율이 더 큽니다."}
+  ]
+}

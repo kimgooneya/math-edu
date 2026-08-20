@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-statistics-unit-4-inference-means","title":"Unit 4: Inference for Quantitative Data: Means","stage":"high","grade":"Grades 10–12","course":"AP Statistics","domain":"Inference for Means","framework":"College Board AP","level":"AP","standards":["AP Statistics Unit 4 (Effective Fall 2026)"],"aliases":["정량 자료 추론: 평균","AP Statistics U4","2026–27 revised framework"],"sources":["https://apcentral.collegeboard.org/courses/ap-statistics","https://apcentral.collegeboard.org/courses/ap-statistics/future-revisions"],
+  "description":"표본평균의 분포와 한 평균, 대응 평균차, 두 평균에 대한 t 신뢰구간·가설검정을 다룹니다.","estimatedMinutes":60,"prerequisites":["ap-statistics-unit-3-inference-proportions"],"pathways":["ap-statistics-unit-5-regression-analysis"],
+  "objectives":["표본평균의 표집분포와 중심극한정리를 조건에 맞게 적용할 수 있다.","한·두 평균 및 대응자료에 적절한 t 추론 절차를 선택하고 결과를 해석할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"표본평균의 표집분포","body":"표본평균의 평균은 μ이고 표준편차는 σ/√n입니다. 모집단이 정규이거나 표본이 충분히 크면 표본평균은 근사 정규분포를 따릅니다."},
+    {"type":"concept","title":"t 분포","body":"모집단 표준편차를 모를 때 표본 표준편차 s를 사용하면 t 분포를 사용합니다. 한 표본 평균의 자유도는 n-1입니다."},
+    {"type":"concept","title":"대응자료","body":"같은 개체의 전후 측정처럼 짝을 이루면 각 쌍의 차이를 하나의 변수로 만들어 한 평균 t 절차를 적용합니다."},
+    {"type":"concept","title":"두 평균 추론","body":"독립된 두 집단의 평균 차이는 두 표본 t 절차를 사용합니다. 무작위성, 독립성, 각 집단의 정규성 또는 충분한 표본 크기를 확인합니다."}
+  ],
+  "problems":[
+    {"id":"ap-statistics-unit-4-inference-means-p01","type":"number","prompt":"모집단 표준편차가 12이고 n=36일 때 표본평균의 표준편차는?","answer":2,"hints":["σ/√n을 사용하세요.","12/6을 계산하세요."],"explanation":"표준오차는 2입니다."},
+    {"id":"ap-statistics-unit-4-inference-means-p02","type":"integer","prompt":"한 표본 t 절차에서 n=15이면 자유도는?","answer":14,"hints":["자유도는 n-1입니다.","15-1을 계산하세요."],"explanation":"자유도는 14입니다."},
+    {"id":"ap-statistics-unit-4-inference-means-p03","type":"choice","prompt":"같은 학생의 수업 전후 점수를 비교할 때 적절한 분석은?","choices":[{"id":"a","label":"점수 차이에 대한 한 표본 t 절차"},{"id":"b","label":"독립 두 비율 z 절차"},{"id":"c","label":"카이제곱 독립성 검정"},{"id":"d","label":"이항분포만 사용"}],"answer":"a","hints":["측정값이 학생별로 짝지어져 있습니다.","각 학생의 전후 차이를 분석하세요."],"explanation":"대응자료는 쌍별 차이를 만들어 한 평균 t 절차로 분석합니다."},
+    {"id":"ap-statistics-unit-4-inference-means-p04","type":"choice","prompt":"표본 크기가 커질수록 다른 조건이 같을 때 평균 추정의 표준오차는?","choices":[{"id":"a","label":"감소한다"},{"id":"b","label":"증가한다"},{"id":"c","label":"항상 같다"},{"id":"d","label":"정의되지 않는다"}],"answer":"a","hints":["표준오차 분모에 √n이 있습니다.","n이 커지면 분모가 커집니다."],"explanation":"σ/√n 또는 s/√n이므로 표본 크기가 커지면 표준오차가 감소합니다."},
+    {"id":"ap-statistics-unit-4-inference-means-p05","type":"choice","prompt":"독립된 두 학급의 평균 시험점수 차이를 추론할 때 적절한 것은?","choices":[{"id":"a","label":"두 표본 t 절차"},{"id":"b","label":"한 비율 z 절차"},{"id":"c","label":"카이제곱 적합도 검정"},{"id":"d","label":"대응표본 절차"}],"answer":"a","hints":["반응변수는 정량 변수입니다.","두 집단은 독립입니다."],"explanation":"독립 두 집단의 평균 차이에는 두 표본 t 절차를 사용합니다."},
+    {"id":"ap-statistics-unit-4-inference-means-p06","type":"choice","prompt":"95% 신뢰구간 μ1-μ2가 (-1.2,4.8)일 때 5% 양측검정에서 가장 타당한 결론은?","choices":[{"id":"a","label":"0을 포함하므로 유의한 평균 차이 증거가 부족하다"},{"id":"b","label":"μ1이 반드시 더 크다"},{"id":"c","label":"두 평균이 반드시 같다"},{"id":"d","label":"p값이 반드시 0이다"}],"answer":"a","hints":["평균 차이 없음은 0입니다.","구간에 0이 포함되는지 보세요."],"explanation":"0이 그럴듯한 차이에 포함되므로 해당 양측검정에서 유의한 차이 증거가 부족합니다."}
+  ]
+}

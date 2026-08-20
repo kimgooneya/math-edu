@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-8-ns",
+  "title": "The Number System",
+  "stage": "middle",
+  "grade": "Grade 8",
+  "course": "Grade 8 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "The Number System",
+  "standards": ["CCSS.Math.Content.8.NS.A.1", "CCSS.Math.Content.8.NS.A.2"],
+  "aliases": ["Grade 8 The Number System", "8.NS", "8학년 수 체계", "무리수와 실수"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/8/NS/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "유리수와 무리수의 소수 표현을 구별하고 무리수를 유리수로 근사하여 비교하고 계산합니다.",
+  "estimatedMinutes": 40,
+  "prerequisites": ["middle-grade-7-ns"],
+  "objectives": ["끝나거나 순환하는 소수와 유리수의 관계를 설명하고 순환소수를 분수로 바꿀 수 있다.", "제곱근과 π 같은 무리수를 유리수로 근사하여 수직선에 놓고 크기와 식의 값을 추정할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "유리수의 소수 표현", "body": "유리수는 두 정수의 비 p/q(q≠0)로 나타낼 수 있습니다. 그 소수 표현은 유한소수이거나 어떤 자리부터 일정한 숫자 묶음이 반복되는 순환소수입니다."},
+    {"type": "concept", "title": "무리수", "body": "유리수가 아닌 실수를 무리수라고 합니다. 완전제곱수가 아닌 양수의 제곱근과 π는 대표적인 무리수이며 소수 표현이 끝나지도 순환하지도 않습니다."},
+    {"type": "concept", "title": "순환소수를 분수로", "body": "x=0.333…이라 두면 10x=3.333…입니다. 두 식을 빼면 9x=3이므로 x=1/3입니다. 반복 묶음 길이에 맞춰 10의 거듭제곱을 곱합니다."},
+    {"type": "concept", "title": "유리수 근사", "body": "1²<2<2²이므로 1<√2<2이고, 1.4²<2<1.5²이므로 1.4<√2<1.5입니다. 이 과정을 반복하여 필요한 정밀도로 근사합니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-8-ns-p01", "type": "choice", "prompt": "다음 중 유리수인 것을 고르세요.", "choices": [{"id": "a", "label": "√2"}, {"id": "b", "label": "π"}, {"id": "c", "label": "√49"}, {"id": "d", "label": "√11"}], "answer": "c", "hints": ["완전제곱수의 제곱근을 찾으세요.", "49=7²입니다."], "explanation": "√49=7이며 7=7/1로 나타낼 수 있으므로 유리수입니다."},
+    {"id": "middle-grade-8-ns-p02", "type": "rational", "prompt": "0.333…에서 3이 끝없이 반복될 때 이 수를 기약분수로 나타내세요.", "answer": {"numerator": 1, "denominator": 3}, "hints": ["x=0.333…과 10x=3.333…을 비교하세요.", "10x-x=3입니다."], "explanation": "9x=3이므로 x=1/3입니다."},
+    {"id": "middle-grade-8-ns-p03", "type": "choice", "prompt": "√2가 들어 있는 가장 좁은 구간을 고르세요.", "choices": [{"id": "a", "label": "1과 2 사이"}, {"id": "b", "label": "1.4와 1.5 사이"}, {"id": "c", "label": "1.5와 1.6 사이"}, {"id": "d", "label": "2와 3 사이"}], "answer": "b", "hints": ["1.4²과 1.5²을 계산하세요.", "1.96<2<2.25입니다."], "explanation": "1.4²=1.96<2<2.25=1.5²이므로 1.4<√2<1.5입니다."},
+    {"id": "middle-grade-8-ns-p04", "type": "choice", "prompt": "√5와 2.2의 크기를 바르게 비교한 것을 고르세요.", "choices": [{"id": "a", "label": "√5<2.2"}, {"id": "b", "label": "√5=2.2"}, {"id": "c", "label": "√5>2.2"}], "answer": "c", "hints": ["두 양수가 있으므로 제곱을 비교할 수 있습니다.", "2.2²=4.84이고 5>4.84입니다."], "explanation": "5>4.84=2.2²이므로 √5>2.2입니다."},
+    {"id": "middle-grade-8-ns-p05", "type": "choice", "prompt": "π²의 값이 들어 있는 구간을 고르세요.", "choices": [{"id": "a", "label": "8과 9 사이"}, {"id": "b", "label": "9과 10 사이"}, {"id": "c", "label": "10과 11 사이"}], "answer": "b", "hints": ["π≈3.14를 사용하세요.", "3.14²≈9.86입니다."], "explanation": "π≈3.14이므로 π²≈9.86이며 9와 10 사이입니다."},
+    {"id": "middle-grade-8-ns-p06", "type": "choice", "prompt": "작은 수부터 바르게 나열한 것을 고르세요.", "choices": [{"id": "a", "label": "1.4<√2<1.5"}, {"id": "b", "label": "√2<1.4<1.5"}, {"id": "c", "label": "1.4<1.5<√2"}], "answer": "a", "hints": ["√2≈1.414입니다.", "1.4²과 1.5² 사이에 2가 있는지 확인하세요."], "explanation": "√2는 약 1.414이므로 1.4<√2<1.5입니다."}
+  ]
+}

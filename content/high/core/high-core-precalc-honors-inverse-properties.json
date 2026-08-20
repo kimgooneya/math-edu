@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-honors-inverse-properties",
+  "title": "Honors Extension: Inverse Function Properties",
+  "stage": "high", "grade": "Grades 9–12", "course": "Precalculus", "domain": "Functions", "framework": "CCSS-M", "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSF-BF.B.4.b", "HSF-BF.B.4.c", "HSF-BF.B.4.d"],
+  "pathways": ["Traditional: Honors Precalculus", "Integrated pathway extension: after Integrated Math III", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["역함수 성질", "Inverse Function Properties", "합성 검증", "정의역 제한"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "합성으로 역함수를 검증하고 그래프의 y=x 대칭을 설명하며 비일대일 함수의 정의역을 제한해 역함수를 만듭니다.",
+  "estimatedMinutes": 35, "prerequisites": ["high-core-precalc-composition-inverses"],
+  "objectives": ["양방향 합성이 항등함수인지 확인해 역함수 관계를 검증할 수 있다.", "그래프 대칭과 정의역 제한을 사용해 역함수의 정의역·치역을 결정할 수 있다."],
+  "theory": [
+    {"type":"formula","title":"합성 검증","body":"서로 역함수라면 두 순서의 합성이 각 정의역에서 항등함수가 됩니다.","formula":"f(g(x))=x, g(f(x))=x"},
+    {"type":"concept","title":"그래프 대칭","body":"함수와 역함수의 그래프는 y=x에 대해 대칭입니다. 원래 함수의 정의역은 역함수의 치역이 됩니다."},
+    {"type":"concept","title":"정의역 제한","body":"x²처럼 전체 실수에서 일대일이 아닌 함수는 x≥0 또는 x≤0 같은 한 단조 구간으로 정의역을 제한하면 역함수를 가질 수 있습니다."},
+    {"type":"example","title":"제곱함수의 역함수","prompt":"f(x)=x², x≥0의 역함수를 구하세요.","steps":["y=x²에서 x와 y를 바꿉니다.","x=y²이고 y≥0입니다.","따라서 y=√x입니다."],"answer":"f⁻¹(x)=√x"}
+  ],
+  "problems": [
+    {"id":"high-core-precalc-honors-inverse-properties-p01","type":"choice","prompt":"f와 g가 역함수임을 검증하는 조건을 고르세요.","answer":"A","hints":["두 순서의 합성을 모두 확인하세요.","결과는 항등함수여야 합니다."],"explanation":"f∘g와 g∘f가 모두 x여야 합니다.","choices":[{"id":"A","label":"f(g(x))=x, g(f(x))=x"},{"id":"B","label":"f(x)=g(x)"},{"id":"C","label":"f(x)g(x)=0"},{"id":"D","label":"f(x)+g(x)=1"}]},
+    {"id":"high-core-precalc-honors-inverse-properties-p02","type":"number","prompt":"f(x)=2x+3, g(x)=(x-3)/2일 때 f(g(11))을 구하세요.","answer":11,"hints":["먼저 g(11)을 구하세요.","그 결과를 f에 넣으세요."],"explanation":"g(11)=4, f(4)=11입니다."},
+    {"id":"high-core-precalc-honors-inverse-properties-p03","type":"choice","prompt":"f의 정의역 [1,5]가 역함수에서 무엇이 되는지 고르세요.","answer":"C","hints":["입력과 출력이 바뀝니다.","원래 정의역은 역함수의 출력 범위입니다."],"explanation":"f의 정의역은 f⁻¹의 치역입니다.","choices":[{"id":"A","label":"기울기"},{"id":"B","label":"절편"},{"id":"C","label":"치역"},{"id":"D","label":"주기"}]},
+    {"id":"high-core-precalc-honors-inverse-properties-p04","type":"choice","prompt":"f(x)=x²가 역함수를 갖도록 하는 정의역 제한을 고르세요.","answer":"B","hints":["수평선 검사를 통과해야 합니다.","한쪽 가지를 선택하세요."],"explanation":"x≥0으로 제한하면 일대일입니다.","choices":[{"id":"A","label":"모든 실수"},{"id":"B","label":"x≥0"},{"id":"C","label":"x≠0"},{"id":"D","label":"모든 유리수와 무리수"}]},
+    {"id":"high-core-precalc-honors-inverse-properties-p05","type":"choice","prompt":"f(x)=x², x≥0의 역함수를 고르세요.","answer":"D","hints":["x와 y를 바꿉니다.","양의 제곱근 가지를 선택하세요."],"explanation":"역함수는 √x입니다.","choices":[{"id":"A","label":"x²"},{"id":"B","label":"-√x"},{"id":"C","label":"1/x²"},{"id":"D","label":"√x"}]},
+    {"id":"high-core-precalc-honors-inverse-properties-p06","type":"choice","prompt":"서로 역함수인 두 그래프의 대칭축을 고르세요.","answer":"A","hints":["좌표 (a,b)가 (b,a)로 바뀝니다.","좌표 교환의 대칭축을 찾으세요."],"explanation":"대칭축은 y=x입니다.","choices":[{"id":"A","label":"y=x"},{"id":"B","label":"x축"},{"id":"C","label":"y축"},{"id":"D","label":"y=-x"}]}
+  ],
+  "honorsBasis": "CCSS (+) standards HSF-BF.B.4.b-d."
+}

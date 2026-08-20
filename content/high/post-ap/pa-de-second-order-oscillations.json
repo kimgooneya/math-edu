@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-de-second-order-oscillations",
+  "title": "2계 선형식과 진동",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Differential Equations",
+  "domain": "Second-Order Equations and Oscillations",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.03: second-order constant-coefficient equations, oscillations, damping, forcing, and resonance"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["Second Order ODE", "Harmonic Oscillator", "공명"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 2계 선형식과 감쇠·강제진동·공명을 다룹니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/"],
+  "estimatedMinutes": 220,
+  "prerequisites": ["pa-de-first-order"],
+  "objectives": ["특성방정식으로 상수계수 2계 선형 미분방정식을 풀 수 있다.", "질량-용수철 모형에서 감쇠, 강제응답과 공명을 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "특성방정식", "body": "상수계수 동차 2계 선형식에는 지수함수 꼴을 대입해 특성방정식을 만듭니다. 서로 다른 실근, 중근, 켤레복소근에 따라 해의 형태가 달라집니다."},
+    {"type": "concept", "title": "단순조화운동", "body": "복원력이 변위에 비례하고 감쇠가 없으면 사인과 코사인으로 진동합니다. 각진동수는 질량과 용수철 상수의 비로 결정됩니다."},
+    {"type": "concept", "title": "감쇠", "body": "저항력이 속도에 비례하면 특성근에 음의 실수부가 생겨 진폭이 감소합니다. 판별식에 따라 과감쇠, 임계감쇠, 부족감쇠로 구분합니다."},
+    {"type": "concept", "title": "강제진동과 공명", "body": "외부의 주기적 힘은 정상상태 응답을 만듭니다. 감쇠가 없고 입력 주파수가 자연주파수와 같으면 공명이 일어나 진폭이 시간에 따라 커질 수 있습니다."}
+  ],
+  "problems": [
+    {"id": "pa-de-second-order-oscillations-p01", "type": "unorderedSet", "prompt": "y''+5y'+6y=0의 특성근 집합을 구하세요.", "answer": [-3, -2], "hints": ["특성다항식은 r^2+5r+6입니다.", "곱이 6이고 합이 5인 두 수를 찾으세요."], "explanation": "특성다항식은 (r+2)(r+3)이므로 근은 -2와 -3입니다."},
+    {"id": "pa-de-second-order-oscillations-p02", "type": "integer", "prompt": "y''+4y=0, y(0)=1, y'(0)=0일 때 t=π/2에서 y의 값을 구하세요.", "answer": -1, "hints": ["초기조건을 만족하는 해는 cos(2t)입니다.", "cos π를 계산하세요."], "explanation": "y=cos(2t)이므로 y(π/2)=cos π=-1입니다."},
+    {"id": "pa-de-second-order-oscillations-p03", "type": "choice", "prompt": "y''+2y'+5y=0의 감쇠 유형을 고르세요.", "choices": [{"id": "a", "label": "과감쇠"}, {"id": "b", "label": "임계감쇠"}, {"id": "c", "label": "부족감쇠"}, {"id": "d", "label": "무감쇠"}], "answer": "c", "hints": ["특성방정식의 판별식을 계산하세요.", "판별식 4-20은 음수입니다."], "explanation": "음의 판별식과 양의 감쇠계수로 인해 진폭이 감소하며 진동하는 부족감쇠입니다."},
+    {"id": "pa-de-second-order-oscillations-p04", "type": "choice", "prompt": "방정식 y''+4y=cos(ωt)에서 감쇠가 없을 때 공명을 일으키는 양의 ω를 고르세요.", "choices": [{"id": "a", "label": "1"}, {"id": "b", "label": "2"}, {"id": "c", "label": "4"}, {"id": "d", "label": "8"}], "answer": "b", "hints": ["동차식의 자연각진동수를 찾으세요.", "y''+ω0^2 y=0과 비교하세요."], "explanation": "자연각진동수는 √4=2이므로 ω=2에서 공명합니다."},
+    {"id": "pa-de-second-order-oscillations-p05", "type": "rational", "prompt": "y''-y=e^(2t)의 특수해를 A e^(2t)로 둘 때 A를 구하세요.", "answer": {"numerator": 1, "denominator": 3}, "hints": ["가정한 특수해를 좌변에 대입하세요.", "y''-y=(4A-A)e^(2t)입니다."], "explanation": "3A e^(2t)=e^(2t)이므로 A=1/3입니다."},
+    {"id": "pa-de-second-order-oscillations-p06", "type": "choice", "prompt": "질량 1, 용수철 상수 9인 무감쇠 진동자의 주기를 고르세요.", "choices": [{"id": "a", "label": "π/3"}, {"id": "b", "label": "2π/3"}, {"id": "c", "label": "3π"}, {"id": "d", "label": "6π"}], "answer": "b", "hints": ["각진동수는 √(k/m)=3입니다.", "주기는 2π를 각진동수로 나눈 값입니다."], "explanation": "주기는 2π/3입니다."}
+  ]
+}

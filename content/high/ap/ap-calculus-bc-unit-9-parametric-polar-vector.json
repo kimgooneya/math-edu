@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-bc-unit-9-parametric-polar-vector","title":"Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions","stage":"high","grade":"Grades 11–12","course":"AP Calculus BC","domain":"Parametric, Polar, and Vector-Valued Functions","framework":"College Board AP","level":"AP","standards":["AP Calculus BC Unit 9"],"aliases":["매개방정식·극좌표·벡터값 함수","AP Calculus BC U9","BC-only Unit 9"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-bc"],
+  "description":"공유 선수 과정인 AP Calculus AB Units 1–8 이후 매개곡선, 극곡선, 벡터값 함수의 미분·적분과 운동·넓이·호의 길이를 다룹니다.","estimatedMinutes":60,"prerequisites":["ap-calculus-ab-unit-8-applications-integration"],"pathways":["ap-calculus-bc-unit-10-infinite-sequences-series"],
+  "objectives":["매개·벡터값 함수의 속도, 가속도, 기울기와 호의 길이를 계산할 수 있다.","극함수의 접선 기울기와 극곡선 내부 넓이를 적분으로 구할 수 있다."],
+  "theory":[
+    {"type":"formula","title":"매개곡선의 미분","body":"dx/dt가 0이 아닐 때 y를 x로 미분하고, 다시 t로 미분해 dx/dt로 나누면 이계도함수를 얻습니다.","formula":"dy/dx=(dy/dt)/(dx/dt)"},
+    {"type":"formula","title":"매개곡선의 호의 길이","body":"속력 √[(dx/dt)²+(dy/dt)²]을 시간에 대해 적분합니다.","formula":"L=∫√((x')²+(y')²)dt"},
+    {"type":"concept","title":"벡터값 함수와 운동","body":"r(t)=<x(t),y(t)>의 도함수는 속도 벡터이고 이계도함수는 가속도 벡터입니다. 속력은 속도 벡터의 크기입니다."},
+    {"type":"formula","title":"극함수 미적분","body":"x=r cosθ, y=r sinθ를 미분해 접선 기울기를 구하며, 극곡선 넓이는 반지름 제곱의 절반을 적분합니다.","formula":"A=(1/2)∫r(θ)²dθ"}
+  ],
+  "problems":[
+    {"id":"ap-calculus-bc-unit-9-parametric-polar-vector-p01","type":"rational","prompt":"x=t², y=t³일 때 t=1에서 dy/dx를 기약분수로 나타내세요.","answer":{"numerator":3,"denominator":2},"hints":["dx/dt=2t, dy/dt=3t²입니다.","t=1에서 두 값을 나누세요."],"explanation":"dy/dx=(3t²)/(2t)=3t/2이므로 t=1에서 3/2입니다."},
+    {"id":"ap-calculus-bc-unit-9-parametric-polar-vector-p02","type":"vector","prompt":"r(t)=<t²,3t-1>일 때 t=2의 속도 벡터는?","answer":[4,3],"hints":["성분별로 미분하세요.","r'(t)=<2t,3>입니다."],"explanation":"r'(2)=<4,3>입니다."},
+    {"id":"ap-calculus-bc-unit-9-parametric-polar-vector-p03","type":"integer","prompt":"속도 벡터가 <3,4>일 때 속력은?","answer":5,"hints":["벡터의 크기를 구하세요.","√(3²+4²)를 계산하세요."],"explanation":"속력은 √25=5입니다."},
+    {"id":"ap-calculus-bc-unit-9-parametric-polar-vector-p04","type":"choice","prompt":"극곡선 r=2, 0≤θ≤π가 쓸어가는 넓이는?","choices":[{"id":"a","label":"π"},{"id":"b","label":"2π"},{"id":"c","label":"4π"},{"id":"d","label":"8π"}],"answer":"b","hints":["(1/2)∫r²dθ를 쓰세요.","(1/2)·4·π입니다."],"explanation":"넓이는 2π로 반지름 2인 반원의 넓이와 같습니다."},
+    {"id":"ap-calculus-bc-unit-9-parametric-polar-vector-p05","type":"choice","prompt":"x=cos t, y=sin t, 0≤t≤2π의 호의 길이는?","choices":[{"id":"a","label":"π"},{"id":"b","label":"2π"},{"id":"c","label":"4π"},{"id":"d","label":"1"}],"answer":"b","hints":["속력은 √(sin²t+cos²t)=1입니다.","0부터 2π까지 1을 적분하세요."],"explanation":"단위원 한 바퀴의 길이는 ∫[0,2π]1dt=2π입니다."},
+    {"id":"ap-calculus-bc-unit-9-parametric-polar-vector-p06","type":"choice","prompt":"극함수 r(θ)에서 x의 θ에 대한 도함수는?","choices":[{"id":"a","label":"r'cosθ-rsinθ"},{"id":"b","label":"r'sinθ+rcosθ"},{"id":"c","label":"r cosθ"},{"id":"d","label":"r'cosθ+rsinθ"}],"answer":"a","hints":["x=r cosθ를 곱의 법칙으로 미분하세요.","(cosθ)'=-sinθ입니다."],"explanation":"dx/dθ=r'cosθ-rsinθ입니다."}
+  ]
+}

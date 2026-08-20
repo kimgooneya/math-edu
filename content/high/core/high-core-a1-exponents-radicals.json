@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a1-exponents-radicals",
+  "title": "Exponents, Radicals, and Real Numbers",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra I",
+  "domain": "Number and Quantity",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSN-RN.A.1",
+    "HSN-RN.A.2",
+    "HSN-RN.B.3",
+    "HSA-SSE.B.3.c"
+  ],
+  "pathways": [
+    "Traditional: Algebra I",
+    "Integrated: Integrated Math I / Integrated Math II",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "지수와 근호",
+    "Exponents and Radicals",
+    "실수",
+    "유리 지수"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "정수 및 유리 지수의 성질을 근호와 연결하고 유리수·무리수 연산 결과를 해석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "middle-grade-8-ns",
+    "middle-grade-8-ee"
+  ],
+  "objectives": [
+    "지수 법칙을 정수 지수와 유리 지수에 적용할 수 있다.",
+    "근호식을 간단히 하고 유리수와 무리수의 합·곱을 분류할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "유리 지수",
+      "body": "a가 양수일 때 a^(1/n)은 a의 n제곱근이며 a^(m/n)은 그 값을 m제곱한 것과 같습니다. 이 정의로 정수 지수의 법칙이 유리 지수에서도 이어집니다."
+    },
+    {
+      "type": "concept",
+      "title": "유리수와 무리수",
+      "body": "유리수에 무리수를 더하면 무리수이고, 0이 아닌 유리수와 무리수를 곱해도 무리수입니다. 다만 두 무리수의 합이나 곱은 유리수가 될 수도 있습니다."
+    },
+    {
+      "type": "formula",
+      "title": "지수 법칙",
+      "body": "같은 밑의 곱에서는 지수를 더하고 거듭제곱의 거듭제곱에서는 지수를 곱합니다.",
+      "formula": "a^m·a^n=a^(m+n), (a^m)^n=a^(mn), a^(m/n)=ⁿ√(a^m)"
+    },
+    {
+      "type": "example",
+      "title": "근호 간단히 하기",
+      "prompt": "√72를 간단히 하세요.",
+      "steps": [
+        "72=36×2로 완전제곱 인수를 찾습니다.",
+        "√72=√36·√2입니다.",
+        "√36=6이므로 6√2입니다."
+      ],
+      "answer": "6√2"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a1-exponents-radicals-p01",
+      "type": "integer",
+      "prompt": "2³·2⁴의 값을 구하세요.",
+      "answer": 128,
+      "hints": [
+        "같은 밑의 지수를 더하세요.",
+        "2^(3+4)=2⁷입니다."
+      ],
+      "explanation": "2³·2⁴=2⁷=128입니다."
+    },
+    {
+      "id": "high-core-a1-exponents-radicals-p02",
+      "type": "integer",
+      "prompt": "16^(3/4)의 값을 구하세요.",
+      "answer": 8,
+      "hints": [
+        "16^(1/4)=2입니다.",
+        "그 값을 세제곱하세요."
+      ],
+      "explanation": "16^(3/4)=(⁴√16)³=2³=8입니다."
+    },
+    {
+      "id": "high-core-a1-exponents-radicals-p03",
+      "type": "choice",
+      "prompt": "√50을 가장 간단히 나타낸 것을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "50=25×2입니다.",
+        "√25를 밖으로 꺼내세요."
+      ],
+      "explanation": "√50=√25·√2=5√2이므로 A입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "5√2"
+        },
+        {
+          "id": "B",
+          "label": "10√5"
+        },
+        {
+          "id": "C",
+          "label": "25√2"
+        },
+        {
+          "id": "D",
+          "label": "2√5"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-exponents-radicals-p04",
+      "type": "choice",
+      "prompt": "3+√2의 수 체계를 고르세요.",
+      "answer": "D",
+      "hints": [
+        "3은 유리수이고 √2는 무리수입니다.",
+        "유리수와 무리수의 합을 생각하세요."
+      ],
+      "explanation": "유리수 3과 무리수 √2의 합은 무리수입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "자연수"
+        },
+        {
+          "id": "B",
+          "label": "정수"
+        },
+        {
+          "id": "C",
+          "label": "유리수"
+        },
+        {
+          "id": "D",
+          "label": "무리수"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-exponents-radicals-p05",
+      "type": "rational",
+      "prompt": "x^(−2)=1/25이고 x가 양수일 때 x를 구하세요.",
+      "answer": {
+        "numerator": 5,
+        "denominator": 1
+      },
+      "hints": [
+        "x^(−2)=1/x²입니다.",
+        "1/x²=1/25에서 x²=25입니다."
+      ],
+      "explanation": "x는 양수이므로 x=5입니다."
+    },
+    {
+      "id": "high-core-a1-exponents-radicals-p06",
+      "type": "number",
+      "prompt": "81^(1/2)의 값을 구하세요.",
+      "answer": 9,
+      "hints": [
+        "1/2제곱은 양의 제곱근입니다.",
+        "√81을 계산하세요."
+      ],
+      "explanation": "81^(1/2)=√81=9입니다."
+    }
+  ]
+}

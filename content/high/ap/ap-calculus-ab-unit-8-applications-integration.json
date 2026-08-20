@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-ab-unit-8-applications-integration","title":"Unit 8: Applications of Integration","stage":"high","grade":"Grades 11–12","course":"AP Calculus AB","domain":"Applications of Integration","framework":"College Board AP","level":"AP","standards":["AP Calculus AB Unit 8"],"aliases":["적분의 응용","AP Calculus AB U8"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-ab"],
+  "description":"평균값, 입자 운동, 곡선 사이 넓이와 단면·회전체 부피를 정적분으로 모델링하며, BC 전용 과정은 공식 Unit 9로 이어집니다.","estimatedMinutes":55,"prerequisites":["ap-calculus-ab-unit-7-differential-equations"],"pathways":["ap-calculus-bc-unit-9-parametric-polar-vector"],
+  "objectives":["변화율 적분으로 누적량·이동거리·함수의 평균값을 구할 수 있다.","곡선 사이 넓이와 단면 또는 회전체 부피의 적분식을 구성할 수 있다."],
+  "theory":[
+    {"type":"formula","title":"함수의 평균값","body":"연속함수의 구간 평균값은 정적분을 구간 길이로 나눈 값입니다.","formula":"f_avg=(1/(b-a))∫[a,b]f(x)dx"},
+    {"type":"concept","title":"순변위와 총이동거리","body":"속도의 적분은 순변위이고 |속도|의 적분은 총이동거리입니다. 속도의 부호가 바뀌는 시점에서 구간을 나눕니다."},
+    {"type":"concept","title":"곡선 사이 넓이","body":"세로 조각은 위 함수-아래 함수, 가로 조각은 오른쪽 함수-왼쪽 함수를 적분합니다. 교점에서 경계를 나눌 수 있습니다."},
+    {"type":"formula","title":"부피","body":"알려진 단면적 A를 적분하거나 원판·와셔의 바깥 반지름과 안쪽 반지름을 사용합니다.","formula":"V=∫A(x)dx,  V=π∫(R²-r²)dx"}
+  ],
+  "problems":[
+    {"id":"ap-calculus-ab-unit-8-applications-integration-p01","type":"integer","prompt":"f(x)=2x의 [0,4] 평균값은?","answer":4,"hints":["정적분을 구간 길이 4로 나누세요.","∫[0,4]2x dx=16입니다."],"explanation":"평균값은 16/4=4입니다."},
+    {"id":"ap-calculus-ab-unit-8-applications-integration-p02","type":"integer","prompt":"0≤x≤1에서 y=x와 y=x² 사이 넓이를 6배한 값은?","answer":1,"hints":["이 구간에서 x가 x²보다 큽니다.","∫[0,1](x-x²)dx=1/6입니다."],"explanation":"넓이는 1/2-1/3=1/6이므로 6배는 1입니다."},
+    {"id":"ap-calculus-ab-unit-8-applications-integration-p03","type":"choice","prompt":"x축 둘레로 y=f(x)≥0을 회전할 때 원판법 적분은?","choices":[{"id":"a","label":"π∫f(x)²dx"},{"id":"b","label":"2π∫f(x)dx"},{"id":"c","label":"∫πf(x)dx"},{"id":"d","label":"∫f'(x)dx"}],"answer":"a","hints":["원판 단면적은 πr²입니다.","반지름은 f(x)입니다."],"explanation":"단면적이 π[f(x)]²이므로 이를 적분합니다."},
+    {"id":"ap-calculus-ab-unit-8-applications-integration-p04","type":"integer","prompt":"속도 v(t)=t-1일 때 t=0부터 2까지 총이동거리는?","answer":1,"hints":["t=1에서 속도 부호가 바뀝니다.","∫[0,1](1-t)dt와 ∫[1,2](t-1)dt를 더하세요."],"explanation":"각 구간 거리가 1/2이므로 총이동거리는 1입니다."},
+    {"id":"ap-calculus-ab-unit-8-applications-integration-p05","type":"integer","prompt":"밑면 구간 0≤x≤2에서 단면적 A(x)=3x²인 입체의 부피는?","answer":8,"hints":["부피는 단면적의 적분입니다.","∫[0,2]3x²dx=[x³]_0^2입니다."],"explanation":"부피는 8입니다."},
+    {"id":"ap-calculus-ab-unit-8-applications-integration-p06","type":"choice","prompt":"두 곡선 사이 세로 조각의 높이는 일반적으로?","choices":[{"id":"a","label":"위 함수-아래 함수"},{"id":"b","label":"아래 함수-위 함수"},{"id":"c","label":"오른쪽-왼쪽"},{"id":"d","label":"두 함수의 곱"}],"answer":"a","hints":["넓이는 음수가 되지 않아야 합니다.","세로 방향의 위아래 차이를 구하세요."],"explanation":"세로 조각의 높이는 위쪽 y값에서 아래쪽 y값을 뺀 값입니다."}
+  ]
+}

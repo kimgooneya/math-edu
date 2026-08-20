@@ -54,7 +54,15 @@ export function createUnitCard(unit, progress, { masteryLabel, href = `#/learn/$
   header.append(title, createBadge(masteryLabel || fallbackMasteryLabel(progress)));
   card.append(header);
 
-  const meta = [unit.grade, unit.course, unit.domain].filter(Boolean).join(" · ");
+  const curriculum = createElement("div", {
+    className: "unit-curriculum-tags",
+    attrs: { "aria-label": "교육과정 분류" },
+  });
+  if (unit.level) curriculum.append(createBadge(`수준: ${unit.level}`, "badge-level"));
+  if (unit.framework) curriculum.append(createBadge(`기준: ${unit.framework}`, "badge-framework"));
+  if (curriculum.childNodes.length) card.append(curriculum);
+
+  const meta = [unit.course, unit.grade, unit.domain].filter(Boolean).join(" · ");
   if (meta) card.append(createElement("p", { className: "unit-meta", text: meta }));
   if (unit.description) card.append(createElement("p", { className: "unit-description", text: unit.description }));
   if (unit.estimatedMinutes) card.append(createElement("p", { className: "unit-time", text: `약 ${unit.estimatedMinutes}분` }));

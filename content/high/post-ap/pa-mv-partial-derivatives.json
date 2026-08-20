@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-mv-partial-derivatives",
+  "title": "편미분과 다변수 최적화",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Multivariable Calculus",
+  "domain": "Partial Derivatives",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.02: partial differentiation, gradient, directional derivatives, and optimization"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["편도함수", "Gradient", "Multivariable Optimization"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 여러 변수 함수의 변화율과 최적화를 다룹니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/"],
+  "estimatedMinutes": 210,
+  "prerequisites": ["pa-mv-vectors-geometry"],
+  "objectives": ["편도함수, 그래디언트와 방향도함수를 계산할 수 있다.", "접평면과 라그랑주 승수법을 이용해 국소 변화와 제약 최적화를 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "편도함수", "body": "여러 변수 함수에서 한 변수만 변화시키고 나머지는 고정해 구한 변화율이 편도함수입니다. 각각의 편도함수는 좌표축 방향의 순간 변화율입니다."},
+    {"type": "concept", "title": "그래디언트와 방향도함수", "body": "그래디언트는 모든 1계 편도함수를 모은 벡터이며 함수가 가장 빠르게 증가하는 방향을 가리킵니다. 단위벡터 방향의 방향도함수는 그래디언트와 그 단위벡터의 내적입니다."},
+    {"type": "concept", "title": "선형화와 접평면", "body": "미분 가능한 함수는 한 점 근처에서 접평면으로 근사할 수 있습니다. 두 변수 함수의 접평면은 함수값과 두 편도함수가 정하는 1차식입니다."},
+    {"type": "concept", "title": "최적화와 제약", "body": "내부 극값 후보에서는 보통 그래디언트가 영벡터입니다. 제약곡선 위에서는 목적함수의 그래디언트와 제약함수의 그래디언트가 평행하다는 라그랑주 승수 조건을 사용합니다."}
+  ],
+  "problems": [
+    {"id": "pa-mv-partial-derivatives-p01", "type": "integer", "prompt": "f(x,y)=x^2y+3y^2일 때 x에 대한 편도함수의 (2,1)에서의 값을 구하세요.", "answer": 4, "hints": ["y를 상수처럼 두세요.", "x에 대한 편도함수는 2xy입니다."], "explanation": "2xy에 (2,1)을 대입하면 4입니다."},
+    {"id": "pa-mv-partial-derivatives-p02", "type": "integer", "prompt": "f(x,y)=x^2y+3y^2일 때 y에 대한 편도함수의 (2,1)에서의 값을 구하세요.", "answer": 10, "hints": ["x를 상수처럼 두세요.", "y에 대한 편도함수는 x^2+6y입니다."], "explanation": "x^2+6y에 (2,1)을 대입하면 4+6=10입니다."},
+    {"id": "pa-mv-partial-derivatives-p03", "type": "vector", "prompt": "f(x,y)=x^2+y^2의 점 (3,4)에서 그래디언트를 구하세요.", "answer": [6, 8], "hints": ["두 편도함수를 성분으로 배열하세요.", "그래디언트는 (2x,2y)입니다."], "explanation": "(2·3,2·4)=(6,8)입니다."},
+    {"id": "pa-mv-partial-derivatives-p04", "type": "rational", "prompt": "f(x,y)=x^2+y^2의 점 (1,2)에서 단위방향 (3/5,4/5)로의 방향도함수를 구하세요.", "answer": {"numerator": 22, "denominator": 5}, "hints": ["점에서의 그래디언트는 (2,4)입니다.", "그래디언트와 단위방향의 내적을 구하세요."], "explanation": "그래디언트와 단위방향의 내적은 2·3/5+4·4/5=22/5입니다."},
+    {"id": "pa-mv-partial-derivatives-p05", "type": "choice", "prompt": "z=x^2+y^2의 점 (1,2,5)에서 접평면을 고르세요.", "choices": [{"id": "a", "label": "z=5+2(x-1)+4(y-2)"}, {"id": "b", "label": "z=5+x+y"}, {"id": "c", "label": "z=2x+4y"}, {"id": "d", "label": "z=5+4(x-1)+2(y-2)"}], "answer": "a", "hints": ["점에서 두 편도함수는 2와 4입니다.", "선형화 식에 기준 함수값 5를 포함하세요."], "explanation": "접평면은 z=f(1,2)+f_x(1,2)(x-1)+f_y(1,2)(y-2)이므로 a입니다."},
+    {"id": "pa-mv-partial-derivatives-p06", "type": "orderedPair", "prompt": "f(x,y)=x^2+y^2-4x+6y의 유일한 임계점을 구하세요.", "answer": [2, -3], "hints": ["두 편도함수를 모두 0으로 두세요.", "2x-4=0과 2y+6=0을 푸세요."], "explanation": "x=2, y=-3이므로 임계점은 (2,-3)입니다."}
+  ]
+}

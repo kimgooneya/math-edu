@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-radical-functions",
+  "title": "Radical Functions and Equations",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Number and Quantity",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSN-RN.A.2",
+    "HSA-REI.A.2",
+    "HSF-BF.A.1",
+    "HSF-BF.B.3",
+    "HSF-IF.C.7.b"
+  ],
+  "pathways": [
+    "Traditional: Algebra II",
+    "Integrated: Integrated Math II / Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "무리함수와 무리방정식",
+    "Radical Functions",
+    "Radical Equations",
+    "제곱근 함수"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "근호식과 유리 지수를 연결하고 무리방정식을 풀 때 정의역과 무연근을 점검하며 제곱근 함수의 변환을 분석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-exponents-radicals",
+    "high-core-a1-polynomials-quadratics"
+  ],
+  "objectives": [
+    "근호식과 유리 지수 형태를 서로 바꾸고 간단히 할 수 있다.",
+    "무리방정식을 풀어 원래 식에서 해를 검산하고 제곱근 함수의 정의역을 해석할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "근호함수의 정의역",
+      "body": "실수 범위의 짝수 제곱근에서는 근호 안이 0 이상이어야 합니다. y=√(x-h)+k는 기본함수 y=√x를 오른쪽 h, 위쪽 k만큼 옮긴 그래프입니다."
+    },
+    {
+      "type": "concept",
+      "title": "무연근",
+      "body": "근호를 고립한 뒤 양변을 제곱하면 원래 방정식에 없던 해가 생길 수 있습니다. 얻은 후보는 반드시 원래 식에 대입해 확인해야 합니다."
+    },
+    {
+      "type": "formula",
+      "title": "근호와 지수",
+      "body": "양수 a에 대해 n제곱근은 1/n제곱과 같습니다.",
+      "formula": "ⁿ√(a^m)=a^(m/n)"
+    },
+    {
+      "type": "example",
+      "title": "무리방정식",
+      "prompt": "√(x+5)=x-1을 푸세요.",
+      "steps": [
+        "오른쪽이 0 이상이므로 x≥1입니다.",
+        "제곱하면 x+5=x²-2x+1, 즉 x²-3x-4=0입니다.",
+        "후보 4,-1 중 원식과 조건을 만족하는 것은 x=4뿐입니다."
+      ],
+      "answer": "x=4"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a2-radical-functions-p01",
+      "type": "number",
+      "prompt": "√144의 값을 구하세요.",
+      "answer": 12,
+      "hints": [
+        "주제곱근은 음이 아닌 값입니다.",
+        "12²=144입니다."
+      ],
+      "explanation": "√144=12입니다."
+    },
+    {
+      "id": "high-core-a2-radical-functions-p02",
+      "type": "integer",
+      "prompt": "√(x-2)=3을 풀어 x를 구하세요.",
+      "answer": 11,
+      "hints": [
+        "양변을 제곱하세요.",
+        "x-2=9입니다."
+      ],
+      "explanation": "x=11이며 원식에서 √9=3으로 확인됩니다."
+    },
+    {
+      "id": "high-core-a2-radical-functions-p03",
+      "type": "choice",
+      "prompt": "f(x)=√(x+4)의 실수 정의역을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "근호 안은 0 이상이어야 합니다.",
+        "x+4≥0을 푸세요."
+      ],
+      "explanation": "x≥-4가 정의역입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "x≥−4"
+        },
+        {
+          "id": "B",
+          "label": "x>4"
+        },
+        {
+          "id": "C",
+          "label": "x≤−4"
+        },
+        {
+          "id": "D",
+          "label": "모든 실수"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-radical-functions-p04",
+      "type": "orderedPair",
+      "prompt": "y=√(x-3)+2 그래프의 시작점을 구하세요.",
+      "answer": [
+        3,
+        2
+      ],
+      "hints": [
+        "기본 그래프 시작점은 (0,0)입니다.",
+        "오른쪽 3, 위로 2 이동합니다."
+      ],
+      "explanation": "시작점은 (3,2)입니다."
+    },
+    {
+      "id": "high-core-a2-radical-functions-p05",
+      "type": "choice",
+      "prompt": "√(x²)=x가 모든 실수 x에서 참인지 고르세요.",
+      "answer": "B",
+      "hints": [
+        "주제곱근은 음이 아닙니다.",
+        "x=-2를 대입해 보세요."
+      ],
+      "explanation": "√(x²)는 항상 |x|이므로 모든 실수에서 x와 같지는 않습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "참"
+        },
+        {
+          "id": "B",
+          "label": "거짓, √(x²)=|x|"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-radical-functions-p06",
+      "type": "integer",
+      "prompt": "∛(-125)의 값을 구하세요.",
+      "answer": -5,
+      "hints": [
+        "홀수 제곱근은 음수에도 정의됩니다.",
+        "(-5)³=-125입니다."
+      ],
+      "explanation": "∛(-125)=-5입니다."
+    }
+  ]
+}

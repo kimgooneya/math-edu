@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-ai-hl-number-algebra",
+  "title": "IB AI HL 수와 대수 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Applications and Interpretation",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Number and algebra",
+  "standards": ["IB AI HL: Number and algebra"],
+  "pathways": ["AI: 행렬·고윳값·Markov 연쇄로 반복되는 현실 시스템을 계산 기술로 분석하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-applications-and-interpretations-en.pdf"],
+  "aliases": ["IB AI HL Topic 1", "AI HL Number and algebra", "IB 응용과 해석 HL 수와 대수"],
+  "description": "AI SL 금융·수열 모형을 행렬 연산, 역행렬, 고윳값·고유벡터와 Markov 연쇄의 장기 상태로 확장합니다.",
+  "estimatedMinutes": 90,
+  "prerequisites": ["ib-ai-sl-number-algebra"],
+  "objectives": ["행렬로 연립관계와 선형변환을 나타내고 기술을 사용해 계산할 수 있다.", "전이행렬의 고윳값·고유벡터로 Markov 모형의 반복과 안정상태를 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "행렬과 시스템", "body": "행렬은 여러 변수의 선형 관계를 한 번에 나타냅니다. 곱 AB는 B의 변환 후 A의 변환이며, 곱셈 순서는 일반적으로 바꿀 수 없습니다."},
+    {"type": "concept", "title": "역행렬과 행렬식", "body": "정사각행렬 A의 det(A)≠0이면 역행렬이 존재하고 AX=b의 해는 X=A^(-1)b입니다. 행렬식 0은 변환이 차원을 찌그러뜨려 정보가 사라짐을 뜻합니다."},
+    {"type": "concept", "title": "고윳값과 고유벡터", "body": "Av=λv이면 v의 방향은 변환 뒤에도 유지되고 λ만큼 배율이 바뀝니다. 반복 변환의 장기 거동은 크기가 큰 고윳값과 대응 고유벡터의 영향을 받습니다."},
+    {"type": "concept", "title": "Markov 연쇄", "body": "상태벡터를 전이행렬로 반복 갱신합니다. 정규 전이행렬의 안정상태는 전체 비율 조건과 Mv=v를 함께 만족하며 장기 시장점유율 같은 양을 모델링합니다."}
+  ],
+  "problems": [
+    {"id": "ib-ai-hl-number-algebra-p01", "type": "vector", "prompt": "수요 모형 2x+y=11, x-y=1을 행렬방정식으로 나타냈습니다. 역행렬 또는 행 연산으로 (x,y)를 구하세요.", "answer": [4, 3], "hints": ["둘째 식에서 y=x-1입니다.", "이를 첫째 식에 대입하면 3x-1=11입니다."], "explanation": "x=4, y=3이며 [[2,1],[1,-1]]의 행렬식 -3이 0이 아니므로 해는 유일합니다."},
+    {"id": "ib-ai-hl-number-algebra-p02", "type": "integer", "prompt": "행렬 [[4,1],[2,3]]의 행렬식을 구하세요.", "answer": 10, "hints": ["2×2 행렬식은 ad-bc입니다.", "4×3-1×2를 계산하세요."], "explanation": "행렬식은 12-2=10이므로 역행렬이 존재합니다."},
+    {"id": "ib-ai-hl-number-algebra-p03", "type": "vector", "prompt": "벡터 (3,4)를 먼저 90° 반시계 회전한 뒤 x방향 2배, y방향 0.5배로 확대합니다. 최종 벡터를 구하세요.", "answer": [-8, 1.5], "hints": ["회전행렬은 (x,y)를 (-y,x)로 보냅니다.", "회전 결과 (-4,3)에 두 방향 배율을 적용하세요."], "explanation": "변환 순서를 지키면 (3,4)→(-4,3)→(-8,1.5)입니다. 행렬곱은 일반적으로 교환되지 않습니다."},
+    {"id": "ib-ai-hl-number-algebra-p04", "type": "vector", "prompt": "상태벡터 (A,B)를 p_(n+1)=[[0.8,0.3],[0.2,0.7]]p_n으로 갱신합니다. 합이 1인 안정상태 벡터를 구하세요.", "answer": [0.6, 0.4], "hints": ["안정상태에서는 p_(n+1)=p_n입니다.", "0.2A=0.3B와 A+B=1을 푸세요."], "explanation": "A:B=3:2이고 합이 1이므로 안정상태는 (0.6,0.4)입니다."},
+    {"id": "ib-ai-hl-number-algebra-p05", "type": "choice", "prompt": "정사각행렬 A의 det(A)=0일 때 반드시 참인 설명을 고르세요.", "choices": [{"id": "a", "label": "A의 역행렬이 존재하지 않는다"}, {"id": "b", "label": "A는 단위행렬이다"}, {"id": "c", "label": "모든 고윳값이 1이다"}, {"id": "d", "label": "A²=A이다"}], "answer": "a", "hints": ["역행렬 공식의 분모를 생각하세요.", "행렬식 0인 행렬은 특이행렬입니다."], "explanation": "행렬식이 0이면 선형변환이 일대일이 아니므로 역행렬이 존재하지 않습니다."},
+    {"id": "ib-ai-hl-number-algebra-p06", "type": "vector", "prompt": "상태벡터를 p_(n+1)=[[0.8,0.3],[0.2,0.7]]p_n으로 갱신하고 p_0=(1,0)이라 합니다. p_3을 구하세요.", "answer": [0.65, 0.35], "hints": ["p_1=(0.8,0.2), p_2=(0.7,0.3)입니다.", "전이행렬을 p_2에 한 번 더 곱하세요."], "explanation": "p_3=(0.8×0.7+0.3×0.3, 0.2×0.7+0.7×0.3)=(0.65,0.35)이며 안정상태 (0.6,0.4)에 가까워집니다."}
+  ]
+}

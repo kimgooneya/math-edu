@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-lines-angles-proof",
+  "title": "Lines, Angles, and Geometric Proof",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSG-CO.C.9",
+    "HSG-CO.D.12"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "직선과 각의 증명",
+    "Geometric Proof",
+    "평행선",
+    "작도"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "정의·공리·이미 증명된 정리를 구분하고 수직선, 평행선, 각 관계를 논리적으로 증명하며 기본 작도를 이해합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-geo-transformations-congruence"
+  ],
+  "objectives": [
+    "대응각, 엇각, 맞꼭지각 관계를 사용해 직선과 각에 관한 명제를 증명할 수 있다.",
+    "정의와 공리에서 결론으로 이어지는 증명의 구조를 설명할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "증명의 구조",
+      "body": "증명은 주어진 조건과 정의, 공리, 앞서 증명한 정리를 근거로 각 결론을 정당화하는 논리적 연결입니다. 그림은 추측을 돕지만 측정만으로 일반 명제를 증명할 수는 없습니다."
+    },
+    {
+      "type": "concept",
+      "title": "평행선과 횡단선",
+      "body": "평행한 두 직선을 횡단선이 가르면 대응각과 엇각은 같고 같은 쪽 내각의 합은 180°입니다. 역명제를 사용해 두 직선의 평행도 증명할 수 있습니다."
+    },
+    {
+      "type": "formula",
+      "title": "선형쌍과 맞꼭지각",
+      "body": "선형쌍은 보각이고 맞꼭지각은 서로 같습니다.",
+      "formula": "m∠1+m∠2=180°,  m∠1=m∠3"
+    },
+    {
+      "type": "concept",
+      "title": "선분과 각의 복사·이등분",
+      "body": "컴퍼스로 길이를 옮기면 합동인 선분을 복사할 수 있습니다. 각의 두 변을 같은 원호로 자른 뒤 그 교점 사이 거리를 새 꼭짓점에 옮기면 각을 복사하고, 두 교차 원호의 교점을 꼭짓점과 이으면 각을 이등분합니다."
+    },
+    {
+      "type": "concept",
+      "title": "수선과 평행선 작도",
+      "body": "한 직선 위 점에서 같은 거리의 두 점을 잡고 교차 원호를 이으면 수선을 세울 수 있습니다. 직선 밖 점에서 원래 직선과 횡단선이 만드는 대응각을 복사하면 평행선을 작도할 수 있습니다."
+    },
+    {
+      "type": "example",
+      "title": "두 단계 증명",
+      "prompt": "평행선의 한 대응각이 68°일 때 그 각과 선형쌍인 각의 크기를 구하세요.",
+      "steps": [
+        "대응각은 68°로 같습니다.",
+        "선형쌍의 합은 180°입니다.",
+        "180-68=112°입니다."
+      ],
+      "answer": "112°"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-lines-angles-proof-p01",
+      "type": "integer",
+      "prompt": "맞꼭지각 중 한 각이 47°일 때 다른 각의 크기를 구하세요.",
+      "answer": 47,
+      "hints": [
+        "맞꼭지각 정리를 사용하세요.",
+        "서로 마주 보는 각의 크기는 같습니다."
+      ],
+      "explanation": "맞꼭지각은 서로 같으므로 47°입니다."
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p02",
+      "type": "integer",
+      "prompt": "선형쌍의 한 각이 123°일 때 다른 각을 구하세요.",
+      "answer": 57,
+      "hints": [
+        "선형쌍의 합은 180°입니다.",
+        "180-123을 계산하세요."
+      ],
+      "explanation": "다른 각은 180-123=57°입니다."
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p03",
+      "type": "choice",
+      "prompt": "평행한 두 직선을 횡단선이 지날 때 항상 같은 각의 쌍을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "평행선의 각 정리를 떠올리세요.",
+        "같은 쪽 내각은 보각입니다."
+      ],
+      "explanation": "엇각은 서로 같으므로 B입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "같은 쪽 내각"
+        },
+        {
+          "id": "B",
+          "label": "엇각"
+        },
+        {
+          "id": "C",
+          "label": "임의의 인접각"
+        },
+        {
+          "id": "D",
+          "label": "선형쌍"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p04",
+      "type": "choice",
+      "prompt": "명제 ‘맞꼭지각은 같다’를 증명할 때 핵심 근거를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "각각 같은 인접각과 선형쌍을 이룹니다.",
+        "같은 양에서 같은 각을 빼는 논리를 사용합니다."
+      ],
+      "explanation": "두 선형쌍이 모두 180°라는 사실에서 공통 각을 빼면 맞꼭지각이 같음을 보일 수 있습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "두 선형쌍의 합이 각각 180°"
+        },
+        {
+          "id": "B",
+          "label": "그림에서 비슷해 보임"
+        },
+        {
+          "id": "C",
+          "label": "자를 사용한 길이 측정"
+        },
+        {
+          "id": "D",
+          "label": "원의 넓이 공식"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p05",
+      "type": "integer",
+      "prompt": "두 평행선에서 같은 쪽 내각 하나가 104°일 때 다른 내각을 구하세요.",
+      "answer": 76,
+      "hints": [
+        "같은 쪽 내각의 합은 180°입니다.",
+        "180-104를 계산하세요."
+      ],
+      "explanation": "다른 내각은 76°입니다."
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p06",
+      "type": "choice",
+      "prompt": "컴퍼스와 눈금 없는 자로 선분의 수직이등분선을 작도할 때 필요한 점을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "두 끝점에서 같은 거리에 있는 점을 찾으세요.",
+        "두 원호의 교점을 잇습니다."
+      ],
+      "explanation": "양 끝점에서 같은 거리인 두 원호 교점을 이으면 수직이등분선이 됩니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "양 끝점에서 같은 반지름으로 그린 두 원호의 교점"
+        },
+        {
+          "id": "B",
+          "label": "선분 밖의 임의의 한 점"
+        },
+        {
+          "id": "C",
+          "label": "원점"
+        },
+        {
+          "id": "D",
+          "label": "평행선의 무한원점"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p07",
+      "type": "choice",
+      "prompt": "주어진 선분과 합동인 선분을 작도할 때 컴퍼스로 옮겨야 하는 것을 고르세요.",
+      "answer": "B",
+      "hints": ["컴퍼스 폭은 두 끝점 사이를 기록합니다.", "각도나 넓이가 아니라 길이를 복사합니다."],
+      "explanation": "원래 선분의 두 끝점 사이 거리를 컴퍼스 폭으로 옮깁니다.",
+      "choices": [{"id":"A","label":"선분의 기울기만"},{"id":"B","label":"두 끝점 사이 거리"},{"id":"C","label":"종이의 폭"},{"id":"D","label":"임의의 각"}]
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p08",
+      "type": "choice",
+      "prompt": "각의 이등분선을 작도할 때 두 변 위의 같은 거리 점에서 그린 원호의 교점을 어떻게 사용하는지 고르세요.",
+      "answer": "C",
+      "hints": ["교점은 두 각의 변에서 같은 거리에 놓입니다.", "교점을 원래 꼭짓점과 연결하세요."],
+      "explanation": "원호 교점과 각의 꼭짓점을 이은 직선이 각을 이등분합니다.",
+      "choices": [{"id":"A","label":"교점을 지운다"},{"id":"B","label":"교점에서 임의의 원만 그린다"},{"id":"C","label":"교점과 각의 꼭짓점을 잇는다"},{"id":"D","label":"교점 두 개를 평행이동한다"}]
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p09",
+      "type": "integer",
+      "prompt": "한 직선 위의 점에서 작도한 수선이 원래 직선과 이루는 각의 크기를 구하세요.",
+      "answer": 90,
+      "hints": ["수선의 정의를 사용하세요.", "수직인 두 직선은 직각을 만듭니다."],
+      "explanation": "수선은 원래 직선과 90°를 이룹니다."
+    },
+    {
+      "id": "high-core-geo-lines-angles-proof-p10",
+      "type": "choice",
+      "prompt": "직선 밖의 점을 지나 원래 직선에 평행한 직선을 작도하는 방법을 고르세요.",
+      "answer": "A",
+      "hints": ["횡단선을 하나 그립니다.", "평행선의 대응각 역정리를 사용하세요."],
+      "explanation": "횡단선과 원래 직선이 만드는 대응각을 외부점에 복사하면 두 직선이 평행합니다.",
+      "choices": [{"id":"A","label":"대응각을 외부점에 복사한다"},{"id":"B","label":"임의의 다른 각을 그린다"},{"id":"C","label":"원래 직선을 지운다"},{"id":"D","label":"선분 길이만 두 배로 한다"}]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-sl-calculus",
+  "title": "IB AA SL 미적분",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Calculus",
+  "standards": ["IB AA SL: Calculus"],
+  "pathways": ["AA: 극한에서 미분·적분을 전개하고 함수의 성질을 분석적으로 정당화하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA SL Topic 5", "AA SL Calculus", "IB 분석과 접근 미적분 표준"],
+  "description": "극한과 도함수, 접선·최적화, 부정·정적분과 넓이를 대수적 정확성과 함께 학습합니다.",
+  "estimatedMinutes": 80,
+  "prerequisites": ["ib-aa-sl-functions"],
+  "objectives": ["도함수를 계산하고 그래프의 증가·감소, 극값, 접선을 분석할 수 있다.", "원시함수와 정적분을 구하고 누적량과 넓이로 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "극한과 도함수", "body": "도함수는 차분몫의 극한으로 정의되는 순간변화율입니다. 미분 가능하면 연속이지만 연속이라고 항상 미분 가능한 것은 아닙니다."},
+    {"type": "concept", "title": "미분법", "body": "거듭제곱·곱·몫·연쇄법칙을 결합해 다항·삼각·지수·로그함수를 미분합니다. 합성함수에서는 바깥 함수의 미분에 안쪽 함수의 미분을 곱합니다."},
+    {"type": "concept", "title": "도함수의 응용", "body": "f'의 부호는 증가·감소를, 부호 변화는 극값을 판별합니다. 실제 최적화에서는 정의역과 끝점까지 비교해야 합니다."},
+    {"type": "concept", "title": "적분과 기본정리", "body": "부정적분은 원시함수의 족이고 정적분은 부호 있는 누적량입니다. 미적분학의 기본정리는 미분과 적분이 서로 역과정임을 연결합니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-sl-calculus-p01", "type": "choice", "prompt": "f(x)=x³-4x의 그래프에서 x=2인 점의 접선 방정식을 고르세요.", "choices": [{"id": "a", "label": "y=8x-16"}, {"id": "b", "label": "y=8x"}, {"id": "c", "label": "y=4x-8"}, {"id": "d", "label": "y=12x-24"}], "answer": "a", "hints": ["f(2)=0이고 f'(x)=3x²-4입니다.", "접선 기울기는 f'(2)=8입니다."], "explanation": "점 (2,0)을 지나고 기울기가 8이므로 y=8(x-2)=8x-16입니다."},
+    {"id": "ib-aa-sl-calculus-p02", "type": "integer", "prompt": "h(x)=(x²+1)^4일 때 h'(1)을 구하세요.", "answer": 64, "hints": ["연쇄법칙으로 h'(x)=4(x²+1)^3(2x)입니다.", "x=1에서 (x²+1)^3=8입니다."], "explanation": "h'(1)=4×8×2=64입니다."},
+    {"id": "ib-aa-sl-calculus-p03", "type": "integer", "prompt": "둘레가 40 m인 직사각형의 넓이가 최대일 때 그 최대 넓이를 구하세요.", "answer": 100, "hints": ["한 변을 x라 두면 다른 변은 20-x입니다.", "A(x)=x(20-x)의 임계점과 끝점을 비교하세요."], "explanation": "A'(x)=20-2x=0에서 x=10이고 A''=-2<0이므로 최대 넓이는 10×10=100 m²입니다."},
+    {"id": "ib-aa-sl-calculus-p04", "type": "rational", "prompt": "0≤x≤1에서 곡선 y=x와 y=x² 사이의 넓이를 구하세요.", "answer": {"numerator": 1, "denominator": 6}, "hints": ["구간 안에서는 x≥x²입니다.", "0부터 1까지 x-x²을 적분하세요."], "explanation": "[x²/2-x³/3]_0^1=1/2-1/3=1/6입니다."},
+    {"id": "ib-aa-sl-calculus-p05", "type": "choice", "prompt": "f'(x)=(x-1)(x+2)일 때 f의 국소 극값에 대한 설명을 고르세요.", "choices": [{"id": "a", "label": "x=-2에서 국소최대, x=1에서 국소최소"}, {"id": "b", "label": "x=-2에서 국소최소, x=1에서 국소최대"}, {"id": "c", "label": "두 점 모두 국소최대"}, {"id": "d", "label": "극값이 없다"}], "answer": "a", "hints": ["도함수 부호는 (-∞,-2)에서 양수, (-2,1)에서 음수입니다.", "x=1 뒤에는 다시 양수가 됩니다."], "explanation": "f'가 +에서 -로 바뀌는 -2는 국소최대, -에서 +로 바뀌는 1은 국소최소입니다."},
+    {"id": "ib-aa-sl-calculus-p06", "type": "integer", "prompt": "입자의 위치가 s(t)=t³-6t²+9t이고 0≤t≤4입니다. 이 구간에서 입자가 이동한 총거리를 구하세요.", "answer": 12, "hints": ["v(t)=3(t-1)(t-3)이므로 방향 전환 시각은 1과 3입니다.", "s(0), s(1), s(3), s(4)의 연속한 차이 절댓값을 더하세요."], "explanation": "위치는 0,4,0,4이므로 총거리는 |4-0|+|0-4|+|4-0|=12입니다."}
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-conics-analytic-geometry",
+  "title": "Conic Sections and Analytic Geometry",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Precalculus",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Honors",
+  "levelNote": "Honors는 국가 표준 과정명이 아니라 CCSS의 (+) 기준 또는 학교별 가속·심화 편성을 나타내는 이 콘텐츠의 라벨입니다.",
+  "standards": [
+    "HSG-GPE.A.3"
+  ],
+  "pathways": [
+    "Traditional: Precalculus",
+    "Integrated pathway follow-on: after Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "원뿔곡선과 해석기하",
+    "Conic Sections",
+    "Ellipse and Hyperbola",
+    "타원과 쌍곡선"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "타원과 쌍곡선을 거리 조건과 표준방정식으로 분석하고 중심, 초점, 꼭짓점, 점근선을 기하적으로 해석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-geo-coordinate-geometry"
+  ],
+  "objectives": [
+    "두 초점까지 거리의 합 또는 차에서 타원과 쌍곡선의 방정식 구조를 설명할 수 있다.",
+    "타원과 쌍곡선의 표준형에서 중심, 꼭짓점, 초점 또는 점근선을 구할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "거리로 정의한 타원과 쌍곡선",
+      "body": "타원은 두 초점까지 거리의 합이 일정한 점들의 집합이고, 쌍곡선은 두 초점까지 거리 차의 절댓값이 일정한 점들의 집합입니다."
+    },
+    {
+      "type": "concept",
+      "title": "표준형과 이동",
+      "body": "중심 또는 꼭짓점이 원점이 아닌 경우 x를 x-h, y를 y-k로 바꿉니다. 분모와 부호를 읽어 장축 방향, 꼭짓점, 점근선을 판단합니다."
+    },
+    {
+      "type": "formula",
+      "title": "대표 표준형",
+      "body": "가로 장축 타원과 가로로 열린 쌍곡선의 표준형입니다.",
+      "formula": "x²/a²+y²/b²=1, x²/a²-y²/b²=1"
+    },
+    {
+      "type": "concept",
+      "title": "초점에서 타원 방정식 유도",
+      "body": "초점이 (±c,0)이고 두 초점까지 거리의 합이 2a이면 거리식 √((x-c)²+y²)+√((x+c)²+y²)=2a를 두 번 제곱해 x²/a²+y²/b²=1을 얻으며 b²=a²-c²입니다."
+    },
+    {
+      "type": "concept",
+      "title": "초점에서 쌍곡선 방정식 유도",
+      "body": "초점이 (±c,0)이고 거리 차의 절댓값이 2a이면 두 거리식의 차를 두 번 제곱해 x²/a²-y²/b²=1을 얻으며 c²=a²+b²입니다."
+    },
+    {
+      "type": "example",
+      "title": "타원 읽기",
+      "prompt": "x²/25+y²/9=1의 장축 꼭짓점을 구하세요.",
+      "steps": [
+        "큰 분모 25가 x항 아래에 있어 장축은 가로입니다.",
+        "a=5입니다.",
+        "중심이 원점이므로 장축 꼭짓점은 (-5,0),(5,0)입니다."
+      ],
+      "answer": "(-5,0),(5,0)"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p01",
+      "type": "choice",
+      "prompt": "두 고정점까지 거리의 합이 일정한 점들의 집합을 고르세요.",
+      "answer": "C",
+      "hints": [
+        "두 고정점은 초점입니다.",
+        "거리의 합이 일정한 원뿔곡선을 떠올리세요."
+      ],
+      "explanation": "두 초점까지 거리의 합이 일정한 점들의 집합은 타원입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "원"
+        },
+        {
+          "id": "B",
+          "label": "포물선"
+        },
+        {
+          "id": "C",
+          "label": "타원"
+        },
+        {
+          "id": "D",
+          "label": "쌍곡선"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p02",
+      "type": "orderedPair",
+      "prompt": "(x-2)²/16+(y+1)²/9=1의 중심을 구하세요.",
+      "answer": [
+        2,
+        -1
+      ],
+      "hints": [
+        "x-h와 y-k 형태를 찾으세요.",
+        "y+1=y-(-1)입니다."
+      ],
+      "explanation": "중심은 (2,-1)입니다."
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p03",
+      "type": "number",
+      "prompt": "x²/36+y²/4=1에서 장반경의 길이를 구하세요.",
+      "answer": 6,
+      "hints": [
+        "큰 분모는 a²=36입니다.",
+        "a는 양의 제곱근입니다."
+      ],
+      "explanation": "장반경은 √36=6입니다."
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p04",
+      "type": "choice",
+      "prompt": "x²/9-y²/4=1이 나타내는 곡선을 고르세요.",
+      "answer": "C",
+      "hints": [
+        "두 제곱항 사이 부호를 보세요.",
+        "부호가 반대인 표준형입니다."
+      ],
+      "explanation": "두 제곱항의 부호가 반대이므로 쌍곡선입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "원"
+        },
+        {
+          "id": "B",
+          "label": "타원"
+        },
+        {
+          "id": "C",
+          "label": "쌍곡선"
+        },
+        {
+          "id": "D",
+          "label": "포물선"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p05",
+      "type": "orderedPair",
+      "prompt": "x²/9-y²/4=1인 쌍곡선의 오른쪽 꼭짓점을 구하세요.",
+      "answer": [
+        3,
+        0
+      ],
+      "hints": [
+        "가로로 열린 쌍곡선에서 꼭짓점은 (±a,0)입니다.",
+        "a²=9이므로 a=3입니다."
+      ],
+      "explanation": "오른쪽 꼭짓점은 (3,0)입니다."
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p06",
+      "type": "choice",
+      "prompt": "타원의 두 초점까지 거리의 관계를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "타원의 끈 작도법을 생각하세요.",
+        "두 거리의 합이 고정됩니다."
+      ],
+      "explanation": "타원에서는 두 초점까지 거리의 합이 일정합니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "합이 일정"
+        },
+        {
+          "id": "B",
+          "label": "차가 0"
+        },
+        {
+          "id": "C",
+          "label": "곱이 일정"
+        },
+        {
+          "id": "D",
+          "label": "각각 항상 반지름과 같음"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p07",
+      "type": "number",
+      "prompt": "타원 x²/25+y²/9=1에서 초점의 x좌표 절댓값 c를 구하세요.",
+      "answer": 4,
+      "hints": ["타원에서는 c²=a²-b²입니다.", "25-9의 제곱근을 구하세요."],
+      "explanation": "c=√(25-9)=4입니다."
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p08",
+      "type": "number",
+      "prompt": "쌍곡선 x²/9-y²/16=1에서 초점의 x좌표 절댓값 c를 구하세요.",
+      "answer": 5,
+      "hints": ["쌍곡선에서는 c²=a²+b²입니다.", "9+16의 제곱근을 구하세요."],
+      "explanation": "c=√25=5입니다."
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p09",
+      "type": "choice",
+      "prompt": "초점이 (±5,0), 꼭짓점이 (±3,0)인 쌍곡선의 방정식을 고르세요.",
+      "answer": "B",
+      "hints": ["a=3, c=5입니다.", "b²=c²-a²=16입니다."],
+      "explanation": "a²=9, b²=16이므로 x²/9-y²/16=1입니다.",
+      "choices": [{"id":"A","label":"x²/25+y²/9=1"},{"id":"B","label":"x²/9-y²/16=1"},{"id":"C","label":"x²/16-y²/9=1"},{"id":"D","label":"x²/9+y²/16=1"}]
+    },
+    {
+      "id": "high-core-precalc-conics-analytic-geometry-p10",
+      "type": "number",
+      "prompt": "초점이 (±3,0)이고 장반경 a=5인 타원에서 b²을 구하세요.",
+      "answer": 16,
+      "hints": ["타원에서는 b²=a²-c²입니다.", "25-9를 계산하세요."],
+      "explanation": "b²=25-9=16입니다."
+    }
+  ],
+  "honorsBasis": "Includes CCSS (+) standards and/or school-level accelerated sequencing.",
+  "extensionStandards": ["HSG-GPE.A.3"]
+}

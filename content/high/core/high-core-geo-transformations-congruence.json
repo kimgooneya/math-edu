@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-transformations-congruence",
+  "title": "Transformations and Congruence",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSG-CO.A.1",
+    "HSG-CO.A.2",
+    "HSG-CO.A.3",
+    "HSG-CO.A.4",
+    "HSG-CO.A.5",
+    "HSG-CO.B.6"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "변환과 합동",
+    "Transformations",
+    "Rigid Motions",
+    "강체 변환"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "평행이동·회전·반사·확대를 좌표와 기하 정의로 표현하고 강체 변환으로 합동을 설명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "middle-grade-8-g"
+  ],
+  "objectives": [
+    "기본 변환을 좌표 규칙으로 적용하고 합성할 수 있다.",
+    "강체 변환을 이용해 두 도형의 합동 여부를 설명할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "강체 변환",
+      "body": "평행이동, 회전, 반사는 거리와 각의 크기를 보존합니다. 이런 강체 변환들의 합성으로 한 도형을 다른 도형과 정확히 겹칠 수 있으면 두 도형은 합동입니다."
+    },
+    {
+      "type": "concept",
+      "title": "대칭과 변환",
+      "body": "도형을 자신에게 옮기는 회전이나 반사는 대칭입니다. 정다각형은 중심 둘레의 회전 대칭과 여러 반사 대칭을 가집니다."
+    },
+    {
+      "type": "formula",
+      "title": "대표 좌표 규칙",
+      "body": "원점 중심 90° 반시계 회전과 y축 반사를 구분합니다.",
+      "formula": "(x,y)→(-y,x),  (x,y)→(-x,y)"
+    },
+    {
+      "type": "example",
+      "title": "변환 합성",
+      "prompt": "점 (2,-1)을 x축에 반사한 뒤 오른쪽으로 3만큼 평행이동하세요.",
+      "steps": [
+        "x축 반사로 (2,1)이 됩니다.",
+        "오른쪽으로 3만큼 이동하면 x좌표에 3을 더합니다.",
+        "최종 점은 (5,1)입니다."
+      ],
+      "answer": "(5,1)"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-transformations-congruence-p01",
+      "type": "orderedPair",
+      "prompt": "점 (3,-2)를 왼쪽으로 5, 위로 4만큼 평행이동한 좌표를 구하세요.",
+      "answer": [
+        -2,
+        2
+      ],
+      "hints": [
+        "x좌표에서 5를 빼세요.",
+        "y좌표에 4를 더하세요."
+      ],
+      "explanation": "(3-5,-2+4)=(-2,2)입니다."
+    },
+    {
+      "id": "high-core-geo-transformations-congruence-p02",
+      "type": "orderedPair",
+      "prompt": "점 (4,1)을 y축에 대하여 반사한 좌표를 구하세요.",
+      "answer": [
+        -4,
+        1
+      ],
+      "hints": [
+        "y축 반사는 x좌표의 부호만 바꿉니다.",
+        "y좌표는 그대로입니다."
+      ],
+      "explanation": "(4,1)→(-4,1)입니다."
+    },
+    {
+      "id": "high-core-geo-transformations-congruence-p03",
+      "type": "orderedPair",
+      "prompt": "점 (2,5)를 원점 중심으로 90° 반시계 회전한 좌표를 구하세요.",
+      "answer": [
+        -5,
+        2
+      ],
+      "hints": [
+        "규칙 (x,y)→(-y,x)를 쓰세요.",
+        "x=2, y=5를 대입하세요."
+      ],
+      "explanation": "(2,5)→(-5,2)입니다."
+    },
+    {
+      "id": "high-core-geo-transformations-congruence-p04",
+      "type": "choice",
+      "prompt": "다음 중 거리를 보존하지 않는 변환을 고르세요.",
+      "answer": "D",
+      "hints": [
+        "강체 변환은 길이를 보존합니다.",
+        "배율 2는 모든 길이를 두 배로 만듭니다."
+      ],
+      "explanation": "확대 배율 2는 거리를 바꾸므로 D입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "평행이동"
+        },
+        {
+          "id": "B",
+          "label": "회전"
+        },
+        {
+          "id": "C",
+          "label": "반사"
+        },
+        {
+          "id": "D",
+          "label": "확대 배율 2"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-transformations-congruence-p05",
+      "type": "choice",
+      "prompt": "한 도형을 강체 변환의 합성으로 다른 도형에 겹칠 수 있을 때의 관계를 고르세요.",
+      "answer": "B",
+      "hints": [
+        "강체 변환은 길이와 각을 보존합니다.",
+        "합동의 변환 정의를 떠올리세요."
+      ],
+      "explanation": "강체 변환으로 정확히 겹치면 두 도형은 합동입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "닮음만 성립"
+        },
+        {
+          "id": "B",
+          "label": "합동"
+        },
+        {
+          "id": "C",
+          "label": "평행"
+        },
+        {
+          "id": "D",
+          "label": "수직"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-transformations-congruence-p06",
+      "type": "integer",
+      "prompt": "정사각형을 중심 둘레로 몇 도 회전하면 처음으로 자기 자신과 다시 겹치나요?",
+      "answer": 90,
+      "hints": [
+        "한 바퀴 360°를 꼭짓점 수 4로 나누세요.",
+        "가장 작은 양의 회전각을 묻습니다."
+      ],
+      "explanation": "360÷4=90이므로 90° 회전에서 처음 다시 겹칩니다."
+    }
+  ]
+}

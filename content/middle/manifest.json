@@ -1,12 +1,10 @@
 {
   "schemaVersion": 1,
-  "title": "중학교 수학",
-  "units": [
-    "middle-integer-rational-operations.json",
-    "middle-linear-equations.json",
-    "middle-simultaneous-linear-equations.json",
-    "middle-linear-function-graph.json",
-    "middle-quadratic-equation-function.json",
-    "middle-pythagorean-trig.json"
-  ]
+  "title": "U.S. Middle School Mathematics (CCSS-M)",
+  "manifests": [
+    "grade-6/manifest.json",
+    "grade-7/manifest.json",
+    "grade-8/manifest.json"
+  ],
+  "units": []
 }

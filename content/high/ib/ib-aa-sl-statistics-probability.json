@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-sl-statistics-probability",
+  "title": "IB AA SL 통계와 확률",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Statistics and probability",
+  "standards": ["IB AA SL: Statistics and probability"],
+  "pathways": ["AA: 확률법칙과 분포의 수학적 구조를 계산하고 자료 해석의 타당성을 판단하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA SL Topic 4", "AA SL Statistics and probability", "IB 분석과 접근 통계 확률 표준"],
+  "description": "표본과 편향, 기술통계, 상관·회귀, 조건부확률, 이항·정규분포를 수학적으로 해석합니다.",
+  "estimatedMinutes": 65,
+  "prerequisites": ["ib-aa-sl-number-algebra"],
+  "objectives": ["자료의 대표값·산포·상관과 회귀 결과를 맥락에 맞게 해석할 수 있다.", "확률법칙과 이항·정규분포로 사건의 가능성을 계산할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "표본과 자료 요약", "body": "표본은 모집단을 대표해야 합니다. 평균·중앙값은 중심을, 사분위범위·표준편차는 산포를 나타내며 이상치는 두 종류의 요약에 다르게 영향을 줍니다."},
+    {"type": "concept", "title": "상관과 회귀", "body": "Pearson 상관계수 r은 선형 관계의 방향과 강도를 측정합니다. 회귀선은 예측에 쓰지만 상관은 인과를 보장하지 않으며 관측 범위 밖 외삽은 위험합니다."},
+    {"type": "concept", "title": "조건부확률", "body": "P(A|B)=P(A∩B)/P(B)입니다. 독립이면 P(A|B)=P(A)이고 P(A∩B)=P(A)P(B)입니다."},
+    {"type": "concept", "title": "확률분포", "body": "고정된 시행 횟수와 성공확률을 가진 독립 시행은 이항분포로 모델링합니다. 정규분포는 평균을 중심으로 대칭이며 표준화값 z=(x-μ)/σ로 비교합니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-sl-statistics-probability-p01", "type": "number", "prompt": "정렬된 자료 4,5,6,7,8,30에서 중앙값과 사분위수를 사용해 사분위범위 IQR을 구하세요.", "answer": 3, "hints": ["하위 절반 4,5,6의 중앙값과 상위 절반 7,8,30의 중앙값을 찾으세요.", "IQR=Q3-Q1입니다."], "explanation": "Q1=5, Q3=8이므로 IQR=3입니다. 큰 값 30의 영향을 평균보다 덜 받습니다."},
+    {"id": "ib-aa-sl-statistics-probability-p02", "type": "rational", "prompt": "학생 80명 중 스포츠 참여자는 48명이며, 그중 음악 동아리에도 참여하는 학생은 30명입니다. 스포츠 참여 학생을 골랐을 때 음악 동아리에도 참여할 조건부확률을 구하세요.", "answer": {"numerator": 5, "denominator": 8}, "hints": ["조건이 스포츠 참여이므로 분모는 48입니다.", "교집합 인원 30을 48로 나누어 약분하세요."], "explanation": "조건부확률은 30/48=5/8입니다."},
+    {"id": "ib-aa-sl-statistics-probability-p03", "type": "number", "prompt": "한 부품의 불량확률이 0.4이고 서로 독립인 부품 5개를 검사합니다. 정확히 3개가 불량일 확률을 구하세요.", "answer": 0.2304, "tolerance": 0.000001, "hints": ["X~B(5,0.4)로 모델링하세요.", "C(5,3)(0.4)^3(0.6)^2를 계산하세요."], "explanation": "확률은 10×0.064×0.36=0.2304입니다."},
+    {"id": "ib-aa-sl-statistics-probability-p04", "type": "number", "prompt": "회귀식 y=1.8x+12로 x=10일 때 y를 예측했지만 실제 관측값은 34였습니다. 잔차를 '관측값-예측값'으로 정의할 때 잔차를 구하세요.", "answer": 4, "hints": ["예측값은 1.8×10+12입니다.", "34에서 예측값을 빼세요."], "explanation": "예측값은 30이고 잔차는 34-30=4입니다."},
+    {"id": "ib-aa-sl-statistics-probability-p05", "type": "number", "prompt": "X가 평균 70, 표준편차 8인 정규분포를 따릅니다. 계산기에서 Φ(2)=0.97725를 얻었을 때 P(X>86)을 구하세요.", "answer": 0.02275, "tolerance": 0.000001, "hints": ["86의 표준화값은 (86-70)/8=2입니다.", "오른쪽 꼬리는 1-Φ(2)입니다."], "explanation": "P(X>86)=1-0.97725=0.02275입니다."},
+    {"id": "ib-aa-sl-statistics-probability-p06", "type": "choice", "prompt": "학생 명부에서 임의의 시작점을 정한 뒤 매 20번째 학생을 조사했는데 명부가 반별로 20명씩 반복 정렬되어 있습니다. 가장 타당한 판단을 고르세요.", "choices": [{"id": "a", "label": "주기성과 추출 간격이 겹쳐 표본이 편향될 수 있다"}, {"id": "b", "label": "표본 크기와 무관하게 완전한 단순무작위표본이다"}, {"id": "c", "label": "상관계수가 반드시 0이 된다"}, {"id": "d", "label": "조건부확률을 계산할 수 없다"}], "answer": "a", "hints": ["계통추출의 간격과 명부의 반복 구조를 비교하세요.", "각 반에서 같은 위치 학생만 뽑힐 수 있습니다."], "explanation": "20명 주기와 추출 간격 20이 일치하면 반복적으로 같은 유형의 학생을 골라 대표성이 손상될 수 있습니다."}
+  ]
+}

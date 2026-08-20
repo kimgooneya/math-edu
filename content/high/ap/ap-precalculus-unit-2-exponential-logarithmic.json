@@ -1,0 +1,21 @@
+{
+  "schemaVersion":1,"id":"ap-precalculus-unit-2-exponential-logarithmic","title":"Unit 2: Exponential and Logarithmic Functions","stage":"high","grade":"Grades 10–12","course":"AP Precalculus","domain":"Exponential and Logarithmic Functions","framework":"College Board AP","level":"AP","standards":["AP Precalculus Unit 2"],"aliases":["지수함수와 로그함수","AP Precalculus U2"],"sources":["https://apcentral.collegeboard.org/courses/ap-precalculus"],
+  "description":"등비적 변화와 지수·로그 모델을 분석하고 함수의 합성·분해와 제한된 정의역에서의 역함수를 여러 표현으로 다룹니다.","estimatedMinutes":65,"prerequisites":["ap-precalculus-unit-1-polynomial-rational"],"pathways":["ap-precalculus-unit-3-trigonometric-polar"],
+  "objectives":["일정한 비율의 변화를 지수함수로 모델링하고 매개변수를 해석할 수 있다.","함수를 합성·분해하고 일대일 정의역에서 역함수를 구해 지수·로그 관계와 맥락을 해석할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"등비적 변화","body":"동일한 입력 간격마다 출력이 일정한 비로 변하면 지수 모델 ab^x가 적합합니다. b>1은 성장, 0<b<1은 감쇠를 뜻합니다."},
+    {"type":"concept","title":"로그는 지수의 역함수","body":"log_b y=x와 b^x=y는 같은 관계입니다. 따라서 지수함수와 로그함수의 그래프는 y=x에 대해 대칭입니다."},
+    {"type":"formula","title":"로그 법칙","body":"곱은 합, 몫은 차, 거듭제곱은 계수로 바뀝니다.","formula":"log_b(MN)=log_b M+log_b N,  log_b(M^p)=p log_b M"},
+    {"type":"concept","title":"2.7 함수의 합성과 분해","body":"(f∘g)(x)=f(g(x))에서는 g의 출력이 f의 입력이 되며 일반적으로 합성 순서를 바꿀 수 없습니다. 복잡한 식을 바깥 함수와 안쪽 함수로 분해하면 변환과 맥락 속 연쇄 관계를 설명할 수 있습니다."},
+    {"type":"concept","title":"2.8 역함수와 가역 정의역","body":"역함수는 입력과 출력을 뒤바꾸며 그래프는 y=x에 대해 대칭입니다. 함수가 일대일이 아닌 경우 정의역을 제한하고, f(f^-1(x))=x와 f^-1(f(x))=x로 결과를 확인합니다."},
+    {"type":"example","title":"성장 모델","prompt":"초기 200개가 시간당 1.5배가 될 때 3시간 후 양을 구합니다.","steps":["모델은 200(1.5)^t입니다.","t=3이면 200×3.375=675입니다."],"answer":"675"}
+  ],
+  "problems":[
+    {"id":"ap-precalculus-unit-2-exponential-logarithmic-p02","type":"number","prompt":"log_2(32)의 값은?","answer":5,"hints":["2의 몇 제곱이 32인지 찾으세요.","2^5=32입니다."],"explanation":"2^5=32이므로 log_2(32)=5입니다."},
+    {"id":"ap-precalculus-unit-2-exponential-logarithmic-p03","type":"choice","prompt":"매 입력 1 증가마다 값이 20% 감소하는 모델의 밑은?","choices":[{"id":"a","label":"0.2"},{"id":"b","label":"0.8"},{"id":"c","label":"1.2"},{"id":"d","label":"20"}],"answer":"b","hints":["남는 비율은 100%-20%입니다.","감쇠 모델의 밑은 1보다 작습니다."],"explanation":"매번 80%가 남으므로 밑은 0.8입니다."},
+    {"id":"ap-precalculus-unit-2-exponential-logarithmic-p05","type":"integer","prompt":"5^(x-1)=125일 때 x는?","answer":4,"hints":["125를 5의 거듭제곱으로 쓰세요.","x-1=3입니다."],"explanation":"125=5^3이므로 x-1=3, x=4입니다."},
+    {"id":"ap-precalculus-unit-2-exponential-logarithmic-p06","type":"choice","prompt":"y=log_2 x의 정의역은?","choices":[{"id":"a","label":"x<0"},{"id":"b","label":"x≤0"},{"id":"c","label":"x>0"},{"id":"d","label":"모든 실수"}],"answer":"c","hints":["로그의 진수 조건을 떠올리세요.","진수는 양수여야 합니다."],"explanation":"실수 로그에서 진수 x는 반드시 양수입니다."},
+    {"id":"ap-precalculus-unit-2-exponential-logarithmic-p07","type":"integer","prompt":"f(x)=2x+1, g(x)=x²일 때 (f∘g)(3)은?","answer":19,"hints":["먼저 g(3)을 계산하세요.","g(3)=9를 f에 입력하세요."],"explanation":"(f∘g)(3)=f(9)=2·9+1=19입니다."},
+    {"id":"ap-precalculus-unit-2-exponential-logarithmic-p08","type":"choice","prompt":"f(x)=x²을 x≥0으로 제한했을 때 역함수는?","choices":[{"id":"a","label":"f^-1(x)=x²"},{"id":"b","label":"f^-1(x)=√x"},{"id":"c","label":"f^-1(x)=-√x"},{"id":"d","label":"f^-1(x)=1/x²"}],"answer":"b","hints":["x와 y를 바꾸고 y를 푸세요.","원래 정의역 x≥0에 대응해 양의 제곱근을 택합니다."],"explanation":"제한된 함수는 일대일이며 입력·출력을 뒤바꾸면 f^-1(x)=√x입니다."}
+  ]
+}

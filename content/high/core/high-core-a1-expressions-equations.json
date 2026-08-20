@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a1-expressions-equations",
+  "title": "Expressions, Equations, and Quantities",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra I",
+  "domain": "Algebra",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSA-SSE.A.1",
+    "HSA-SSE.A.2",
+    "HSA-CED.A.1",
+    "HSA-REI.A.1"
+  ],
+  "pathways": [
+    "Traditional: Algebra I",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "대수식과 방정식",
+    "Expressions and Equations",
+    "식의 구조",
+    "Algebra I foundations"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "대수식의 구조와 수량의 단위를 해석하고, 상황을 방정식으로 표현해 동치 변형의 근거를 설명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "middle-grade-8-ee"
+  ],
+  "objectives": [
+    "식의 항과 인수 구조를 해석하고 동치인 식으로 변형할 수 있다.",
+    "수량과 단위를 정의해 실제 상황을 방정식으로 모델링할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "식의 구조 읽기",
+      "body": "항은 덧셈으로 구분되고 인수는 곱셈을 이룹니다. 괄호와 공통인수를 먼저 보면 식 전체가 나타내는 양을 의미 있게 해석할 수 있습니다."
+    },
+    {
+      "type": "concept",
+      "title": "방정식과 수량",
+      "body": "방정식은 두 양이 같다는 관계입니다. 변수가 뜻하는 양과 단위를 먼저 정하면 식을 세운 뒤 얻은 해가 상황에 맞는지도 확인할 수 있습니다."
+    },
+    {
+      "type": "formula",
+      "title": "분배법칙과 공통인수",
+      "body": "분배법칙은 같은 값을 유지하는 동치 변형의 근거입니다.",
+      "formula": "a(b+c)=ab+ac,  ab+ac=a(b+c)"
+    },
+    {
+      "type": "example",
+      "title": "둘레 모델 세우기",
+      "prompt": "가로가 x m이고 세로가 x+3 m인 직사각형의 둘레가 30 m일 때 식을 세우세요.",
+      "steps": [
+        "둘레는 가로와 세로를 두 번씩 더한 값입니다.",
+        "2x+2(x+3)=30으로 나타냅니다.",
+        "정리하면 4x+6=30이므로 x=6입니다."
+      ],
+      "answer": "2x+2(x+3)=30, x=6"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a1-expressions-equations-p01",
+      "type": "integer",
+      "prompt": "3(x+4)-2x를 x=5일 때 계산하세요.",
+      "answer": 17,
+      "hints": [
+        "먼저 분배법칙으로 괄호를 푸세요.",
+        "3x+12-2x=x+12입니다."
+      ],
+      "explanation": "식은 x+12와 같으므로 x=5를 대입하면 17입니다."
+    },
+    {
+      "id": "high-core-a1-expressions-equations-p02",
+      "type": "integer",
+      "prompt": "5x+15에서 공통인수를 묶어 5(x+k)로 나타낼 때 k를 구하세요.",
+      "answer": 3,
+      "hints": [
+        "두 항을 5로 나누세요.",
+        "15÷5를 계산하세요."
+      ],
+      "explanation": "5x+15=5(x+3)이므로 k=3입니다."
+    },
+    {
+      "id": "high-core-a1-expressions-equations-p03",
+      "type": "choice",
+      "prompt": "2(x-3)+7과 동치인 식을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "2를 괄호 안의 두 항에 모두 곱하세요.",
+        "-6과 7을 합하세요."
+      ],
+      "explanation": "2(x-3)+7=2x-6+7=2x+1이므로 A입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "2x+1"
+        },
+        {
+          "id": "B",
+          "label": "2x-1"
+        },
+        {
+          "id": "C",
+          "label": "2x+4"
+        },
+        {
+          "id": "D",
+          "label": "x+1"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-expressions-equations-p04",
+      "type": "integer",
+      "prompt": "어떤 수 x의 4배에서 9를 뺀 값이 27입니다. x를 구하세요.",
+      "answer": 9,
+      "hints": [
+        "관계를 4x-9=27로 쓰세요.",
+        "양변에 9를 더한 뒤 4로 나누세요."
+      ],
+      "explanation": "4x=36이므로 x=9입니다."
+    },
+    {
+      "id": "high-core-a1-expressions-equations-p05",
+      "type": "choice",
+      "prompt": "속도 60 km/h로 t시간 이동한 거리를 나타내는 식과 단위를 고르세요.",
+      "answer": "B",
+      "hints": [
+        "거리는 속력×시간입니다.",
+        "km/h와 h를 곱하면 km가 남습니다."
+      ],
+      "explanation": "60(km/h)×t(h)=60t km이므로 B입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "60+t km"
+        },
+        {
+          "id": "B",
+          "label": "60t km"
+        },
+        {
+          "id": "C",
+          "label": "60/t h"
+        },
+        {
+          "id": "D",
+          "label": "t/60 km"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-expressions-equations-p06",
+      "type": "number",
+      "prompt": "총액 44달러에 10% 팁이 포함되어 있습니다. 식 1.10m=44에서 팁 전 금액 m을 구하세요.",
+      "answer": 40,
+      "hints": [
+        "양변을 1.10으로 나누세요.",
+        "44÷1.1을 계산하세요."
+      ],
+      "explanation": "m=44÷1.10=40이므로 팁 전 금액은 40달러입니다."
+    }
+  ]
+}

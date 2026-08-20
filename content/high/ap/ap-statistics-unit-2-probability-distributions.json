@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-statistics-unit-2-probability-distributions","title":"Unit 2: Probability, Random Variables, and Probability Distributions","stage":"high","grade":"Grades 10–12","course":"AP Statistics","domain":"Probability and Random Variables","framework":"College Board AP","level":"AP","standards":["AP Statistics Unit 2 (Effective Fall 2026)"],"aliases":["확률·확률변수·확률분포","AP Statistics U2","2026–27 revised framework"],"sources":["https://apcentral.collegeboard.org/courses/ap-statistics","https://apcentral.collegeboard.org/courses/ap-statistics/future-revisions"],
+  "description":"2026–27 개정 Unit 2의 이원 범주형 자료, 조건부확률, 확률 규칙, 시뮬레이션, 이산확률변수와 이항분포를 다룹니다.","estimatedMinutes":60,"prerequisites":["ap-statistics-unit-1-data-collection"],"pathways":["ap-statistics-unit-3-inference-proportions"],
+  "objectives":["이원표와 확률 규칙을 사용해 결합·조건부확률과 독립성을 판단할 수 있다.","이산확률변수와 이항분포의 확률·평균·표준편차를 계산하고 맥락에서 해석할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"이원 범주형 자료","body":"이원표는 두 범주형 변수의 결합·주변·조건부 분포를 보여 줍니다. 조건부 비율이 집단마다 다르면 연관성이 있음을 시사합니다."},
+    {"type":"formula","title":"확률 규칙","body":"합집합은 중복되는 교집합을 한 번 빼며 조건부확률은 조건 사건으로 표본공간을 제한합니다.","formula":"P(A∪B)=P(A)+P(B)-P(A∩B), P(A|B)=P(A∩B)/P(B)"},
+    {"type":"concept","title":"확률변수","body":"이산확률변수의 평균은 장기 기대값 ΣxP(x)이고 분산은 평균으로부터 제곱거리의 기대값입니다. 모든 확률은 0과 1 사이이고 합은 1입니다."},
+    {"type":"concept","title":"이항분포와 시뮬레이션","body":"고정된 시행 수, 두 결과, 독립성, 일정한 성공확률 조건에서 이항모형을 사용합니다. 시뮬레이션은 반복 실험의 비율로 확률을 추정합니다."}
+  ],
+  "problems":[
+    {"id":"ap-statistics-unit-2-probability-distributions-p01","type":"number","prompt":"P(A)=0.6, P(B)=0.5, P(A∩B)=0.2일 때 P(A∪B)는?","answer":0.9,"hints":["합집합 공식을 쓰세요.","0.6+0.5-0.2를 계산하세요."],"explanation":"P(A∪B)=0.9입니다."},
+    {"id":"ap-statistics-unit-2-probability-distributions-p02","type":"number","prompt":"P(A∩B)=0.15, P(B)=0.5일 때 P(A|B)는?","answer":0.3,"hints":["교집합 확률을 조건 사건 확률로 나누세요.","0.15/0.5입니다."],"explanation":"조건부확률은 0.3입니다."},
+    {"id":"ap-statistics-unit-2-probability-distributions-p03","type":"choice","prompt":"A와 B가 독립이고 P(A)=0.4, P(B)=0.5이면 P(A∩B)는?","choices":[{"id":"a","label":"0.1"},{"id":"b","label":"0.2"},{"id":"c","label":"0.4"},{"id":"d","label":"0.9"}],"answer":"b","hints":["독립이면 교집합은 확률의 곱입니다.","0.4×0.5를 계산하세요."],"explanation":"독립이므로 P(A∩B)=0.2입니다."},
+    {"id":"ap-statistics-unit-2-probability-distributions-p04","type":"number","prompt":"X가 0과 2를 각각 확률 0.5로 가질 때 E(X)는?","answer":1,"hints":["각 값×확률을 더하세요.","0×0.5+2×0.5입니다."],"explanation":"기대값은 1입니다."},
+    {"id":"ap-statistics-unit-2-probability-distributions-p05","type":"choice","prompt":"다음 중 이항 조건이 아닌 것은?","choices":[{"id":"a","label":"시행 수가 고정됨"},{"id":"b","label":"각 시행에 두 결과"},{"id":"c","label":"성공확률이 일정함"},{"id":"d","label":"시행마다 성공확률이 반드시 달라짐"}],"answer":"d","hints":["이항모형의 BINS 조건을 떠올리세요.","성공확률은 일정해야 합니다."],"explanation":"시행마다 성공확률이 달라지면 일반적인 이항분포 조건을 만족하지 않습니다."},
+    {"id":"ap-statistics-unit-2-probability-distributions-p06","type":"number","prompt":"X~Binomial(10,0.3)일 때 평균은?","answer":3,"hints":["이항분포 평균은 np입니다.","10×0.3을 계산하세요."],"explanation":"평균 성공 횟수는 np=3입니다."}
+  ]
+}

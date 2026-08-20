@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-7-rp",
+  "title": "Ratios and Proportional Relationships",
+  "stage": "middle",
+  "grade": "Grade 7",
+  "course": "Grade 7 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "Ratios and Proportional Relationships",
+  "standards": ["CCSS.Math.Content.7.RP.A.1", "CCSS.Math.Content.7.RP.A.2.a", "CCSS.Math.Content.7.RP.A.2.b", "CCSS.Math.Content.7.RP.A.2.c", "CCSS.Math.Content.7.RP.A.2.d", "CCSS.Math.Content.7.RP.A.3"],
+  "aliases": ["Grade 7 Ratios and Proportional Relationships", "7.RP", "7학년 비와 비례 관계", "복합 단위비율과 퍼센트"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/7/RP/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "분수의 비로 이루어진 단위비율, 비례 관계의 상수·식·그래프, 여러 단계 퍼센트 문제를 다룹니다.",
+  "estimatedMinutes": 50,
+  "prerequisites": ["middle-grade-6-rp", "middle-grade-6-ns"],
+  "objectives": ["분수끼리의 비에서 단위비율을 구하고 비례 관계를 표·그래프·식에서 판별할 수 있다.", "비례상수와 좌표의 의미를 해석하고 세금·할인·증감률·오차율 문제를 해결할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "복합분수 단위비율", "body": "1/2마일을 1/4시간에 이동한 속력은 (1/2)÷(1/4)=2마일/시간입니다. 단위가 서로 다르면 답에 어떤 양이 분자와 분모에 놓이는지 확인합니다."},
+    {"type": "concept", "title": "비례 관계 판별", "body": "표에서 y/x가 일정하고, 그래프가 원점을 지나는 직선이면 y와 x는 비례합니다. 그 일정한 값 k가 비례상수입니다."},
+    {"type": "concept", "title": "식과 그래프의 의미", "body": "비례 관계는 y=kx로 나타냅니다. 그래프의 (1,k)는 단위비율을, (x,y)는 x만큼일 때 y만큼이라는 실제 상황을 뜻합니다."},
+    {"type": "concept", "title": "여러 단계 퍼센트", "body": "p% 증가한 값은 원래 값×(1+p/100), p% 감소한 값은 원래 값×(1-p/100)입니다. 세금, 팁, 할인, 이자와 오차율에도 같은 비례 추론을 적용합니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-7-rp-p01", "type": "integer", "prompt": "1/2마일을 1/4시간에 걸었다면 한 시간당 몇 마일을 걷는 셈인가요?", "answer": 2, "hints": ["거리 분수를 시간 분수로 나누세요.", "1/2÷1/4를 계산하세요."], "explanation": "(1/2)÷(1/4)=(1/2)×4=2이므로 시간당 2마일입니다."},
+    {"id": "middle-grade-7-rp-p02", "type": "choice", "prompt": "표의 순서쌍이 (1,4), (2,8), (4,16)일 때 이 관계에 대한 설명으로 옳은 것을 고르세요.", "choices": [{"id": "a", "label": "비례 관계이고 비례상수는 4이다"}, {"id": "b", "label": "비례 관계이고 비례상수는 2이다"}, {"id": "c", "label": "비례 관계가 아니다"}], "answer": "a", "hints": ["각 순서쌍에서 y/x를 계산하세요.", "4/1, 8/2, 16/4를 비교하세요."], "explanation": "모든 순서쌍에서 y/x=4이므로 y=4x인 비례 관계입니다."},
+    {"id": "middle-grade-7-rp-p03", "type": "number", "prompt": "비례식 y=3.5x의 비례상수를 구하세요.", "answer": 3.5, "hints": ["y=kx에서 k가 비례상수입니다.", "x의 계수를 확인하세요."], "explanation": "y=3.5x에서 x의 계수 3.5가 비례상수입니다."},
+    {"id": "middle-grade-7-rp-p04", "type": "choice", "prompt": "개당 6달러인 물건의 총가격 그래프 위 점 (5,30)이 뜻하는 것을 고르세요.", "choices": [{"id": "a", "label": "5개를 사면 30달러이다"}, {"id": "b", "label": "30개를 사면 5달러이다"}, {"id": "c", "label": "한 개에 30달러이다"}], "answer": "a", "hints": ["x는 물건 수, y는 총가격입니다.", "순서쌍의 첫째와 둘째 좌표를 맥락에 맞게 읽으세요."], "explanation": "(5,30)은 물건 5개에 대한 총가격이 30달러라는 뜻입니다."},
+    {"id": "middle-grade-7-rp-p05", "type": "integer", "prompt": "60달러짜리 물건을 20% 할인할 때 판매 가격은 몇 달러인가요?", "answer": 48, "hints": ["할인 후에는 원래 가격의 80%를 냅니다.", "60×0.8을 계산하세요."], "explanation": "할인액은 12달러이고 판매 가격은 60-12=48달러입니다."},
+    {"id": "middle-grade-7-rp-p06", "type": "integer", "prompt": "실제 길이는 50 cm인데 47 cm로 측정했습니다. 실제값을 기준으로 한 절대 퍼센트 오차는 몇 %인가요?", "answer": 6, "hints": ["절대 오차는 |47-50|=3입니다.", "3÷50×100을 계산하세요."], "explanation": "절대 퍼센트 오차는 3/50×100=6%입니다."}
+  ]
+}

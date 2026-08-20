@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-circles",
+  "title": "Circles: Theorems and Equations",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSG-C.A.1",
+    "HSG-C.A.2",
+    "HSG-C.A.3",
+    "HSG-C.B.5",
+    "HSG-GPE.A.1"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math II / Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "원의 정리와 방정식",
+    "Circles",
+    "원주각과 접선",
+    "Circle Equation"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "원의 닮음, 현·접선·중심각·원주각 관계와 호의 길이·부채꼴 넓이를 다루고 원의 방정식을 완전제곱으로 유도합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-geo-triangle-congruence",
+    "high-core-geo-similarity-trigonometry",
+    "high-core-geo-coordinate-geometry"
+  ],
+  "objectives": [
+    "평행이동과 확대를 이용해 모든 원이 서로 닮음임을 증명할 수 있다.",
+    "원에서 중심각, 원주각, 현, 접선의 관계를 적용할 수 있다.",
+    "삼각형의 내접원·외접원과 원에 내접한 사각형의 성질을 설명하고 작도할 수 있다.",
+    "원 밖의 한 점에서 원에 그은 접선을 작도하고 그 근거를 설명할 수 있다.",
+    "원의 방정식을 표준형으로 나타내고 중심과 반지름을 해석할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "중심각과 원주각",
+      "body": "같은 호를 보는 원주각은 그 중심각의 절반입니다. 지름을 보는 원주각은 90°이며, 반지름은 접점에서 접선과 수직입니다."
+    },
+    {
+      "type": "concept",
+      "title": "호와 부채꼴",
+      "body": "호의 길이와 부채꼴 넓이는 중심각이 360°에서 차지하는 비율만큼 전체 원주와 원 넓이를 취합니다. 각도 단위를 반드시 확인합니다."
+    },
+    {
+      "type": "formula",
+      "title": "원의 방정식",
+      "body": "중심 (h,k), 반지름 r인 원은 중심에서 거리가 r인 점들의 집합입니다.",
+      "formula": "(x-h)²+(y-k)²=r²"
+    },
+    {
+      "type": "example",
+      "title": "완전제곱으로 중심 찾기",
+      "prompt": "x²+y²-6x+4y-3=0의 중심을 구하세요.",
+      "steps": [
+        "x²-6x=(x-3)²-9입니다.",
+        "y²+4y=(y+2)²-4입니다.",
+        "정리하면 (x-3)²+(y+2)²=16이므로 중심은 (3,-2)입니다."
+      ],
+      "answer": "(3,-2)"
+    },
+    {
+      "type": "concept",
+      "title": "모든 원의 닮음 증명",
+      "body": "중심 O₁, 반지름 r₁인 원을 먼저 평행이동해 중심 O₁을 다른 원의 중심 O₂에 겹칩니다. 이어 O₂ 중심, 배율 r₂/r₁인 확대를 하면 모든 점의 중심까지 거리가 r₁에서 r₂로 바뀌어 두 번째 원과 정확히 겹칩니다. 따라서 어떤 두 원도 닮음입니다."
+    },
+    {
+      "type": "concept",
+      "title": "내접·외접 도형과 원에 내접한 사각형",
+      "body": "삼각형의 세 변의 수직이등분선은 외심에서 만나고 외접원을 정합니다. 세 각의 이등분선은 내심에서 만나며 각 변에 접하는 내접원을 정합니다. 원에 내접한 사각형은 마주 보는 두 각의 합이 180°이고, 그 역도 성립합니다."
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-circles-p01",
+      "type": "integer",
+      "prompt": "같은 호에 대한 중심각이 100°일 때 원주각을 구하세요.",
+      "answer": 50,
+      "hints": [
+        "원주각은 중심각의 절반입니다.",
+        "100÷2를 계산하세요."
+      ],
+      "explanation": "원주각은 50°입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p02",
+      "type": "integer",
+      "prompt": "반지름이 접선과 접점에서 이루는 각을 구하세요.",
+      "answer": 90,
+      "hints": [
+        "접선 정리를 떠올리세요.",
+        "접점으로 그은 반지름은 접선과 수직입니다."
+      ],
+      "explanation": "수직이므로 90°입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p03",
+      "type": "orderedPair",
+      "prompt": "원 (x+2)²+(y-5)²=9의 중심을 구하세요.",
+      "answer": [
+        -2,
+        5
+      ],
+      "hints": [
+        "(x-h)²+(y-k)²=r²와 비교하세요.",
+        "괄호 안 부호를 반대로 읽으세요."
+      ],
+      "explanation": "중심은 (-2,5)입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p04",
+      "type": "number",
+      "prompt": "원 x²+y²=49의 반지름을 구하세요.",
+      "answer": 7,
+      "hints": [
+        "r²=49입니다.",
+        "반지름은 양수입니다."
+      ],
+      "explanation": "r=√49=7입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p05",
+      "type": "number",
+      "prompt": "반지름 6인 원에서 중심각 60°인 호의 길이를 π 없이 계수만 묻습니다. 호의 길이가 kπ일 때 k를 구하세요.",
+      "answer": 2,
+      "hints": [
+        "호의 길이는 60/360×2π×6입니다.",
+        "1/6×12π를 계산하세요."
+      ],
+      "explanation": "호의 길이는 2π이므로 k=2입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p06",
+      "type": "number",
+      "prompt": "반지름 4인 원에서 중심각 90°인 부채꼴 넓이가 kπ일 때 k를 구하세요.",
+      "answer": 4,
+      "hints": [
+        "전체 원 넓이는 16π입니다.",
+        "90°는 전체의 1/4입니다."
+      ],
+      "explanation": "부채꼴 넓이는 16π/4=4π이므로 k=4입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p07",
+      "type": "number",
+      "prompt": "반지름 2인 원을 중심을 맞춘 뒤 반지름 5인 원으로 보내는 확대의 배율을 구하세요.",
+      "answer": 2.5,
+      "hints": [
+        "확대 배율은 상의 반지름을 원래 반지름으로 나눈 값입니다.",
+        "5÷2를 계산하세요."
+      ],
+      "explanation": "중심을 평행이동으로 맞춘 뒤 배율 5/2=2.5로 확대하면 두 원이 겹치므로 원들은 닮음입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p08",
+      "type": "integer",
+      "prompt": "원에 내접한 사각형의 한 각이 112°일 때 그 각의 맞은편 각을 구하세요.",
+      "answer": 68,
+      "hints": [
+        "원에 내접한 사각형의 마주 보는 두 각은 보각입니다.",
+        "180-112를 계산하세요."
+      ],
+      "explanation": "마주 보는 두 각의 합은 180°이므로 맞은편 각은 68°입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p09",
+      "type": "choice",
+      "prompt": "삼각형의 외접원 중심을 작도할 때 교점을 찾아야 하는 선들을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "외심은 세 꼭짓점에서 같은 거리에 있습니다.",
+        "두 점에서 같은 거리인 점은 그 선분의 수직이등분선 위에 있습니다."
+      ],
+      "explanation": "두 변의 수직이등분선 교점은 세 꼭짓점에서 같은 거리인 외심이며, 이를 중심으로 외접원을 그릴 수 있습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "두 각의 이등분선"
+        },
+        {
+          "id": "B",
+          "label": "두 변의 수직이등분선"
+        },
+        {
+          "id": "C",
+          "label": "두 중선"
+        },
+        {
+          "id": "D",
+          "label": "두 높이"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-circles-p10",
+      "type": "integer",
+      "prompt": "원 밖의 같은 점 P에서 원에 그은 두 접선의 접점을 A,B라 할 때 PA=7 cm이면 PB를 구하세요.",
+      "answer": 7,
+      "hints": [
+        "한 외부점에서 그은 두 접선 선분의 길이는 같습니다.",
+        "반지름 OA, OB와 OP로 만든 두 직각삼각형의 합동을 생각하세요."
+      ],
+      "explanation": "OA=OB, OP는 공통이고 두 접점의 각은 직각이므로 두 직각삼각형이 합동입니다. 따라서 PA=PB=7 cm입니다."
+    },
+    {
+      "id": "high-core-geo-circles-p12",
+      "type": "choice",
+      "prompt": "삼각형의 내접원을 작도하는 방법과 그 중심의 성질을 모두 바르게 설명한 것을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "내접원은 삼각형의 세 변에 모두 접해야 하므로 중심에서 세 변까지의 수직거리가 같아야 합니다.",
+        "한 각의 이등분선 위의 점은 그 각을 이루는 두 변에서 같은 거리에 있습니다."
+      ],
+      "explanation": "두 각의 이등분선 교점 I는 셋째 각의 이등분선 위에도 놓이며 세 변까지의 수직거리가 같습니다. 따라서 I가 내심이자 내접원의 중심이고, I에서 한 변에 내린 수선의 길이를 반지름으로 원을 그리면 세 변에 모두 접합니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "두 각의 이등분선 교점인 내심을 중심으로 하고, 내심에서 한 변까지의 수직거리를 반지름으로 한다"
+        },
+        {
+          "id": "B",
+          "label": "두 변의 수직이등분선 교점을 중심으로 하고, 한 꼭짓점까지의 거리를 반지름으로 한다"
+        },
+        {
+          "id": "C",
+          "label": "두 중선의 교점을 중심으로 하고, 가장 긴 변의 절반을 반지름으로 한다"
+        },
+        {
+          "id": "D",
+          "label": "두 높이의 교점을 중심으로 하고, 임의의 변 길이를 반지름으로 한다"
+        }
+      ]
+    }
+  ]
+}

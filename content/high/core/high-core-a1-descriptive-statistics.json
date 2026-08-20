@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a1-descriptive-statistics",
+  "title": "Descriptive Statistics and Data Displays",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra I",
+  "domain": "Statistics and Probability",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSS-ID.A.1",
+    "HSS-ID.A.2",
+    "HSS-ID.A.3",
+    "HSS-ID.B.5",
+    "HSS-ID.B.6"
+  ],
+  "pathways": [
+    "Traditional: Algebra I",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "기술 통계",
+    "Descriptive Statistics",
+    "분포 비교",
+    "산점도"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "한 변수와 두 변수 자료를 적절한 그래프로 나타내고 중심·산포·분포 모양과 이상치를 맥락 속에서 비교합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "middle-grade-8-sp"
+  ],
+  "objectives": [
+    "자료 유형에 맞는 그래프와 요약 통계를 선택할 수 있다.",
+    "두 분포 또는 두 변수 관계를 중심, 산포, 모양, 이상치로 해석할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "분포의 네 요소",
+      "body": "분포를 비교할 때는 중심, 산포, 전체 모양, 이상치를 함께 봅니다. 평균과 표준편차는 대칭적인 자료에, 중앙값과 사분위범위는 치우치거나 이상치가 있는 자료에 특히 유용합니다."
+    },
+    {
+      "type": "concept",
+      "title": "두 변수 자료",
+      "body": "산점도는 두 수치형 변수의 방향, 형태, 강도와 이상치를 보여 줍니다. 범주형 두 변수는 이원표에서 조건부 비율을 비교합니다."
+    },
+    {
+      "type": "formula",
+      "title": "사분위범위",
+      "body": "사분위범위는 자료의 가운데 50%가 퍼진 폭이며 이상치의 영향을 비교적 적게 받습니다.",
+      "formula": "IQR=Q₃-Q₁"
+    },
+    {
+      "type": "example",
+      "title": "중심 비교",
+      "prompt": "자료 2,3,3,4,18의 평균과 중앙값 중 대표값으로 더 안정적인 것을 고르세요.",
+      "steps": [
+        "18은 나머지 값에서 멀리 떨어진 이상치입니다.",
+        "평균은 이상치 쪽으로 크게 끌립니다.",
+        "중앙값 3이 전형적인 값을 더 안정적으로 나타냅니다."
+      ],
+      "answer": "중앙값 3"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a1-descriptive-statistics-p01",
+      "type": "number",
+      "prompt": "자료 2,4,6,8의 평균을 구하세요.",
+      "answer": 5,
+      "hints": [
+        "네 수의 합을 구하세요.",
+        "20을 자료 수 4로 나누세요."
+      ],
+      "explanation": "평균은 (2+4+6+8)/4=5입니다."
+    },
+    {
+      "id": "high-core-a1-descriptive-statistics-p02",
+      "type": "number",
+      "prompt": "자료 1,3,7,9,20의 중앙값을 구하세요.",
+      "answer": 7,
+      "hints": [
+        "자료는 이미 오름차순입니다.",
+        "가운데 세 번째 값을 찾으세요."
+      ],
+      "explanation": "다섯 값의 가운데 값은 7입니다."
+    },
+    {
+      "id": "high-core-a1-descriptive-statistics-p03",
+      "type": "number",
+      "prompt": "자료 2,5,7,10의 범위를 구하세요.",
+      "answer": 8,
+      "hints": [
+        "최댓값에서 최솟값을 빼세요.",
+        "10-2를 계산하세요."
+      ],
+      "explanation": "범위는 10-2=8입니다."
+    },
+    {
+      "id": "high-core-a1-descriptive-statistics-p04",
+      "type": "choice",
+      "prompt": "극단적인 이상치가 있는 치우친 분포의 중심과 산포로 더 적절한 조합을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "이상치에 강한 통계를 찾으세요.",
+        "중앙값과 사분위범위는 순서에 기반합니다."
+      ],
+      "explanation": "중앙값과 사분위범위가 이상치의 영향을 덜 받으므로 B입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "평균과 표준편차"
+        },
+        {
+          "id": "B",
+          "label": "중앙값과 사분위범위"
+        },
+        {
+          "id": "C",
+          "label": "최빈값과 범위"
+        },
+        {
+          "id": "D",
+          "label": "최댓값과 최솟값"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-descriptive-statistics-p05",
+      "type": "choice",
+      "prompt": "산점도가 오른쪽 위로 좁게 모여 있을 때 가장 알맞은 설명을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "x가 커질 때 y의 방향을 보세요.",
+        "점들이 직선에 얼마나 가까운지도 보세요."
+      ],
+      "explanation": "x가 증가할수록 y도 증가하고 점들이 좁게 모여 있어 강한 양의 연관입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "강한 양의 연관"
+        },
+        {
+          "id": "B",
+          "label": "강한 음의 연관"
+        },
+        {
+          "id": "C",
+          "label": "연관 없음"
+        },
+        {
+          "id": "D",
+          "label": "범주형 자료"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-descriptive-statistics-p06",
+      "type": "number",
+      "prompt": "자료의 제1사분위수가 12이고 제3사분위수가 21일 때 사분위범위를 구하세요.",
+      "answer": 9,
+      "hints": [
+        "IQR=Q₃-Q₁을 사용하세요.",
+        "21-12를 계산하세요."
+      ],
+      "explanation": "사분위범위는 21-12=9입니다."
+    }
+  ]
+}

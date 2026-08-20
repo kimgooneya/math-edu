@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-ab-unit-2-differentiation-fundamentals","title":"Unit 2: Differentiation: Definition and Fundamental Properties","stage":"high","grade":"Grades 11–12","course":"AP Calculus AB","domain":"Differentiation Fundamentals","framework":"College Board AP","level":"AP","standards":["AP Calculus AB Unit 2"],"aliases":["미분의 정의와 기본 성질","AP Calculus AB U2"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-ab"],
+  "description":"미분계수를 극한으로 정의하고 거듭제곱·곱·몫 법칙 및 기본 초월함수의 도함수를 계산합니다.","estimatedMinutes":55,"prerequisites":["ap-calculus-ab-unit-1-limits-continuity"],"pathways":["ap-calculus-ab-unit-3-composite-implicit-inverse"],
+  "objectives":["도함수를 순간변화율과 접선 기울기로 해석하고 정의로 계산할 수 있다.","합·차·곱·몫 법칙과 기본 도함수 공식을 정확히 적용할 수 있다."],
+  "theory":[
+    {"type":"formula","title":"미분계수의 정의","body":"a에서의 도함수는 할선 기울기의 극한입니다.","formula":"f'(a)=lim(h→0)[f(a+h)-f(a)]/h"},
+    {"type":"concept","title":"미분 가능성과 연속","body":"미분 가능하면 연속이지만 연속이라고 항상 미분 가능한 것은 아닙니다. 모서리, 첨점, 수직접선, 불연속에서는 미분 가능성을 따져야 합니다."},
+    {"type":"formula","title":"기본 법칙","body":"거듭제곱은 지수를 앞으로 내리고 1 줄이며, 상수배와 합에 선형적으로 적용됩니다.","formula":"d(x^n)/dx=nx^(n-1)"},
+    {"type":"formula","title":"곱과 몫","body":"곱은 각 항을 한 번씩 미분한 합이고 몫은 분모 제곱으로 나눕니다.","formula":"(fg)'=f'g+fg', (f/g)'=(f'g-fg')/g²"}
+  ],
+  "problems":[
+    {"id":"ap-calculus-ab-unit-2-differentiation-fundamentals-p01","type":"choice","prompt":"f(x)=x³의 도함수는?","choices":[{"id":"a","label":"3x²"},{"id":"b","label":"x²"},{"id":"c","label":"3x"},{"id":"d","label":"x⁴/4"}],"answer":"a","hints":["거듭제곱 법칙을 쓰세요.","지수 3을 계수로 내리고 지수를 1 줄입니다."],"explanation":"d(x³)/dx=3x²입니다."},
+    {"id":"ap-calculus-ab-unit-2-differentiation-fundamentals-p02","type":"integer","prompt":"f(x)=x²-4x일 때 f'(3)은?","answer":2,"hints":["f'(x)=2x-4입니다.","x=3을 대입하세요."],"explanation":"f'(3)=6-4=2입니다."},
+    {"id":"ap-calculus-ab-unit-2-differentiation-fundamentals-p03","type":"choice","prompt":"f(x)=x·e^x의 도함수는?","choices":[{"id":"a","label":"e^x"},{"id":"b","label":"xe^x"},{"id":"c","label":"e^x(1+x)"},{"id":"d","label":"x²e^x"}],"answer":"c","hints":["곱의 법칙을 쓰세요.","x'=1이고 (e^x)'=e^x입니다."],"explanation":"f'=1·e^x+x·e^x=e^x(1+x)입니다."},
+    {"id":"ap-calculus-ab-unit-2-differentiation-fundamentals-p04","type":"choice","prompt":"f(x)=1/x의 도함수는?","choices":[{"id":"a","label":"1/x²"},{"id":"b","label":"-1/x²"},{"id":"c","label":"ln x"},{"id":"d","label":"-x²"}],"answer":"b","hints":["x^-1로 쓰세요.","거듭제곱 법칙을 적용하세요."],"explanation":"(x^-1)'=-x^-2=-1/x²입니다."},
+    {"id":"ap-calculus-ab-unit-2-differentiation-fundamentals-p05","type":"integer","prompt":"위치 s(t)=t²+2t일 때 t=4의 순간속도는?","answer":10,"hints":["속도는 위치의 도함수입니다.","s'(t)=2t+2입니다."],"explanation":"s'(4)=8+2=10입니다."},
+    {"id":"ap-calculus-ab-unit-2-differentiation-fundamentals-p06","type":"choice","prompt":"함수가 한 점에서 미분 가능하면 반드시 참인 것은?","choices":[{"id":"a","label":"그 점에서 연속이다"},{"id":"b","label":"도함수가 0이다"},{"id":"c","label":"극대값이다"},{"id":"d","label":"이계도함수가 존재한다"}],"answer":"a","hints":["미분 가능성은 연속성보다 강한 조건입니다.","역은 항상 참이 아닙니다."],"explanation":"한 점에서 미분 가능하면 그 점에서 반드시 연속입니다."}
+  ]
+}

@@ -42,7 +42,7 @@ const appState = {
   loading: true,
   error: null,
   route: null,
-  catalogFilters: { query: "", stage: "all", domain: "all" },
+  catalogFilters: { query: "", course: "all", grade: "all", level: "all", domain: "all" },
   learnSessions: new Map(),
   renderNumber: 0,
 };
@@ -374,26 +374,51 @@ function renderHome() {
   appState.main.append(section);
 }
 
-function domains() {
+function filterValues(field) {
   const values = new Set();
-  for (const unit of unitList()) if (unit.domain) values.add(String(unit.domain));
+  for (const unit of unitList()) if (unit[field]) values.add(String(unit[field]));
   return [...values].sort((a, b) => a.localeCompare(b, "ko"));
 }
 
 function unitMatches(unit) {
-  const { query, stage, domain } = appState.catalogFilters;
-  if (stage !== "all" && String(unit.stage || "").toLowerCase() !== stage) return false;
-  if (domain !== "all" && String(unit.domain || "") !== domain) return false;
+  const { query, course, grade, level, domain } = appState.catalogFilters;
+  for (const [field, selected] of Object.entries({ course, grade, level, domain })) {
+    if (selected !== "all" && String(unit[field] || "") !== selected) return false;
+  }
   if (!query) return true;
-  const haystack = [unit.id, unit.title, unit.description, unit.grade, unit.course, unit.domain, ...(unit.aliases || [])].join(" ").toLowerCase();
+  const haystack = [
+    unit.id,
+    unit.title,
+    unit.description,
+    unit.grade,
+    unit.course,
+    unit.level,
+    unit.framework,
+    unit.domain,
+    ...asArray(unit.standards),
+    ...asArray(unit.pathways),
+    ...asArray(unit.aliases),
+  ].join(" ").toLowerCase();
   return haystack.includes(query.toLowerCase());
+}
+
+function createCatalogSelect(field, labelText) {
+  const label = createElement("label", { text: labelText });
+  const select = createElement("select", { attrs: { name: field } });
+  [["all", "전체"], ...filterValues(field).map((value) => [value, value])].forEach(([value, optionLabel]) => {
+    const option = createElement("option", { text: optionLabel, attrs: { value } });
+    if (value === appState.catalogFilters[field]) option.selected = true;
+    select.append(option);
+  });
+  label.append(select);
+  return { label, select };
 }
 
 function renderCatalog() {
   clear(appState.main);
   const section = createElement("section", { className: "page page-catalog" });
   section.append(heading(1, "전체 학습"));
-  section.append(createElement("p", { className: "page-lead", text: "학교급과 개념 영역을 고르거나 단원 이름으로 검색해 보세요." }));
+  section.append(createElement("p", { className: "page-lead", text: "과정, 학년, 수준, 개념 영역을 고르거나 성취기준과 학습 경로까지 검색해 보세요." }));
 
   const form = createElement("form", { className: "filters catalog-filters", attrs: { role: "search" } });
   const searchLabel = createElement("label", { text: "단원 검색" });
@@ -402,28 +427,21 @@ function renderCatalog() {
   });
   searchLabel.append(search);
 
-  const stageLabel = createElement("label", { text: "학교급" });
-  const stage = createElement("select", { attrs: { name: "stage" } });
-  [["all", "전체"], ["middle", "중등"], ["high", "고등"]].forEach(([value, label]) => {
-    const option = createElement("option", { text: label, attrs: { value } });
-    if (value === appState.catalogFilters.stage) option.selected = true;
-    stage.append(option);
-  });
-  stageLabel.append(stage);
-
-  const domainLabel = createElement("label", { text: "영역" });
-  const domain = createElement("select", { attrs: { name: "domain" } });
-  [["all", "전체"], ...domains().map((value) => [value, value])].forEach(([value, label]) => {
-    const option = createElement("option", { text: label, attrs: { value } });
-    if (value === appState.catalogFilters.domain) option.selected = true;
-    domain.append(option);
-  });
-  domainLabel.append(domain);
-  form.append(searchLabel, stageLabel, domainLabel);
+  const courseFilter = createCatalogSelect("course", "과정");
+  const gradeFilter = createCatalogSelect("grade", "학년");
+  const levelFilter = createCatalogSelect("level", "수준");
+  const domainFilter = createCatalogSelect("domain", "영역");
+  form.append(searchLabel, courseFilter.label, gradeFilter.label, levelFilter.label, domainFilter.label);
 
   const results = createElement("div", { className: "catalog-results" });
   const update = () => {
-    appState.catalogFilters = { query: search.value.trim(), stage: stage.value, domain: domain.value };
+    appState.catalogFilters = {
+      query: search.value.trim(),
+      course: courseFilter.select.value,
+      grade: gradeFilter.select.value,
+      level: levelFilter.select.value,
+      domain: domainFilter.select.value,
+    };
     const filtered = unitList().filter(unitMatches);
     results.replaceChildren();
     results.append(createElement("p", { className: "result-count", text: `${filtered.length}개 단원` }));

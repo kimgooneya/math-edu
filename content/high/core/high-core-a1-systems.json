@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a1-systems",
+  "title": "Systems of Linear Equations and Inequalities",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra I",
+  "domain": "Algebra",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSA-REI.C.5",
+    "HSA-REI.C.6",
+    "HSA-REI.D.10",
+    "HSA-REI.D.11",
+    "HSA-CED.A.3"
+  ],
+  "pathways": [
+    "Traditional: Algebra I",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "연립일차방정식",
+    "Linear Systems",
+    "연립부등식",
+    "교점"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "그래프, 대입, 소거로 연립일차방정식을 풀고 연립부등식의 공통 영역을 제약 조건으로 해석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-linear-functions"
+  ],
+  "objectives": [
+    "연립일차방정식을 여러 방법으로 풀고 해의 개수를 판단할 수 있다.",
+    "연립부등식의 공통 해 영역을 실제 제약 조건과 연결할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "연립방정식의 해",
+      "body": "두 방정식을 동시에 만족하는 순서쌍은 두 직선 그래프의 교점입니다. 한 점에서 만나면 해 하나, 평행하면 해 없음, 같은 직선이면 해가 무한히 많습니다."
+    },
+    {
+      "type": "concept",
+      "title": "소거와 대입",
+      "body": "한 식에서 변수를 고립시켜 대입하거나 두 식의 같은 변수 계수를 반대로 만들어 더하면 한 변수를 없앨 수 있습니다. 두 방법은 같은 교점을 찾습니다."
+    },
+    {
+      "type": "formula",
+      "title": "연립부등식",
+      "body": "각 부등식이 나타내는 반평면을 모두 만족하는 겹친 부분이 해집합입니다.",
+      "formula": "y≥m₁x+b₁ 그리고 y<m₂x+b₂"
+    },
+    {
+      "type": "example",
+      "title": "소거법 예제",
+      "prompt": "x+y=7, x-y=1을 푸세요.",
+      "steps": [
+        "두 식을 더하면 2x=8입니다.",
+        "x=4를 첫 식에 대입하면 y=3입니다.",
+        "두 원식에 대입해 모두 참인지 확인합니다."
+      ],
+      "answer": "(4,3)"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a1-systems-p01",
+      "type": "orderedPair",
+      "prompt": "x+y=9, x-y=3의 해를 순서쌍으로 입력하세요.",
+      "answer": [
+        6,
+        3
+      ],
+      "hints": [
+        "두 식을 더하세요.",
+        "2x=12에서 x=6입니다."
+      ],
+      "explanation": "x=6이고 6+y=9이므로 y=3, 해는 (6,3)입니다."
+    },
+    {
+      "id": "high-core-a1-systems-p02",
+      "type": "orderedPair",
+      "prompt": "y=2x+1, y=10-x의 교점을 구하세요.",
+      "answer": [
+        3,
+        7
+      ],
+      "hints": [
+        "두 y식을 같게 놓으세요.",
+        "2x+1=10-x를 푸세요."
+      ],
+      "explanation": "3x=9이므로 x=3, y=7입니다."
+    },
+    {
+      "id": "high-core-a1-systems-p03",
+      "type": "choice",
+      "prompt": "y=3x+2와 y=3x-4의 해의 개수를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "두 직선의 기울기를 비교하세요.",
+        "기울기는 같고 절편은 다릅니다."
+      ],
+      "explanation": "서로 다른 평행선이므로 교점과 해가 없습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "0개"
+        },
+        {
+          "id": "B",
+          "label": "1개"
+        },
+        {
+          "id": "C",
+          "label": "2개"
+        },
+        {
+          "id": "D",
+          "label": "무한히 많음"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-systems-p04",
+      "type": "choice",
+      "prompt": "x+y≤6, x≥0, y≥0의 공통 영역 설명을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "x,y가 음이 아니므로 제1사분면입니다.",
+        "원점은 x+y≤6을 만족합니다."
+      ],
+      "explanation": "세 부등식의 공통 해는 제1사분면에서 x+y=6 아래와 경계를 포함한 삼각형 영역입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "제1사분면의 직선 x+y=6 아래쪽"
+        },
+        {
+          "id": "B",
+          "label": "제3사분면 전체"
+        },
+        {
+          "id": "C",
+          "label": "직선 위쪽만"
+        },
+        {
+          "id": "D",
+          "label": "공통 영역 없음"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-systems-p05",
+      "type": "integer",
+      "prompt": "성인 표 10달러, 학생 표 6달러를 합해 12장을 팔고 88달러를 받았습니다. 성인 표 수를 구하세요.",
+      "answer": 4,
+      "hints": [
+        "성인 a, 학생 s라 두고 a+s=12를 세우세요.",
+        "10a+6s=88에서 s=12-a를 대입하세요."
+      ],
+      "explanation": "10a+6(12-a)=88에서 4a=16이므로 성인 표는 4장입니다."
+    },
+    {
+      "id": "high-core-a1-systems-p06",
+      "type": "choice",
+      "prompt": "2x+y=5와 4x+2y=10의 관계를 고르세요.",
+      "answer": "C",
+      "hints": [
+        "첫 식에 2를 곱하세요.",
+        "둘째 식과 완전히 같은지 확인하세요."
+      ],
+      "explanation": "첫 식의 2배가 둘째 식이므로 같은 직선을 나타내며 해가 무한히 많습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "해 없음"
+        },
+        {
+          "id": "B",
+          "label": "해 하나"
+        },
+        {
+          "id": "C",
+          "label": "해가 무한히 많음"
+        }
+      ]
+    }
+  ]
+}

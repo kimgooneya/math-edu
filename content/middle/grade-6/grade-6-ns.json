@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-6-ns",
+  "title": "The Number System",
+  "stage": "middle",
+  "grade": "Grade 6",
+  "course": "Grade 6 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "The Number System",
+  "standards": [
+    "CCSS.Math.Content.6.NS.A.1", "CCSS.Math.Content.6.NS.B.2", "CCSS.Math.Content.6.NS.B.3", "CCSS.Math.Content.6.NS.B.4",
+    "CCSS.Math.Content.6.NS.C.5", "CCSS.Math.Content.6.NS.C.6.a", "CCSS.Math.Content.6.NS.C.6.b", "CCSS.Math.Content.6.NS.C.6.c",
+    "CCSS.Math.Content.6.NS.C.7.a", "CCSS.Math.Content.6.NS.C.7.b", "CCSS.Math.Content.6.NS.C.7.c", "CCSS.Math.Content.6.NS.C.7.d", "CCSS.Math.Content.6.NS.C.8"
+  ],
+  "aliases": ["Grade 6 The Number System", "6.NS", "6학년 수 체계", "분수 나눗셈과 음수"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/6/NS/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "분수 나눗셈, 다자리 수와 소수 계산, 최대공약수·최소공배수, 음의 유리수와 좌표를 다룹니다.",
+  "estimatedMinutes": 55,
+  "prerequisites": [],
+  "objectives": ["분수 나눗셈과 다자리 수·소수의 사칙계산을 정확히 수행할 수 있다.", "양수와 음수, 절댓값, 순서, 좌표를 실제 맥락과 수직선에서 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "분수의 나눗셈", "body": "분수로 나누는 것은 그 분수의 역수를 곱하는 것과 같습니다. a/b÷c/d=a/b×d/c이며, 두 분수의 분모 b와 d는 0이 아니고 나누는 수 c/d도 0이 아니어야 하므로 c도 0이 아닙니다."},
+    {"type": "example", "title": "분수 나눗셈 모델", "prompt": "2/3컵의 요구르트를 1/6컵씩 나누면 몇 번 담을 수 있을까요?", "steps": ["2/3를 여섯 등분 단위로 나타내면 4/6입니다.", "수직선이나 분수 막대에서 2/3 안에 1/6 길이 조각이 4개 들어갑니다.", "식으로는 2/3÷1/6=2/3×6=4입니다."], "answer": "4번"},
+    {"type": "concept", "title": "정확한 계산과 공약수", "body": "다자리 수 나눗셈과 소수의 사칙계산은 자릿값을 맞추어 계산합니다. 최대공약수는 공통 인수 중 가장 큰 수이고 최소공배수는 공통 배수 중 가장 작은 양수입니다."},
+    {"type": "concept", "title": "음수와 절댓값", "body": "양수와 음수는 기준 0의 반대 방향이나 값을 나타냅니다. 절댓값 |x|는 x에서 0까지의 거리이므로 항상 0 이상입니다."},
+    {"type": "concept", "title": "좌표평면", "body": "순서쌍 (x,y)의 부호는 사분면을 정합니다. 가로나 세로로 나란한 두 점 사이의 거리는 달라지는 좌표의 차의 절댓값입니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-6-ns-p01", "type": "integer", "prompt": "3/4÷1/8의 값을 구하세요.", "answer": 6, "hints": ["1/8의 역수를 곱하세요.", "3/4×8을 계산하세요."], "explanation": "3/4÷1/8=3/4×8=6입니다."},
+    {"id": "middle-grade-6-ns-p02", "type": "integer", "prompt": "1344÷32를 계산하세요.", "answer": 42, "hints": ["32×40=1280을 먼저 생각하세요.", "남은 64는 32×2입니다."], "explanation": "1344=32×42이므로 몫은 42입니다."},
+    {"id": "middle-grade-6-ns-p03", "type": "number", "prompt": "12.75+3.6을 계산하세요.", "answer": 16.35, "hints": ["소수점을 세로로 맞추세요.", "3.6을 3.60으로 써 보세요."], "explanation": "12.75+3.60=16.35입니다."},
+    {"id": "middle-grade-6-ns-p04", "type": "integer", "prompt": "48과 60의 최대공약수를 구하세요.", "answer": 12, "hints": ["두 수의 공통 인수를 찾으세요.", "48=12×4, 60=12×5입니다."], "explanation": "48과 60을 모두 나누는 가장 큰 양의 정수는 12입니다."},
+    {"id": "middle-grade-6-ns-p05", "type": "number", "prompt": "|-7.5|의 값을 구하세요.", "answer": 7.5, "hints": ["절댓값은 0에서 떨어진 거리입니다.", "거리는 음수가 될 수 없습니다."], "explanation": "-7.5는 0에서 7.5만큼 떨어져 있으므로 |-7.5|=7.5입니다."},
+    {"id": "middle-grade-6-ns-p06", "type": "integer", "prompt": "좌표평면의 두 점 (-3,4)와 (5,4) 사이의 거리를 구하세요.", "answer": 8, "hints": ["두 점의 y좌표가 같습니다.", "x좌표 차의 절댓값을 구하세요."], "explanation": "두 점은 수평선 위에 있고 거리는 |5-(-3)|=8입니다."},
+    {"id": "middle-grade-6-ns-p07", "type": "integer", "prompt": "2/3컵의 요구르트를 한 번에 1/6컵씩 담는다면 모두 몇 번 담을 수 있나요?", "answer": 4, "hints": ["2/3 안에 1/6이 몇 개 들어가는지 묻는 문제입니다.", "2/3를 분모가 6인 분수로 바꾸거나 2/3÷1/6을 계산하세요."], "explanation": "2/3=4/6이므로 분수 막대에서 1/6 조각이 4개 들어갑니다. 식으로도 2/3÷1/6=2/3×6=4입니다."},
+    {"id": "middle-grade-6-ns-p08", "type": "orderedPair", "prompt": "점 (3,-4)를 y축에 대하여 반사한 점의 좌표를 쓰세요.", "answer": [-3, -4], "hints": ["y축 반사에서는 x좌표의 부호만 바뀝니다.", "y좌표 -4는 그대로 둡니다."], "explanation": "y축을 기준으로 같은 거리에 있는 점은 x좌표의 부호가 반대이고 y좌표는 같으므로 (-3,-4)입니다."},
+    {"id": "middle-grade-6-ns-p09", "type": "choice", "prompt": "-2.3과 -2.8의 크기를 바르게 비교한 것을 고르세요.", "choices": [{"id": "a", "label": "-2.3>-2.8"}, {"id": "b", "label": "-2.3<-2.8"}, {"id": "c", "label": "-2.3=-2.8"}], "answer": "a", "hints": ["수직선에서 오른쪽에 있는 수가 더 큽니다.", "-2.3은 -2.8보다 0에 더 가깝습니다."], "explanation": "수직선에서 -2.3이 -2.8의 오른쪽에 있으므로 -2.3>-2.8입니다. 절댓값은 2.3<2.8이지만 음수의 순서는 반대처럼 보인다는 점에 주의합니다."}
+  ]
+}

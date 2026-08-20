@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-statistical-inference",
+  "title": "Statistical Inference and Experiments",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Statistics and Probability",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSS-IC.A.1",
+    "HSS-IC.A.2",
+    "HSS-IC.B.3",
+    "HSS-IC.B.4",
+    "HSS-IC.B.5",
+    "HSS-IC.B.6"
+  ],
+  "pathways": [
+    "Traditional: Algebra II",
+    "Integrated: Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "통계적 추론",
+    "Statistical Inference",
+    "표본조사와 실험",
+    "신뢰구간"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "무작위 표본과 무작위 배정의 역할을 구분하고 시뮬레이션, 오차한계, 실험 비교로 모집단에 대한 추론의 타당성을 평가합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-descriptive-statistics",
+    "high-core-geo-probability"
+  ],
+  "objectives": [
+    "무작위 표본과 무작위 배정이 허용하는 추론 범위를 구분할 수 있다.",
+    "표본통계량의 변동성과 오차한계를 이용해 모집단 모수에 대해 추론할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "표본과 모집단",
+      "body": "모집단 전체를 조사하기 어려울 때 무작위 표본의 통계량으로 모집단 모수를 추정합니다. 표본 크기가 커지면 보통 표본통계량의 변동성과 오차한계가 줄어듭니다."
+    },
+    {
+      "type": "concept",
+      "title": "조사와 실험",
+      "body": "무작위 표본추출은 결과를 모집단으로 일반화하는 데 도움을 주고, 무작위 처치 배정은 처리 효과의 인과 추론을 돕습니다. 두 무작위화는 목적이 다릅니다."
+    },
+    {
+      "type": "formula",
+      "title": "오차한계",
+      "body": "추정값과 오차한계는 그럴듯한 모수 범위를 제시합니다.",
+      "formula": "신뢰구간의 간단한 표현: 추정값 ± 오차한계"
+    },
+    {
+      "type": "concept",
+      "title": "무작위화 시뮬레이션",
+      "body": "귀무모형이 참이라고 가정하고 표본추출이나 처치 배정을 난수로 여러 번 재현해 통계량의 모의분포를 만듭니다. 관측 통계량만큼 극단적인 모의 결과가 드물면 우연만으로 설명하기 어렵다는 근거가 됩니다."
+    },
+    {
+      "type": "example",
+      "title": "설문 추정",
+      "prompt": "지지율 추정치가 52%, 오차한계가 3%p일 때 간단한 구간을 구하세요.",
+      "steps": [
+        "하한은 52-3=49입니다.",
+        "상한은 52+3=55입니다.",
+        "구간은 49%에서 55%입니다."
+      ],
+      "answer": "49%~55%"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a2-statistical-inference-p01",
+      "type": "choice",
+      "prompt": "학교 전체 학생의 의견을 가장 잘 일반화할 표본을 고르세요.",
+      "answer": "C",
+      "hints": [
+        "모집단의 각 학생이 선택될 기회를 가져야 합니다.",
+        "편의표본을 피하세요."
+      ],
+      "explanation": "전체 명부의 무작위 표본이 대표성을 가장 잘 확보합니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "농구부 학생만"
+        },
+        {
+          "id": "B",
+          "label": "도서관에 온 학생만"
+        },
+        {
+          "id": "C",
+          "label": "전체 명부에서 무작위로 뽑은 학생"
+        },
+        {
+          "id": "D",
+          "label": "첫 교시 한 반"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-statistical-inference-p02",
+      "type": "choice",
+      "prompt": "처리의 인과 효과를 비교하는 데 가장 중요한 설계 요소를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "처치집단 사이 숨은 차이를 균형 있게 만드는 방법을 찾으세요.",
+        "무작위 배정을 생각하세요."
+      ],
+      "explanation": "무작위 처치 배정은 집단 간 교란요인을 줄여 인과 추론을 돕습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "무작위 처치 배정"
+        },
+        {
+          "id": "B",
+          "label": "응답자 이름 공개"
+        },
+        {
+          "id": "C",
+          "label": "표본을 한 명으로 제한"
+        },
+        {
+          "id": "D",
+          "label": "결과를 먼저 선택"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-statistical-inference-p03",
+      "type": "number",
+      "prompt": "추정 평균 40, 오차한계 2일 때 구간의 하한을 구하세요.",
+      "answer": 38,
+      "hints": [
+        "추정값에서 오차한계를 빼세요.",
+        "40-2를 계산하세요."
+      ],
+      "explanation": "하한은 38입니다."
+    },
+    {
+      "id": "high-core-a2-statistical-inference-p04",
+      "type": "number",
+      "prompt": "같은 조건에서 구간의 상한을 구하세요.",
+      "answer": 42,
+      "hints": [
+        "추정값에 오차한계를 더하세요.",
+        "40+2를 계산하세요."
+      ],
+      "explanation": "상한은 42입니다."
+    },
+    {
+      "id": "high-core-a2-statistical-inference-p05",
+      "type": "choice",
+      "prompt": "표본 크기를 크게 할 때 일반적으로 나타나는 변화를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "더 많은 독립 관측은 표본 변동을 줄입니다.",
+        "크기와 편향은 별개의 문제입니다."
+      ],
+      "explanation": "다른 조건이 같다면 큰 표본은 보통 오차한계를 줄입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "오차한계가 감소한다"
+        },
+        {
+          "id": "B",
+          "label": "오차한계가 반드시 증가한다"
+        },
+        {
+          "id": "C",
+          "label": "편향이 자동으로 모두 사라진다"
+        },
+        {
+          "id": "D",
+          "label": "모집단 크기가 바뀐다"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-statistical-inference-p06",
+      "type": "choice",
+      "prompt": "관찰 연구만으로 가장 조심해야 하는 결론을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "무작위 처치 배정이 없었습니다.",
+        "숨은 교란변수가 있을 수 있습니다."
+      ],
+      "explanation": "관찰 연구의 연관만으로 인과관계를 확정하기 어렵습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "두 변수 사이 연관이 관찰되었다"
+        },
+        {
+          "id": "B",
+          "label": "한 변수가 다른 변수를 원인으로 만들었다"
+        },
+        {
+          "id": "C",
+          "label": "표본의 평균을 계산했다"
+        },
+        {
+          "id": "D",
+          "label": "자료를 그래프로 나타냈다"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-statistical-inference-p07",
+      "type": "number",
+      "prompt": "공정한 동전을 10번 던지는 모의를 500회 했더니 앞면이 9번 이상 나온 모의가 15회였습니다. 모의 비율을 소수로 구하세요.",
+      "answer": 0.03,
+      "hints": ["극단적인 모의 횟수를 전체 모의 횟수로 나누세요.", "15÷500을 계산하세요."],
+      "explanation": "모의 비율은 15/500=0.03입니다."
+    },
+    {
+      "id": "high-core-a2-statistical-inference-p08",
+      "type": "choice",
+      "prompt": "귀무모형 아래 1,000회의 무작위화 시뮬레이션 중 관측 차이만큼 극단적인 결과가 8회였다면 가장 알맞은 해석을 고르세요.",
+      "answer": "A",
+      "hints": ["8/1000은 매우 작은 비율입니다.", "관측 결과가 우연만으로 자주 생기는지 판단하세요."],
+      "explanation": "극단적인 결과의 모의 비율이 0.008로 작으므로 관측 차이는 우연만으로 설명하기 어렵다는 근거가 됩니다.",
+      "choices": [
+        {"id":"A","label":"우연만으로 설명하기 어렵다는 근거가 있다"},
+        {"id":"B","label":"귀무모형이 반드시 참이다"},
+        {"id":"C","label":"두 집단이 완전히 동일함이 증명된다"},
+        {"id":"D","label":"표본 크기는 해석과 무관하다"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-dm-logic-proofs",
+  "title": "논리와 증명",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Discrete Mathematics",
+  "domain": "Logic and Proof",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 6.1200: logical notation, sets, relations, induction, invariants, and proofs by contradiction"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["Proof Techniques", "명제논리", "Mathematical Reasoning"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 컴퓨터과학에 필요한 논리·집합·관계와 증명 기법을 다룹니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/6/", "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"],
+  "estimatedMinutes": 210,
+  "prerequisites": [],
+  "objectives": ["명제, 술어, 집합과 관계를 정확한 논리 기호와 말로 해석할 수 있다.", "직접증명, 대우·모순 증명과 수학적 귀납법을 선택해 간단한 명제를 증명할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "명제와 논리연산", "body": "명제는 참 또는 거짓이 분명한 문장입니다. 부정, 논리곱, 논리합, 조건명제를 진리표와 동치변형으로 분석하면 복잡한 조건을 정확히 다룰 수 있습니다."},
+    {"type": "concept", "title": "술어·집합·관계", "body": "술어는 변수의 값에 따라 참값이 달라지며 전칭과 존재 한정자로 범위를 정합니다. 집합, 함수, 관계는 이산 구조를 표현하는 기본 언어입니다."},
+    {"type": "concept", "title": "직접·대우·모순 증명", "body": "직접증명은 가정에서 결론을 논리적으로 이끌고, 대우증명은 결론의 부정에서 가정의 부정을 보입니다. 모순증명은 명제의 부정을 가정해 불가능한 결론을 얻습니다."},
+    {"type": "concept", "title": "귀납법과 불변량", "body": "수학적 귀납법은 시작 사례와 다음 단계로의 전달을 증명해 모든 자연수 사례를 보장합니다. 알고리즘이나 상태기계에서는 매 단계 유지되는 불변량이 올바름 증명의 핵심입니다."}
+  ],
+  "problems": [
+    {"id": "pa-dm-logic-proofs-p01", "type": "choice", "prompt": "'모든 정수 x에 대해 P(x)이다'의 부정을 고르세요.", "choices": [{"id": "a", "label": "모든 정수 x에 대해 P(x)가 아니다"}, {"id": "b", "label": "어떤 정수 x에 대해 P(x)가 아니다"}, {"id": "c", "label": "어떤 정수 x에 대해 P(x)이다"}, {"id": "d", "label": "P(x)는 항상 참이다"}], "answer": "b", "hints": ["전칭 한정자의 부정은 존재 한정자로 바뀝니다.", "반례 하나가 전칭명제를 거짓으로 만듭니다."], "explanation": "모든 x에 대한 P(x)의 부정은 P(x)가 거짓인 x가 적어도 하나 존재한다는 뜻입니다."},
+    {"id": "pa-dm-logic-proofs-p02", "type": "choice", "prompt": "조건명제 p→q가 거짓인 경우를 고르세요.", "choices": [{"id": "a", "label": "p 참, q 참"}, {"id": "b", "label": "p 참, q 거짓"}, {"id": "c", "label": "p 거짓, q 참"}, {"id": "d", "label": "p 거짓, q 거짓"}], "answer": "b", "hints": ["약속한 조건 p가 충족되었는데 결론 q가 실패한 경우를 찾으세요.", "조건명제는 그 한 경우에만 거짓입니다."], "explanation": "p가 참인데 q가 거짓일 때만 p→q가 거짓입니다."},
+    {"id": "pa-dm-logic-proofs-p03", "type": "unorderedSet", "prompt": "집합 {1,2,3}과 {2,3,4}의 교집합을 구하세요.", "answer": [2, 3], "hints": ["두 집합에 모두 포함된 원소만 고르세요.", "순서는 중요하지 않습니다."], "explanation": "두 집합의 공통 원소는 2와 3입니다."},
+    {"id": "pa-dm-logic-proofs-p04", "type": "choice", "prompt": "두 짝수의 합이 짝수임을 직접증명할 때 가장 적절한 시작을 고르세요.", "choices": [{"id": "a", "label": "두 수를 2a와 2b로 둔다"}, {"id": "b", "label": "두 수를 a+1과 b+1로 둔다"}, {"id": "c", "label": "결론이 거짓이라고만 선언한다"}, {"id": "d", "label": "두 수를 모두 0으로 둔다"}], "answer": "a", "hints": ["짝수의 정의를 사용하세요.", "각 짝수는 어떤 정수의 2배입니다."], "explanation": "2a+2b=2(a+b)이고 a+b는 정수이므로 합도 짝수입니다."},
+    {"id": "pa-dm-logic-proofs-p05", "type": "choice", "prompt": "1+2+...+n=n(n+1)/2을 귀납법으로 증명할 때 n=1의 기초단계 확인을 고르세요.", "choices": [{"id": "a", "label": "1=1·2/2"}, {"id": "b", "label": "1+2=2"}, {"id": "c", "label": "n=n"}, {"id": "d", "label": "0=1"}], "answer": "a", "hints": ["식의 양변에 n=1을 대입하세요.", "왼쪽 합은 1입니다."], "explanation": "n=1일 때 양변이 모두 1이므로 기초단계가 성립합니다."},
+    {"id": "pa-dm-logic-proofs-p06", "type": "integer", "prompt": "Euclid 알고리즘으로 gcd(48,18)을 구하세요.", "answer": 6, "hints": ["48을 18로 나눈 나머지는 12입니다.", "18을 12로, 다시 12를 나머지로 나누세요."], "explanation": "48=2·18+12, 18=1·12+6, 12=2·6이므로 최대공약수는 6입니다."}
+  ]
+}

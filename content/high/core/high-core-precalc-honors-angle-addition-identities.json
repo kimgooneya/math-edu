@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-honors-angle-addition-identities",
+  "title": "Honors Extension: Angle-Addition Identities",
+  "stage": "high", "grade": "Grades 9–12", "course": "Precalculus", "domain": "Functions", "framework": "CCSS-M", "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSF-TF.C.9"],
+  "pathways": ["Traditional: Honors Precalculus", "Integrated pathway extension: after Integrated Math III", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["삼각함수 덧셈정리", "Angle Addition Identities", "배각공식", "차각공식"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "단위원 회전에서 사인·코사인 덧셈공식을 유도하고 차각·배각공식과 비표준각의 정확한 값 계산에 적용합니다.",
+  "estimatedMinutes": 35, "prerequisites": ["high-core-precalc-honors-special-trig-values", "high-core-precalc-trig-modeling-identities"],
+  "objectives": ["회전과 내적을 사용해 사인·코사인 덧셈공식을 설명할 수 있다.", "덧셈공식에서 차각·배각공식을 만들고 정확한 값을 구할 수 있다."],
+  "theory": [
+    {"type":"formula","title":"덧셈공식","body":"두 각의 합을 좌표 회전으로 전개합니다.","formula":"sin(a+b)=sin a cos b+cos a sin b; cos(a+b)=cos a cos b-sin a sin b"},
+    {"type":"formula","title":"차각공식","body":"b를 -b로 바꾸고 사인의 홀함수성, 코사인의 짝함수성을 사용합니다.","formula":"sin(a-b)=sin a cos b-cos a sin b"},
+    {"type":"formula","title":"배각공식","body":"a=b=θ를 덧셈공식에 대입합니다.","formula":"sin2θ=2sinθcosθ; cos2θ=cos²θ-sin²θ"},
+    {"type":"example","title":"75°의 사인","prompt":"sin75°를 정확히 구하세요.","steps":["75°=45°+30°입니다.","덧셈공식을 적용합니다.","sin75°=(√6+√2)/4입니다."],"answer":"(√6+√2)/4"}
+  ],
+  "problems": [
+    {"id":"high-core-precalc-honors-angle-addition-identities-p01","type":"number","prompt":"sin30°cos60°+cos30°sin60°의 값을 구하세요.","answer":1,"hints":["sin(a+b) 형태입니다.","sin90°를 구하세요."],"explanation":"식은 sin90°=1입니다."},
+    {"id":"high-core-precalc-honors-angle-addition-identities-p02","type":"number","prompt":"cos60°cos30°-sin60°sin30°의 값을 구하세요.","answer":0,"hints":["cos(a+b) 형태입니다.","cos90°를 구하세요."],"explanation":"식은 cos90°=0입니다."},
+    {"id":"high-core-precalc-honors-angle-addition-identities-p03","type":"choice","prompt":"sin(a-b)와 동치인 식을 고르세요.","answer":"B","hints":["차각에서 두 번째 항의 부호를 확인하세요.","사인-코사인 교차곱입니다."],"explanation":"sin(a-b)=sin a cos b-cos a sin b입니다.","choices":[{"id":"A","label":"sin a sin b+cos a cos b"},{"id":"B","label":"sin a cos b-cos a sin b"},{"id":"C","label":"cos a cos b+sin a sin b"},{"id":"D","label":"2sin a sin b"}]},
+    {"id":"high-core-precalc-honors-angle-addition-identities-p04","type":"number","prompt":"sinθ=3/5, cosθ=4/5일 때 sin2θ를 소수로 구하세요.","answer":0.96,"hints":["sin2θ=2sinθcosθ입니다.","2·3/5·4/5를 계산하세요."],"explanation":"sin2θ=24/25=0.96입니다."},
+    {"id":"high-core-precalc-honors-angle-addition-identities-p05","type":"rational","prompt":"cosθ=3/5, sinθ=4/5일 때 cos2θ를 구하세요.","answer":{"numerator":-7,"denominator":25},"hints":["cos2θ=cos²θ-sin²θ입니다.","9/25-16/25를 계산하세요."],"explanation":"cos2θ=-7/25입니다."},
+    {"id":"high-core-precalc-honors-angle-addition-identities-p06","type":"choice","prompt":"cos(a+b)의 전개를 고르세요.","answer":"C","hints":["코사인 항끼리의 곱에서 시작합니다.","사인 곱을 뺍니다."],"explanation":"cos(a+b)=cos a cos b-sin a sin b입니다.","choices":[{"id":"A","label":"sin a cos b+cos a sin b"},{"id":"B","label":"cos a sin b-sin a cos b"},{"id":"C","label":"cos a cos b-sin a sin b"},{"id":"D","label":"cos a cos b+sin a sin b"}]}
+  ],
+  "honorsBasis": "CCSS (+) standard HSF-TF.C.9."
+}

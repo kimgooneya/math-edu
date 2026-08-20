@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-la-vector-spaces",
+  "title": "벡터공간과 부분공간",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Linear Algebra",
+  "domain": "Vector Spaces",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.06: vector spaces, subspaces, column space, nullspace, basis, and dimension"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["부분공간", "Basis and Dimension", "Four Fundamental Subspaces"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 생성·독립성·기저·차원과 기본 부분공간을 다룹니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/"],
+  "estimatedMinutes": 210,
+  "prerequisites": ["pa-la-systems-matrices"],
+  "objectives": ["벡터 집합의 생성공간과 선형독립성을 판별할 수 있다.", "열공간과 영공간의 기저 및 차원을 구할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "벡터공간과 부분공간", "body": "벡터공간은 벡터 덧셈과 스칼라배에 대해 닫혀 있는 구조입니다. 부분공간은 영벡터를 포함하고 같은 두 연산에 대해 닫혀 있어야 합니다."},
+    {"type": "concept", "title": "생성과 선형결합", "body": "벡터들의 모든 선형결합으로 얻는 집합을 생성공간이라 합니다. 어떤 벡터가 생성공간에 속하는지는 계수를 미지수로 둔 연립방정식의 해 존재 여부로 판단합니다."},
+    {"type": "concept", "title": "독립성·기저·차원", "body": "영벡터를 만드는 선형결합이 자명한 경우뿐이면 벡터들이 선형독립입니다. 공간을 생성하는 독립 벡터들의 집합이 기저이고, 기저 벡터의 수가 차원입니다."},
+    {"type": "concept", "title": "열공간과 영공간", "body": "행렬 A의 열공간은 Ax가 만들 수 있는 모든 출력이고, 영공간은 Ax=0을 만족하는 모든 입력입니다. 피벗 열은 열공간의 기저 선택에 도움을 줍니다."}
+  ],
+  "problems": [
+    {"id": "pa-la-vector-spaces-p01", "type": "choice", "prompt": "벡터 (1,2)가 (1,0)과 (0,1)의 생성공간에 속하는지 고르세요.", "choices": [{"id": "a", "label": "속한다"}, {"id": "b", "label": "속하지 않는다"}], "answer": "a", "hints": ["두 벡터는 평면의 표준기저입니다.", "1(1,0)+2(0,1)을 계산하세요."], "explanation": "(1,2)는 두 표준기저 벡터의 선형결합이므로 생성공간에 속합니다."},
+    {"id": "pa-la-vector-spaces-p02", "type": "choice", "prompt": "다음 중 R^2의 기저를 고르세요.", "choices": [{"id": "a", "label": "{(1,0),(0,1)}"}, {"id": "b", "label": "{(1,1),(2,2)}"}, {"id": "c", "label": "{(0,0),(1,0)}"}, {"id": "d", "label": "{(1,0)}"}], "answer": "a", "hints": ["기저는 독립이면서 공간 전체를 생성해야 합니다.", "R^2에는 독립인 벡터 두 개가 필요합니다."], "explanation": "표준기저 두 벡터는 독립이며 R^2 전체를 생성합니다."},
+    {"id": "pa-la-vector-spaces-p03", "type": "choice", "prompt": "벡터 (1,2)와 (2,4)의 선형독립성에 대한 설명을 고르세요.", "choices": [{"id": "a", "label": "선형독립이다"}, {"id": "b", "label": "선형종속이다"}], "answer": "b", "hints": ["한 벡터가 다른 벡터의 배수인지 확인하세요.", "(2,4)=2(1,2)입니다."], "explanation": "둘째 벡터가 첫째 벡터의 2배이므로 선형종속입니다."},
+    {"id": "pa-la-vector-spaces-p04", "type": "vector", "prompt": "행렬 [[1,2],[2,4]]의 영공간에 속하는 영이 아닌 벡터 하나를 구하세요.", "answer": [-2, 1], "hints": ["방정식 x+2y=0을 푸세요.", "y=1로 두면 x=-2입니다."], "explanation": "행렬을 (-2,1)에 곱하면 두 성분 모두 0입니다."},
+    {"id": "pa-la-vector-spaces-p05", "type": "integer", "prompt": "벡터 (1,0,0), (0,1,0), (1,1,0)이 생성하는 부분공간의 차원을 구하세요.", "answer": 2, "hints": ["셋째 벡터는 앞의 두 벡터의 합입니다.", "앞의 두 벡터는 서로 독립입니다."], "explanation": "독립인 생성벡터가 두 개이므로 차원은 2입니다."},
+    {"id": "pa-la-vector-spaces-p06", "type": "vector", "prompt": "기저 B={(1,1),(1,-1)}에 대해 벡터 (5,1)의 B-좌표를 구하세요.", "answer": [3, 2], "hints": ["a(1,1)+b(1,-1)=(5,1)로 두세요.", "a+b=5, a-b=1을 푸세요."], "explanation": "두 식을 풀면 a=3, b=2이므로 B-좌표는 (3,2)입니다."}
+  ]
+}
