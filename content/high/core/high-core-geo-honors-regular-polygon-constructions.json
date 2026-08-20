@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-honors-regular-polygon-constructions",
+  "title": "Honors Extension: Regular Polygon Constructions",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSG-CO.D.13"],
+  "pathways": ["Traditional: Honors Geometry", "Integrated: Integrated Math II extension", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["정다각형 작도", "Regular Polygon Construction", "내접 정사각형", "내접 정육각형"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "컴퍼스와 눈금 없는 자를 사용해 원에 정삼각형·정사각형·정육각형을 내접시키고 작도의 근거를 중심각과 합동으로 설명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": ["high-core-geo-lines-angles-proof", "high-core-geo-circles"],
+  "objectives": ["원의 반지름과 수직지름을 이용해 정다각형을 작도할 수 있다.", "각 작도 단계가 같은 현과 같은 중심각을 만드는 이유를 증명할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"정육각형 작도","body":"원 위의 한 점에서 반지름을 현의 길이로 여섯 번 옮기면 중심과 인접한 두 점이 정삼각형을 이루므로 중심각이 각각 60°가 됩니다."},
+    {"type":"concept","title":"정삼각형 작도","body":"정육각형의 꼭짓점을 하나씩 건너 선택하면 세 중심각이 각각 120°이고 세 현의 길이가 같아 정삼각형이 됩니다."},
+    {"type":"concept","title":"정사각형 작도","body":"한 지름을 작도하고 중심에서 그 지름에 수직인 지름을 작도하면 네 중심각이 90°입니다. 네 끝점을 차례로 이으면 같은 현과 네 직각을 가진 정사각형입니다."},
+    {"type":"example","title":"정육각형의 한 변","prompt":"반지름 5인 원에 내접한 정육각형의 한 변 길이를 설명하세요.","steps":["인접 꼭짓점과 중심이 만드는 중심각은 60°입니다.","두 반지름의 길이는 각각 5입니다.","꼭짓점 삼각형은 정삼각형이므로 현의 길이도 5입니다."],"answer":"5"}
+  ],
+  "problems": [
+    {"id":"high-core-geo-honors-regular-polygon-constructions-p01","type":"integer","prompt":"원에 내접한 정육각형의 한 중심각 크기를 구하세요.","answer":60,"hints":["한 바퀴는 360°입니다.","360을 6으로 나누세요."],"explanation":"중심각은 360°/6=60°입니다."},
+    {"id":"high-core-geo-honors-regular-polygon-constructions-p02","type":"integer","prompt":"원에 내접한 정사각형의 한 중심각 크기를 구하세요.","answer":90,"hints":["네 중심각이 같습니다.","360을 4로 나누세요."],"explanation":"중심각은 90°입니다."},
+    {"id":"high-core-geo-honors-regular-polygon-constructions-p03","type":"choice","prompt":"원에 내접한 정사각형 작도의 핵심을 고르세요.","answer":"B","hints":["네 꼭짓점을 90° 간격으로 만들어야 합니다.","서로 수직인 두 지름을 생각하세요."],"explanation":"서로 수직인 두 지름의 네 끝점을 이으면 정사각형이 됩니다.","choices":[{"id":"A","label":"임의의 현 두 개"},{"id":"B","label":"서로 수직인 두 지름"},{"id":"C","label":"평행한 두 접선만"},{"id":"D","label":"원의 중심 하나만"}]},
+    {"id":"high-core-geo-honors-regular-polygon-constructions-p04","type":"number","prompt":"반지름 7인 원에 내접한 정육각형의 한 변 길이를 구하세요.","answer":7,"hints":["정육각형의 중심 삼각형을 보세요.","60°인 이등변삼각형은 정삼각형입니다."],"explanation":"내접 정육각형의 한 변은 원의 반지름과 같아 7입니다."},
+    {"id":"high-core-geo-honors-regular-polygon-constructions-p05","type":"choice","prompt":"내접 정육각형에서 꼭짓점을 하나씩 건너 이어 얻는 도형을 고르세요.","answer":"A","hints":["여섯 꼭짓점 중 번갈아 세 개를 선택합니다.","세 현의 길이가 같습니다."],"explanation":"번갈아 선택한 세 꼭짓점을 이으면 정삼각형입니다.","choices":[{"id":"A","label":"정삼각형"},{"id":"B","label":"정사각형"},{"id":"C","label":"정오각형"},{"id":"D","label":"직사각형만"}]},
+    {"id":"high-core-geo-honors-regular-polygon-constructions-p06","type":"choice","prompt":"정육각형 작도에서 컴퍼스 폭으로 사용하는 길이를 고르세요.","answer":"C","hints":["같은 현을 원 둘레에 반복해 옮깁니다.","60° 중심 삼각형의 세 변을 비교하세요."],"explanation":"원의 반지름을 컴퍼스 폭으로 사용합니다.","choices":[{"id":"A","label":"지름의 두 배"},{"id":"B","label":"임의의 접선 길이"},{"id":"C","label":"원의 반지름"},{"id":"D","label":"원의 넓이"}]}
+  ],
+  "honorsBasis": "CCSS (+) standard HSG-CO.D.13."
+}

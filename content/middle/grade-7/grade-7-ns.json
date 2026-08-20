@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-7-ns",
+  "title": "The Number System",
+  "stage": "middle",
+  "grade": "Grade 7",
+  "course": "Grade 7 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "The Number System",
+  "standards": ["CCSS.Math.Content.7.NS.A.1.a", "CCSS.Math.Content.7.NS.A.1.b", "CCSS.Math.Content.7.NS.A.1.c", "CCSS.Math.Content.7.NS.A.1.d", "CCSS.Math.Content.7.NS.A.2.a", "CCSS.Math.Content.7.NS.A.2.b", "CCSS.Math.Content.7.NS.A.2.c", "CCSS.Math.Content.7.NS.A.2.d", "CCSS.Math.Content.7.NS.A.3"],
+  "aliases": ["Grade 7 The Number System", "7.NS", "7학년 수 체계", "유리수의 사칙연산"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/7/NS/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "유리수 덧셈·뺄셈·곱셈·나눗셈의 의미와 성질, 유한소수와 순환소수, 여러 단계 문제를 다룹니다.",
+  "estimatedMinutes": 50,
+  "prerequisites": ["middle-grade-6-ns"],
+  "objectives": ["수직선과 연산 성질을 이용해 양수와 음수인 유리수의 사칙연산을 설명하고 계산할 수 있다.", "유리수의 소수 표현이 유한하거나 순환함을 알고 실제 문제에서 유리수 연산을 적용할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "덧셈과 뺄셈", "body": "p+q는 p에서 q의 부호가 가리키는 방향으로 |q|만큼 이동한 위치입니다. p-q=p+(-q)이므로 뺄셈은 빼는 수의 덧셈 역원인 반대수를 더하는 것으로 바꿀 수 있습니다."},
+    {"type": "concept", "title": "곱셈과 나눗셈", "body": "부호가 같은 두 수의 곱과 몫은 양수이고 부호가 다르면 음수입니다. 0으로는 나눌 수 없으며, 정수끼리의 몫은 분모가 0이 아닌 유리수입니다."},
+    {"type": "concept", "title": "연산 성질", "body": "교환·결합·분배법칙은 유리수에서도 성립합니다. 부호와 분수를 포함한 계산을 묶거나 펼쳐 더 효율적으로 해결할 수 있습니다."},
+    {"type": "concept", "title": "유리수의 소수 표현", "body": "유리수를 긴 나눗셈으로 소수로 바꾸면 소수 표현이 끝나거나 일정한 숫자 묶음이 반복됩니다. 예를 들어 2/11=0.181818…입니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-7-ns-p01", "type": "integer", "prompt": "-8+13을 계산하세요.", "answer": 5, "hints": ["-8에서 오른쪽으로 13만큼 이동하세요.", "13-8을 계산하고 큰 절댓값의 부호를 따르세요."], "explanation": "부호가 다르므로 절댓값을 빼면 13-8=5이고 양수입니다."},
+    {"id": "middle-grade-7-ns-p02", "type": "integer", "prompt": "6-(-4)를 계산하세요.", "answer": 10, "hints": ["음수를 빼는 것은 그 반대수를 더하는 것입니다.", "6+4로 바꾸세요."], "explanation": "6-(-4)=6+4=10입니다."},
+    {"id": "middle-grade-7-ns-p03", "type": "integer", "prompt": "(-3)×(-7)을 계산하세요.", "answer": 21, "hints": ["같은 부호끼리의 곱은 양수입니다.", "3×7을 계산하세요."], "explanation": "음수 두 개를 곱하면 양수이고 3×7=21입니다."},
+    {"id": "middle-grade-7-ns-p04", "type": "integer", "prompt": "-18÷6을 계산하세요.", "answer": -3, "hints": ["부호가 다른 두 수의 몫은 음수입니다.", "18÷6=3입니다."], "explanation": "부호가 다르므로 몫은 음수이며 -18÷6=-3입니다."},
+    {"id": "middle-grade-7-ns-p05", "type": "choice", "prompt": "2/11의 소수 표현을 고르세요.", "choices": [{"id": "a", "label": "0.2"}, {"id": "b", "label": "0.181818…"}, {"id": "c", "label": "0.111111…"}, {"id": "d", "label": "0.02222…"}], "answer": "b", "hints": ["2를 11로 긴 나눗셈 하세요.", "18이라는 두 자리 묶음이 반복됩니다."], "explanation": "2÷11=0.181818…이며 18이 순환합니다."},
+    {"id": "middle-grade-7-ns-p06", "type": "number", "prompt": "-2.5+4×1.5를 계산하세요.", "answer": 3.5, "hints": ["곱셈을 덧셈보다 먼저 계산하세요.", "4×1.5=6입니다."], "explanation": "-2.5+6=3.5입니다."}
+  ]
+}

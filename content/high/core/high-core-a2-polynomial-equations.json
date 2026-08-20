@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-polynomial-equations",
+  "title": "Polynomial Functions and Equations",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Algebra and Functions",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSA-APR.B.2",
+    "HSA-APR.B.3",
+    "HSA-REI.B.4",
+    "HSF-IF.C.7.c"
+  ],
+  "pathways": [
+    "Traditional: Algebra II",
+    "Integrated: Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "다항함수와 방정식",
+    "Polynomial Functions",
+    "고차방정식",
+    "영점과 중복도"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "다항함수의 끝행동, 영점, 중복도와 그래프를 연결하고 실수 및 복소수 범위에서 고차방정식을 풉니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a2-complex-numbers",
+    "high-core-a2-polynomial-operations"
+  ],
+  "objectives": [
+    "인수분해와 영점의 관계로 다항방정식을 풀 수 있다.",
+    "차수, 최고차항, 영점의 중복도로 다항함수 그래프를 해석할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "영점과 그래프",
+      "body": "p(a)=0이면 x=a에서 그래프가 x축과 만납니다. 영점의 중복도가 홀수면 보통 x축을 지나고 짝수면 닿았다가 같은 쪽으로 돌아갑니다."
+    },
+    {
+      "type": "concept",
+      "title": "중복도와 부호 변화",
+      "body": "홀수 중복도의 영점에서는 함수값의 부호가 바뀌어 그래프가 x축을 통과하고, 짝수 중복도의 영점에서는 부호가 유지되어 그래프가 x축에 닿아 되돌아갑니다."
+    },
+    {
+      "type": "formula",
+      "title": "끝행동",
+      "body": "큰 |x|에서 그래프의 방향은 최고차항의 차수와 계수 부호가 결정합니다.",
+      "formula": "p(x)≈aₙxⁿ (|x|가 매우 클 때)"
+    },
+    {
+      "type": "example",
+      "title": "삼차방정식",
+      "prompt": "x³-4x=0을 푸세요.",
+      "steps": [
+        "공통인수 x를 묶어 x(x²-4)=0으로 만듭니다.",
+        "차의 제곱으로 x(x-2)(x+2)=0입니다.",
+        "근은 -2,0,2입니다."
+      ],
+      "answer": "x=-2,0,2"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a2-polynomial-equations-p01",
+      "type": "unorderedSet",
+      "prompt": "x³-9x=0의 실근을 입력하세요.",
+      "answer": [
+        -3,
+        0,
+        3
+      ],
+      "hints": [
+        "x를 공통인수로 묶으세요.",
+        "x(x-3)(x+3)=0입니다."
+      ],
+      "explanation": "각 인수가 0이 되는 -3,0,3이 실근입니다."
+    },
+    {
+      "id": "high-core-a2-polynomial-equations-p02",
+      "type": "integer",
+      "prompt": "p(x)=(x-2)²(x+1)에서 영점 2의 중복도를 구하세요.",
+      "answer": 2,
+      "hints": [
+        "인수 x-2의 지수를 보세요.",
+        "그 지수가 중복도입니다."
+      ],
+      "explanation": "(x-2)의 지수가 2이므로 중복도는 2입니다."
+    },
+    {
+      "id": "high-core-a2-polynomial-equations-p03",
+      "type": "choice",
+      "prompt": "짝수 중복도 영점에서 그래프의 일반적인 행동을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "부호가 영점 양쪽에서 바뀌는지 생각하세요.",
+        "짝수 거듭제곱은 양쪽에서 같은 부호입니다."
+      ],
+      "explanation": "짝수 중복도에서는 그래프가 x축에 닿고 같은 쪽으로 돌아갑니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "x축을 가로지른다"
+        },
+        {
+          "id": "B",
+          "label": "x축에 닿고 되돌아간다"
+        },
+        {
+          "id": "C",
+          "label": "수직 점근선을 만든다"
+        },
+        {
+          "id": "D",
+          "label": "항상 불연속이다"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-polynomial-equations-p04",
+      "type": "integer",
+      "prompt": "p(x)=(x+4)^3(x-1)^2에서 영점 -4의 중복도를 구하세요.",
+      "answer": 3,
+      "hints": [
+        "영점에 대응하는 인수의 지수를 보세요.",
+        "(x+4)의 지수는 3입니다."
+      ],
+      "explanation": "인수 (x+4)가 세 번 반복되므로 중복도는 3입니다."
+    },
+    {
+      "id": "high-core-a2-polynomial-equations-p05",
+      "type": "choice",
+      "prompt": "최고차항이 -2x⁴인 다항함수의 양쪽 끝행동을 고르세요.",
+      "answer": "C",
+      "hints": [
+        "짝수 차수는 양쪽 방향이 같습니다.",
+        "최고차항 계수는 음수입니다."
+      ],
+      "explanation": "짝수 차수이고 계수가 음수이므로 양쪽 끝이 모두 아래로 갑니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "둘 다 위"
+        },
+        {
+          "id": "B",
+          "label": "왼쪽 아래, 오른쪽 위"
+        },
+        {
+          "id": "C",
+          "label": "둘 다 아래"
+        },
+        {
+          "id": "D",
+          "label": "왼쪽 위, 오른쪽 아래"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-polynomial-equations-p06",
+      "type": "integer",
+      "prompt": "x⁴-5x²+4=0의 실근 개수를 구하세요.",
+      "answer": 4,
+      "hints": [
+        "u=x²로 치환하세요.",
+        "u²-5u+4=(u-1)(u-4)입니다."
+      ],
+      "explanation": "x²=1 또는 4이므로 x=±1,±2, 실근은 4개입니다."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-ai-sl-number-algebra",
+  "title": "IB AI SL 수와 대수",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Applications and Interpretation",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Number and algebra",
+  "standards": ["IB AI SL: Number and algebra"],
+  "pathways": ["AI: 근사·오차·금융수학을 스프레드시트와 그래프 계산기로 해석하는 응용 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-applications-and-interpretations-en.pdf"],
+  "aliases": ["IB AI SL Topic 1", "AI SL Number and algebra", "IB 응용과 해석 수와 대수 표준"],
+  "description": "근사와 오차, 과학적 표기, 수열, 복리·대출·감가상각을 현실 자료와 기술 도구로 해석합니다.",
+  "estimatedMinutes": 65,
+  "prerequisites": [],
+  "objectives": ["측정값의 반올림·절대오차·백분율 오차를 실제 맥락에서 해석할 수 있다.", "수열과 지수 모형을 사용해 저축·대출·감가상각을 계산하고 판단할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "근사와 오차", "body": "반올림된 측정값은 가능한 값의 구간을 뜻합니다. 절대오차는 참값과 근삿값의 차이, 백분율 오차는 그 차이를 참값에 대한 비율로 표현한 것입니다."},
+    {"type": "concept", "title": "과학적 표기와 단위", "body": "과학적 표기는 a×10^n(1≤|a|<10) 꼴로 매우 크거나 작은 양을 비교합니다. 계산 결과는 자료의 정밀도와 단위를 고려해 보고합니다."},
+    {"type": "concept", "title": "수열 모형", "body": "매 기간 일정량이 변하면 등차수열, 일정 비율이 변하면 등비수열입니다. 표·그래프·재귀식으로 장기 추세를 확인할 수 있습니다."},
+    {"type": "concept", "title": "금융수학", "body": "복리는 원금과 누적 이자에 다시 이자가 붙습니다. 정기 납입·대출 상환은 금융 계산기나 스프레드시트로 기간별 잔액과 총비용을 비교합니다."}
+  ],
+  "problems": [
+    {"id": "ib-ai-sl-number-algebra-p01", "type": "number", "prompt": "질량 2.4 kg와 부피 1.2 L가 각각 가장 가까운 0.1 단위로 반올림되었습니다. 가능한 밀도의 최댓값을 kg/L로 구하세요.", "answer": 2.130434782608696, "tolerance": 0.000001, "hints": ["질량 상한은 2.45, 부피 하한은 1.15입니다.", "밀도를 최대화하려면 상한 질량을 하한 부피로 나누세요."], "explanation": "가능한 최대 밀도는 2.45/1.15≈2.130435 kg/L입니다."},
+    {"id": "ib-ai-sl-number-algebra-p02", "type": "integer", "prompt": "3.6×10^8 byte의 자료를 각각 2.4×10^5 byte인 파일로 균등하게 나눕니다. 파일 수를 구하세요.", "answer": 1500, "hints": ["전체 용량을 파일 하나의 용량으로 나누세요.", "3.6/2.4와 10^(8-5)를 각각 계산하세요."], "explanation": "(3.6/2.4)×10³=1.5×10³=1500개입니다."},
+    {"id": "ib-ai-sl-number-algebra-p03", "type": "integer", "prompt": "훈련 거리가 첫 주 15 km이고 매주 2 km씩 증가합니다. 처음 12주 동안의 총 훈련 거리를 구하세요.", "answer": 312, "hints": ["제12주 거리는 15+11×2=37입니다.", "등차합 12(15+37)/2를 계산하세요."], "explanation": "총거리는 6×52=312 km입니다."},
+    {"id": "ib-ai-sl-number-algebra-p04", "type": "number", "prompt": "가격 24000달러인 자동차가 매년 18%씩 감가상각될 때 2년 뒤 가치를 구하세요.", "answer": 16137.6, "tolerance": 0.01, "hints": ["매년 가치의 82%가 남습니다.", "24000(0.82)^2를 계산하세요."], "explanation": "2년 뒤 가치는 24000×0.6724=16137.60달러입니다."},
+    {"id": "ib-ai-sl-number-algebra-p05", "type": "choice", "prompt": "5000달러를 3년 예치합니다. 계좌 A는 연 6% 연복리, 계좌 B는 명목 연 5.9% 월복리입니다. 계산기 결과로 올바른 비교를 고르세요.", "choices": [{"id": "a", "label": "A≈5955.08, B≈5965.57이므로 B가 더 큼"}, {"id": "b", "label": "A≈5955.08, B≈5873.00이므로 A가 더 큼"}, {"id": "c", "label": "두 잔액은 정확히 같음"}, {"id": "d", "label": "명목이율만 비교하면 A의 잔액이 반드시 큼"}], "answer": "a", "hints": ["A=5000(1.06)^3입니다.", "B=5000(1+0.059/12)^36을 계산하세요."], "explanation": "A≈5955.08, B≈5965.57입니다. B는 명목이율이 낮아도 더 자주 복리 계산되어 잔액이 더 큽니다."},
+    {"id": "ib-ai-sl-number-algebra-p06", "type": "integer", "prompt": "대출 잔액이 B_(n+1)=1.01B_n-900, B_0=10000으로 갱신됩니다. 두 번 납부한 직후 잔액 B_2를 구하세요.", "answer": 8392, "hints": ["B_1=1.01×10000-900을 계산하세요.", "그 결과를 같은 재귀식에 다시 넣으세요."], "explanation": "B_1=9200, B_2=1.01×9200-900=8392입니다."}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-mv-multiple-integrals",
+  "title": "다중적분과 좌표변환",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Multivariable Calculus",
+  "domain": "Multiple Integrals",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.02: double and triple integrals, polar, cylindrical and spherical coordinates, and change of variables"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["이중적분", "삼중적분", "Change of Variables"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 넓이·부피·질량을 다중적분과 좌표변환으로 계산합니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/3.-double-integrals-and-line-integrals-in-the-plane/", "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/4.-triple-integrals-and-surface-integrals-in-3-space/"],
+  "estimatedMinutes": 210,
+  "prerequisites": ["pa-mv-partial-derivatives"],
+  "objectives": ["영역을 반복적분의 적절한 경계로 나타내고 값을 계산할 수 있다.", "극·원통·구면 좌표와 야코비안을 사용해 적분을 변환할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "이중적분", "body": "이중적분은 작은 넓이 조각에서의 함수값을 합한 극한입니다. 반복적분으로 계산할 때는 영역의 모양에 맞춰 안쪽 변수와 경계를 정합니다."},
+    {"type": "concept", "title": "삼중적분", "body": "삼중적분은 3차원 영역의 부피, 질량, 평균값 등을 계산합니다. 직육면체 영역에서는 적분 순서를 자유롭게 바꾸기 쉽지만 일반 영역에서는 각 경계를 세심하게 정해야 합니다."},
+    {"type": "concept", "title": "극좌표와 야코비안", "body": "원형 영역은 극좌표로 바꾸면 단순해집니다. 작은 넓이 요소는 반지름에 따라 늘어나므로 dxdy를 r dr dθ로 바꾸어야 합니다."},
+    {"type": "concept", "title": "원통좌표", "body": "원통좌표는 평면의 극좌표에 높이 z를 더한 좌표입니다. x=r cos θ, y=r sin θ를 사용하며 부피요소는 반지름 확대를 반영해 r dr dθ dz가 됩니다."},
+    {"type": "concept", "title": "구면좌표", "body": "구면좌표는 원점에서의 거리 ρ, 양의 z축에서 잰 각 φ, xy평면의 방위각 θ로 점을 나타냅니다. 부피요소의 야코비안은 ρ^2 sin φ입니다."},
+    {"type": "concept", "title": "변수변환", "body": "일반적인 변수변환에서는 야코비안 행렬식의 절댓값이 넓이 또는 부피의 확대 비율을 나타냅니다. 새 좌표의 영역과 적분함수를 모두 함께 변환해야 합니다."}
+  ],
+  "problems": [
+    {"id": "pa-mv-multiple-integrals-p01", "type": "integer", "prompt": "0≤x≤1, 0≤y≤2인 직사각형에서 함수 x+y의 이중적분 값을 구하세요.", "answer": 3, "hints": ["먼저 y에 대해 적분하면 2x+2입니다.", "그 결과를 x=0부터 1까지 적분하세요."], "explanation": "∫_0^1(2x+2)dx=1+2=3입니다."},
+    {"id": "pa-mv-multiple-integrals-p02", "type": "rational", "prompt": "0≤x≤1, 0≤y≤1-x인 삼각형 영역의 넓이를 이중적분으로 구하세요.", "answer": {"numerator": 1, "denominator": 2}, "hints": ["적분함수 1을 사용합니다.", "안쪽 적분의 길이는 1-x입니다."], "explanation": "∫_0^1(1-x)dx=1/2입니다."},
+    {"id": "pa-mv-multiple-integrals-p03", "type": "choice", "prompt": "반지름이 3인 원판에서 1을 적분한 값을 고르세요.", "choices": [{"id": "a", "label": "3π"}, {"id": "b", "label": "6π"}, {"id": "c", "label": "9π"}, {"id": "d", "label": "18π"}], "answer": "c", "hints": ["1의 이중적분은 영역의 넓이입니다.", "원판의 넓이는 πr^2입니다."], "explanation": "반지름이 3이므로 넓이는 9π입니다."},
+    {"id": "pa-mv-multiple-integrals-p04", "type": "rational", "prompt": "단위 정육면체 0≤x,y,z≤1에서 xyz의 삼중적분 값을 구하세요.", "answer": {"numerator": 1, "denominator": 8}, "hints": ["적분이 세 개의 일변수 적분 곱으로 분리됩니다.", "각 변수에 대해 0부터 1까지 변수 자체를 적분한 값은 1/2입니다."], "explanation": "(1/2)(1/2)(1/2)=1/8입니다."},
+    {"id": "pa-mv-multiple-integrals-p05", "type": "choice", "prompt": "평면 극좌표변환 x=r cos θ, y=r sin θ에서 넓이 요소 dxdy를 고르세요.", "choices": [{"id": "a", "label": "dr dθ"}, {"id": "b", "label": "r dr dθ"}, {"id": "c", "label": "r^2 dr dθ"}, {"id": "d", "label": "sin θ dr dθ"}], "answer": "b", "hints": ["야코비안 행렬식의 절댓값을 생각하세요.", "반지름이 클수록 같은 각도 폭의 부채꼴 조각이 넓어집니다."], "explanation": "극좌표의 야코비안 절댓값은 r이므로 dxdy=r dr dθ입니다."},
+    {"id": "pa-mv-multiple-integrals-p06", "type": "integer", "prompt": "영역 0≤x≤2, 0≤y≤1에서 밀도 함수가 x일 때 전체 질량을 구하세요.", "answer": 2, "hints": ["밀도를 영역 전체에서 적분하세요.", "y 방향 길이는 1이므로 x를 0부터 2까지 적분하면 됩니다."], "explanation": "∫_0^2∫_0^1 x dydx=∫_0^2 x dx=2입니다."},
+    {"id": "pa-mv-multiple-integrals-p07", "type": "choice", "prompt": "반지름 2, 높이 3인 원기둥에서 1의 삼중적분 값을 고르세요.", "choices": [{"id": "a", "label": "6π"}, {"id": "b", "label": "8π"}, {"id": "c", "label": "12π"}, {"id": "d", "label": "24π"}], "answer": "c", "hints": ["1의 삼중적분은 영역의 부피입니다.", "원통좌표에서 r은 0부터 2, θ는 0부터 2π, z는 0부터 3입니다."], "explanation": "원기둥 부피는 π·2^2·3=12π입니다."},
+    {"id": "pa-mv-multiple-integrals-p08", "type": "choice", "prompt": "반지름 2인 구에서 1의 삼중적분 값을 고르세요.", "choices": [{"id": "a", "label": "8π/3"}, {"id": "b", "label": "16π/3"}, {"id": "c", "label": "32π/3"}, {"id": "d", "label": "32π"}], "answer": "c", "hints": ["1의 삼중적분은 구의 부피입니다.", "구의 부피 공식 4πR^3/3을 사용하세요."], "explanation": "4π·2^3/3=32π/3입니다."},
+    {"id": "pa-mv-multiple-integrals-p09", "type": "choice", "prompt": "ρ를 반지름, φ를 양의 z축에서 잰 각으로 쓰는 구면좌표의 부피 야코비안을 고르세요.", "choices": [{"id": "a", "label": "ρ sin φ"}, {"id": "b", "label": "ρ^2 sin φ"}, {"id": "c", "label": "ρ^2 cos φ"}, {"id": "d", "label": "r"}], "answer": "b", "hints": ["반지름 방향 확대가 두 번 나타납니다.", "위도 방향의 원호 길이에 sin φ가 포함됩니다."], "explanation": "구면좌표의 부피요소는 ρ^2 sin φ dρ dφ dθ입니다."}
+  ]
+}

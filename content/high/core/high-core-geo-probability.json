@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-probability",
+  "title": "Probability and Conditional Probability",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Statistics and Probability",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSS-CP.A.1",
+    "HSS-CP.A.2",
+    "HSS-CP.A.3",
+    "HSS-CP.A.4",
+    "HSS-CP.A.5",
+    "HSS-CP.B.6",
+    "HSS-CP.B.7"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math II",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "확률과 조건부확률",
+    "Conditional Probability",
+    "독립 사건",
+    "덧셈법칙"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "표본공간, 합사건, 교사건, 조건부확률, 독립성을 집합과 이원표로 표현하고 확률의 덧셈·곱셈 법칙을 적용합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "middle-grade-8-sp"
+  ],
+  "objectives": [
+    "사건을 표본공간의 부분집합으로 나타내고 합·교·여사건 확률을 계산할 수 있다.",
+    "조건부확률로 독립성을 판단하고 실제 의사결정에서 해석할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "사건의 집합 표현",
+      "body": "사건 A 또는 B는 합집합, A와 B가 동시에 일어나는 사건은 교집합, A가 일어나지 않는 사건은 여집합입니다. 벤다이어그램은 중복을 시각화합니다."
+    },
+    {
+      "type": "concept",
+      "title": "조건부확률과 독립",
+      "body": "B가 일어났다는 조건에서 A의 확률은 P(A∩B)/P(B)입니다. P(A|B)=P(A)이면 B의 발생이 A의 확률을 바꾸지 않으므로 독립입니다."
+    },
+    {
+      "type": "formula",
+      "title": "덧셈과 곱셈 법칙",
+      "body": "합사건에서는 겹친 부분을 한 번 빼고, 연속 사건에서는 조건부확률을 곱합니다.",
+      "formula": "P(A∪B)=P(A)+P(B)-P(A∩B), P(A∩B)=P(A|B)P(B)"
+    },
+    {
+      "type": "example",
+      "title": "카드 조건부확률",
+      "prompt": "표준 카드에서 뽑은 카드가 그림 카드임을 알 때 왕일 확률을 구하세요.",
+      "steps": [
+        "그림 카드는 J,Q,K가 각 무늬에 있어 12장입니다.",
+        "그중 왕은 4장입니다.",
+        "조건부확률은 4/12=1/3입니다."
+      ],
+      "answer": "1/3"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-probability-p01",
+      "type": "rational",
+      "prompt": "공정한 주사위에서 짝수가 나올 확률을 구하세요.",
+      "answer": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "hints": [
+        "짝수 결과는 2,4,6입니다.",
+        "유리한 결과 3개를 전체 6개로 나누세요."
+      ],
+      "explanation": "확률은 3/6=1/2입니다."
+    },
+    {
+      "id": "high-core-geo-probability-p02",
+      "type": "rational",
+      "prompt": "P(A)=0.6, P(B)=0.5, P(A∩B)=0.3일 때 P(A∪B)를 구하세요.",
+      "answer": {
+        "numerator": 4,
+        "denominator": 5
+      },
+      "hints": [
+        "덧셈법칙을 사용하세요.",
+        "0.6+0.5-0.3을 계산하세요."
+      ],
+      "explanation": "P(A∪B)=0.8=4/5입니다."
+    },
+    {
+      "id": "high-core-geo-probability-p03",
+      "type": "choice",
+      "prompt": "P(A)=0.4이고 P(A|B)=0.4일 때 A와 B의 관계를 고르세요. 단 P(B)>0입니다.",
+      "answer": "A",
+      "hints": [
+        "독립의 조건 P(A|B)=P(A)를 확인하세요.",
+        "두 값이 같습니다."
+      ],
+      "explanation": "조건부확률이 원래 확률과 같으므로 A와 B는 독립입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "독립"
+        },
+        {
+          "id": "B",
+          "label": "서로 배반"
+        },
+        {
+          "id": "C",
+          "label": "반드시 같은 사건"
+        },
+        {
+          "id": "D",
+          "label": "판단 불가"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-probability-p04",
+      "type": "rational",
+      "prompt": "빨간 공 3개, 파란 공 2개에서 비복원으로 두 번 뽑을 때 두 공 모두 빨간색일 확률을 구하세요.",
+      "answer": {
+        "numerator": 3,
+        "denominator": 10
+      },
+      "hints": [
+        "첫 빨간 공 확률은 3/5입니다.",
+        "그다음 빨간 공 확률은 2/4입니다."
+      ],
+      "explanation": "(3/5)(2/4)=6/20=3/10입니다."
+    },
+    {
+      "id": "high-core-geo-probability-p05",
+      "type": "rational",
+      "prompt": "P(A)=0.7일 때 여사건 P(Aᶜ)를 구하세요.",
+      "answer": {
+        "numerator": 3,
+        "denominator": 10
+      },
+      "hints": [
+        "사건과 여사건 확률의 합은 1입니다.",
+        "1-0.7을 계산하세요."
+      ],
+      "explanation": "P(Aᶜ)=0.3=3/10입니다."
+    },
+    {
+      "id": "high-core-geo-probability-p06",
+      "type": "choice",
+      "prompt": "서로 배반인 두 사건 A,B에 대해 항상 참인 것을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "서로 배반이면 동시에 일어날 수 없습니다.",
+        "교집합이 빈 사건입니다."
+      ],
+      "explanation": "교집합이 비어 있으므로 P(A∩B)=0입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "P(A∩B)=0"
+        },
+        {
+          "id": "B",
+          "label": "P(A)=P(B)"
+        },
+        {
+          "id": "C",
+          "label": "항상 독립"
+        },
+        {
+          "id": "D",
+          "label": "P(A∪B)=0"
+        }
+      ]
+    }
+  ]
+}

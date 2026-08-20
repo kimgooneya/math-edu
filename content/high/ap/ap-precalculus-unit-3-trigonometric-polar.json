@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-precalculus-unit-3-trigonometric-polar","title":"Unit 3: Trigonometric and Polar Functions","stage":"high","grade":"Grades 10–12","course":"AP Precalculus","domain":"Trigonometric and Polar Functions","framework":"College Board AP","level":"AP","standards":["AP Precalculus Unit 3"],"aliases":["삼각함수와 극함수","AP Precalculus U3"],"sources":["https://apcentral.collegeboard.org/courses/ap-precalculus"],
+  "description":"주기적 변화, 단위원, 삼각함수 변환·방정식과 극좌표 표현을 이용해 회전 현상을 모델링합니다.","estimatedMinutes":55,"prerequisites":["ap-precalculus-unit-2-exponential-logarithmic"],"pathways":["ap-precalculus-unit-4-parameters-vectors-matrices","ap-calculus-ab-unit-1-limits-continuity"],
+  "objectives":["사인·코사인 함수의 진폭, 주기, 위상 이동을 맥락에서 해석할 수 있다.","직교좌표와 극좌표를 변환하고 극함수의 대칭과 주요 점을 분석할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"단위원과 삼각함수","body":"각 θ에 대응하는 단위원의 점은 (cos θ, sin θ)입니다. 이 정의로 모든 실수 각의 삼각함수와 부호를 설명할 수 있습니다."},
+    {"type":"formula","title":"주기 모델","body":"y=A sin(B(x-C))+D에서 |A|는 진폭, 2π/|B|는 주기, C는 수평 이동, D는 중간선입니다.","formula":"period=2π/|B|"},
+    {"type":"concept","title":"삼각 항등식과 방정식","body":"sin²x+cos²x=1과 주기성을 이용하면 식을 바꾸고 제한된 구간의 모든 해를 찾을 수 있습니다."},
+    {"type":"concept","title":"극좌표","body":"극좌표 (r,θ)는 원점에서 거리 r와 각 θ로 점을 나타냅니다. x=r cosθ, y=r sinθ이며 음의 r은 반대 방향을 뜻합니다."}
+  ],
+  "problems":[
+    {"id":"ap-precalculus-unit-3-trigonometric-polar-p01","type":"number","prompt":"sin(π/6)의 값은?","answer":0.5,"hints":["단위원의 30° 점을 떠올리세요.","y좌표가 사인값입니다."],"explanation":"π/6에서 단위원의 y좌표는 1/2입니다."},
+    {"id":"ap-precalculus-unit-3-trigonometric-polar-p02","type":"choice","prompt":"y=3cos(2x)+1의 주기는?","choices":[{"id":"a","label":"π/2"},{"id":"b","label":"π"},{"id":"c","label":"2π"},{"id":"d","label":"3π"}],"answer":"b","hints":["주기는 2π/|B|입니다.","B=2입니다."],"explanation":"주기는 2π/2=π입니다."},
+    {"id":"ap-precalculus-unit-3-trigonometric-polar-p03","type":"integer","prompt":"y=4sin x-2의 최댓값은?","answer":2,"hints":["sin x의 최댓값은 1입니다.","4×1-2를 계산하세요."],"explanation":"최댓값은 4(1)-2=2입니다."},
+    {"id":"ap-precalculus-unit-3-trigonometric-polar-p04","type":"choice","prompt":"0≤x<2π에서 cos x=0의 해 개수는?","choices":[{"id":"a","label":"0개"},{"id":"b","label":"1개"},{"id":"c","label":"2개"},{"id":"d","label":"4개"}],"answer":"c","hints":["단위원의 x좌표가 0인 점을 찾으세요.","위쪽과 아래쪽 두 점입니다."],"explanation":"x=π/2, 3π/2로 해는 2개입니다."},
+    {"id":"ap-precalculus-unit-3-trigonometric-polar-p05","type":"orderedPair","prompt":"극좌표 (2, π/2)를 직교좌표 (x,y)로 나타내세요.","answer":[0,2],"hints":["x=r cosθ, y=r sinθ를 쓰세요.","cos(π/2)=0, sin(π/2)=1입니다."],"explanation":"x=2·0=0, y=2·1=2이므로 (0,2)입니다."},
+    {"id":"ap-precalculus-unit-3-trigonometric-polar-p06","type":"choice","prompt":"극함수 r=3이 나타내는 그래프는?","choices":[{"id":"a","label":"원점 중심 반지름 3인 원"},{"id":"b","label":"기울기 3인 직선"},{"id":"c","label":"반지름 6인 원"},{"id":"d","label":"포물선"}],"answer":"a","hints":["모든 각에서 원점까지 거리가 같습니다.","고정된 r은 원을 만듭니다."],"explanation":"모든 θ에서 거리가 3이므로 원점 중심 반지름 3인 원입니다."}
+  ]
+}

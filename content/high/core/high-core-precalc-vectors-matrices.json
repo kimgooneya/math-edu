@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-vectors-matrices",
+  "title": "Vectors and Matrices",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Precalculus",
+  "domain": "Number and Quantity",
+  "framework": "CCSS-M",
+  "level": "Honors",
+  "levelNote": "Honors는 국가 표준 과정명이 아니라 CCSS의 (+) 기준 또는 학교별 가속·심화 편성을 나타내는 이 콘텐츠의 라벨입니다.",
+  "standards": [
+    "HSN-VM.A.1",
+    "HSN-VM.A.2",
+    "HSN-VM.A.3",
+    "HSN-VM.B.4.a",
+    "HSN-VM.B.4.b",
+    "HSN-VM.B.4.c",
+    "HSN-VM.B.5.a",
+    "HSN-VM.B.5.b",
+    "HSN-VM.C.6",
+    "HSN-VM.C.7",
+    "HSN-VM.C.8",
+    "HSN-VM.C.9",
+    "HSN-VM.C.10",
+    "HSN-VM.C.11",
+    "HSN-VM.C.12"
+  ],
+  "pathways": [
+    "Traditional: Precalculus",
+    "Integrated pathway follow-on: after Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "벡터와 행렬",
+    "Vectors and Matrices",
+    "벡터 성분",
+    "행렬 변환"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "벡터의 크기·방향·성분과 내적을 다루고 행렬 연산, 연립방정식, 평면 변환을 하나의 표현 체계로 연결합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-systems",
+    "high-core-geo-coordinate-geometry"
+  ],
+  "objectives": [
+    "벡터를 성분으로 연산하고 크기, 단위벡터, 내적을 구할 수 있다.",
+    "속도와 힘을 벡터로 모델링하고 덧셈·뺄셈·스칼라곱의 기하적 의미를 설명할 수 있다.",
+    "행렬을 연산하고 자료, 연립방정식, 평면 변환을 나타낼 수 있다.",
+    "행렬식, 항등행렬, 역행렬과 넓이 배율의 관계를 적용할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "벡터와 성분",
+      "body": "벡터는 크기와 방향을 가진 양입니다. 시작점 P에서 끝점 Q로 가는 벡터의 성분은 Q-P이며, 벡터 덧셈은 성분별로 계산합니다."
+    },
+    {
+      "type": "concept",
+      "title": "행렬과 변환",
+      "body": "행렬은 자료나 선형변환을 직사각형 배열로 나타냅니다. 행렬 곱 AB는 A의 열 수와 B의 행 수가 같을 때 정의되며 일반적으로 AB와 BA는 다릅니다."
+    },
+    {
+      "type": "formula",
+      "title": "크기와 내적",
+      "body": "내적이 0인 영벡터가 아닌 두 벡터는 수직입니다.",
+      "formula": "|⟨a,b⟩|=√(a²+b²), ⟨a,b⟩·⟨c,d⟩=ac+bd"
+    },
+    {
+      "type": "example",
+      "title": "벡터 성분",
+      "prompt": "P(-1,2)에서 Q(4,-2)로 향하는 벡터와 크기를 구하세요.",
+      "steps": [
+        "Q-P=(4-(-1),-2-2)=(5,-4)입니다.",
+        "크기는 √(5²+(-4)²)입니다.",
+        "따라서 벡터는 ⟨5,-4⟩, 크기는 √41입니다."
+      ],
+      "answer": "⟨5,-4⟩, √41"
+    },
+    {
+      "type": "concept",
+      "title": "벡터 연산과 물리량",
+      "body": "위치, 변위, 속도, 힘처럼 크기와 방향을 함께 가진 양은 벡터로 모델링합니다. u+v는 v를 u의 끝에 이어 붙인 합성 이동이고, u-v=u+(-v)이며, cu는 |c|배로 늘리거나 줄이고 c<0이면 방향을 뒤집습니다. 같은 크기와 같은 방향의 벡터는 놓인 위치가 달라도 같습니다."
+    },
+    {
+      "type": "example",
+      "title": "속도 벡터 합성",
+      "prompt": "동쪽으로 30 km/h로 움직이는 배가 북쪽으로 40 km/h인 해류를 만날 때 지면에 대한 속력과 방향을 구하세요.",
+      "steps": [
+        "동쪽을 x축, 북쪽을 y축으로 두면 속도 벡터는 ⟨30,40⟩입니다.",
+        "속력은 √(30²+40²)=50 km/h입니다.",
+        "방향각은 tan⁻¹(40/30)≈53.1°이므로 동쪽에서 북쪽으로 약 53.1°입니다."
+      ],
+      "answer": "50 km/h, 동쪽에서 북쪽으로 약 53.1°"
+    },
+    {
+      "type": "concept",
+      "title": "자료 행렬과 행렬 연산",
+      "body": "행렬의 행과 열에 범주를 정해 판매량이나 이동 자료를 저장할 수 있습니다. 같은 크기의 행렬은 대응 원소끼리 더하고 빼며, 스칼라곱은 모든 원소에 같은 수를 곱합니다. 행렬 곱은 선형변환의 합성을 나타내고 일반적으로 AB≠BA입니다."
+    },
+    {
+      "type": "formula",
+      "title": "항등행렬·행렬식·역행렬",
+      "body": "2×2 항등행렬 I는 AI=IA=A를 만족합니다. det A≠0일 때만 역행렬이 존재하며, 선형변환은 넓이를 |det A|배로 바꿉니다.",
+      "formula": "A=[[a,b],[c,d]], det A=ad-bc, A⁻¹=(1/(ad-bc))[[d,-b],[-c,a]]"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-precalc-vectors-matrices-p01",
+      "type": "vector",
+      "prompt": "벡터 ⟨2,-3⟩과 ⟨4,5⟩의 합을 입력하세요.",
+      "answer": [
+        6,
+        2
+      ],
+      "hints": [
+        "성분별로 더하세요.",
+        "2+4와 -3+5를 계산하세요."
+      ],
+      "explanation": "합은 ⟨6,2⟩입니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p02",
+      "type": "number",
+      "prompt": "벡터 ⟨3,4⟩의 크기를 구하세요.",
+      "answer": 5,
+      "hints": [
+        "√(3²+4²)를 계산하세요.",
+        "3-4-5 직각삼각형입니다."
+      ],
+      "explanation": "크기는 √25=5입니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p03",
+      "type": "integer",
+      "prompt": "벡터 ⟨1,2⟩과 ⟨3,-1⟩의 내적을 구하세요.",
+      "answer": 1,
+      "hints": [
+        "대응 성분을 곱해 더하세요.",
+        "1·3+2·(-1)을 계산하세요."
+      ],
+      "explanation": "내적은 3-2=1입니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p04",
+      "type": "choice",
+      "prompt": "두 영벡터가 아닌 벡터의 내적이 0일 때 관계를 고르세요.",
+      "answer": "B",
+      "hints": [
+        "내적과 각의 코사인 관계를 생각하세요.",
+        "cos90°=0입니다."
+      ],
+      "explanation": "내적이 0이면 두 벡터는 수직입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "평행"
+        },
+        {
+          "id": "B",
+          "label": "수직"
+        },
+        {
+          "id": "C",
+          "label": "같은 벡터"
+        },
+        {
+          "id": "D",
+          "label": "크기가 0"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p05",
+      "type": "choice",
+      "prompt": "행렬 A가 2×3, B가 3×4일 때 AB의 크기를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "안쪽 차원 3이 일치합니다.",
+        "결과는 바깥 차원 2×4입니다."
+      ],
+      "explanation": "AB는 정의되고 크기는 2×4입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "2×4"
+        },
+        {
+          "id": "B",
+          "label": "3×3"
+        },
+        {
+          "id": "C",
+          "label": "4×2"
+        },
+        {
+          "id": "D",
+          "label": "정의되지 않음"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p06",
+      "type": "vector",
+      "prompt": "행렬 [[1,0],[0,-1]]을 벡터 ⟨3,2⟩에 곱한 결과를 입력하세요.",
+      "answer": [
+        3,
+        -2
+      ],
+      "hints": [
+        "첫 성분은 1·3+0·2입니다.",
+        "둘째 성분은 0·3-1·2입니다."
+      ],
+      "explanation": "결과는 ⟨3,-2⟩이며 x축 반사입니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p07",
+      "type": "number",
+      "prompt": "동쪽 30 km/h와 북쪽 40 km/h의 속도 벡터를 합성했을 때 속력을 구하세요.",
+      "answer": 50,
+      "hints": [
+        "합성 속도는 ⟨30,40⟩입니다.",
+        "크기 √(30²+40²)를 계산하세요."
+      ],
+      "explanation": "합성 속력은 √(900+1600)=√2500=50 km/h입니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p08",
+      "type": "vector",
+      "prompt": "벡터 ⟨7,1⟩에서 ⟨2,-3⟩을 뺀 결과를 입력하세요.",
+      "answer": [
+        5,
+        4
+      ],
+      "hints": [
+        "대응 성분끼리 빼세요.",
+        "1-(-3)은 4입니다."
+      ],
+      "explanation": "⟨7,1⟩-⟨2,-3⟩=⟨5,4⟩입니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p09",
+      "type": "vector",
+      "prompt": "벡터 ⟨3,-1⟩에 스칼라 -2를 곱한 결과를 입력하세요.",
+      "answer": [
+        -6,
+        2
+      ],
+      "hints": [
+        "두 성분에 모두 -2를 곱하세요.",
+        "음의 스칼라는 방향도 반대로 바꿉니다."
+      ],
+      "explanation": "-2⟨3,-1⟩=⟨-6,2⟩입니다. 크기는 2배가 되고 방향은 반대가 됩니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p10",
+      "type": "integer",
+      "prompt": "행이 상점 A,B이고 열이 1월,2월인 판매량 행렬 [[12,15],[9,14]]에서 상점 B의 2월 판매량을 구하세요.",
+      "answer": 14,
+      "hints": [
+        "상점 B는 둘째 행입니다.",
+        "2월은 둘째 열입니다."
+      ],
+      "explanation": "둘째 행 둘째 열의 원소는 14이므로 상점 B의 2월 판매량은 14입니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p11",
+      "type": "choice",
+      "prompt": "행렬 [[1,2],[3,4]]와 [[5,-1],[0,2]]의 합을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "같은 위치의 원소끼리 더하세요.",
+        "결과 행렬은 [[6,1],[3,6]]입니다."
+      ],
+      "explanation": "대응 원소를 더하면 [[1+5,2-1],[3+0,4+2]]=[[6,1],[3,6]]입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "[[6,1],[3,6]]"
+        },
+        {
+          "id": "B",
+          "label": "[[6,3],[1,6]]"
+        },
+        {
+          "id": "C",
+          "label": "[[5,-2],[0,8]]"
+        },
+        {
+          "id": "D",
+          "label": "[[4,3],[3,2]]"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p12",
+      "type": "choice",
+      "prompt": "A=[[1,1],[0,1]], B=[[1,0],[1,1]]일 때 행렬 곱에 대한 참인 설명을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "AB와 BA를 각각 계산하세요.",
+        "AB=[[2,1],[1,1]], BA=[[1,1],[1,2]]입니다."
+      ],
+      "explanation": "AB와 BA가 서로 다르므로 이 예에서 행렬 곱은 교환법칙을 만족하지 않습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "AB=BA"
+        },
+        {
+          "id": "B",
+          "label": "AB≠BA"
+        },
+        {
+          "id": "C",
+          "label": "두 곱 모두 정의되지 않는다"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p13",
+      "type": "choice",
+      "prompt": "2×2 행렬 A에 항등행렬 I를 곱한 결과를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "항등행렬은 수의 1과 같은 역할을 합니다.",
+        "왼쪽이나 오른쪽에 곱해도 원래 행렬이 유지됩니다."
+      ],
+      "explanation": "항등행렬의 정의에 따라 AI=IA=A입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "A"
+        },
+        {
+          "id": "B",
+          "label": "영행렬"
+        },
+        {
+          "id": "C",
+          "label": "항상 A⁻¹"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p14",
+      "type": "integer",
+      "prompt": "행렬 [[3,1],[2,4]]의 행렬식을 구하세요.",
+      "answer": 10,
+      "hints": [
+        "2×2 행렬식은 ad-bc입니다.",
+        "3·4-1·2를 계산하세요."
+      ],
+      "explanation": "행렬식은 12-2=10입니다. 0이 아니므로 이 행렬은 역행렬을 가집니다."
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p15",
+      "type": "choice",
+      "prompt": "행렬 [[2,1],[1,1]]의 역행렬을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "행렬식은 2·1-1·1=1입니다.",
+        "공식 A⁻¹=(1/det A)[[d,-b],[-c,a]]를 사용하세요."
+      ],
+      "explanation": "행렬식이 1이므로 역행렬은 [[1,-1],[-1,2]]입니다. 원행렬과 곱하면 항등행렬이 됩니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "[[2,-1],[-1,1]]"
+        },
+        {
+          "id": "B",
+          "label": "[[1,-1],[-1,2]]"
+        },
+        {
+          "id": "C",
+          "label": "[[1,1],[1,2]]"
+        },
+        {
+          "id": "D",
+          "label": "역행렬이 없다"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-vectors-matrices-p16",
+      "type": "number",
+      "prompt": "행렬 [[2,0],[0,3]]이 나타내는 선형변환으로 넓이 5인 도형을 옮겼을 때 상의 넓이를 구하세요.",
+      "answer": 30,
+      "hints": [
+        "행렬식의 절댓값이 넓이 배율입니다.",
+        "행렬식 6을 원래 넓이 5에 곱하세요."
+      ],
+      "explanation": "행렬식은 2·3=6이므로 넓이는 6배가 되어 5·6=30입니다."
+    }
+  ],
+  "honorsBasis": "Includes CCSS (+) standards and/or school-level accelerated sequencing.",
+  "extensionStandards": [
+    "HSN-VM.A.1",
+    "HSN-VM.A.2",
+    "HSN-VM.A.3",
+    "HSN-VM.B.4.a",
+    "HSN-VM.B.4.b",
+    "HSN-VM.B.4.c",
+    "HSN-VM.B.5.a",
+    "HSN-VM.B.5.b",
+    "HSN-VM.C.6",
+    "HSN-VM.C.7",
+    "HSN-VM.C.8",
+    "HSN-VM.C.9",
+    "HSN-VM.C.10",
+    "HSN-VM.C.11",
+    "HSN-VM.C.12"
+  ]
+}

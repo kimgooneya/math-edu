@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-polynomial-operations",
+  "title": "Polynomial Operations and Identities",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Algebra",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSA-APR.A.1",
+    "HSA-APR.B.2",
+    "HSA-APR.B.3",
+    "HSA-APR.C.4",
+    "HSA-APR.D.6"
+  ],
+  "pathways": [
+    "Traditional: Algebra II",
+    "Integrated: Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "다항식 연산과 항등식",
+    "Polynomial Operations",
+    "나머지정리",
+    "이항정리"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "다항식 연산, 항등식, 나머지정리, 인수정리, 이항정리를 사용해 고차 다항식의 구조와 영점을 분석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-polynomials-quadratics"
+  ],
+  "objectives": [
+    "다항식을 연산하고 항등식을 증명 또는 활용할 수 있다.",
+    "나머지정리와 인수정리로 다항식의 영점과 인수를 판단할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "다항식의 연산",
+      "body": "동류항의 계수를 더하고 분배법칙으로 각 항을 모두 곱합니다. 다항식의 합과 곱은 다시 다항식이며 차수는 소거가 없다면 곱에서 더해집니다."
+    },
+    {
+      "type": "concept",
+      "title": "나머지정리와 인수정리",
+      "body": "다항식 p(x)를 x-a로 나눈 나머지는 p(a)입니다. 따라서 p(a)=0이면 x-a는 p(x)의 인수이고 a는 영점입니다."
+    },
+    {
+      "type": "formula",
+      "title": "다항식 나눗셈 항등식",
+      "body": "나눗셈 결과는 몫과 나머지를 사용해 원래 다항식을 다시 구성해야 합니다.",
+      "formula": "p(x)=d(x)q(x)+r(x)"
+    },
+    {
+      "type": "example",
+      "title": "인수 판정",
+      "prompt": "p(x)=x³-4x²+x+6에서 x-2가 인수인지 판단하세요.",
+      "steps": [
+        "나머지정리에 따라 p(2)를 계산합니다.",
+        "8-16+2+6=0입니다.",
+        "나머지가 0이므로 x-2는 인수입니다."
+      ],
+      "answer": "인수이다"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a2-polynomial-operations-p01",
+      "type": "integer",
+      "prompt": "(2x²+3x-1)+(x²-5x+4)에서 x의 계수를 구하세요.",
+      "answer": -2,
+      "hints": [
+        "x항끼리 더하세요.",
+        "3+(-5)를 계산하세요."
+      ],
+      "explanation": "합은 3x²-2x+3이므로 x의 계수는 -2입니다."
+    },
+    {
+      "id": "high-core-a2-polynomial-operations-p02",
+      "type": "integer",
+      "prompt": "(x+2)(x²-2x+4)의 상수항을 구하세요.",
+      "answer": 8,
+      "hints": [
+        "상수항은 상수끼리 곱해 얻습니다.",
+        "2×4를 계산하세요."
+      ],
+      "explanation": "곱은 x³+8이며 상수항은 8입니다."
+    },
+    {
+      "id": "high-core-a2-polynomial-operations-p03",
+      "type": "integer",
+      "prompt": "p(x)=x³-2x+5를 x-2로 나눈 나머지를 구하세요.",
+      "answer": 9,
+      "hints": [
+        "나머지는 p(2)입니다.",
+        "8-4+5를 계산하세요."
+      ],
+      "explanation": "p(2)=9이므로 나머지는 9입니다."
+    },
+    {
+      "id": "high-core-a2-polynomial-operations-p04",
+      "type": "choice",
+      "prompt": "p(-3)=0일 때 반드시 p(x)의 인수인 것을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "영점 a에 대응하는 인수는 x-a입니다.",
+        "a=-3을 대입하세요."
+      ],
+      "explanation": "x-(-3)=x+3이 인수입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "x-3"
+        },
+        {
+          "id": "B",
+          "label": "x+3"
+        },
+        {
+          "id": "C",
+          "label": "3x-1"
+        },
+        {
+          "id": "D",
+          "label": "x²+3"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-polynomial-operations-p05",
+      "type": "integer",
+      "prompt": "p(x)를 x-2로 나눈 몫이 x+3이고 나머지가 4일 때 p(2)를 구하세요.",
+      "answer": 4,
+      "hints": [
+        "나머지정리를 사용하세요.",
+        "p(2)는 나머지와 같습니다."
+      ],
+      "explanation": "x-2로 나눈 나머지가 4이므로 p(2)=4입니다."
+    },
+    {
+      "id": "high-core-a2-polynomial-operations-p06",
+      "type": "choice",
+      "prompt": "x²-y²와 동치인 인수분해를 고르세요.",
+      "answer": "B",
+      "hints": [
+        "차의 제곱 공식을 떠올리세요.",
+        "두 켤레 인수의 곱입니다."
+      ],
+      "explanation": "(x-y)(x+y)=x²-y²이므로 B입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "(x-y)²"
+        },
+        {
+          "id": "B",
+          "label": "(x-y)(x+y)"
+        },
+        {
+          "id": "C",
+          "label": "(x+y)²"
+        },
+        {
+          "id": "D",
+          "label": "x(x-y)"
+        }
+      ]
+    }
+  ]
+}

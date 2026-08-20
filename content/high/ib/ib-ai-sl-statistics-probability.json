@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-ai-sl-statistics-probability",
+  "title": "IB AI SL 통계와 확률",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Applications and Interpretation",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Statistics and probability",
+  "standards": ["IB AI SL: Statistics and probability"],
+  "pathways": ["AI: 실제 자료를 수집·시각화하고 상관·회귀·분포를 기술로 해석하는 중심 응용 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-applications-and-interpretations-en.pdf"],
+  "aliases": ["IB AI SL Topic 4", "AI SL Statistics and probability", "IB 응용과 해석 통계 확률 표준"],
+  "description": "표본과 자료 시각화, 기술통계, Pearson·Spearman 상관, 회귀, 확률과 이항·정규분포를 실제 자료로 탐구합니다.",
+  "estimatedMinutes": 80,
+  "prerequisites": ["ib-ai-sl-number-algebra"],
+  "objectives": ["자료 수집의 편향을 평가하고 기술통계·시각화·상관·회귀를 맥락에서 해석할 수 있다.", "확률법칙과 이항·정규분포를 기술로 계산하고 결과의 의미를 설명할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "자료 수집과 표현", "body": "무작위 표본은 선택 편향을 줄이며 층화표본은 중요한 하위집단 비율을 반영합니다. 상자그림·히스토그램·누적도수그래프는 분포의 서로 다른 특징을 보여 줍니다."},
+    {"type": "concept", "title": "상관과 순위", "body": "Pearson r은 선형 관계, Spearman 순위상관은 단조 관계를 측정합니다. 산점도, 이상치, 표본 크기와 맥락을 계수와 함께 봐야 합니다."},
+    {"type": "concept", "title": "회귀와 예측", "body": "회귀식의 기울기와 절편은 변수 단위로 해석합니다. 보간은 자료 범위 안 예측이고 외삽은 범위 밖 예측이므로 더 강한 가정을 요구합니다."},
+    {"type": "concept", "title": "분포와 기술", "body": "이항분포는 성공 횟수, 정규분포는 연속 측정값을 모델링합니다. 계산기에서 누적확률을 구한 뒤 입력 경계와 꼬리 방향을 검토합니다."}
+  ],
+  "problems": [
+    {"id": "ib-ai-sl-statistics-probability-p01", "type": "choice", "prompt": "실제 배송시간 자료가 12,13,15,15,18,27분입니다. 중앙값 분할법으로 Q1=13, Q3=18을 얻었습니다. 가장 타당한 해석을 고르세요.", "choices": [{"id": "a", "label": "상한 울타리 25.5를 넘는 27은 이상치 후보이다"}, {"id": "b", "label": "IQR은 14이다"}, {"id": "c", "label": "중앙값은 27이다"}, {"id": "d", "label": "자료가 완전히 대칭이다"}], "answer": "a", "hints": ["IQR=18-13=5입니다.", "상한 울타리는 Q3+1.5IQR입니다."], "explanation": "상한 울타리는 18+7.5=25.5이므로 27은 이상치 후보입니다."},
+    {"id": "ib-ai-sl-statistics-probability-p02", "type": "number", "prompt": "다섯 학생의 두 과목 순위가 A=(1,2,3,4,5), B=(2,1,3,5,4)입니다. 동순위가 없을 때 Spearman 순위상관계수를 구하세요.", "answer": 0.8, "tolerance": 0.000001, "hints": ["순위차 제곱의 합은 1+1+0+1+1=4입니다.", "ρ=1-6Σd²/(n(n²-1))을 사용하세요."], "explanation": "ρ=1-24/(5×24)=0.8로 강한 양의 단조 연관을 나타냅니다."},
+    {"id": "ib-ai-sl-statistics-probability-p03", "type": "choice", "prompt": "기술로 선형회귀를 실행해 y=2.4x+15, r=0.86을 얻었습니다. x=10에서 실제 y=35였습니다. 올바른 해석을 고르세요.", "choices": [{"id": "a", "label": "예측값은 39, 잔차는 -4이며 비교적 강한 양의 선형 연관이다"}, {"id": "b", "label": "예측값은 24, 잔차는 11이며 인과가 증명된다"}, {"id": "c", "label": "예측값은 39, 잔차는 4이며 음의 연관이다"}, {"id": "d", "label": "r=0.86이므로 모든 잔차가 0이다"}], "answer": "a", "hints": ["예측값은 2.4×10+15=39입니다.", "잔차는 관측값 35에서 예측값을 뺍니다."], "explanation": "잔차는 35-39=-4이고 r=0.86은 강한 양의 선형 연관을 시사하지만 인과를 증명하지 않습니다."},
+    {"id": "ib-ai-sl-statistics-probability-p04", "type": "rational", "prompt": "설문 응답자 120명 중 앱 사용자는 75명이고, 앱 사용자 중 유료 구독자는 45명입니다. 앱 사용자로 조건화했을 때 유료 구독자일 확률을 구하세요.", "answer": {"numerator": 3, "denominator": 5}, "hints": ["조건이 앱 사용자이므로 분모는 75입니다.", "45/75를 약분하세요."], "explanation": "조건부확률은 45/75=3/5입니다."},
+    {"id": "ib-ai-sl-statistics-probability-p05", "type": "number", "prompt": "X~B(10,0.3)에 대해 계산기에서 P(X≤3)=0.64961을 얻었습니다. P(X≥4)를 구하세요.", "answer": 0.35039, "tolerance": 0.000001, "hints": ["X≥4는 X≤3의 여사건입니다.", "1-0.64961을 계산하세요."], "explanation": "P(X≥4)=1-0.64961=0.35039입니다. 계산기 누적경계가 3인지 확인해야 합니다."},
+    {"id": "ib-ai-sl-statistics-probability-p06", "type": "number", "prompt": "시험점수 X가 평균 68, 표준편차 7인 정규분포를 따릅니다. 계산기에서 P(X>75)=0.1587을 얻었습니다. 같은 분포의 학생 200명 중 75점을 넘을 것으로 예상되는 학생 수를 구하세요.", "answer": 31.74, "tolerance": 0.001, "hints": ["기대 인원은 전체 인원×확률입니다.", "200×0.1587을 계산하세요."], "explanation": "기대 인원은 31.74명으로, 실제 인원 예측에는 약 32명이라 보고할 수 있습니다."}
+  ]
+}

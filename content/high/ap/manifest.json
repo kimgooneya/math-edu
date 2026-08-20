@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "title": "College Board AP Mathematics",
+  "framework": "College Board AP",
+  "level": "AP",
+  "grade": "Grades 10–12",
+  "courses": [
+    {"id":"ap-precalculus","title":"AP Precalculus","units":4,"source":"https://apcentral.collegeboard.org/courses/ap-precalculus"},
+    {"id":"ap-calculus-ab","title":"AP Calculus AB","units":8,"source":"https://apcentral.collegeboard.org/courses/ap-calculus-ab"},
+    {"id":"ap-calculus-bc","title":"AP Calculus BC (BC-only Units 9–10; shared AB Units 1–8)","units":2,"source":"https://apcentral.collegeboard.org/courses/ap-calculus-bc"},
+    {"id":"ap-statistics","title":"AP Statistics","units":5,"source":"https://apcentral.collegeboard.org/courses/ap-statistics"}
+  ],
+  "units": [
+    "ap-precalculus-unit-1-polynomial-rational.json",
+    "ap-precalculus-unit-2-exponential-logarithmic.json",
+    "ap-precalculus-unit-3-trigonometric-polar.json",
+    "ap-precalculus-unit-4-parameters-vectors-matrices.json",
+    "ap-calculus-ab-unit-1-limits-continuity.json",
+    "ap-calculus-ab-unit-2-differentiation-fundamentals.json",
+    "ap-calculus-ab-unit-3-composite-implicit-inverse.json",
+    "ap-calculus-ab-unit-4-contextual-applications.json",
+    "ap-calculus-ab-unit-5-analytical-applications.json",
+    "ap-calculus-ab-unit-6-integration-accumulation.json",
+    "ap-calculus-ab-unit-7-differential-equations.json",
+    "ap-calculus-ab-unit-8-applications-integration.json",
+    "ap-calculus-bc-unit-9-parametric-polar-vector.json",
+    "ap-calculus-bc-unit-10-infinite-sequences-series.json",
+    "ap-statistics-unit-1-data-collection.json",
+    "ap-statistics-unit-2-probability-distributions.json",
+    "ap-statistics-unit-3-inference-proportions.json",
+    "ap-statistics-unit-4-inference-means.json",
+    "ap-statistics-unit-5-regression-analysis.json"
+  ]
+}

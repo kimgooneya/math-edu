@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-complex-numbers",
+  "title": "Complex Numbers",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Number and Quantity",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSN-CN.A.1",
+    "HSN-CN.A.2",
+    "HSN-CN.C.7"
+  ],
+  "pathways": [
+    "Traditional: Algebra II",
+    "Integrated: Integrated Math II / Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "복소수",
+    "Complex Numbers",
+    "허수 단위",
+    "복소평면"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "허수 단위 i와 복소수의 사칙연산을 익히고 실수 해가 없는 이차방정식을 복소수 범위에서 풉니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-polynomials-quadratics"
+  ],
+  "objectives": [
+    "복소수를 a+bi 꼴로 나타내고 사칙연산을 수행할 수 있다.",
+    "실수 해가 없는 이차방정식을 복소수 범위에서 풀 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "허수 단위와 복소수",
+      "body": "i²=-1로 정의하며 모든 복소수는 a+bi 꼴입니다. a는 실수부, b는 허수부입니다. 실수는 b=0인 복소수이므로 복소수 체계가 실수 체계를 포함합니다."
+    },
+    {
+      "type": "concept",
+      "title": "켤레와 복소평면",
+      "body": "a+bi의 켤레는 a-bi이고 두 수의 곱은 a²+b²인 실수입니다. 복소평면에서는 실수부를 가로축, 허수부를 세로축 좌표로 나타냅니다."
+    },
+    {
+      "type": "formula",
+      "title": "i의 거듭제곱",
+      "body": "i의 거듭제곱은 4개마다 반복됩니다.",
+      "formula": "i¹=i, i²=-1, i³=-i, i⁴=1"
+    },
+    {
+      "type": "example",
+      "title": "복소근",
+      "prompt": "x²+9=0을 복소수 범위에서 푸세요.",
+      "steps": [
+        "x²=-9로 정리합니다.",
+        "√(-9)=3i입니다.",
+        "제곱근은 두 개이므로 x=±3i입니다."
+      ],
+      "answer": "x=±3i"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a2-complex-numbers-p01",
+      "type": "integer",
+      "prompt": "i²의 값을 구하세요.",
+      "answer": -1,
+      "hints": [
+        "허수 단위의 정의를 사용하세요.",
+        "i는 제곱하면 -1입니다."
+      ],
+      "explanation": "정의에 따라 i²=-1입니다."
+    },
+    {
+      "id": "high-core-a2-complex-numbers-p02",
+      "type": "choice",
+      "prompt": "(3+2i)+(4-5i)를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "실수부끼리 더하세요.",
+        "허수부의 계수 2와 -5를 더하세요."
+      ],
+      "explanation": "실수부는 7, 허수부는 -3이므로 7-3i입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "7-3i"
+        },
+        {
+          "id": "B",
+          "label": "7+7i"
+        },
+        {
+          "id": "C",
+          "label": "1-3i"
+        },
+        {
+          "id": "D",
+          "label": "12-10i"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-complex-numbers-p03",
+      "type": "choice",
+      "prompt": "(2+i)(2-i)를 고르세요.",
+      "answer": "C",
+      "hints": [
+        "켤레의 곱을 사용하세요.",
+        "a²+b² 꼴입니다."
+      ],
+      "explanation": "(2+i)(2-i)=4-i²=5입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "3"
+        },
+        {
+          "id": "B",
+          "label": "4"
+        },
+        {
+          "id": "C",
+          "label": "5"
+        },
+        {
+          "id": "D",
+          "label": "4-2i"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-complex-numbers-p05",
+      "type": "unorderedSet",
+      "prompt": "x²+4=0의 두 복소근에서 i의 계수만 입력하세요.",
+      "answer": [
+        -2,
+        2
+      ],
+      "hints": [
+        "x=±2i입니다.",
+        "두 근의 i 계수를 쓰세요."
+      ],
+      "explanation": "복소근은 -2i, 2i이므로 계수는 -2와 2입니다."
+    },
+    {
+      "id": "high-core-a2-complex-numbers-p06",
+      "type": "choice",
+      "prompt": "i^23을 고르세요.",
+      "answer": "D",
+      "hints": [
+        "23을 4로 나눈 나머지를 구하세요.",
+        "나머지 3이면 i³입니다."
+      ],
+      "explanation": "23=4·5+3이므로 i^23=i³=-i입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "1"
+        },
+        {
+          "id": "B",
+          "label": "i"
+        },
+        {
+          "id": "C",
+          "label": "−1"
+        },
+        {
+          "id": "D",
+          "label": "−i"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-complex-numbers-p07",
+      "type": "choice",
+      "prompt": "(6+8i)/2를 고르세요.",
+      "answer": "A",
+      "hints": ["실수부와 허수부를 각각 2로 나누세요.", "6/2=3, 8/2=4입니다."],
+      "explanation": "(6+8i)/2=3+4i입니다.",
+      "choices": [{"id":"A","label":"3+4i"},{"id":"B","label":"8+10i"},{"id":"C","label":"3+8i"},{"id":"D","label":"6+4i"}]
+    }
+  ]
+}

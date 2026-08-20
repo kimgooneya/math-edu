@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-ai-sl-geometry-trigonometry",
+  "title": "IB AI SL 기하와 삼각법",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Applications and Interpretation",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Geometry and trigonometry",
+  "standards": ["IB AI SL: Geometry and trigonometry"],
+  "pathways": ["AI: 측량·방위·3차원 측정과 Voronoi 모형을 기술로 해결하는 공간 응용 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-applications-and-interpretations-en.pdf"],
+  "aliases": ["IB AI SL Topic 3", "AI SL Geometry and trigonometry", "IB 응용과 해석 기하 삼각법 표준"],
+  "description": "거리·각·부피, 방위와 삼각측량, 3차원 상황, Voronoi 다이어그램을 실용적 의사결정에 적용합니다.",
+  "estimatedMinutes": 70,
+  "prerequisites": ["ib-ai-sl-number-algebra", "ib-ai-sl-functions"],
+  "objectives": ["사인·코사인 법칙과 방위를 사용해 실제 거리·높이·방향을 계산할 수 있다.", "3차원 측정과 Voronoi 다이어그램을 위치·서비스 영역 문제에 적용할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "측정과 삼각법", "body": "직각삼각형의 삼각비와 임의 삼각형의 사인·코사인 법칙으로 직접 재기 어려운 거리와 높이를 구합니다. 중간값은 충분한 정밀도로 유지합니다."},
+    {"type": "concept", "title": "방위", "body": "세 자리 방위각은 북쪽에서 시계방향으로 측정합니다. 지도 문제에서는 축척·단위와 함께 벡터 또는 삼각형으로 이동을 표현합니다."},
+    {"type": "concept", "title": "3차원 측정", "body": "복합 입체는 기본 입체로 분해해 부피와 겉넓이를 구합니다. 대각선·고도 문제는 서로 다른 평면의 직각삼각형을 단계적으로 사용합니다."},
+    {"type": "concept", "title": "Voronoi 다이어그램", "body": "Voronoi 셀은 각 생성점에 가장 가까운 평면 영역입니다. 경계는 두 생성점을 잇는 선분의 수직이등분선이며 시설의 서비스 구역을 모델링합니다."}
+  ],
+  "problems": [
+    {"id": "ib-ai-sl-geometry-trigonometry-p01", "type": "number", "prompt": "높이 1.6 m의 측량기에서 건물까지 수평거리는 40 m, 건물 꼭대기의 고도각은 30°입니다. 건물 높이를 구하세요.", "answer": 24.69401076758503, "tolerance": 0.001, "hints": ["측량기 위에서 꼭대기까지 높이는 40tan30°입니다.", "측량기 높이 1.6 m를 더하세요."], "explanation": "건물 높이는 40tan30°+1.6≈24.694 m입니다."},
+    {"id": "ib-ai-sl-geometry-trigonometry-p02", "type": "number", "prompt": "두 도로의 길이가 8 km와 11 km이고 끼인각이 45°일 때 양 끝점 사이 거리의 제곱을 구하세요.", "answer": 60.54920651116764, "tolerance": 0.000001, "hints": ["코사인 법칙을 쓰세요.", "8²+11²-2×8×11×cos45°를 계산하세요."], "explanation": "거리의 제곱은 185-88√2≈60.549207입니다."},
+    {"id": "ib-ai-sl-geometry-trigonometry-p03", "type": "number", "prompt": "한 사람이 동쪽으로 12 km, 이어서 북쪽으로 5 km 이동했습니다. 출발점에서 최종점까지의 방위각을 구하세요.", "answer": 67.38013505195957, "tolerance": 0.001, "hints": ["방위각은 북쪽에서 시계방향으로 잽니다.", "tanθ=동쪽 성분/북쪽 성분=12/5입니다."], "explanation": "θ=arctan(12/5)≈67.380°이므로 세 자리 방위각은 약 067°입니다."},
+    {"id": "ib-ai-sl-geometry-trigonometry-p04", "type": "number", "prompt": "반지름 3 m, 원기둥 부분 높이 5 m이고 위가 같은 반지름의 반구인 탱크의 전체 부피를 구하세요.", "answer": 197.92033717615698, "tolerance": 0.001, "hints": ["원기둥 부피 45π와 반구 부피 (2/3)π(3³)를 더하세요.", "반구 부피는 18π입니다."], "explanation": "전체 부피는 63π≈197.920 m³입니다."},
+    {"id": "ib-ai-sl-geometry-trigonometry-p05", "type": "number", "prompt": "가로 3 m, 세로 4 m, 높이 12 m인 직육면체에서 공간대각선이 밑면과 이루는 각을 구하세요.", "answer": 67.38013505195957, "tolerance": 0.001, "hints": ["밑면 대각선은 5 m이고 공간대각선은 13 m입니다.", "tanθ=12/5 또는 sinθ=12/13을 사용하세요."], "explanation": "θ=arctan(12/5)≈67.380°입니다."},
+    {"id": "ib-ai-sl-geometry-trigonometry-p06", "type": "choice", "prompt": "두 병원 A, B의 Voronoi 경계 위 점이 갖는 성질을 고르세요.", "choices": [{"id": "a", "label": "A와 B까지 거리가 같다"}, {"id": "b", "label": "항상 A에 더 가깝다"}, {"id": "c", "label": "항상 B에 더 가깝다"}, {"id": "d", "label": "두 병원을 잇는 선 위에만 있다"}], "answer": "a", "hints": ["경계는 두 생성점의 수직이등분선입니다.", "수직이등분선 위 점의 거리 성질을 떠올리세요."], "explanation": "Voronoi 경계는 A와 B에서 같은 거리에 있는 점들의 집합입니다."}
+  ]
+}

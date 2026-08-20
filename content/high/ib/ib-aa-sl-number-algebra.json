@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-sl-number-algebra",
+  "title": "IB AA SL 수와 대수",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB SL",
+  "framework": "IB DP",
+  "domain": "Number and algebra",
+  "standards": ["IB AA SL: Number and algebra"],
+  "pathways": ["AA: 대수적 추론과 기호 조작을 바탕으로 수열·로그·이항정리를 엄밀하게 다루는 경로"],
+  "sources": [
+    "https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/",
+    "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"
+  ],
+  "aliases": ["IB AA SL Topic 1", "AA SL Number and algebra", "IB 분석과 접근 수와 대수 표준"],
+  "description": "등차·등비수열, 재무수학, 지수와 로그, 이항정리를 기호적 추론과 정확한 계산으로 연결합니다.",
+  "estimatedMinutes": 65,
+  "prerequisites": [],
+  "objectives": [
+    "등차·등비수열의 일반항과 합을 구하고 재무 상황을 해석할 수 있다.",
+    "지수·로그 법칙과 이항정리를 사용하여 식과 방정식을 정확히 다룰 수 있다."
+  ],
+  "theory": [
+    {"type": "concept", "title": "등차수열", "body": "첫째항 a, 공차 d인 등차수열은 u_n=a+(n-1)d이고, 처음 n항의 합은 S_n=n(2a+(n-1)d)/2입니다."},
+    {"type": "concept", "title": "등비수열과 금융", "body": "공비 r인 등비수열은 u_n=ar^(n-1)입니다. 복리와 감가상각은 일정 비율을 반복 곱하는 등비모형이며, 유한합은 r≠1일 때 a(1-r^n)/(1-r)입니다."},
+    {"type": "concept", "title": "지수와 로그", "body": "로그는 지수의 역연산입니다. 양의 밑 b≠1에 대해 log_b(xy)=log_b x+log_b y이며, 밑변환으로 서로 다른 밑의 로그를 비교합니다."},
+    {"type": "concept", "title": "이항정리", "body": "자연수 n에 대해 (a+b)^n의 일반항은 C(n,r)a^(n-r)b^r입니다. 특정 항의 차수와 계수를 조합적으로 찾을 수 있습니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-sl-number-algebra-p01", "type": "integer", "prompt": "등차수열에서 u_5=18이고 u_12=46입니다. 처음 20항의 합을 구하세요.", "answer": 800, "hints": ["두 일반항을 빼면 7d=28입니다.", "d=4와 a=2를 S_20 공식에 대입하세요."], "explanation": "d=4, a=2이고 u_20=78이므로 S_20=20(2+78)/2=800입니다."},
+    {"id": "ib-aa-sl-number-algebra-p02", "type": "integer", "prompt": "양의 공비를 갖는 등비수열에서 u_2=6, u_5=162입니다. 처음 6항의 합을 구하세요.", "answer": 728, "hints": ["u_5/u_2=r^3=27입니다.", "r=3, a=2를 유한등비합 공식에 적용하세요."], "explanation": "수열은 2,6,18,54,162,486이므로 합은 728입니다."},
+    {"id": "ib-aa-sl-number-algebra-p03", "type": "integer", "prompt": "5000달러가 연 4% 복리로 증가합니다. 잔액이 처음으로 6000달러를 넘는 최소 정수 연수를 구하세요.", "answer": 5, "hints": ["5000(1.04)^n>6000을 로그로 푸세요.", "n>ln(1.2)/ln(1.04)≈4.65입니다."], "explanation": "n은 정수이므로 최소 5년이며, 4년에는 약 5849.29달러이고 5년에는 약 6083.26달러입니다."},
+    {"id": "ib-aa-sl-number-algebra-p04", "type": "integer", "prompt": "정의역 조건을 고려하여 log_2(x-1)+log_2(x+1)=3의 실근을 구하세요.", "answer": 3, "hints": ["로그를 합치면 log_2(x²-1)=3입니다.", "x>1이라는 정의역 조건을 적용하세요."], "explanation": "x²-1=8이므로 x=±3이지만 로그의 정의역 x>1을 만족하는 해는 x=3뿐입니다."},
+    {"id": "ib-aa-sl-number-algebra-p05", "type": "integer", "prompt": "(2x-1)^6의 전개에서 x^3의 계수를 구하세요.", "answer": -160, "hints": ["x^3은 (2x)^3을 선택하는 항입니다.", "C(6,3)×2^3×(-1)^3을 계산하세요."], "explanation": "계수는 20×8×(-1)=-160입니다."},
+    {"id": "ib-aa-sl-number-algebra-p06", "type": "integer", "prompt": "수열이 u_1=4, u_(n+1)=0.5u_n+6으로 정의됩니다. 수열이 수렴한다고 가정할 때 그 극한을 구하세요.", "answer": 12, "hints": ["극한을 L이라 두면 연속적인 재귀식에서 L=0.5L+6입니다.", "이 일차방정식을 푸세요."], "explanation": "L-0.5L=6이므로 L=12입니다. 배율 0.5의 절댓값이 1보다 작아 이 고정점으로 수렴합니다."}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-bc-unit-10-infinite-sequences-series","title":"Unit 10: Infinite Sequences and Series","stage":"high","grade":"Grades 11–12","course":"AP Calculus BC","domain":"Infinite Sequences and Series","framework":"College Board AP","level":"AP","standards":["AP Calculus BC Unit 10"],"aliases":["무한수열과 급수","AP Calculus BC U10","BC-only Unit 10"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-bc"],
+  "description":"수열·급수의 수렴, 다양한 판정법, 오차 경계, 거듭제곱급수와 Taylor·Maclaurin 다항식을 다룹니다.","estimatedMinutes":65,"prerequisites":["ap-calculus-bc-unit-9-parametric-polar-vector"],"pathways":[],
+  "objectives":["무한급수에 적절한 수렴 판정법을 선택하고 절대·조건수렴을 구분할 수 있다.","거듭제곱급수의 수렴구간과 Taylor 다항식을 구하고 오차를 평가할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"수열과 급수","body":"수열 a_n의 극한과 급수 Σa_n의 부분합 극한은 다른 개념입니다. 급수가 수렴하려면 a_n→0이 필요하지만 이것만으로 충분하지 않습니다."},
+    {"type":"concept","title":"수렴 판정","body":"기하급수·p급수, 비교·극한비교, 적분, 비, 근 판정으로 양항급수를 분석하고 교대급수 판정으로 부호가 번갈아 드는 급수를 분석합니다."},
+    {"type":"concept","title":"절대수렴과 오차","body":"Σ|a_n|이 수렴하면 Σa_n은 절대수렴합니다. 교대급수는 조건을 만족할 때 첫 생략항의 크기가 오차 상한입니다."},
+    {"type":"formula","title":"거듭제곱급수와 Taylor 급수","body":"비 판정으로 수렴반지름을 찾고 양 끝점을 따로 검사합니다. 함수의 도함수값으로 중심 a의 Taylor 급수를 구성합니다.","formula":"f(x)=Σ[n=0..∞] f^(n)(a)(x-a)^n/n!"}
+  ],
+  "problems":[
+    {"id":"ap-calculus-bc-unit-10-infinite-sequences-series-p01","type":"choice","prompt":"기하급수 Σ[n=0..∞](1/3)^n의 합은?","choices":[{"id":"a","label":"1/2"},{"id":"b","label":"1"},{"id":"c","label":"3/2"},{"id":"d","label":"3"}],"answer":"c","hints":["합은 a/(1-r)입니다.","a=1, r=1/3입니다."],"explanation":"1/(1-1/3)=3/2입니다."},
+    {"id":"ap-calculus-bc-unit-10-infinite-sequences-series-p02","type":"choice","prompt":"Σ[n=1..∞]1/n의 수렴 여부는?","choices":[{"id":"a","label":"발산"},{"id":"b","label":"절대수렴"},{"id":"c","label":"조건수렴"},{"id":"d","label":"합이 1"}],"answer":"a","hints":["조화급수입니다.","p급수에서 p=1입니다."],"explanation":"p≤1인 p급수는 발산하므로 조화급수는 발산합니다."},
+    {"id":"ap-calculus-bc-unit-10-infinite-sequences-series-p03","type":"choice","prompt":"Σ(-1)^(n+1)/n은?","choices":[{"id":"a","label":"조건수렴"},{"id":"b","label":"절대수렴"},{"id":"c","label":"발산"},{"id":"d","label":"항이 0으로 가지 않음"}],"answer":"a","hints":["교대조화급수입니다.","절댓값 급수는 조화급수입니다."],"explanation":"교대급수로 수렴하지만 절댓값 급수는 발산하므로 조건수렴합니다."},
+    {"id":"ap-calculus-bc-unit-10-infinite-sequences-series-p04","type":"choice","prompt":"Σ x^n의 수렴구간은?","choices":[{"id":"a","label":"-1<x<1"},{"id":"b","label":"-1≤x≤1"},{"id":"c","label":"x>0"},{"id":"d","label":"모든 실수"}],"answer":"a","hints":["공비가 x인 기하급수입니다.","|x|<1이고 끝점은 따로 검사하세요."],"explanation":"|x|<1에서만 수렴하며 x=1과 -1에서는 발산합니다."},
+    {"id":"ap-calculus-bc-unit-10-infinite-sequences-series-p05","type":"choice","prompt":"e^x의 2차 Maclaurin 다항식은?","choices":[{"id":"a","label":"1+x+x²/2"},{"id":"b","label":"x+x²"},{"id":"c","label":"1+x²/2"},{"id":"d","label":"1-x+x²/2"}],"answer":"a","hints":["e^x의 모든 도함수는 e^x입니다.","x=0의 값은 모두 1입니다."],"explanation":"n=0,1,2 항은 1+x+x²/2입니다."},
+    {"id":"ap-calculus-bc-unit-10-infinite-sequences-series-p06","type":"number","prompt":"교대급수의 첫 생략항 크기가 0.01이면 교대급수 오차 상한은?","answer":0.01,"hints":["항의 크기가 감소하고 0으로 간다고 가정합니다.","오차는 첫 생략항 크기 이하입니다."],"explanation":"교대급수 오차 정리에 따라 절대오차는 0.01 이하입니다."}
+  ]
+}

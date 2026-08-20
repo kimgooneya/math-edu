@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-ab-unit-7-differential-equations","title":"Unit 7: Differential Equations","stage":"high","grade":"Grades 11–12","course":"AP Calculus AB","domain":"Differential Equations","framework":"College Board AP","level":"AP","standards":["AP Calculus AB Unit 7"],"aliases":["미분방정식","AP Calculus AB U7"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-ab"],
+  "description":"미분방정식의 해를 검증하고 기울기장, 변수분리, 초기조건과 지수 성장·감쇠 모델로 해의 거동을 분석합니다.","estimatedMinutes":50,"prerequisites":["ap-calculus-ab-unit-6-integration-accumulation"],"pathways":["ap-calculus-ab-unit-8-applications-integration"],
+  "objectives":["미분방정식의 해를 검증하고 기울기장에서 해곡선의 거동을 설명할 수 있다.","변수분리와 초기조건으로 미분방정식을 풀고 지수 모델을 해석할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"기울기장","body":"dy/dx=F(x,y)는 각 점에서 해곡선의 접선 기울기를 정합니다. 기울기장은 해를 직접 풀지 않고도 증가·감소와 평형해를 보여 줍니다."},
+    {"type":"concept","title":"해의 검증","body":"후보 함수와 그 도함수를 미분방정식에 대입해 모든 정의역의 점에서 등식이 성립하는지 확인합니다. 초기조건까지 만족하면 특정해가 됩니다."},
+    {"type":"concept","title":"변수분리","body":"dy/dx=g(x)h(y)를 y항과 x항으로 분리해 양변을 적분합니다. 해를 구한 뒤 초기조건으로 적분상수를 정합니다."},
+    {"type":"concept","title":"지수 성장과 감쇠","body":"dy/dt=ky의 해는 y=Ce^(kt)입니다. k>0이면 성장, k<0이면 감쇠이며 현재 양에 비례하는 변화율을 나타냅니다."}
+  ],
+  "problems":[
+    {"id":"ap-calculus-ab-unit-7-differential-equations-p01","type":"choice","prompt":"dy/dx=2x의 일반해는?","choices":[{"id":"a","label":"y=x²+C"},{"id":"b","label":"y=2x²+C"},{"id":"c","label":"y=2+C"},{"id":"d","label":"y=e^(2x)"}],"answer":"a","hints":["2x를 x에 대해 적분하세요.","적분상수 C를 포함하세요."],"explanation":"∫2x dx=x²+C입니다."},
+    {"id":"ap-calculus-ab-unit-7-differential-equations-p02","type":"integer","prompt":"dy/dx=y, y(0)=3일 때 y(0)의 기울기는?","answer":3,"hints":["미분방정식에 현재 y값을 넣으세요.","y=3이면 dy/dx=3입니다."],"explanation":"dy/dx=y이므로 (0,3)에서 기울기는 3입니다."},
+    {"id":"ap-calculus-ab-unit-7-differential-equations-p03","type":"choice","prompt":"dy/dx=x-y의 기울기장에서 기울기가 0인 점들의 관계는?","choices":[{"id":"a","label":"y=x"},{"id":"b","label":"y=-x"},{"id":"c","label":"x=0만"},{"id":"d","label":"y=0만"}],"answer":"a","hints":["기울기 0이 되도록 x-y=0을 푸세요.","x-y=0이면 y=x입니다."],"explanation":"직선 y=x 위에서는 dy/dx=x-y=0이므로 기울기장 선분이 수평입니다."},
+    {"id":"ap-calculus-ab-unit-7-differential-equations-p04","type":"choice","prompt":"dy/dt=-0.2y가 나타내는 것은?","choices":[{"id":"a","label":"지수 감쇠"},{"id":"b","label":"지수 성장"},{"id":"c","label":"선형 성장"},{"id":"d","label":"항상 일정"}],"answer":"a","hints":["비례상수의 부호를 보세요.","음수이면 양이 감소합니다."],"explanation":"k=-0.2<0이므로 지수 감쇠입니다."},
+    {"id":"ap-calculus-ab-unit-7-differential-equations-p05","type":"choice","prompt":"dy/dx=x/y를 변수분리한 올바른 형태는?","choices":[{"id":"a","label":"y dy=x dx"},{"id":"b","label":"dy/y=dx/x"},{"id":"c","label":"x dy=y dx"},{"id":"d","label":"dy=x+y dx"}],"answer":"a","hints":["양변에 y dx를 곱하세요.","y와 dy를 같은 쪽에 모으세요."],"explanation":"y dy=x dx로 분리됩니다."},
+    {"id":"ap-calculus-ab-unit-7-differential-equations-p06","type":"integer","prompt":"y'=2y, y(0)=5인 해에서 y'(0)은?","answer":10,"hints":["방정식에 y(0)=5를 대입하세요.","2×5를 계산하세요."],"explanation":"y'(0)=2y(0)=10입니다."}
+  ]
+}

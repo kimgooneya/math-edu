@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "title": "IB Diploma Programme Mathematics (first assessment 2021)",
+  "description": "2021년 첫 평가 체계의 IB Mathematics AA·AI를 SL과 HL로 구분하고, 각 과정의 다섯 공식 주제를 이론·추론·모델링·기술 활용 평가까지 포괄하도록 구성한 전체 컬렉션입니다.",
+  "units": [
+    "ib-aa-sl-number-algebra.json",
+    "ib-aa-sl-functions.json",
+    "ib-aa-sl-geometry-trigonometry.json",
+    "ib-aa-sl-statistics-probability.json",
+    "ib-aa-sl-calculus.json",
+    "ib-aa-hl-number-algebra.json",
+    "ib-aa-hl-functions.json",
+    "ib-aa-hl-geometry-trigonometry.json",
+    "ib-aa-hl-statistics-probability.json",
+    "ib-aa-hl-calculus.json",
+    "ib-ai-sl-number-algebra.json",
+    "ib-ai-sl-functions.json",
+    "ib-ai-sl-geometry-trigonometry.json",
+    "ib-ai-sl-statistics-probability.json",
+    "ib-ai-sl-calculus.json",
+    "ib-ai-hl-number-algebra.json",
+    "ib-ai-hl-functions.json",
+    "ib-ai-hl-geometry-trigonometry.json",
+    "ib-ai-hl-statistics-probability.json",
+    "ib-ai-hl-calculus.json"
+  ]
+}

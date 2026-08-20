@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-honors-complex-plane-theory",
+  "title": "Honors Extension: Complex Plane and Fundamental Theorem",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Number and Quantity",
+  "framework": "CCSS-M",
+  "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSN-CN.A.3", "HSN-CN.B.4", "HSN-CN.B.5", "HSN-CN.B.6", "HSN-CN.C.8", "HSN-CN.C.9"],
+  "pathways": ["Traditional: Honors Algebra II", "Integrated: Integrated Math III extension", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["복소평면", "Complex Plane", "극형", "대수학의 기본정리"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "복소수를 직교형과 극형으로 나타내고 연산의 기하적 의미, 거리와 중점, 복소 항등식, 대수학의 기본정리를 연결합니다.",
+  "estimatedMinutes": 45,
+  "prerequisites": ["high-core-a2-complex-numbers", "high-core-a2-polynomial-operations"],
+  "objectives": ["복소수 연산을 복소평면의 이동·회전·확대로 해석하고 거리와 중점을 계산할 수 있다.", "복소수에서 다항식 항등식을 확장하고 대수학의 기본정리와 켤레근 정리를 적용할 수 있다."],
+  "theory": [
+    {"type":"formula","title":"절댓값·거리·중점","body":"복소수의 절댓값은 원점까지의 거리이고 두 수 사이 거리는 차의 절댓값입니다.","formula":"|a+bi|=√(a²+b²), d(z₁,z₂)=|z₂-z₁|, m=(z₁+z₂)/2"},
+    {"type":"concept","title":"극형과 곱셈","body":"z=r(cosθ+i sinθ)에서 r은 절댓값, θ는 편각입니다. 곱셈은 절댓값을 곱하고 편각을 더하므로 확대와 회전을 합성합니다."},
+    {"type":"concept","title":"켤레와 몫","body":"분모의 켤레를 분자와 분모에 곱하면 분모가 실수가 됩니다. 켤레의 곱 (a+bi)(a-bi)=a²+b²는 절댓값의 제곱입니다."},
+    {"type":"example","title":"기본정리와 켤레근","prompt":"실수 계수 4차식의 한 근이 1+2i이고 실근이 두 개일 때 다른 비실수 근을 구하세요.","steps":["4차식은 중복도를 포함해 복소근 4개를 갖습니다.","실수 계수 다항식의 비실수 근은 켤레쌍입니다.","따라서 다른 비실수 근은 1-2i입니다."],"answer":"1-2i"}
+  ],
+  "problems": [
+    {"id":"high-core-a2-honors-complex-plane-theory-p01","type":"number","prompt":"복소수 3+4i의 절댓값을 구하세요.","answer":5,"hints":["√(3²+4²)를 계산하세요.","9+16=25입니다."],"explanation":"절댓값은 5입니다."},
+    {"id":"high-core-a2-honors-complex-plane-theory-p02","type":"number","prompt":"z₁=1+2i와 z₂=4+6i 사이의 거리를 구하세요.","answer":5,"hints":["|z₂-z₁|을 구하세요.","|3+4i|를 계산하세요."],"explanation":"거리는 5입니다."},
+    {"id":"high-core-a2-honors-complex-plane-theory-p03","type":"choice","prompt":"z₁=2+i와 z₂=6+5i를 잇는 선분의 중점을 고르세요.","answer":"C","hints":["(z₁+z₂)/2를 계산하세요.","실수부와 허수부를 각각 평균내세요."],"explanation":"중점은 4+3i입니다.","choices":[{"id":"A","label":"2+2i"},{"id":"B","label":"8+6i"},{"id":"C","label":"4+3i"},{"id":"D","label":"3+4i"}]},
+    {"id":"high-core-a2-honors-complex-plane-theory-p04","type":"choice","prompt":"복소수 2+3i에 i를 곱한 결과를 고르세요.","answer":"B","hints":["i(2+3i)를 전개하세요.","i²=-1을 사용하세요."],"explanation":"결과는 -3+2i이며 90° 회전에 해당합니다.","choices":[{"id":"A","label":"3-2i"},{"id":"B","label":"-3+2i"},{"id":"C","label":"2+3i"},{"id":"D","label":"-2-3i"}]},
+    {"id":"high-core-a2-honors-complex-plane-theory-p05","type":"choice","prompt":"복소수 범위에서 x²+4의 인수분해를 고르세요.","answer":"A","hints":["(2i)²=-4입니다.","제곱의 차를 사용하세요."],"explanation":"x²+4=(x-2i)(x+2i)입니다.","choices":[{"id":"A","label":"(x-2i)(x+2i)"},{"id":"B","label":"(x-2)(x+2)"},{"id":"C","label":"(x-4i)(x+4i)"},{"id":"D","label":"(x+2i)²"}]},
+    {"id":"high-core-a2-honors-complex-plane-theory-p06","type":"integer","prompt":"5차 다항식이 복소수 범위에서 중복도를 포함해 갖는 근의 총개수를 구하세요.","answer":5,"hints":["대수학의 기본정리를 사용하세요.","차수와 복소근 총개수를 연결하세요."],"explanation":"5차식은 중복도를 포함해 복소근 5개를 갖습니다."},
+    {"id":"high-core-a2-honors-complex-plane-theory-p07","type":"number","prompt":"0이 아닌 z,w에 대해 |z|=10, |w|=2일 때 |z/w|를 구하세요.","answer":5,"hints":["몫의 절댓값은 절댓값의 몫입니다.","10÷2를 계산하세요."],"explanation":"|z/w|=5입니다."},
+    {"id":"high-core-a2-honors-complex-plane-theory-p08","type":"choice","prompt":"(1+i)/(1-i)를 a+bi 꼴로 나타낸 것을 고르세요.","answer":"C","hints":["분자와 분모에 1+i를 곱하세요.","(1+i)²/(1-i²)을 계산하세요."],"explanation":"(1+i)²/2=(2i)/2=i입니다.","choices":[{"id":"A","label":"1"},{"id":"B","label":"-i"},{"id":"C","label":"i"},{"id":"D","label":"1+i"}]},
+    {"id":"high-core-a2-honors-complex-plane-theory-p09","type":"choice","prompt":"절댓값 2, 편각 60°인 복소수의 극형을 고르세요.","answer":"B","hints":["z=r(cosθ+i sinθ)를 사용하세요.","r=2, θ=60°를 대입하세요."],"explanation":"극형은 2(cos60°+i sin60°)입니다.","choices":[{"id":"A","label":"60(cos2°+i sin2°)"},{"id":"B","label":"2(cos60°+i sin60°)"},{"id":"C","label":"2+i60"},{"id":"D","label":"cos120°+i sin120°"}]}
+  ],
+  "honorsBasis": "CCSS (+) complex-number standards."
+}

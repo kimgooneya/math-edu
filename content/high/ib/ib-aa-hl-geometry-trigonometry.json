@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-hl-geometry-trigonometry",
+  "title": "IB AA HL 기하와 삼각법 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Geometry and trigonometry",
+  "standards": ["IB AA HL: Geometry and trigonometry"],
+  "pathways": ["AA: 복합 삼각 항등식과 3차원 벡터 직선·평면을 대수적 관계로 유도하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA HL Topic 3", "AA HL Geometry and trigonometry", "IB 분석과 접근 HL 기하 삼각법"],
+  "description": "AA SL 기하 위에서 합성각·배각 공식, 고난도 삼각방정식, 3차원 벡터의 직선·평면·외적을 다룹니다.",
+  "estimatedMinutes": 90,
+  "prerequisites": ["ib-aa-sl-geometry-trigonometry", "ib-aa-hl-number-algebra"],
+  "objectives": ["합성각과 배각 공식을 유도·활용하여 삼각식을 변형하고 방정식을 풀 수 있다.", "3차원에서 벡터 직선과 평면의 교차·각·거리를 분석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "합성각과 배각", "body": "sin(A±B), cos(A±B) 공식에서 배각·반각 공식을 유도합니다. a sinx+b cosx를 R sin(x+φ)로 합성하면 최댓값과 방정식 해석이 간결해집니다."},
+    {"type": "concept", "title": "삼각방정식", "body": "항등식으로 한 함수에 대한 대수방정식으로 바꾼 뒤 기본각과 주기를 사용합니다. 제곱하거나 나눈 경우 정의역과 잃거나 더해진 해를 확인합니다."},
+    {"type": "concept", "title": "3차원 직선과 평면", "body": "직선은 r=a+λd, 평면은 r·n=c로 표현합니다. 직선 방향 d와 평면 법선 n의 내적으로 평행·수직 관계를 판정합니다."},
+    {"type": "concept", "title": "외적", "body": "a×b는 두 벡터에 수직이며 크기는 평행사변형 넓이 |a||b|sinθ입니다. 두 방향벡터의 외적은 평면의 법선벡터를 제공합니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-hl-geometry-trigonometry-p01", "type": "choice", "prompt": "cos(2x)와 항상 같은 식을 고르세요.", "choices": [{"id": "a", "label": "cos²x-sin²x"}, {"id": "b", "label": "cos²x+sin²x"}, {"id": "c", "label": "2sinx cosx"}, {"id": "d", "label": "1+2sin²x"}], "answer": "a", "hints": ["코사인 합성각 공식에 A=B=x를 대입하세요.", "cos(x+x)를 전개하세요."], "explanation": "cos(2x)=cos²x-sin²x입니다."},
+    {"id": "ib-aa-hl-geometry-trigonometry-p02", "type": "integer", "prompt": "0≤x<2π에서 3sinx+4cosx=5를 만족하는 해의 개수를 구하세요.", "answer": 1, "hints": ["좌변을 5sin(x+φ)로 합성할 수 있습니다.", "최댓값 5에 도달하는 각은 한 주기 안에서 한 번입니다."], "explanation": "3sinx+4cosx의 진폭은 5이고 등호는 합성된 사인이 1일 때만 성립하므로 한 주기에서 해는 1개입니다."},
+    {"id": "ib-aa-hl-geometry-trigonometry-p03", "type": "vector", "prompt": "점 A=(1,0,0), B=(0,1,0), C=(0,0,1)을 지나는 평면의 법선벡터 중 세 성분이 모두 양수이고 최대공약수가 1인 것을 구하세요.", "answer": [1, 1, 1], "hints": ["AB=(-1,1,0), AC=(-1,0,1)을 구하세요.", "AB×AC를 계산하세요."], "explanation": "AB×AC=(1,1,1)이며 두 방향벡터 모두와 수직이므로 요구한 법선벡터입니다."},
+    {"id": "ib-aa-hl-geometry-trigonometry-p04", "type": "rational", "prompt": "직선 r=(1,2,0)+λ(2,-1,3)이 평면 2x-y+z=9와 만날 때 매개변수 λ를 구하세요.", "answer": {"numerator": 9, "denominator": 8}, "hints": ["x=1+2λ, y=2-λ, z=3λ를 평면식에 대입하세요.", "정리하면 8λ=9입니다."], "explanation": "2(1+2λ)-(2-λ)+3λ=9에서 8λ=9, 따라서 λ=9/8입니다."},
+    {"id": "ib-aa-hl-geometry-trigonometry-p05", "type": "number", "prompt": "점 (1,2,3)에서 평면 x+2y-2z=5까지의 거리를 구하세요.", "answer": 2, "hints": ["점-평면 거리 공식의 분자는 |1+4-6-5|입니다.", "법선벡터 (1,2,-2)의 크기는 3입니다."], "explanation": "거리는 |1+4-6-5|/√(1+4+4)=6/3=2입니다."},
+    {"id": "ib-aa-hl-geometry-trigonometry-p06", "type": "unorderedSet", "prompt": "0≤x<2π에서 2cos²x-1=0의 해 중 π의 배수 계수들을 쓰세요. 예: π/4는 0.25로 입력합니다.", "answer": [0.25, 0.75, 1.25, 1.75], "hints": ["cos²x=1/2입니다.", "단위원의 네 사분면에서 |cosx|=√2/2인 각을 찾으세요."], "explanation": "해는 π/4, 3π/4, 5π/4, 7π/4이므로 π의 계수는 0.25, 0.75, 1.25, 1.75입니다."},
+    {"id": "ib-aa-hl-geometry-trigonometry-p07", "type": "integer", "prompt": "벡터 a=(1,2,2), b=(2,1,-2)가 이루는 각을 도 단위로 구하세요.", "answer": 90, "hints": ["내적 a·b를 계산하세요.", "내적이 0인 영벡터가 아닌 두 벡터는 수직입니다."], "explanation": "a·b=2+2-4=0이므로 두 벡터가 이루는 각은 90°입니다."},
+    {"id": "ib-aa-hl-geometry-trigonometry-p08", "type": "orderedPair", "prompt": "두 벡터 직선 r=(1,0)+t(2,1), s=(7,4)+u(-1,-1)의 교점을 구하세요.", "answer": [5, 2], "hints": ["성분을 같게 두어 1+2t=7-u, t=4-u를 얻으세요.", "두 식을 풀면 t=2입니다."], "explanation": "t=2일 때 r=(5,2)이고 u=2일 때 s=(5,2)이므로 교점은 (5,2)입니다."}
+  ]
+}

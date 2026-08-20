@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-statistics-unit-1-data-collection","title":"Unit 1: Exploring One-Variable Data and Collecting Data","stage":"high","grade":"Grades 10–12","course":"AP Statistics","domain":"One-Variable Data and Data Collection","framework":"College Board AP","level":"AP","standards":["AP Statistics Unit 1 (Effective Fall 2026)"],"aliases":["일변량 자료 탐색과 자료 수집","AP Statistics U1","2026–27 revised framework"],"sources":["https://apcentral.collegeboard.org/courses/ap-statistics","https://apcentral.collegeboard.org/courses/ap-statistics/future-revisions"],
+  "description":"2026–27 개정 체계에 따라 탐구 질문, 변수, 일변량 분포, 표본추출과 실험 설계를 하나의 단원에서 다룹니다.","estimatedMinutes":60,"prerequisites":[],"pathways":["ap-statistics-unit-2-probability-distributions"],
+  "objectives":["일변량 범주형·정량 자료의 분포를 적절한 그래프와 통계량으로 비교할 수 있다.","통계적 탐구 질문에 맞는 표본추출 또는 실험 설계를 선택하고 일반화·인과 추론 범위를 판단할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"탐구 질문과 변수","body":"통계적 탐구 질문은 자료에 변이가 있을 것을 예상합니다. 관측 단위와 범주형·정량 변수를 명확히 정의해야 분석 방법을 선택할 수 있습니다."},
+    {"type":"concept","title":"분포 설명","body":"정량 분포는 모양, 중심, 산포, 특이값을 맥락과 단위로 설명합니다. 평균·표준편차는 이상값에 민감하고 중앙값·IQR은 비교적 강건합니다."},
+    {"type":"concept","title":"표본추출","body":"단순무작위, 층화, 군집, 계통 표본은 무작위성을 활용합니다. 자발적 응답과 편의 표본은 선택 편향을 만들 수 있습니다."},
+    {"type":"concept","title":"실험 설계","body":"무작위 배정은 처리 효과의 인과 추론을 돕고, 반복·통제·블록은 변이를 관리합니다. 무작위 표본은 모집단 일반화와 연결되며 역할이 다릅니다."}
+  ],
+  "problems":[
+    {"id":"ap-statistics-unit-1-data-collection-p01","type":"choice","prompt":"가구당 자녀 수는 어떤 변수인가?","choices":[{"id":"a","label":"정량 변수"},{"id":"b","label":"범주형 변수"},{"id":"c","label":"처리 변수만"},{"id":"d","label":"식별자"}],"answer":"a","hints":["수치의 차와 평균이 의미가 있는지 보세요.","개수를 나타냅니다."],"explanation":"자녀 수는 수치로 측정되는 정량 변수입니다."},
+    {"id":"ap-statistics-unit-1-data-collection-p02","type":"integer","prompt":"정렬된 자료 2, 4, 7, 9, 13의 중앙값은?","answer":7,"hints":["자료가 5개이므로 가운데 값을 찾으세요.","세 번째 값입니다."],"explanation":"가운데 값은 7입니다."},
+    {"id":"ap-statistics-unit-1-data-collection-p03","type":"integer","prompt":"자료의 Q1=10, Q3=22일 때 IQR은?","answer":12,"hints":["IQR=Q3-Q1입니다.","22-10을 계산하세요."],"explanation":"IQR은 12입니다."},
+    {"id":"ap-statistics-unit-1-data-collection-p04","type":"choice","prompt":"온라인 공개 설문에 원하는 사람만 응답했다. 가장 직접적인 문제는?","choices":[{"id":"a","label":"자발적 응답 편향"},{"id":"b","label":"블록 효과"},{"id":"c","label":"이중 맹검"},{"id":"d","label":"층화 표본"}],"answer":"a","hints":["누가 스스로 참여를 선택했는지 보세요.","강한 의견을 가진 사람이 과대표집될 수 있습니다."],"explanation":"자발적 응답 표본은 응답자가 스스로 선택해 편향될 수 있습니다."},
+    {"id":"ap-statistics-unit-1-data-collection-p05","type":"choice","prompt":"처리를 실험 단위에 무작위 배정한 주된 이유는?","choices":[{"id":"a","label":"교란을 줄이고 인과 추론을 돕기 위해"},{"id":"b","label":"표본 크기를 0으로 만들기 위해"},{"id":"c","label":"모든 변수를 범주형으로 만들기 위해"},{"id":"d","label":"반드시 모집단 전체에 일반화하기 위해"}],"answer":"a","hints":["무작위 표본추출과 무작위 배정을 구분하세요.","처리군을 비교 가능하게 만드는 목적입니다."],"explanation":"무작위 배정은 잠재적 교란요인을 처리군에 균형 있게 분산해 인과 추론을 뒷받침합니다."},
+    {"id":"ap-statistics-unit-1-data-collection-p06","type":"choice","prompt":"오른쪽으로 강하게 치우친 분포의 대표 중심으로 더 강건한 것은?","choices":[{"id":"a","label":"중앙값"},{"id":"b","label":"평균"},{"id":"c","label":"범위"},{"id":"d","label":"표준편차"}],"answer":"a","hints":["극단값에 덜 민감한 통계량을 고르세요.","순서의 가운데를 사용합니다."],"explanation":"중앙값은 큰 극단값의 영향을 평균보다 덜 받습니다."}
+  ]
+}

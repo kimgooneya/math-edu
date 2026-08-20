@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-triangle-congruence",
+  "title": "Triangle Congruence and Theorems",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSG-CO.B.7",
+    "HSG-CO.B.8",
+    "HSG-CO.C.10",
+    "HSG-CO.C.11"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "삼각형의 합동",
+    "Triangle Congruence",
+    "SSS SAS ASA",
+    "삼각형 정리"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "강체 변환과 SSS·SAS·ASA·AAS 조건으로 삼각형의 합동을 판정하고 합동인 대응 부분을 사용해 성질을 증명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-geo-lines-angles-proof"
+  ],
+  "objectives": [
+    "충분한 삼각형 합동 조건과 충분하지 않은 조건을 구분할 수 있다.",
+    "합동을 이용해 이등변삼각형과 평행사변형의 성질을 증명할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "합동 조건",
+      "body": "SSS, SAS, ASA, AAS는 삼각형을 하나로 결정하므로 합동 조건입니다. SSA는 일반적으로 두 삼각형이 가능할 수 있어 합동 조건이 아닙니다."
+    },
+    {
+      "type": "concept",
+      "title": "CPCTC",
+      "body": "두 삼각형의 합동을 먼저 증명하면 대응하는 변과 각이 각각 같다는 사실을 사용할 수 있습니다. 대응 순서를 정확히 맞추는 것이 중요합니다."
+    },
+    {
+      "type": "formula",
+      "title": "삼각형 내각합",
+      "body": "유클리드 평면에서 삼각형 세 내각의 합은 180°입니다.",
+      "formula": "m∠A+m∠B+m∠C=180°"
+    },
+    {
+      "type": "example",
+      "title": "이등변삼각형",
+      "prompt": "AB=AC이고 ∠B=52°인 △ABC에서 ∠C와 ∠A를 구하세요.",
+      "steps": [
+        "같은 변의 맞은편 밑각은 같으므로 ∠C=52°입니다.",
+        "세 각의 합은 180°입니다.",
+        "∠A=180-104=76°입니다."
+      ],
+      "answer": "∠C=52°, ∠A=76°"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-triangle-congruence-p01",
+      "type": "choice",
+      "prompt": "두 삼각형에서 세 쌍의 대응변 길이가 모두 같을 때 적용하는 합동 조건을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "세 변에 대한 정보입니다.",
+        "변을 S로 나타냅니다."
+      ],
+      "explanation": "세 대응변이 모두 같으므로 SSS 합동입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "SSS"
+        },
+        {
+          "id": "B",
+          "label": "SAS"
+        },
+        {
+          "id": "C",
+          "label": "ASA"
+        },
+        {
+          "id": "D",
+          "label": "SSA"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-triangle-congruence-p02",
+      "type": "choice",
+      "prompt": "일반적으로 삼각형 합동을 보장하지 않는 조건을 고르세요.",
+      "answer": "D",
+      "hints": [
+        "주어진 각이 두 변 사이에 끼이지 않은 경우를 생각하세요.",
+        "모호한 경우가 생길 수 있습니다."
+      ],
+      "explanation": "SSA는 서로 다른 두 삼각형이 가능할 수 있어 일반적인 합동 조건이 아닙니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "SSS"
+        },
+        {
+          "id": "B",
+          "label": "SAS"
+        },
+        {
+          "id": "C",
+          "label": "ASA"
+        },
+        {
+          "id": "D",
+          "label": "SSA"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-triangle-congruence-p03",
+      "type": "integer",
+      "prompt": "삼각형의 두 각이 35°, 65°일 때 셋째 각을 구하세요.",
+      "answer": 80,
+      "hints": [
+        "삼각형 내각의 합은 180°입니다.",
+        "180-35-65를 계산하세요."
+      ],
+      "explanation": "셋째 각은 80°입니다."
+    },
+    {
+      "id": "high-core-geo-triangle-congruence-p04",
+      "type": "integer",
+      "prompt": "이등변삼각형의 꼭지각이 40°일 때 각 밑각의 크기를 구하세요.",
+      "answer": 70,
+      "hints": [
+        "두 밑각은 같습니다.",
+        "남은 140°를 2로 나누세요."
+      ],
+      "explanation": "각 밑각은 (180-40)/2=70°입니다."
+    },
+    {
+      "id": "high-core-geo-triangle-congruence-p05",
+      "type": "choice",
+      "prompt": "△ABC≅△DEF일 때 변 BC에 대응하는 변을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "합동 기호의 글자 순서를 맞추세요.",
+        "B↔E, C↔F입니다."
+      ],
+      "explanation": "BC의 양 끝점은 E와 F에 대응하므로 EF입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "DE"
+        },
+        {
+          "id": "B",
+          "label": "EF"
+        },
+        {
+          "id": "C",
+          "label": "FD"
+        },
+        {
+          "id": "D",
+          "label": "AB"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-triangle-congruence-p06",
+      "type": "integer",
+      "prompt": "합동인 두 삼각형에서 한 삼각형의 둘레가 27 cm일 때 다른 삼각형의 둘레를 구하세요.",
+      "answer": 27,
+      "hints": [
+        "합동 도형의 대응변 길이는 같습니다.",
+        "세 변 길이의 합도 같습니다."
+      ],
+      "explanation": "합동인 삼각형은 대응변이 같으므로 둘레도 27 cm입니다."
+    }
+  ]
+}

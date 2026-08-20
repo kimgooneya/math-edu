@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-hl-statistics-probability",
+  "title": "IB AA HL 통계와 확률 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Statistics and probability",
+  "standards": ["IB AA HL: Statistics and probability"],
+  "pathways": ["AA: 베이즈 정리와 확률변수의 기댓값·분산을 확률 구조에서 엄밀히 계산하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA HL Topic 4", "AA HL Statistics and probability", "IB 분석과 접근 HL 통계 확률"],
+  "description": "AA SL 확률에서 베이즈 정리, 이산·연속 확률변수, 기댓값과 분산, 확률변수의 선형결합으로 확장합니다.",
+  "estimatedMinutes": 85,
+  "prerequisites": ["ib-aa-sl-statistics-probability", "ib-aa-hl-number-algebra"],
+  "objectives": ["베이즈 정리와 전체확률법칙으로 조건부확률을 역산할 수 있다.", "확률변수와 그 선형결합의 기댓값·분산을 계산하고 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "베이즈 정리", "body": "원인 H에 대한 관측 E가 주어졌을 때 P(H|E)=P(E|H)P(H)/P(E)입니다. 분모는 가능한 원인별 결합확률을 더한 전체확률로 구합니다."},
+    {"type": "concept", "title": "이산 확률변수", "body": "확률질량함수의 확률 합은 1이고 E(X)=ΣxP(X=x)입니다. 분산은 E(X²)-[E(X)]²로 계산할 수 있습니다."},
+    {"type": "concept", "title": "연속 확률변수", "body": "확률밀도함수 f는 음수가 아니며 전체 적분이 1입니다. 구간 확률은 곡선 아래 넓이이고 한 점의 확률은 0입니다."},
+    {"type": "concept", "title": "선형결합", "body": "E(aX+b)=aE(X)+b이고 Var(aX+b)=a²Var(X)입니다. 독립인 X,Y에 대해서만 Var(X+Y)=Var(X)+Var(Y)를 바로 적용할 수 있습니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-hl-statistics-probability-p01", "type": "number", "prompt": "어떤 질환의 유병률은 0.1이고 검사의 민감도는 0.8, 위양성률은 0.2입니다. 양성일 때 질환이 있을 확률을 구하세요.", "answer": 0.3076923076923077, "tolerance": 0.000001, "hints": ["질환·양성 확률은 0.1×0.8입니다.", "전체 양성확률은 0.1×0.8+0.9×0.2입니다."], "explanation": "베이즈 정리로 0.08/(0.08+0.18)=4/13≈0.307692입니다."},
+    {"id": "ib-aa-hl-statistics-probability-p02", "type": "number", "prompt": "X가 0,1,3을 각각 확률 k, 2k, 1-3k로 갖고 E(X)=1.4입니다. k를 구하세요.", "answer": 0.22857142857142856, "tolerance": 0.000001, "hints": ["E(X)=0·k+1·2k+3(1-3k)입니다.", "3-7k=1.4를 푸세요."], "explanation": "7k=1.6이므로 k=8/35≈0.228571이며 모든 확률이 음이 아닙니다."},
+    {"id": "ib-aa-hl-statistics-probability-p03", "type": "number", "prompt": "서로 독립인 X,Y에 대해 Var(X)=4, Var(Y)=1입니다. Z=2X-3Y+5일 때 Var(Z)를 구하세요.", "answer": 25, "hints": ["상수 5는 분산에 영향을 주지 않습니다.", "독립성을 사용해 2²Var(X)+(-3)²Var(Y)를 계산하세요."], "explanation": "Var(Z)=4×4+9×1=25입니다."},
+    {"id": "ib-aa-hl-statistics-probability-p04", "type": "rational", "prompt": "확률밀도함수 f(x)=x/2 (0≤x≤2)인 X에 대해 P(X>1 | X<√3)을 구하세요.", "answer": {"numerator": 2, "denominator": 3}, "hints": ["분자는 1부터 √3까지, 분모는 0부터 √3까지 x/2를 적분합니다.", "각 적분은 x²/4의 끝값 차입니다."], "explanation": "분자는 (3-1)/4=1/2, 분모는 3/4이므로 조건부확률은 (1/2)/(3/4)=2/3입니다."},
+    {"id": "ib-aa-hl-statistics-probability-p05", "type": "choice", "prompt": "독립인 X,Y가 각각 평균 10, 5이고 표준편차 2, 1인 정규분포를 따릅니다. W=X-2Y의 분포를 고르세요.", "choices": [{"id": "a", "label": "평균 0, 분산 8인 정규분포"}, {"id": "b", "label": "평균 5, 분산 3인 정규분포"}, {"id": "c", "label": "평균 0, 분산 6인 정규분포"}, {"id": "d", "label": "평균 20, 분산 8인 정규분포"}], "answer": "a", "hints": ["평균은 10-2×5입니다.", "독립이므로 분산은 2²+(-2)²×1²입니다."], "explanation": "E(W)=0, Var(W)=4+4=8이고 독립 정규변수의 선형결합도 정규분포입니다."},
+    {"id": "ib-aa-hl-statistics-probability-p06", "type": "choice", "prompt": "연속 확률변수 X에 대해 항상 참인 설명을 고르세요.", "choices": [{"id": "a", "label": "P(X=a)=0"}, {"id": "b", "label": "밀도함수 값은 항상 1 이하"}, {"id": "c", "label": "E(X)는 반드시 양수"}, {"id": "d", "label": "모든 구간 확률이 같다"}], "answer": "a", "hints": ["확률은 밀도함수의 구간 넓이입니다.", "폭이 0인 한 점의 넓이를 생각하세요."], "explanation": "연속분포에서 한 점만의 확률은 0입니다. 밀도 높이는 1을 넘을 수도 있습니다."}
+  ]
+}

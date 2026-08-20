@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-unit-circle-trigonometry",
+  "title": "Unit-Circle Trigonometry",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Precalculus",
+  "domain": "Functions",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSF-TF.A.1",
+    "HSF-TF.A.2",
+    "HSF-TF.B.5",
+    "HSF-TF.C.8"
+  ],
+  "pathways": [
+    "Traditional: Precalculus",
+    "Integrated pathway follow-on: after Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "단위원 삼각함수",
+    "Unit Circle",
+    "Radians",
+    "라디안"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "라디안과 단위원으로 삼각함수를 모든 실수 입력에 확장하고 특수각 값, 주기, 대칭, 기본 항등식을 분석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-geo-similarity-trigonometry"
+  ],
+  "objectives": [
+    "각도를 도와 라디안 사이에서 변환하고 단위원 좌표로 삼각함수 값을 구할 수 있다.",
+    "삼각함수의 주기, 부호, 대칭과 피타고라스 항등식을 설명할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "라디안",
+      "body": "반지름 r인 원에서 길이 r인 호가 만드는 중심각이 1라디안입니다. 한 바퀴는 2π라디안이며 라디안은 호의 길이와 각을 직접 연결합니다."
+    },
+    {
+      "type": "concept",
+      "title": "단위원",
+      "body": "단위원에서 각 θ의 종점 좌표는 (cosθ,sinθ)입니다. tanθ=sinθ/cosθ이며 cosθ=0인 곳에서는 정의되지 않습니다."
+    },
+    {
+      "type": "formula",
+      "title": "기본 항등식",
+      "body": "단위원 방정식 x²+y²=1에서 피타고라스 항등식이 나옵니다.",
+      "formula": "sin²θ+cos²θ=1, tanθ=sinθ/cosθ"
+    },
+    {
+      "type": "example",
+      "title": "라디안과 호의 길이",
+      "prompt": "반지름 3인 원에서 중심각이 2라디안일 때 호의 길이를 구하세요.",
+      "steps": [
+        "라디안 정의에서 호의 길이는 s=rθ입니다.",
+        "r=3, θ=2를 대입합니다.",
+        "s=3·2=6입니다."
+      ],
+      "answer": "6"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-precalc-unit-circle-trigonometry-p01",
+      "type": "number",
+      "prompt": "180°를 라디안으로 나타낼 때 π의 계수 k를 구하세요.",
+      "answer": 1,
+      "hints": [
+        "180°=π 라디안입니다.",
+        "kπ에서 k를 읽으세요."
+      ],
+      "explanation": "180°=1π이므로 k=1입니다."
+    },
+    {
+      "id": "high-core-precalc-unit-circle-trigonometry-p02",
+      "type": "number",
+      "prompt": "90°를 라디안으로 나타낼 때 π의 계수 k를 구하세요.",
+      "answer": 0.5,
+      "hints": [
+        "180°가 π이므로 절반을 취하세요.",
+        "90°=π/2입니다."
+      ],
+      "explanation": "π/2=0.5π이므로 k=0.5입니다."
+    },
+    {
+      "id": "high-core-precalc-unit-circle-trigonometry-p03",
+      "type": "number",
+      "prompt": "cos0의 값을 구하세요.",
+      "answer": 1,
+      "hints": [
+        "각 0의 단위원 종점은 (1,0)입니다.",
+        "cos은 x좌표입니다."
+      ],
+      "explanation": "cos0=1입니다."
+    },
+    {
+      "id": "high-core-precalc-unit-circle-trigonometry-p04",
+      "type": "number",
+      "prompt": "sin(3π/2)의 값을 구하세요.",
+      "answer": -1,
+      "hints": [
+        "3π/2는 270°입니다.",
+        "단위원 종점은 (0,-1)입니다."
+      ],
+      "explanation": "sin은 y좌표이므로 -1입니다."
+    },
+    {
+      "id": "high-core-precalc-unit-circle-trigonometry-p05",
+      "type": "choice",
+      "prompt": "tanθ가 정의되지 않는 조건을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "tanθ=sinθ/cosθ입니다.",
+        "분모가 0인 조건을 찾으세요."
+      ],
+      "explanation": "cosθ=0이면 0으로 나눌 수 없어 tanθ가 정의되지 않습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "sinθ=0"
+        },
+        {
+          "id": "B",
+          "label": "cosθ=0"
+        },
+        {
+          "id": "C",
+          "label": "sinθ=cosθ"
+        },
+        {
+          "id": "D",
+          "label": "θ=0만"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-unit-circle-trigonometry-p06",
+      "type": "number",
+      "prompt": "sinθ=3/5이고 θ가 제1사분면에 있을 때 cosθ를 소수로 구하세요.",
+      "answer": 0.8,
+      "hints": [
+        "sin²θ+cos²θ=1을 사용하세요.",
+        "cosθ는 양수이며 √(1-9/25)=4/5입니다."
+      ],
+      "explanation": "제1사분면이므로 cosθ=4/5=0.8입니다."
+    }
+  ]
+}

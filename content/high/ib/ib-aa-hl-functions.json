@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-hl-functions",
+  "title": "IB AA HL 함수 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Functions",
+  "standards": ["IB AA HL: Functions"],
+  "pathways": ["AA: 다항·유리·절댓값 함수의 구조와 근·점근선·대칭을 대수적으로 증명하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA HL Topic 2", "AA HL Functions", "IB 분석과 접근 HL 함수"],
+  "description": "AA SL 함수에서 다항식의 근과 계수, 유리함수의 점근 구조, 절댓값·합성함수의 대수적 분석으로 확장합니다.",
+  "estimatedMinutes": 85,
+  "prerequisites": ["ib-aa-sl-functions", "ib-aa-hl-number-algebra"],
+  "objectives": ["다항함수의 근과 계수 관계를 사용해 식을 구성하고 분석할 수 있다.", "유리·절댓값·합성함수의 정의역, 점근선, 교점과 변환을 엄밀히 판별할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "근과 계수", "body": "이차식 ax²+bx+c의 근 α,β는 α+β=-b/a, αβ=c/a를 만족합니다. 실수 계수 다항식에서 비실수 근은 켤레쌍으로 나타납니다."},
+    {"type": "concept", "title": "유리함수의 구조", "body": "분모를 0으로 만드는 값은 정의역에서 제외합니다. 약분되지 않은 영점은 수직점근선, 차수 비교나 나눗셈은 수평·사선점근선을 결정합니다."},
+    {"type": "concept", "title": "절댓값 함수", "body": "|f(x)|는 f(x)<0인 부분을 x축 위로 반사합니다. |f(x)|=g(x)는 g(x)≥0인 구간에서 f(x)=±g(x)를 모두 확인해야 합니다."},
+    {"type": "concept", "title": "대칭과 함수 방정식", "body": "f(-x)=f(x)이면 짝함수, f(-x)=-f(x)이면 홀함수입니다. 역함수와 원함수의 그래프는 y=x에 대해 대칭입니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-hl-functions-p01", "type": "number", "prompt": "2x²-7x+3=0의 두 근을 α, β라 할 때 α²+β²을 구하세요.", "answer": 9.25, "hints": ["α+β=7/2, αβ=3/2입니다.", "α²+β²=(α+β)²-2αβ를 쓰세요."], "explanation": "(7/2)²-2(3/2)=49/4-3=37/4=9.25입니다."},
+    {"id": "ib-aa-hl-functions-p02", "type": "choice", "prompt": "f(x)=(2x²+1)/(x-3)의 사선점근선을 고르세요.", "choices": [{"id": "a", "label": "y=2x+6"}, {"id": "b", "label": "y=2x-6"}, {"id": "c", "label": "y=3"}, {"id": "d", "label": "x=3"}], "answer": "a", "hints": ["다항식 나눗셈을 하세요.", "2x²+1=(x-3)(2x+6)+19입니다."], "explanation": "f(x)=2x+6+19/(x-3)이므로 사선점근선은 y=2x+6입니다."},
+    {"id": "ib-aa-hl-functions-p03", "type": "unorderedSet", "prompt": "방정식 |x²-4|=3의 모든 실근을 구하세요.", "answer": [-2.6457513105737893, -1, 1, 2.6457513105737893], "hints": ["x²-4=3 또는 x²-4=-3으로 나누세요.", "x²=7과 x²=1의 양·음의 근을 모두 포함하세요."], "explanation": "해는 x=±√7, ±1입니다."},
+    {"id": "ib-aa-hl-functions-p04", "type": "unorderedSet", "prompt": "x>0에서 f(x)=x+1/x입니다. f(x)=5/2를 만족하는 x를 모두 구하세요.", "answer": [0.5, 2], "hints": ["양변에 2x를 곱해 2x²-5x+2=0을 얻으세요.", "식을 (2x-1)(x-2)로 인수분해하세요."], "explanation": "두 해 1/2과 2는 모두 x>0을 만족합니다."},
+    {"id": "ib-aa-hl-functions-p05", "type": "integer", "prompt": "최고차항 계수가 1인 실수 계수 삼차다항식의 근이 2+i, 2-i, -1입니다. 이 다항식의 상수항을 구하세요.", "answer": 5, "hints": ["상수항은 세 근의 곱에 -1을 곱한 값입니다.", "(2+i)(2-i)=5입니다."], "explanation": "근의 곱은 5×(-1)=-5이므로 monic 삼차식의 상수항은 -(-5)=5입니다."},
+    {"id": "ib-aa-hl-functions-p06", "type": "choice", "prompt": "f(x)=1/(x-2)+4의 수직점근선과 수평점근선 순서쌍을 고르세요.", "choices": [{"id": "a", "label": "(x=2, y=4)"}, {"id": "b", "label": "(x=4, y=2)"}, {"id": "c", "label": "(x=-2, y=4)"}, {"id": "d", "label": "(x=2, y=-4)"}], "answer": "a", "hints": ["분모가 0인 x값을 찾으세요.", "x의 절댓값이 커질 때 1/(x-2)의 극한을 보세요."], "explanation": "x=2에서 분모가 0이고, 멀리서는 함수값이 4에 가까워집니다."}
+  ]
+}

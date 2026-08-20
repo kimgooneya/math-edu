@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a1-linear-modeling",
+  "title": "Linear Modeling and Regression",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra I",
+  "domain": "Modeling",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSA-CED.A.2",
+    "HSS-ID.B.6",
+    "HSS-ID.C.7",
+    "HSS-ID.C.8",
+    "HSS-ID.C.9"
+  ],
+  "pathways": [
+    "Traditional: Algebra I",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "선형 모델링",
+    "Linear Modeling",
+    "회귀직선",
+    "상관과 인과"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "실제 자료에 선형 모델을 적합하고 기울기·절편·잔차·상관계수를 맥락에서 해석하며 인과 추론의 한계를 구분합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-linear-functions",
+    "high-core-a1-descriptive-statistics"
+  ],
+  "objectives": [
+    "상황과 자료에서 선형 모델을 만들고 계수의 단위를 해석할 수 있다.",
+    "잔차와 상관계수를 사용해 적합도를 평가하고 상관과 인과를 구분할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "모델의 계수",
+      "body": "선형 모델 ŷ=mx+b에서 m은 입력 한 단위당 예측값의 변화, b는 입력 0에서의 예측입니다. 절편이 관측 범위 밖이면 실제 의미가 없을 수도 있습니다."
+    },
+    {
+      "type": "concept",
+      "title": "잔차와 상관",
+      "body": "잔차는 관측값-예측값입니다. 잔차가 0 주위에 무작위로 흩어지면 선형 모델이 적절할 수 있습니다. 상관계수는 선형 연관의 방향과 강도를 나타내지만 인과를 증명하지 않습니다."
+    },
+    {
+      "type": "formula",
+      "title": "잔차",
+      "body": "양의 잔차는 실제 값이 모델 예측보다 컸다는 뜻입니다.",
+      "formula": "잔차=관측값-예측값"
+    },
+    {
+      "type": "example",
+      "title": "비용 모델",
+      "prompt": "한 달 사용량 x GB에 대한 요금이 C=8x+25일 때 기울기를 해석하세요.",
+      "steps": [
+        "기울기는 x의 계수 8입니다.",
+        "x의 단위는 GB, C의 단위는 달러입니다.",
+        "사용량이 1 GB 늘 때 예상 요금이 8달러 늘어난다는 뜻입니다."
+      ],
+      "answer": "GB당 8달러"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a1-linear-modeling-p01",
+      "type": "number",
+      "prompt": "모델 ŷ=3x+5에서 x=4일 때 예측값을 구하세요.",
+      "answer": 17,
+      "hints": [
+        "x에 4를 대입하세요.",
+        "3×4+5를 계산하세요."
+      ],
+      "explanation": "예측값은 12+5=17입니다."
+    },
+    {
+      "id": "high-core-a1-linear-modeling-p02",
+      "type": "number",
+      "prompt": "관측값이 21이고 예측값이 18일 때 잔차를 구하세요.",
+      "answer": 3,
+      "hints": [
+        "잔차=관측값-예측값입니다.",
+        "21-18을 계산하세요."
+      ],
+      "explanation": "잔차는 21-18=3입니다."
+    },
+    {
+      "id": "high-core-a1-linear-modeling-p03",
+      "type": "choice",
+      "prompt": "상관계수 r=-0.92의 해석으로 가장 알맞은 것을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "부호는 방향을 나타냅니다.",
+        "절댓값이 1에 가까울수록 강합니다."
+      ],
+      "explanation": "음수이고 절댓값 0.92가 1에 가까우므로 강한 음의 선형 연관입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "강한 음의 선형 연관"
+        },
+        {
+          "id": "B",
+          "label": "약한 음의 연관"
+        },
+        {
+          "id": "C",
+          "label": "강한 양의 연관"
+        },
+        {
+          "id": "D",
+          "label": "반드시 인과관계"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-linear-modeling-p04",
+      "type": "choice",
+      "prompt": "아이스크림 판매량과 익사 사고가 함께 증가했다는 관찰만으로 결론 내릴 수 있는 것을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "관찰 연구의 숨은 변수를 생각하세요.",
+        "더운 날씨가 두 변수에 함께 영향을 줄 수 있습니다."
+      ],
+      "explanation": "상관만으로 인과를 확정할 수 없으므로 B입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "아이스크림이 사고를 일으킨다"
+        },
+        {
+          "id": "B",
+          "label": "두 변수에 연관이 있을 수 있으나 인과는 확정 못 한다"
+        },
+        {
+          "id": "C",
+          "label": "연관이 전혀 없다"
+        },
+        {
+          "id": "D",
+          "label": "사고가 판매를 일으킨다"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-linear-modeling-p05",
+      "type": "integer",
+      "prompt": "모델 y=120-5t에서 t가 1 증가할 때 y의 변화량을 구하세요.",
+      "answer": -5,
+      "hints": [
+        "기울기는 t의 계수입니다.",
+        "음수는 감소를 뜻합니다."
+      ],
+      "explanation": "기울기 -5이므로 t가 1 증가할 때 y는 5 감소합니다."
+    },
+    {
+      "id": "high-core-a1-linear-modeling-p06",
+      "type": "number",
+      "prompt": "점 (0,10), (5,20)을 정확히 지나는 선형 모델의 기울기를 구하세요.",
+      "answer": 2,
+      "hints": [
+        "y 변화량은 10입니다.",
+        "x 변화량은 5입니다."
+      ],
+      "explanation": "기울기는 (20-10)/(5-0)=2입니다."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-la-eigenvalues",
+  "title": "고유값과 대각화",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Linear Algebra",
+  "domain": "Eigenvalues and Diagonalization",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.06: eigenvalues, eigenvectors, diagonalization, positive definite matrices, singular value decomposition, and Markov processes"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["Eigenvectors", "대각화", "Spectral Analysis"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 선형변환의 고유방향과 반복 작용을 분석합니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/"],
+  "estimatedMinutes": 220,
+  "prerequisites": ["pa-la-orthogonality-applications"],
+  "objectives": ["특성방정식으로 고유값과 고유벡터를 구할 수 있다.", "대각화 가능 조건을 설명하고 반복변환과 마르코프 과정에 적용할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "고유값과 고유벡터", "body": "선형변환 뒤에도 방향이 바뀌지 않고 크기만 고유값만큼 변하는 영이 아닌 벡터가 고유벡터입니다. 고유값은 A-λI의 행렬식이 0이 되는 값입니다."},
+    {"type": "concept", "title": "대각화", "body": "n차 정사각행렬에 독립인 고유벡터가 n개 있으면 고유벡터를 열로 둔 행렬을 이용해 대각화할 수 있습니다. 대각행렬의 거듭제곱은 각 대각성분의 거듭제곱으로 계산됩니다."},
+    {"type": "concept", "title": "대칭행렬과 양의 정부호", "body": "실수 대칭행렬은 서로 직교하는 고유벡터들로 이루어진 정규직교기저를 가집니다. 모든 영이 아닌 x에 대해 x의 전치와 A와 x의 곱이 양수이면 A는 양의 정부호이며, 대칭행렬에서는 모든 고유값이 양수인 것과 동치입니다."},
+    {"type": "concept", "title": "특잇값분해", "body": "모든 행렬은 두 직교행렬과 음이 아닌 특잇값을 가진 대각형 행렬의 곱으로 분해할 수 있습니다. 특잇값은 A의 전치와 A의 곱의 고유값을 음이 아닌 제곱근으로 바꾼 값입니다."},
+    {"type": "concept", "title": "동역학과 마르코프 과정", "body": "행렬을 반복해서 곱하는 과정은 고유값의 크기에 따라 장기 거동이 달라집니다. 확률전이행렬의 고유값 1에 대응하는 고유벡터는 정상분포를 나타낼 수 있습니다."}
+  ],
+  "problems": [
+    {"id": "pa-la-eigenvalues-p01", "type": "unorderedSet", "prompt": "대각행렬 [[2,0],[0,3]]의 고유값 집합을 구하세요.", "answer": [2, 3], "hints": ["대각행렬의 고유값은 대각성분입니다.", "순서는 중요하지 않습니다."], "explanation": "고유값은 2와 3입니다."},
+    {"id": "pa-la-eigenvalues-p02", "type": "choice", "prompt": "행렬 [[2,1],[0,2]]의 고유값 2에 대응하는 고유벡터를 고르세요.", "choices": [{"id": "a", "label": "(1,0)"}, {"id": "b", "label": "(0,1)"}, {"id": "c", "label": "(1,1)"}, {"id": "d", "label": "(0,0)"}], "answer": "a", "hints": ["(A-2I)v=0을 푸세요.", "두 번째 성분은 0이어야 하고 고유벡터는 영벡터가 아닙니다."], "explanation": "(A-2I)(1,0)=(0,0)이므로 (1,0)은 고유벡터입니다."},
+    {"id": "pa-la-eigenvalues-p03", "type": "integer", "prompt": "행렬 [[4,1],[2,3]]의 두 고유값의 합을 구하세요.", "answer": 7, "hints": ["고유값의 합은 행렬의 대각합과 같습니다.", "대각성분 4와 3을 더하세요."], "explanation": "대각합은 4+3=7이므로 고유값의 합도 7입니다."},
+    {"id": "pa-la-eigenvalues-p04", "type": "integer", "prompt": "어떤 2×2 행렬의 고유값이 2와 5일 때 행렬식을 구하세요.", "answer": 10, "hints": ["행렬식은 중복도를 포함한 고유값의 곱입니다.", "2와 5를 곱하세요."], "explanation": "행렬식은 2·5=10입니다."},
+    {"id": "pa-la-eigenvalues-p05", "type": "choice", "prompt": "n×n 행렬이 대각화 가능하기 위한 충분조건을 고르세요.", "choices": [{"id": "a", "label": "독립인 고유벡터가 n개 있다"}, {"id": "b", "label": "모든 성분이 양수이다"}, {"id": "c", "label": "행렬식이 0이다"}, {"id": "d", "label": "모든 행의 합이 0이다"}], "answer": "a", "hints": ["대각화의 변환행렬 열에는 무엇을 놓는지 생각하세요.", "그 변환행렬이 가역이어야 합니다."], "explanation": "독립인 고유벡터 n개를 열로 둔 가역행렬이 있으면 대각화할 수 있습니다."},
+    {"id": "pa-la-eigenvalues-p06", "type": "vector", "prompt": "열확률전이행렬 [[0.8,0.3],[0.2,0.7]]의 성분 합이 1인 정상분포를 구하세요.", "answer": [0.6, 0.4], "hints": ["Av=v와 두 성분의 합이 1이라는 조건을 사용하세요.", "0.2x=0.3y이므로 x:y=3:2입니다."], "explanation": "비가 3:2이고 합이 1이므로 정상분포는 (0.6,0.4)입니다."},
+    {"id": "pa-la-eigenvalues-p07", "type": "choice", "prompt": "다음 중 양의 정부호 행렬을 고르세요.", "choices": [{"id": "a", "label": "diag(2,3)"}, {"id": "b", "label": "diag(2,-3)"}, {"id": "c", "label": "diag(0,3)"}, {"id": "d", "label": "diag(-2,-3)"}], "answer": "a", "hints": ["대칭행렬의 모든 고유값이 양수인지 확인하세요.", "대각행렬의 고유값은 대각성분입니다."], "explanation": "diag(2,3)은 두 고유값이 모두 양수이므로 양의 정부호입니다."},
+    {"id": "pa-la-eigenvalues-p08", "type": "integer", "prompt": "A=diag(2,3), x=(1,-1)일 때 이차형식 x의 전치와 A와 x의 곱의 값을 구하세요.", "answer": 5, "hints": ["먼저 Ax=(2,-3)을 구하세요.", "x와 Ax의 내적을 계산하세요."], "explanation": "1·2+(-1)·(-3)=5입니다."},
+    {"id": "pa-la-eigenvalues-p09", "type": "unorderedSet", "prompt": "대각행렬 [[3,0],[0,2]]의 특잇값 집합을 구하세요.", "answer": [2, 3], "hints": ["A의 전치와 A의 곱은 diag(9,4)입니다.", "그 고유값의 음이 아닌 제곱근을 구하세요."], "explanation": "특잇값은 3과 2이며 집합으로는 {2,3}입니다."}
+  ]
+}

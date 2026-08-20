@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-6-g",
+  "title": "Geometry",
+  "stage": "middle",
+  "grade": "Grade 6",
+  "course": "Grade 6 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "Geometry",
+  "standards": ["CCSS.Math.Content.6.G.A.1", "CCSS.Math.Content.6.G.A.2", "CCSS.Math.Content.6.G.A.3", "CCSS.Math.Content.6.G.A.4"],
+  "aliases": ["Grade 6 Geometry", "6.G", "6학년 기하", "넓이·부피·전개도"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/6/G/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "삼각형과 다각형의 넓이, 직육면체의 부피, 좌표 다각형, 입체도형의 전개도와 겉넓이를 다룹니다.",
+  "estimatedMinutes": 45,
+  "prerequisites": ["middle-grade-6-rp", "middle-grade-6-ee"],
+  "objectives": ["도형을 분해하거나 조합하여 삼각형과 여러 다각형의 넓이를 구할 수 있다.", "분수 모서리 길이를 포함한 직육면체의 부피와 전개도를 이용한 겉넓이를 구할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "다각형의 넓이", "body": "삼각형의 넓이는 밑변×높이÷2입니다. 복잡한 다각형은 직사각형과 삼각형으로 나누거나 큰 도형에서 일부를 빼어 구합니다."},
+    {"type": "concept", "title": "직육면체의 부피", "body": "직육면체의 부피는 길이×너비×높이입니다. 모서리 길이가 분수여도 같은 공식을 사용하며 부피 단위는 세제곱 단위입니다."},
+    {"type": "concept", "title": "좌표 다각형", "body": "좌표평면에서 같은 x좌표나 같은 y좌표를 가진 꼭짓점 사이의 길이는 좌표 차의 절댓값으로 구할 수 있습니다."},
+    {"type": "concept", "title": "전개도와 겉넓이", "body": "전개도는 입체도형의 모든 면을 평면에 펼친 그림입니다. 각 면의 넓이를 빠짐없이 더하면 입체도형의 겉넓이가 됩니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-6-g-p01", "type": "integer", "prompt": "밑변이 12 cm, 높이가 7 cm인 삼각형의 넓이는 몇 cm²인가요?", "answer": 42, "hints": ["삼각형 넓이 공식을 사용하세요.", "12×7÷2를 계산하세요."], "explanation": "삼각형의 넓이는 12×7÷2=42 cm²입니다."},
+    {"id": "middle-grade-6-g-p02", "type": "integer", "prompt": "가로 8 cm, 세로 5 cm인 직사각형에서 가로 3 cm, 세로 2 cm인 직사각형을 잘라 냈습니다. 남은 넓이는 몇 cm²인가요?", "answer": 34, "hints": ["큰 직사각형의 넓이에서 잘라 낸 넓이를 빼세요.", "8×5-3×2를 계산하세요."], "explanation": "전체 40 cm²에서 6 cm²를 빼면 34 cm²입니다."},
+    {"id": "middle-grade-6-g-p03", "type": "integer", "prompt": "길이 4 cm, 너비 3 cm, 높이 6 cm인 직육면체의 부피는 몇 cm³인가요?", "answer": 72, "hints": ["세 모서리 길이를 곱하세요.", "4×3×6을 계산하세요."], "explanation": "부피는 4×3×6=72 cm³입니다."},
+    {"id": "middle-grade-6-g-p04", "type": "integer", "prompt": "모서리 길이가 5 cm인 정육면체의 겉넓이는 몇 cm²인가요?", "answer": 150, "hints": ["같은 정사각형 면이 6개입니다.", "6×5²을 계산하세요."], "explanation": "한 면의 넓이는 25 cm²이고 6면이므로 겉넓이는 150 cm²입니다."},
+    {"id": "middle-grade-6-g-p05", "type": "integer", "prompt": "꼭짓점이 (1,2), (7,2), (7,6), (1,6)인 직사각형의 넓이를 구하세요.", "answer": 24, "hints": ["x좌표 차와 y좌표 차로 변의 길이를 구하세요.", "가로는 6, 세로는 4입니다."], "explanation": "가로 |7-1|=6, 세로 |6-2|=4이므로 넓이는 24입니다."},
+    {"id": "middle-grade-6-g-p06", "type": "choice", "prompt": "직육면체의 전개도로 겉넓이를 구할 때 해야 할 일을 고르세요.", "choices": [{"id": "a", "label": "모든 면의 둘레를 더한다"}, {"id": "b", "label": "모든 면의 넓이를 더한다"}, {"id": "c", "label": "모서리 길이만 더한다"}, {"id": "d", "label": "가장 큰 면의 넓이만 구한다"}], "answer": "b", "hints": ["겉넓이는 입체의 바깥 면 전체의 넓이입니다.", "전개도에 나타난 각 면을 빠짐없이 생각하세요."], "explanation": "전개도에 있는 모든 면의 넓이를 더하면 직육면체의 겉넓이가 됩니다."},
+    {"id": "middle-grade-6-g-p07", "type": "integer", "prompt": "모서리 길이가 3/2 m, 4/3 m, 5/2 m인 직육면체의 부피는 몇 m³인가요?", "answer": 5, "hints": ["직육면체의 부피는 세 모서리 길이의 곱입니다.", "(3/2)×(4/3)×(5/2)에서 공통인수를 약분하세요."], "explanation": "V=(3/2)×(4/3)×(5/2)=2×(5/2)=5 m³입니다. 모서리가 분수여도 부피 공식은 같습니다."}
+  ]
+}

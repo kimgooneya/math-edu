@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "title": "U.S. High School Post-AP / College-Level Enrichment Mathematics",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "grade": "Grades 11–12",
+  "description": "미국 고등학생을 위한 AP 이후 대학 수준 심화·보충 학습 컬렉션이며, 미국 전체 고등학교의 필수 교육과정이나 단일한 전국 표준이 아닙니다. 정식 Dual Enrollment 및 학점 인정은 참여 고교·대학의 협약, 등록 요건과 정책에 따라 달라집니다. framework 값은 콘텐츠 로더 호환성을 위해 Dual Enrollment로 유지하며, MIT 공개 자료는 내용 범위 참고용일 뿐 MIT 과정 등록·학점 또는 특정 기관의 이중등록 승인을 뜻하지 않습니다.",
+  "sources": [
+    "https://catalog.mit.edu/subjects/18/",
+    "https://catalog.mit.edu/subjects/6/",
+    "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
+    "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+    "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/",
+    "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"
+  ],
+  "units": [
+    "pa-mv-vectors-geometry.json",
+    "pa-mv-partial-derivatives.json",
+    "pa-mv-multiple-integrals.json",
+    "pa-mv-vector-calculus.json",
+    "pa-la-systems-matrices.json",
+    "pa-la-vector-spaces.json",
+    "pa-la-orthogonality-applications.json",
+    "pa-la-eigenvalues.json",
+    "pa-de-first-order.json",
+    "pa-de-second-order-oscillations.json",
+    "pa-de-laplace-series-numerics.json",
+    "pa-de-linear-systems.json",
+    "pa-dm-logic-proofs.json",
+    "pa-dm-number-theory-cryptography.json",
+    "pa-dm-state-machines-invariants.json",
+    "pa-dm-combinatorics.json",
+    "pa-dm-generating-functions.json",
+    "pa-dm-graphs.json",
+    "pa-dm-probability-asymptotics.json"
+  ]
+}

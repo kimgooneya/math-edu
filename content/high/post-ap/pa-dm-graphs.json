@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-dm-graphs",
+  "title": "그래프와 이산 구조",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Discrete Mathematics",
+  "domain": "Graph Theory",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 6.1200: elementary graph theory, trees, connectivity, state machines, and invariants"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["Graph Theory", "트리", "Networks"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 네트워크를 그래프·트리·경로와 색칠 구조로 모델링합니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/6/", "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"],
+  "estimatedMinutes": 215,
+  "prerequisites": ["pa-dm-combinatorics"],
+  "objectives": ["그래프의 차수, 경로, 연결성, 트리의 기본 성질을 사용할 수 있다.", "Euler 순회, 이분 그래프, 최단경로와 색칠 문제를 판별할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "그래프와 차수", "body": "그래프는 꼭짓점과 그 사이의 변으로 관계를 나타냅니다. 모든 꼭짓점 차수의 합은 각 변을 두 번 세므로 변 수의 두 배입니다."},
+    {"type": "concept", "title": "경로와 연결성", "body": "경로는 이어진 변을 따라가는 꼭짓점의 열입니다. 모든 두 꼭짓점 사이에 경로가 있으면 연결 그래프이며, 가중그래프에서는 경로 가중치의 합을 비교합니다."},
+    {"type": "concept", "title": "트리", "body": "트리는 연결되어 있고 순환이 없는 그래프입니다. 꼭짓점이 n개인 트리는 변이 n-1개이며, 두 꼭짓점 사이에 단순경로가 정확히 하나 있습니다."},
+    {"type": "concept", "title": "순회·이분성과 색칠", "body": "연결 그래프가 Euler 회로를 가지려면 모든 꼭짓점의 차수가 짝수여야 합니다. 그래프가 이분 그래프인 것은 홀수 길이 순환이 없는 것과 동치이며, 색칠은 인접 꼭짓점에 다른 색을 배정합니다."}
+  ],
+  "problems": [
+    {"id": "pa-dm-graphs-p01", "type": "integer", "prompt": "세 꼭짓점의 차수가 각각 2, 2, 2인 단순 그래프의 변 개수를 구하세요.", "answer": 3, "hints": ["차수의 합은 변 수의 두 배입니다.", "2+2+2를 2로 나누세요."], "explanation": "차수 합이 6이므로 변은 3개입니다."},
+    {"id": "pa-dm-graphs-p02", "type": "integer", "prompt": "완전그래프 K5의 변 개수를 구하세요.", "answer": 10, "hints": ["모든 꼭짓점 쌍이 하나의 변을 만듭니다.", "5개에서 2개를 고르는 조합을 계산하세요."], "explanation": "5C2=10개입니다."},
+    {"id": "pa-dm-graphs-p03", "type": "integer", "prompt": "꼭짓점이 8개인 트리의 변 개수를 구하세요.", "answer": 7, "hints": ["n개의 꼭짓점을 가진 트리의 변 수를 떠올리세요.", "트리의 변 수는 n-1입니다."], "explanation": "8-1=7개입니다."},
+    {"id": "pa-dm-graphs-p04", "type": "choice", "prompt": "연결된 무방향 그래프가 Euler 회로를 갖기 위한 조건을 고르세요.", "choices": [{"id": "a", "label": "모든 꼭짓점의 차수가 짝수이다"}, {"id": "b", "label": "모든 꼭짓점의 차수가 홀수이다"}, {"id": "c", "label": "변이 꼭짓점보다 항상 많다"}, {"id": "d", "label": "삼각형을 반드시 포함한다"}], "answer": "a", "hints": ["각 꼭짓점에 들어온 만큼 나가야 합니다.", "회로에서는 입장과 퇴장이 쌍을 이룹니다."], "explanation": "연결 그래프에서 모든 꼭짓점 차수가 짝수일 때 Euler 회로가 존재합니다."},
+    {"id": "pa-dm-graphs-p05", "type": "choice", "prompt": "그래프가 이분 그래프가 될 수 없게 하는 구조를 고르세요.", "choices": [{"id": "a", "label": "홀수 길이 순환"}, {"id": "b", "label": "고립된 꼭짓점"}, {"id": "c", "label": "짝수 길이 경로"}, {"id": "d", "label": "차수가 1인 꼭짓점"}], "answer": "a", "hints": ["두 색을 번갈아 칠한다고 생각하세요.", "홀수 번 이동해 시작점으로 돌아오면 색이 충돌합니다."], "explanation": "홀수 길이 순환은 두 색으로 인접 꼭짓점을 다르게 칠할 수 없게 합니다."},
+    {"id": "pa-dm-graphs-p06", "type": "integer", "prompt": "가중치가 AB=2, AC=5, BC=1일 때 A에서 C까지의 최단거리 값을 구하세요.", "answer": 3, "hints": ["직접 가는 길과 B를 거치는 길을 비교하세요.", "B를 거치면 2+1입니다."], "explanation": "직접 경로의 길이는 5, A-B-C는 3이므로 최단거리는 3입니다."},
+    {"id": "pa-dm-graphs-p07", "type": "integer", "prompt": "길이가 5인 순환그래프를 인접 꼭짓점이 다른 색이 되도록 칠할 때 필요한 최소 색 수를 구하세요.", "answer": 3, "hints": ["홀수 길이 순환은 이분 그래프가 아닙니다.", "세 색이면 순서대로 충돌 없이 칠할 수 있습니다."], "explanation": "홀수 순환은 두 색으로 칠할 수 없지만 세 색으로 가능하므로 최소 3색입니다."}
+  ]
+}

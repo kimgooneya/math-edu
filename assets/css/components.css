@@ -457,6 +457,24 @@ a.unit-card:focus-visible {
   font-size: var(--text-sm);
 }
 
+.unit-curriculum-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+.badge-level {
+  border-color: color-mix(in srgb, var(--color-accent) 30%, var(--color-line));
+  background: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface));
+  color: var(--color-accent-dark);
+}
+
+.badge-framework {
+  background: var(--color-surface);
+  color: var(--color-navy);
+}
+
 .unit-time,
 .unit-review-date {
   color: var(--color-ink-muted);
@@ -1423,7 +1441,21 @@ textarea:focus {
   }
 
   .catalog-filters {
-    grid-template-columns: minmax(12rem, 1.5fr) repeat(2, minmax(8rem, 1fr));
+    grid-template-columns: repeat(2, minmax(8rem, 1fr));
+  }
+
+  .catalog-filters > label:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 68rem) {
+  .catalog-filters {
+    grid-template-columns: minmax(14rem, 1.7fr) repeat(4, minmax(7rem, 1fr));
+  }
+
+  .catalog-filters > label:first-child {
+    grid-column: auto;
   }
 }
 

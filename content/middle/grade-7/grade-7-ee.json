@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "middle-grade-7-ee",
+  "title": "Expressions and Equations",
+  "stage": "middle",
+  "grade": "Grade 7",
+  "course": "Grade 7 Mathematics",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "pathways": ["Traditional", "Integrated"],
+  "domain": "Expressions and Equations",
+  "standards": ["CCSS.Math.Content.7.EE.A.1", "CCSS.Math.Content.7.EE.A.2", "CCSS.Math.Content.7.EE.B.3", "CCSS.Math.Content.7.EE.B.4.a", "CCSS.Math.Content.7.EE.B.4.b"],
+  "aliases": ["Grade 7 Expressions and Equations", "7.EE", "7학년 식과 방정식", "유리계수 일차식"],
+  "sources": ["https://www.thecorestandards.org/Math/Content/7/EE/", "https://www.thecorestandards.org/wp-content/uploads/Math_Standards.pdf"],
+  "description": "유리계수 일차식의 전개·인수분해, 맥락에 유용한 식의 변형, 여러 단계 방정식과 부등식을 다룹니다.",
+  "estimatedMinutes": 50,
+  "prerequisites": ["middle-grade-6-ee", "middle-grade-7-ns"],
+  "objectives": ["연산 성질을 이용해 유리계수 일차식을 더하고 빼고 전개하고 인수분해할 수 있다.", "실제 상황을 식·방정식·부등식으로 만들고 여러 단계로 해결하며 답을 해석할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "일차식의 전개와 인수분해", "body": "분배법칙 a(b+c)=ab+ac로 괄호를 펼치고, 역으로 공통인수를 묶을 수 있습니다. 동류항은 변수 부분이 같을 때만 계수를 계산합니다."},
+    {"type": "concept", "title": "형태가 보여 주는 의미", "body": "같은 양도 여러 동치식으로 나타낼 수 있습니다. a+0.05a=1.05a는 원래 양에 5%를 더하는 것이 1.05배와 같음을 보여 줍니다."},
+    {"type": "concept", "title": "여러 단계 문제", "body": "문제의 조건을 수치식이나 변수식으로 번역하고 연산 순서에 따라 계산합니다. 어림이나 계산기로 답이 상황에 맞는지 점검할 수 있습니다."},
+    {"type": "concept", "title": "방정식과 부등식", "body": "양변에 같은 수를 더하거나 빼고, 0이 아닌 같은 수로 곱하거나 나누어 해를 고립시킵니다. 음수로 곱하거나 나눌 때는 부등호 방향이 바뀝니다."}
+  ],
+  "problems": [
+    {"id": "middle-grade-7-ee-p01", "type": "choice", "prompt": "3(2x-5)를 전개한 식을 고르세요.", "choices": [{"id": "a", "label": "6x-5"}, {"id": "b", "label": "6x-15"}, {"id": "c", "label": "5x-15"}, {"id": "d", "label": "6x+15"}], "answer": "b", "hints": ["3을 괄호 안의 두 항에 모두 곱하세요.", "3×2x와 3×(-5)를 각각 계산하세요."], "explanation": "분배법칙으로 3(2x-5)=6x-15입니다."},
+    {"id": "middle-grade-7-ee-p02", "type": "choice", "prompt": "8x+12를 인수분해한 식을 고르세요.", "choices": [{"id": "a", "label": "2(4x+12)"}, {"id": "b", "label": "4(2x+3)"}, {"id": "c", "label": "8(x+12)"}, {"id": "d", "label": "4(4x+3)"}], "answer": "b", "hints": ["8과 12의 공통인수 4를 묶으세요.", "각 항을 4로 나누세요."], "explanation": "8x+12=4(2x+3)입니다."},
+    {"id": "middle-grade-7-ee-p03", "type": "choice", "prompt": "가격 a를 5% 올린 값을 나타내는 식을 고르세요.", "choices": [{"id": "a", "label": "0.05a"}, {"id": "b", "label": "0.95a"}, {"id": "c", "label": "1.05a"}, {"id": "d", "label": "5a"}], "answer": "c", "hints": ["원래 값 100%에 5%를 더하세요.", "105%를 소수로 나타내세요."], "explanation": "a+0.05a=1.05a이므로 5% 인상 값은 1.05a입니다."},
+    {"id": "middle-grade-7-ee-p04", "type": "integer", "prompt": "3+2(4)의 값을 구하세요.", "answer": 11, "hints": ["괄호와 곱셈을 먼저 계산하세요.", "2×4=8입니다."], "explanation": "3+2×4=3+8=11입니다."},
+    {"id": "middle-grade-7-ee-p05", "type": "integer", "prompt": "방정식 3x-7=20의 해를 구하세요.", "answer": 9, "hints": ["양변에 7을 더하세요.", "3x=27의 양변을 3으로 나누세요."], "explanation": "3x-7=20에서 3x=27, 따라서 x=9입니다."},
+    {"id": "middle-grade-7-ee-p06", "type": "choice", "prompt": "부등식 4x+3≤19의 해를 고르세요.", "choices": [{"id": "a", "label": "x≤4"}, {"id": "b", "label": "x≥4"}, {"id": "c", "label": "x≤16"}, {"id": "d", "label": "x≥16"}], "answer": "a", "hints": ["양변에서 3을 빼세요.", "4x≤16의 양변을 4로 나누세요."], "explanation": "4x+3≤19이면 4x≤16이므로 x≤4입니다."}
+  ]
+}

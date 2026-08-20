@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a1-polynomials-quadratics",
+  "title": "Polynomials and Quadratic Functions",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra I",
+  "domain": "Algebra and Functions",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSA-APR.A.1",
+    "HSA-SSE.B.3.a",
+    "HSA-SSE.B.3.b",
+    "HSA-REI.B.4",
+    "HSF-IF.C.7.a",
+    "HSF-IF.C.8.a"
+  ],
+  "pathways": [
+    "Traditional: Algebra I",
+    "Integrated: Integrated Math I / Integrated Math II",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "다항식과 이차함수",
+    "Quadratic Functions",
+    "인수분해",
+    "근의 공식"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "다항식 연산과 인수분해를 이용해 이차방정식을 풀고 이차함수의 여러 형태에서 그래프의 특징을 읽습니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-expressions-equations",
+    "high-core-a1-exponents-radicals"
+  ],
+  "objectives": [
+    "다항식을 더하고 곱하며 이차식을 인수분해할 수 있다.",
+    "인수분해·완전제곱·근의 공식으로 이차방정식을 풀고 그래프와 연결할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "다항식의 닫힘",
+      "body": "다항식을 더하거나 빼거나 곱한 결과도 다항식입니다. 동류항을 정확히 모으고 각 항을 빠짐없이 곱하는 것이 핵심입니다."
+    },
+    {
+      "type": "concept",
+      "title": "이차함수의 형태",
+      "body": "표준형은 y=ax²+bx+c, 인수형은 영점, 꼭짓점형은 꼭짓점과 대칭축을 잘 보여 줍니다. 목적에 따라 동치인 형태를 선택합니다."
+    },
+    {
+      "type": "formula",
+      "title": "근의 공식",
+      "body": "ax²+bx+c=0에서 판별식 b²-4ac는 실근의 개수를 알려 줍니다.",
+      "formula": "x=(-b±√(b²-4ac))/(2a)"
+    },
+    {
+      "type": "example",
+      "title": "완전제곱",
+      "prompt": "y=x²-6x+5의 꼭짓점을 구하세요.",
+      "steps": [
+        "x²-6x=(x-3)²-9입니다.",
+        "y=(x-3)²-4로 고칩니다.",
+        "꼭짓점은 (3,-4)입니다."
+      ],
+      "answer": "(3,-4)"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a1-polynomials-quadratics-p01",
+      "type": "integer",
+      "prompt": "(x+3)(x-2)에서 x의 계수를 구하세요.",
+      "answer": 1,
+      "hints": [
+        "분배해 x²+x-6으로 정리하세요.",
+        "x항의 계수를 읽으세요."
+      ],
+      "explanation": "(x+3)(x-2)=x²+x-6이므로 계수는 1입니다."
+    },
+    {
+      "id": "high-core-a1-polynomials-quadratics-p02",
+      "type": "unorderedSet",
+      "prompt": "x²-5x+6=0의 두 해를 입력하세요.",
+      "answer": [
+        2,
+        3
+      ],
+      "hints": [
+        "곱이 6이고 합이 -5가 되는 인수를 찾으세요.",
+        "(x-2)(x-3)=0입니다."
+      ],
+      "explanation": "각 인수가 0이 되는 x=2,3이 해입니다."
+    },
+    {
+      "id": "high-core-a1-polynomials-quadratics-p03",
+      "type": "orderedPair",
+      "prompt": "y=(x+1)²-9의 꼭짓점을 입력하세요.",
+      "answer": [
+        -1,
+        -9
+      ],
+      "hints": [
+        "꼭짓점형 y=(x-h)²+k를 사용하세요.",
+        "x+1=x-(-1)입니다."
+      ],
+      "explanation": "h=-1, k=-9이므로 꼭짓점은 (-1,-9)입니다."
+    },
+    {
+      "id": "high-core-a1-polynomials-quadratics-p04",
+      "type": "choice",
+      "prompt": "y=-2(x-4)²+5의 최댓값을 고르세요.",
+      "answer": "C",
+      "hints": [
+        "a<0이므로 포물선은 아래로 열립니다.",
+        "꼭짓점의 y좌표를 읽으세요."
+      ],
+      "explanation": "꼭짓점 (4,5)가 가장 높은 점이므로 최댓값은 5입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "−2"
+        },
+        {
+          "id": "B",
+          "label": "4"
+        },
+        {
+          "id": "C",
+          "label": "5"
+        },
+        {
+          "id": "D",
+          "label": "없음"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-polynomials-quadratics-p05",
+      "type": "unorderedSet",
+      "prompt": "2x²-8=0의 실수 해를 입력하세요.",
+      "answer": [
+        -2,
+        2
+      ],
+      "hints": [
+        "양변을 2로 나누세요.",
+        "x²=4의 두 해를 모두 쓰세요."
+      ],
+      "explanation": "x²=4이므로 x=-2 또는 2입니다."
+    },
+    {
+      "id": "high-core-a1-polynomials-quadratics-p06",
+      "type": "number",
+      "prompt": "높이 h(t)=-5t²+20t+1의 물체가 가장 높을 때의 시간 t를 구하세요.",
+      "answer": 2,
+      "hints": [
+        "이차함수 꼭짓점의 x좌표는 -b/(2a)입니다.",
+        "a=-5, b=20을 대입하세요."
+      ],
+      "explanation": "t=-20/(2·-5)=2이므로 2초일 때 가장 높습니다."
+    }
+  ]
+}

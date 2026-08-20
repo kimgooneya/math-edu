@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-de-laplace-series-numerics",
+  "title": "라플라스 변환, 급수와 수치해",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Differential Equations",
+  "domain": "Transforms, Series, and Numerical Methods",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.03: Fourier series, Laplace transforms, convolution, transfer functions, and numerical methods"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["Laplace Transform", "Power Series Solutions", "Numerical ODE"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 변환·급수·수치법으로 미분방정식의 해를 구합니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/"],
+  "estimatedMinutes": 230,
+  "prerequisites": ["pa-de-second-order-oscillations"],
+  "objectives": ["라플라스 변환으로 초기값문제와 계단 입력을 대수적으로 다룰 수 있다.", "거듭제곱급수와 Euler·개선 Euler 방법으로 해를 표현하거나 근사할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "라플라스 변환", "body": "라플라스 변환은 시간함수를 복소 주파수 변수의 함수로 바꿉니다. 도함수의 변환에는 초기값이 포함되어 초기값문제를 대수방정식으로 바꿀 수 있습니다."},
+    {"type": "concept", "title": "계단함수와 충격함수", "body": "단위계단함수는 특정 시점에 켜지는 입력을 나타내고, 이동된 함수의 라플라스 변환에는 지연을 나타내는 지수인자가 붙습니다. Dirac delta는 순간 충격을 모델링하며 변환 영역에서 간단한 지수함수가 됩니다."},
+    {"type": "concept", "title": "전달함수와 합성곱", "body": "선형 시불변 시스템의 전달함수는 영 초기조건에서 입력 변환에 대한 출력 변환의 비입니다. 시간 영역의 합성곱은 변환 영역에서 단순한 곱이 되므로 충격응답으로 임의 입력의 출력을 구할 수 있습니다."},
+    {"type": "concept", "title": "Fourier 급수", "body": "주기함수는 서로 직교하는 사인과 코사인의 합으로 나타낼 수 있습니다. 각 Fourier 계수는 한 주기에서 함수와 해당 기저함수의 내적을 적분해 구하며, 주기 입력에 대한 선형 시스템의 응답을 분석하는 데 쓰입니다."},
+    {"type": "concept", "title": "거듭제곱급수", "body": "해석적인 해는 한 점 주변의 거듭제곱급수로 나타낼 수 있습니다. 급수를 미분방정식에 대입하고 같은 차수의 계수를 비교하면 계수의 점화식을 얻습니다."},
+    {"type": "concept", "title": "수치적 시간 전진", "body": "닫힌 형태의 해를 구하기 어렵다면 작은 시간 간격으로 근사합니다. 개선 Euler 방법은 구간 양 끝의 기울기를 평균해 기본 Euler 방법보다 오차를 줄입니다."}
+  ],
+  "problems": [
+    {"id": "pa-de-laplace-series-numerics-p01", "type": "choice", "prompt": "상수함수 1의 라플라스 변환을 고르세요.", "choices": [{"id": "a", "label": "1/s"}, {"id": "b", "label": "s"}, {"id": "c", "label": "1/(s-1)"}, {"id": "d", "label": "e^s"}], "answer": "a", "hints": ["0부터 무한대까지 e^(-st)를 적분하세요.", "s가 양수일 때 적분값을 생각하세요."], "explanation": "∫_0^∞e^(-st)dt=1/s입니다."},
+    {"id": "pa-de-laplace-series-numerics-p02", "type": "choice", "prompt": "e^(2t)의 라플라스 변환을 고르세요.", "choices": [{"id": "a", "label": "1/(s+2)"}, {"id": "b", "label": "1/(s-2)"}, {"id": "c", "label": "2/s"}, {"id": "d", "label": "s/(s^2+4)"}], "answer": "b", "hints": ["e^(-st)e^(2t)=e^(-(s-2)t)입니다.", "상수함수 변환의 s를 s-2로 바꾸세요."], "explanation": "수렴 영역에서 적분하면 1/(s-2)입니다."},
+    {"id": "pa-de-laplace-series-numerics-p03", "type": "rational", "prompt": "y'+y=0, y(0)=1의 해에서 t=ln 2일 때 값을 구하세요.", "answer": {"numerator": 1, "denominator": 2}, "hints": ["라플라스 변환으로 얻는 해는 e^(-t)입니다.", "e^(-ln 2)를 계산하세요."], "explanation": "e^(-ln 2)=1/2입니다."},
+    {"id": "pa-de-laplace-series-numerics-p04", "type": "number", "prompt": "y'=y, y(0)=1에 Euler 방법을 간격 0.1로 두 번 적용해 y(0.2)를 근사하세요.", "answer": 1.21, "hints": ["각 단계에서 현재 값에 1.1을 곱하는 것과 같습니다.", "첫 단계는 1.1, 둘째 단계는 1.21입니다."], "explanation": "Euler 갱신 y_(n+1)=1.1y_n을 두 번 적용하면 1.21입니다."},
+    {"id": "pa-de-laplace-series-numerics-p05", "type": "number", "prompt": "y'=y, y(0)=1에 개선 Euler 방법을 간격 0.1로 한 번 적용해 y(0.1)를 근사하세요.", "answer": 1.105, "hints": ["예측값은 1.1입니다.", "시작 기울기 1과 예측점 기울기 1.1의 평균을 사용하세요."], "explanation": "1+0.1(1+1.1)/2=1.105입니다."},
+    {"id": "pa-de-laplace-series-numerics-p06", "type": "rational", "prompt": "y'=y, y(0)=1의 거듭제곱급수 해에서 t^3의 계수를 구하세요.", "answer": {"numerator": 1, "denominator": 6}, "hints": ["해는 e^t의 급수와 같습니다.", "t^n의 계수는 1/n!입니다."], "explanation": "t^3의 계수는 1/3!=1/6입니다."},
+    {"id": "pa-de-laplace-series-numerics-p07", "type": "choice", "prompt": "t=3에서 켜지는 단위계단함수 u(t-3)의 라플라스 변환을 고르세요.", "choices": [{"id": "a", "label": "e^(-3s)/s"}, {"id": "b", "label": "e^(3s)/s"}, {"id": "c", "label": "1/(s-3)"}, {"id": "d", "label": "3/s"}], "answer": "a", "hints": ["시간 지연 3은 e^(-3s) 인자를 만듭니다.", "단위계단함수의 기본 변환은 1/s입니다."], "explanation": "이동 정리에 따라 u(t-3)의 변환은 e^(-3s)/s입니다."},
+    {"id": "pa-de-laplace-series-numerics-p08", "type": "choice", "prompt": "t=2의 단위충격 δ(t-2)의 라플라스 변환을 고르세요.", "choices": [{"id": "a", "label": "e^(-2s)"}, {"id": "b", "label": "e^(2s)"}, {"id": "c", "label": "1/(s-2)"}, {"id": "d", "label": "2/s"}], "answer": "a", "hints": ["delta의 체질 성질을 사용하세요.", "적분에서 e^(-st)를 t=2에 평가합니다."], "explanation": "δ(t-2)는 적분함수를 t=2에서 평가하므로 변환은 e^(-2s)입니다."},
+    {"id": "pa-de-laplace-series-numerics-p09", "type": "integer", "prompt": "두 함수 f(t)=1, g(t)=1의 합성곱을 t=3에서 평가하세요.", "answer": 3, "hints": ["합성곱은 0부터 t까지 f(τ)g(t-τ)를 적분합니다.", "적분함수는 항상 1입니다."], "explanation": "합성곱은 ∫_0^t1dτ=t이므로 t=3에서 3입니다."},
+    {"id": "pa-de-laplace-series-numerics-p10", "type": "choice", "prompt": "전달함수 H(s)=1/(s+2)에 단위계단 입력 X(s)=1/s를 넣었을 때 출력 Y(s)를 고르세요.", "choices": [{"id": "a", "label": "1/[s(s+2)]"}, {"id": "b", "label": "s/(s+2)"}, {"id": "c", "label": "1/(2s)"}, {"id": "d", "label": "1/(s+2)"}], "answer": "a", "hints": ["출력 변환은 전달함수와 입력 변환의 곱입니다.", "H(s)X(s)를 계산하세요."], "explanation": "Y(s)=H(s)X(s)=1/[s(s+2)]입니다."},
+    {"id": "pa-de-laplace-series-numerics-p11", "type": "integer", "prompt": "2π 주기 함수 f(t)=cos(3t)의 Fourier 코사인 계수 a3을 구하세요.", "answer": 1, "hints": ["함수 자체가 세 번째 코사인 기저함수입니다.", "다른 주파수의 계수는 직교성 때문에 0입니다."], "explanation": "표준 Fourier 급수에서 cos(3t)의 계수 a3은 1입니다."}
+  ]
+}

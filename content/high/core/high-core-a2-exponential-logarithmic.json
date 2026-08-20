@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-exponential-logarithmic",
+  "title": "Exponential and Logarithmic Functions",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra II",
+  "domain": "Functions",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSF-IF.C.7.e",
+    "HSF-LE.A.1",
+    "HSF-LE.A.2",
+    "HSF-LE.A.3",
+    "HSF-LE.A.4",
+    "HSF-LE.B.5"
+  ],
+  "pathways": [
+    "Traditional: Algebra II",
+    "Integrated: Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "지수함수와 로그함수",
+    "Exponential Functions",
+    "Logarithms",
+    "성장과 감쇠"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "지수 성장·감쇠와 로그의 역함수 관계를 이해하고 여러 표현에서 지수·로그 방정식과 모델을 해석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-linear-functions",
+    "high-core-a1-exponents-radicals"
+  ],
+  "objectives": [
+    "지수함수와 로그함수의 관계와 그래프를 설명할 수 있다.",
+    "지수·로그 방정식을 풀고 성장률, 배가시간, 반감기를 모델링할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "지수 성장과 감쇠",
+      "body": "y=ab^x에서 a는 시작값이고 b>1이면 성장, 0<b<1이면 감쇠입니다. 같은 양이 일정한 비율로 변하는 상황은 지수 모델이 적합합니다."
+    },
+    {
+      "type": "concept",
+      "title": "로그는 역함수",
+      "body": "log_b x는 b를 몇 제곱해야 x가 되는지를 나타냅니다. 지수함수와 로그함수의 그래프는 y=x에 대해 대칭이며 로그의 정의역은 양수입니다."
+    },
+    {
+      "type": "formula",
+      "title": "로그 법칙",
+      "body": "곱은 로그의 합, 몫은 차, 거듭제곱은 계수로 바뀝니다.",
+      "formula": "log_b(MN)=log_bM+log_bN, log_b(M^p)=p log_bM"
+    },
+    {
+      "type": "example",
+      "title": "지수방정식",
+      "prompt": "2^(x+1)=16을 푸세요.",
+      "steps": [
+        "16=2⁴로 같은 밑으로 나타냅니다.",
+        "지수가 같으므로 x+1=4입니다.",
+        "x=3입니다."
+      ],
+      "answer": "x=3"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a2-exponential-logarithmic-p01",
+      "type": "integer",
+      "prompt": "log₂32의 값을 구하세요.",
+      "answer": 5,
+      "hints": [
+        "2를 몇 제곱하면 32인지 생각하세요.",
+        "2⁵=32입니다."
+      ],
+      "explanation": "log₂32=5입니다."
+    },
+    {
+      "id": "high-core-a2-exponential-logarithmic-p02",
+      "type": "integer",
+      "prompt": "3^(x)=81을 풀어 x를 구하세요.",
+      "answer": 4,
+      "hints": [
+        "81을 3의 거듭제곱으로 나타내세요.",
+        "81=3⁴입니다."
+      ],
+      "explanation": "밑이 같으므로 x=4입니다."
+    },
+    {
+      "id": "high-core-a2-exponential-logarithmic-p03",
+      "type": "choice",
+      "prompt": "y=5(0.8)^t의 변화 유형을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "밑 0.8을 1과 비교하세요.",
+        "0과 1 사이의 밑은 감쇠입니다."
+      ],
+      "explanation": "0<0.8<1이므로 지수 감쇠입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "지수 성장"
+        },
+        {
+          "id": "B",
+          "label": "지수 감쇠"
+        },
+        {
+          "id": "C",
+          "label": "선형 성장"
+        },
+        {
+          "id": "D",
+          "label": "상수"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-exponential-logarithmic-p04",
+      "type": "number",
+      "prompt": "초기값 200이 매 기간 10% 성장할 때 한 기간 후 값을 구하세요.",
+      "answer": 220,
+      "hints": [
+        "성장인수는 1.10입니다.",
+        "200×1.10을 계산하세요."
+      ],
+      "explanation": "한 기간 후 값은 220입니다."
+    },
+    {
+      "id": "high-core-a2-exponential-logarithmic-p05",
+      "type": "choice",
+      "prompt": "log₃x=4와 동치인 지수식을 고르세요.",
+      "answer": "C",
+      "hints": [
+        "log_bx=y이면 b^y=x입니다.",
+        "b=3, y=4를 대입하세요."
+      ],
+      "explanation": "동치인 식은 3⁴=x입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "3x=4"
+        },
+        {
+          "id": "B",
+          "label": "x³=4"
+        },
+        {
+          "id": "C",
+          "label": "3⁴=x"
+        },
+        {
+          "id": "D",
+          "label": "4³=x"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a2-exponential-logarithmic-p06",
+      "type": "integer",
+      "prompt": "log₁₀(1000)-log₁₀(10)의 값을 구하세요.",
+      "answer": 2,
+      "hints": [
+        "각 로그를 따로 계산하세요.",
+        "3-1을 계산하세요."
+      ],
+      "explanation": "log₁₀1000=3, log₁₀10=1이므로 차는 2입니다."
+    }
+  ]
+}

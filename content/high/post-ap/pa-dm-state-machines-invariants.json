@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-dm-state-machines-invariants",
+  "title": "상태기계와 불변량",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Discrete Mathematics",
+  "domain": "State Machines and Invariants",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 6.1200: state machines, invariants, induction, and proofs of algorithm correctness"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["State Machines", "Loop Invariants", "알고리즘 올바름"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 상태전이와 불변량을 사용해 과정과 알고리즘의 올바름을 증명합니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/6/", "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"],
+  "estimatedMinutes": 190,
+  "prerequisites": ["pa-dm-logic-proofs"],
+  "objectives": ["유한 또는 이산 상태기계의 상태와 전이를 추적하고 도달 가능성을 판별할 수 있다.", "불변량과 감소량을 사용해 알고리즘의 부분 정확성과 종료를 설명할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "상태와 전이", "body": "상태기계는 현재 상황을 나타내는 상태들의 집합과 입력 또는 규칙에 따른 전이로 이루어집니다. 실행은 초기상태에서 시작해 전이 규칙을 반복 적용한 상태열입니다."},
+    {"type": "concept", "title": "도달 가능성", "body": "어떤 상태가 초기상태에서 유한 번의 전이로 갈 수 있으면 도달 가능합니다. 작은 기계는 상태그래프로 조사하고, 큰 기계는 구조적 성질로 불가능한 상태를 배제합니다."},
+    {"type": "concept", "title": "불변량", "body": "불변량은 초기상태에서 참이고 허용된 모든 전이 뒤에도 계속 참인 성질입니다. 귀납법으로 보존을 증명하면 도달 가능한 모든 상태에 그 성질이 성립합니다."},
+    {"type": "concept", "title": "정확성과 종료", "body": "루프 불변량은 알고리즘이 종료할 때 원하는 결론을 보장하는 데 쓰입니다. 종료까지 증명하려면 매 단계 감소하고 아래로 제한된 자연수 값 같은 감소량도 함께 제시합니다."}
+  ],
+  "problems": [
+    {"id": "pa-dm-state-machines-invariants-p01", "type": "choice", "prompt": "상태 A와 B를 매 전이마다 번갈아 바꾸는 기계가 A에서 시작할 때 7번 전이한 뒤 상태를 고르세요.", "choices": [{"id": "a", "label": "A"}, {"id": "b", "label": "B"}], "answer": "b", "hints": ["홀수 번 전이하면 시작 상태와 다른 상태입니다.", "A→B→A의 주기는 2입니다."], "explanation": "7은 홀수이므로 마지막 상태는 B입니다."},
+    {"id": "pa-dm-state-machines-invariants-p02", "type": "integer", "prompt": "상태가 0,1,2이고 매 전이마다 1을 더한 뒤 3으로 나눈 나머지로 바뀌는 기계가 0에서 시작할 때 8번 뒤 상태를 구하세요.", "answer": 2, "hints": ["상태는 0,1,2를 주기로 반복합니다.", "8을 3으로 나눈 나머지를 구하세요."], "explanation": "8≡2 (mod 3)이므로 상태는 2입니다."},
+    {"id": "pa-dm-state-machines-invariants-p03", "type": "choice", "prompt": "정수 상태에서 매 전이마다 2를 더하는 기계의 불변량을 고르세요.", "choices": [{"id": "a", "label": "짝홀성"}, {"id": "b", "label": "정확한 상태값"}, {"id": "c", "label": "상태의 절댓값"}, {"id": "d", "label": "상태가 항상 0이라는 성질"}], "answer": "a", "hints": ["2를 더해도 나머지가 바뀌지 않는 법을 생각하세요.", "짝수에는 짝수를 더해도 짝수이고 홀수에도 짝수를 더하면 홀수입니다."], "explanation": "2를 더하는 전이는 상태의 짝홀성을 보존합니다."},
+    {"id": "pa-dm-state-machines-invariants-p04", "type": "integer", "prompt": "양의 정수 상태 n에서 매 전이마다 n을 1 줄이는 기계가 n=4에서 시작할 때 처음 0에 도달하기까지의 전이 횟수를 구하세요.", "answer": 4, "hints": ["상태열을 4,3,2,1,0으로 적으세요.", "상태 사이의 화살표 수를 세세요."], "explanation": "4→3→2→1→0이므로 네 번 전이합니다."},
+    {"id": "pa-dm-state-machines-invariants-p05", "type": "choice", "prompt": "Euclid 알고리즘의 전이 (a,b)→(b,a mod b)가 보존하는 값을 고르세요.", "choices": [{"id": "a", "label": "a+b"}, {"id": "b", "label": "a-b"}, {"id": "c", "label": "gcd(a,b)"}, {"id": "d", "label": "ab"}], "answer": "c", "hints": ["공약수는 나머지를 취해도 유지됩니다.", "Euclid 알고리즘이 최종적으로 무엇을 계산하는지 생각하세요."], "explanation": "gcd(a,b)=gcd(b,a mod b)이므로 최대공약수가 불변입니다."},
+    {"id": "pa-dm-state-machines-invariants-p06", "type": "choice", "prompt": "자연수 n>0을 매 단계 1씩 줄이는 반복문이 반드시 종료함을 증명하는 감소량을 고르세요.", "choices": [{"id": "a", "label": "현재 n"}, {"id": "b", "label": "초기 n의 제곱"}, {"id": "c", "label": "항상 0인 값"}, {"id": "d", "label": "현재 단계 수의 음수"}], "answer": "a", "hints": ["매 단계 엄격히 감소해야 합니다.", "0 아래로 내려가지 않는 자연수 값을 찾으세요."], "explanation": "현재 n은 매 단계 1 감소하고 0 아래로 내려가지 않으므로 유한 단계 뒤 종료합니다."}
+  ]
+}

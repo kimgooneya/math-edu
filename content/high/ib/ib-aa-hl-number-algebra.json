@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "ib-aa-hl-number-algebra",
+  "title": "IB AA HL 수와 대수 확장",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "IB Mathematics: Analysis and Approaches",
+  "level": "IB HL",
+  "framework": "IB DP",
+  "domain": "Number and algebra",
+  "standards": ["IB AA HL: Number and algebra"],
+  "pathways": ["AA: 수학적 귀납법·복소수·드무아브르 정리와 대수 분해를 엄밀한 증명으로 확장하는 경로"],
+  "sources": ["https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/", "https://www.ibo.org/contentassets/5895a05412144fe890312bad52b17044/subject-brief-dp-math-analysis-and-approaches-en.pdf"],
+  "aliases": ["IB AA HL Topic 1", "AA HL Number and algebra", "IB 분석과 접근 HL 수와 대수"],
+  "description": "AA SL 수와 대수 위에서 귀납적 증명, 복소평면, 극형식과 드무아브르 정리, 부분분수를 전개합니다.",
+  "estimatedMinutes": 90,
+  "prerequisites": ["ib-aa-sl-number-algebra"],
+  "objectives": ["수학적 귀납법으로 자연수 명제를 논리적으로 증명할 수 있다.", "복소수를 직교·극형식으로 표현하고 거듭제곱과 근을 구할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "수학적 귀납법", "body": "기초 단계에서 첫 명제를 확인하고, P(k)가 참이라는 가정으로 P(k+1)을 증명하면 모든 대상 자연수에 대해 명제가 성립합니다. 귀납 가정을 쓰는 위치를 명확히 밝혀야 합니다."},
+    {"type": "concept", "title": "복소평면", "body": "z=a+bi는 복소평면의 점 (a,b)이며 |z|=√(a²+b²), 켤레는 a-bi입니다. z의 역수는 켤레를 이용해 실수 분모로 나타냅니다."},
+    {"type": "concept", "title": "극형식과 드무아브르", "body": "z=r(cosθ+i sinθ)일 때 z^n=r^n(cos nθ+i sin nθ)입니다. n제곱근은 크기 r^(1/n)과 2π/n 간격의 편각을 갖습니다."},
+    {"type": "concept", "title": "부분분수", "body": "유리식은 분모의 선형·기약 이차 인수 구조에 맞춰 단순한 분수의 합으로 분해합니다. 먼저 분자의 차수가 분모보다 작은지 확인합니다."}
+  ],
+  "problems": [
+    {"id": "ib-aa-hl-number-algebra-p01", "type": "choice", "prompt": "1+3+5+...+(2n-1)=n²의 귀납 단계에서 P(k)를 가정한 뒤 더해야 할 다음 항을 고르세요.", "choices": [{"id": "a", "label": "2k+1"}, {"id": "b", "label": "2k-1"}, {"id": "c", "label": "k+1"}, {"id": "d", "label": "2k+2"}], "answer": "a", "hints": ["일반항에 n=k+1을 대입하세요.", "2(k+1)-1을 정리하세요."], "explanation": "다음 홀수는 2(k+1)-1=2k+1이며 k²+(2k+1)=(k+1)²입니다."},
+    {"id": "ib-aa-hl-number-algebra-p02", "type": "number", "prompt": "복소수 (3+4i)/(1-i)를 a+bi로 나타낼 때 b를 구하세요.", "answer": 3.5, "hints": ["분자와 분모에 1+i를 곱하세요.", "(3+4i)(1+i)=-1+7i이고 분모는 2입니다."], "explanation": "몫은 (-1+7i)/2=-0.5+3.5i이므로 b=3.5입니다."},
+    {"id": "ib-aa-hl-number-algebra-p03", "type": "number", "prompt": "z=2(cos(π/6)+i sin(π/6))일 때 드무아브르 정리를 사용하여 z^5의 실수부를 구하세요.", "answer": -27.712812921102035, "tolerance": 0.000001, "hints": ["z^5=32(cos(5π/6)+i sin(5π/6))입니다.", "cos(5π/6)=-√3/2입니다."], "explanation": "실수부는 32(-√3/2)=-16√3≈-27.712813입니다."},
+    {"id": "ib-aa-hl-number-algebra-p04", "type": "integer", "prompt": "방정식 z^4=-16의 네 근의 편각을 [0,2π)에서 잡았습니다. 이 편각들의 합을 π의 배수로 나타낼 때 그 계수를 구하세요.", "answer": 4, "hints": ["-16=16cisπ이고 네 근의 편각은 (π+2kπ)/4입니다.", "k=0,1,2,3의 네 편각을 더하세요."], "explanation": "편각은 π/4, 3π/4, 5π/4, 7π/4이고 합은 4π이므로 계수는 4입니다."},
+    {"id": "ib-aa-hl-number-algebra-p05", "type": "choice", "prompt": "(5x+1)/((x-1)(x+2))=A/(x-1)+B/(x+2)일 때 (A,B)를 고르세요.", "choices": [{"id": "a", "label": "(2,3)"}, {"id": "b", "label": "(3,2)"}, {"id": "c", "label": "(-2,3)"}, {"id": "d", "label": "(2,-3)"}], "answer": "a", "hints": ["5x+1=A(x+2)+B(x-1)입니다.", "x=1과 x=-2를 차례로 대입하세요."], "explanation": "x=1에서 6=3A이므로 A=2, x=-2에서 -9=-3B이므로 B=3입니다."},
+    {"id": "ib-aa-hl-number-algebra-p06", "type": "integer", "prompt": "수열이 u_1=1, u_(n+1)=3u_n+2로 정의됩니다. 치환 v_n=u_n+1을 이용하여 u_6을 구하세요.", "answer": 485, "hints": ["v_(n+1)=3v_n이고 v_1=2입니다.", "u_n=2×3^(n-1)-1을 얻습니다."], "explanation": "u_6=2×3^5-1=486-1=485입니다."}
+  ]
+}

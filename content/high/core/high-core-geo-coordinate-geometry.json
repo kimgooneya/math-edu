@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-coordinate-geometry",
+  "title": "Coordinate Geometry",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSG-GPE.B.4",
+    "HSG-GPE.B.5",
+    "HSG-GPE.B.6",
+    "HSG-GPE.B.7",
+    "HSG-CO.A.2"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math I / Integrated Math II",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "좌표기하",
+    "Coordinate Geometry",
+    "거리와 중점",
+    "기울기 증명"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "좌표, 기울기, 거리, 중점 공식을 이용해 도형의 평행·수직·길이·넓이 성질을 대수적으로 증명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-linear-functions",
+    "high-core-geo-lines-angles-proof"
+  ],
+  "objectives": [
+    "좌표에서 두 점 사이 거리와 선분의 중점을 구할 수 있다.",
+    "기울기와 거리로 사각형과 삼각형의 기하 성질을 증명할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "기울기와 직선 관계",
+      "body": "서로 다른 비수직 직선은 기울기가 같으면 평행합니다. 기울기의 곱이 -1이면 수직입니다. 수직선과 수평선의 경우는 별도로 좌표 변화를 봅니다."
+    },
+    {
+      "type": "concept",
+      "title": "좌표 증명",
+      "body": "도형의 꼭짓점을 좌표로 놓고 기울기, 거리, 중점을 계산하면 평행성, 수직성, 합동을 대수적으로 보일 수 있습니다. 좌표 배치는 계산이 단순하도록 선택합니다."
+    },
+    {
+      "type": "formula",
+      "title": "거리와 중점",
+      "body": "피타고라스 정리로 거리 공식을 얻습니다.",
+      "formula": "d=√((x₂-x₁)²+(y₂-y₁)²), M=((x₁+x₂)/2,(y₁+y₂)/2)"
+    },
+    {
+      "type": "example",
+      "title": "중점 구하기",
+      "prompt": "A(-2,3), B(6,7)의 중점을 구하세요.",
+      "steps": [
+        "x좌표 평균은 (-2+6)/2=2입니다.",
+        "y좌표 평균은 (3+7)/2=5입니다.",
+        "중점은 (2,5)입니다."
+      ],
+      "answer": "(2,5)"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-coordinate-geometry-p01",
+      "type": "number",
+      "prompt": "점 (1,2)와 (4,6) 사이의 거리를 구하세요.",
+      "answer": 5,
+      "hints": [
+        "좌표 차이는 3과 4입니다.",
+        "√(3²+4²)를 계산하세요."
+      ],
+      "explanation": "거리는 √25=5입니다."
+    },
+    {
+      "id": "high-core-geo-coordinate-geometry-p02",
+      "type": "orderedPair",
+      "prompt": "점 (-3,5)와 (7,-1)의 중점을 구하세요.",
+      "answer": [
+        2,
+        2
+      ],
+      "hints": [
+        "각 좌표끼리 평균을 구하세요.",
+        "(-3+7)/2와 (5-1)/2입니다."
+      ],
+      "explanation": "중점은 (2,2)입니다."
+    },
+    {
+      "id": "high-core-geo-coordinate-geometry-p03",
+      "type": "choice",
+      "prompt": "기울기 2인 직선에 수직인 직선의 기울기를 고르세요.",
+      "answer": "D",
+      "hints": [
+        "수직인 두 기울기의 곱은 -1입니다.",
+        "2의 음의 역수를 구하세요."
+      ],
+      "explanation": "음의 역수 -1/2이므로 D입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "2"
+        },
+        {
+          "id": "B",
+          "label": "−2"
+        },
+        {
+          "id": "C",
+          "label": "1/2"
+        },
+        {
+          "id": "D",
+          "label": "−1/2"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-coordinate-geometry-p04",
+      "type": "choice",
+      "prompt": "A(0,0), B(4,0), C(4,3)인 삼각형의 종류를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "AB는 수평선입니다.",
+        "BC는 수직선입니다."
+      ],
+      "explanation": "AB와 BC가 수직이므로 ∠B가 90°인 직각삼각형입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "직각삼각형"
+        },
+        {
+          "id": "B",
+          "label": "정삼각형"
+        },
+        {
+          "id": "C",
+          "label": "둔각삼각형"
+        },
+        {
+          "id": "D",
+          "label": "일직선"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-coordinate-geometry-p05",
+      "type": "number",
+      "prompt": "꼭짓점 (0,0), (6,0), (6,4), (0,4)인 직사각형의 넓이를 구하세요.",
+      "answer": 24,
+      "hints": [
+        "가로와 세로 길이를 좌표 차이로 구하세요.",
+        "6×4를 계산하세요."
+      ],
+      "explanation": "가로 6, 세로 4이므로 넓이는 24입니다."
+    },
+    {
+      "id": "high-core-geo-coordinate-geometry-p06",
+      "type": "rational",
+      "prompt": "점 (2,-1)과 (8,2)를 지나는 직선의 기울기를 구하세요.",
+      "answer": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "hints": [
+        "y 변화량은 3입니다.",
+        "x 변화량은 6입니다."
+      ],
+      "explanation": "기울기는 3/6=1/2입니다."
+    }
+  ]
+}

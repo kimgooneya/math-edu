@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-similarity-trigonometry",
+  "title": "Similarity and Right-Triangle Trigonometry",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSG-SRT.A.1",
+    "HSG-SRT.A.2",
+    "HSG-SRT.A.3",
+    "HSG-SRT.B.4",
+    "HSG-SRT.B.5",
+    "HSG-SRT.C.6",
+    "HSG-SRT.C.7",
+    "HSG-SRT.C.8"
+  ],
+  "pathways": [
+    "Traditional: Geometry",
+    "Integrated: Integrated Math II",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "닮음과 직각삼각형 삼각비",
+    "Similarity",
+    "Right Triangle Trigonometry",
+    "사인 코사인 탄젠트"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "확대 변환과 AA 닮음을 연결하고 직각삼각형의 사인·코사인·탄젠트로 길이와 각을 구합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-geo-triangle-congruence",
+    "middle-grade-8-g"
+  ],
+  "objectives": [
+    "확대의 성질과 AA 기준으로 삼각형 닮음을 설명할 수 있다.",
+    "직각삼각형의 삼각비와 피타고라스 정리를 실제 측정 문제에 적용할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "닮음과 확대",
+      "body": "중심과 배율을 정한 확대는 각의 크기를 보존하고 모든 길이를 같은 배율로 바꿉니다. 대응각이 같고 대응변이 비례하면 두 도형은 닮음입니다."
+    },
+    {
+      "type": "concept",
+      "title": "직각삼각형의 삼각비",
+      "body": "예각 θ에 대해 sin은 대변/빗변, cos는 인접변/빗변, tan은 대변/인접변입니다. 같은 예각을 가진 직각삼각형은 닮음이므로 이 비는 크기와 무관합니다."
+    },
+    {
+      "type": "formula",
+      "title": "삼각비",
+      "body": "빗변, 대변, 인접변은 선택한 각을 기준으로 정합니다.",
+      "formula": "sinθ=대변/빗변, cosθ=인접변/빗변, tanθ=대변/인접변"
+    },
+    {
+      "type": "example",
+      "title": "높이 측정",
+      "prompt": "나무에서 12 m 떨어진 점의 고도각이 45°일 때 눈높이를 무시한 나무 높이를 구하세요.",
+      "steps": [
+        "tan45°=높이/12입니다.",
+        "tan45°=1입니다.",
+        "높이는 12 m입니다."
+      ],
+      "answer": "12 m"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-geo-similarity-trigonometry-p01",
+      "type": "number",
+      "prompt": "닮음비가 3인 확대에서 원래 길이 5 cm인 변의 상 길이를 구하세요.",
+      "answer": 15,
+      "hints": [
+        "길이는 배율만큼 곱해집니다.",
+        "5×3을 계산하세요."
+      ],
+      "explanation": "상 길이는 15 cm입니다."
+    },
+    {
+      "id": "high-core-geo-similarity-trigonometry-p02",
+      "type": "choice",
+      "prompt": "두 삼각형의 두 쌍의 대응각이 같을 때 사용하는 닮음 기준을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "각 두 개가 주어졌습니다.",
+        "Angle-Angle의 약자를 찾으세요."
+      ],
+      "explanation": "두 대응각이 같으면 AA 닮음입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "AA"
+        },
+        {
+          "id": "B",
+          "label": "SSA"
+        },
+        {
+          "id": "C",
+          "label": "HL"
+        },
+        {
+          "id": "D",
+          "label": "CPCTC"
+        }
+      ]
+    },
+    {
+      "id": "high-core-geo-similarity-trigonometry-p03",
+      "type": "rational",
+      "prompt": "직각삼각형에서 θ의 대변이 3, 인접변이 4, 빗변이 5일 때 sinθ를 구하세요.",
+      "answer": {
+        "numerator": 3,
+        "denominator": 5
+      },
+      "hints": [
+        "sin은 대변/빗변입니다.",
+        "3과 5를 사용하세요."
+      ],
+      "explanation": "sinθ=3/5입니다."
+    },
+    {
+      "id": "high-core-geo-similarity-trigonometry-p04",
+      "type": "rational",
+      "prompt": "같은 삼각형에서 tanθ를 구하세요.",
+      "answer": {
+        "numerator": 3,
+        "denominator": 4
+      },
+      "hints": [
+        "tan은 대변/인접변입니다.",
+        "3과 4를 사용하세요."
+      ],
+      "explanation": "tanθ=3/4입니다."
+    },
+    {
+      "id": "high-core-geo-similarity-trigonometry-p05",
+      "type": "integer",
+      "prompt": "직각삼각형의 두 직각변이 6,8일 때 빗변을 구하세요.",
+      "answer": 10,
+      "hints": [
+        "피타고라스 정리를 사용하세요.",
+        "√(6²+8²)=√100입니다."
+      ],
+      "explanation": "빗변은 10입니다."
+    },
+    {
+      "id": "high-core-geo-similarity-trigonometry-p06",
+      "type": "choice",
+      "prompt": "sin35°와 cos55°의 관계를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "35°와 55°는 여각입니다.",
+        "여각 관계 sinθ=cos(90°-θ)를 쓰세요."
+      ],
+      "explanation": "cos55°=cos(90°-35°)=sin35°이므로 같습니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "서로 같다"
+        },
+        {
+          "id": "B",
+          "label": "합이 0이다"
+        },
+        {
+          "id": "C",
+          "label": "곱이 1이다"
+        },
+        {
+          "id": "D",
+          "label": "항상 부호가 반대다"
+        }
+      ]
+    }
+  ]
+}

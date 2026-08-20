@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a1-linear-equations-inequalities",
+  "title": "Linear Equations and Inequalities",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Algebra I",
+  "domain": "Algebra",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSA-CED.A.1",
+    "HSA-CED.A.3",
+    "HSA-REI.B.3",
+    "HSA-REI.D.10"
+  ],
+  "pathways": [
+    "Traditional: Algebra I",
+    "Integrated: Integrated Math I",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "일차방정식과 부등식",
+    "Linear Equations",
+    "Linear Inequalities",
+    "제약 조건"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "한 변수 일차방정식과 부등식을 풀고 해집합과 실제 제약 조건을 수직선 및 그래프로 해석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a1-expressions-equations"
+  ],
+  "objectives": [
+    "일차방정식과 부등식을 동치 변형으로 풀 수 있다.",
+    "해집합과 제약 조건을 상황과 그래프에서 해석할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "등식의 성질",
+      "body": "방정식의 양변에 같은 수를 더하거나 빼고, 0이 아닌 같은 수를 곱하거나 나누면 해가 유지됩니다. 매 단계는 등식의 성질로 설명할 수 있습니다."
+    },
+    {
+      "type": "concept",
+      "title": "부등식의 방향",
+      "body": "부등식의 양변을 음수로 곱하거나 나누면 수직선의 순서가 뒤집히므로 부등호 방향도 바뀝니다. 경계값 포함 여부도 함께 확인합니다."
+    },
+    {
+      "type": "formula",
+      "title": "복합 부등식",
+      "body": "두 조건을 동시에 만족하면 교집합, 하나 이상 만족하면 합집합을 사용합니다.",
+      "formula": "a<x<b,  x<a 또는 x>b"
+    },
+    {
+      "type": "example",
+      "title": "대여 한도",
+      "prompt": "기본료 12달러와 시간당 8달러를 합해 60달러 이하로 쓰려면 몇 시간까지 가능한가요?",
+      "steps": [
+        "시간을 h라 두고 12+8h≤60을 세웁니다.",
+        "8h≤48이므로 h≤6입니다.",
+        "시간은 음수가 아니므로 0≤h≤6입니다."
+      ],
+      "answer": "최대 6시간"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-a1-linear-equations-inequalities-p01",
+      "type": "integer",
+      "prompt": "7x-5=30을 풀어 x를 구하세요.",
+      "answer": 5,
+      "hints": [
+        "양변에 5를 더하세요.",
+        "7x=35를 7로 나누세요."
+      ],
+      "explanation": "7x=35이므로 x=5입니다."
+    },
+    {
+      "id": "high-core-a1-linear-equations-inequalities-p02",
+      "type": "rational",
+      "prompt": "4-3x=10의 해를 기약분수로 구하세요.",
+      "answer": {
+        "numerator": -2,
+        "denominator": 1
+      },
+      "hints": [
+        "양변에서 4를 빼세요.",
+        "-3x=6을 -3으로 나누세요."
+      ],
+      "explanation": "-3x=6이므로 x=-2입니다."
+    },
+    {
+      "id": "high-core-a1-linear-equations-inequalities-p03",
+      "type": "choice",
+      "prompt": "-2x>8의 해를 고르세요.",
+      "answer": "B",
+      "hints": [
+        "양변을 -2로 나눕니다.",
+        "음수로 나누면 부등호 방향이 바뀝니다."
+      ],
+      "explanation": "x<−4이므로 B입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "x>−4"
+        },
+        {
+          "id": "B",
+          "label": "x<−4"
+        },
+        {
+          "id": "C",
+          "label": "x>4"
+        },
+        {
+          "id": "D",
+          "label": "x<4"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-linear-equations-inequalities-p04",
+      "type": "integer",
+      "prompt": "3≤2x+1≤11을 만족하는 정수 x의 최댓값을 구하세요.",
+      "answer": 5,
+      "hints": [
+        "세 부분 모두에서 1을 빼세요.",
+        "2≤2x≤10을 2로 나누세요."
+      ],
+      "explanation": "1≤x≤5이므로 정수 x의 최댓값은 5입니다."
+    },
+    {
+      "id": "high-core-a1-linear-equations-inequalities-p05",
+      "type": "choice",
+      "prompt": "x≥2를 수직선에 나타낸 설명을 고르세요.",
+      "answer": "B",
+      "hints": [
+        "≥는 경계값을 포함합니다.",
+        "2보다 큰 수는 오른쪽에 있습니다."
+      ],
+      "explanation": "2를 포함하므로 닫힌 점을 찍고 오른쪽을 칠하는 B입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "2에 열린 점, 왼쪽"
+        },
+        {
+          "id": "B",
+          "label": "2에 닫힌 점, 오른쪽"
+        },
+        {
+          "id": "C",
+          "label": "2에 열린 점, 오른쪽"
+        },
+        {
+          "id": "D",
+          "label": "2에 닫힌 점, 왼쪽"
+        }
+      ]
+    },
+    {
+      "id": "high-core-a1-linear-equations-inequalities-p06",
+      "type": "integer",
+      "prompt": "입장료 5달러와 놀이기구 한 번당 3달러를 합해 23달러 이하일 때 탈 수 있는 최대 횟수를 구하세요.",
+      "answer": 6,
+      "hints": [
+        "횟수를 r이라 두고 5+3r≤23을 세우세요.",
+        "3r≤18이고 r은 음이 아닌 정수입니다."
+      ],
+      "explanation": "r≤6이므로 최대 6번 탈 수 있습니다."
+    }
+  ]
+}

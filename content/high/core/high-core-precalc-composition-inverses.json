@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-composition-inverses",
+  "title": "Function Composition and Inverses",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Precalculus",
+  "domain": "Functions",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSF-BF.A.1",
+    "HSF-BF.B.3",
+    "HSF-BF.B.4.a",
+    "HSF-IF.C.9"
+  ],
+  "pathways": [
+    "Traditional: Precalculus",
+    "Integrated pathway follow-on: after Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "함수의 합성과 역함수",
+    "Function Composition",
+    "Inverse Functions",
+    "일대일함수"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "여러 함수족의 합성과 역함수를 대수·그래프·표로 분석하고 정의역 제한과 일대일 조건을 설명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-a2-rational-functions",
+    "high-core-a2-exponential-logarithmic"
+  ],
+  "objectives": [
+    "함수를 합성하고 합성함수의 정의역을 판단할 수 있다.",
+    "일대일 함수의 역함수를 구하고 그래프와 합성으로 검증할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "함수의 합성",
+      "body": "(f∘g)(x)=f(g(x))는 g의 출력을 f의 입력으로 사용합니다. x가 g의 정의역에 있고 g(x)가 f의 정의역에 있어야 합성함수가 정의됩니다."
+    },
+    {
+      "type": "concept",
+      "title": "역함수",
+      "body": "역함수는 입력과 출력을 되돌립니다. 수평선 검사를 통과하는 일대일 함수만 전체 정의역에서 역함수를 가지며 그래프는 y=x에 대해 대칭입니다."
+    },
+    {
+      "type": "formula",
+      "title": "역함수 검증",
+      "body": "서로 역함수이면 양쪽 합성이 항등함수가 됩니다.",
+      "formula": "f(f⁻¹(x))=x, f⁻¹(f(x))=x"
+    },
+    {
+      "type": "example",
+      "title": "역함수 구하기",
+      "prompt": "f(x)=3x-5의 역함수를 구하세요.",
+      "steps": [
+        "y=3x-5에서 x와 y를 바꿔 x=3y-5로 씁니다.",
+        "y에 대해 풀면 y=(x+5)/3입니다.",
+        "따라서 f⁻¹(x)=(x+5)/3입니다."
+      ],
+      "answer": "f⁻¹(x)=(x+5)/3"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-precalc-composition-inverses-p01",
+      "type": "integer",
+      "prompt": "f(x)=2x+1, g(x)=x²일 때 (f∘g)(3)을 구하세요.",
+      "answer": 19,
+      "hints": [
+        "먼저 g(3)을 구하세요.",
+        "g(3)=9를 f에 입력하세요."
+      ],
+      "explanation": "f(g(3))=f(9)=19입니다."
+    },
+    {
+      "id": "high-core-precalc-composition-inverses-p02",
+      "type": "integer",
+      "prompt": "같은 함수에서 (g∘f)(3)을 구하세요.",
+      "answer": 49,
+      "hints": [
+        "먼저 f(3)=7을 구하세요.",
+        "g(7)=7²입니다."
+      ],
+      "explanation": "g(f(3))=g(7)=49입니다."
+    },
+    {
+      "id": "high-core-precalc-composition-inverses-p03",
+      "type": "choice",
+      "prompt": "f(x)=x+4의 역함수를 고르세요.",
+      "answer": "A",
+      "hints": [
+        "출력에서 4를 빼면 입력으로 돌아갑니다.",
+        "합성 결과가 x인지 확인하세요."
+      ],
+      "explanation": "f⁻¹(x)=x-4입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "x-4"
+        },
+        {
+          "id": "B",
+          "label": "x+4"
+        },
+        {
+          "id": "C",
+          "label": "1/(x+4)"
+        },
+        {
+          "id": "D",
+          "label": "4-x"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-composition-inverses-p04",
+      "type": "choice",
+      "prompt": "전체 실수에서 f(x)=x²가 역함수를 갖지 못하는 이유를 고르세요.",
+      "answer": "B",
+      "hints": [
+        "서로 다른 입력 2와 -2를 비교하세요.",
+        "같은 출력이 나오는지 확인하세요."
+      ],
+      "explanation": "f(2)=f(-2)=4이므로 일대일이 아니며 수평선 검사를 실패합니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "수직선 검사를 실패한다"
+        },
+        {
+          "id": "B",
+          "label": "수평선 검사를 실패한다"
+        },
+        {
+          "id": "C",
+          "label": "정의역이 비어 있다"
+        },
+        {
+          "id": "D",
+          "label": "항상 감소한다"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-composition-inverses-p05",
+      "type": "number",
+      "prompt": "f(x)=5x+2일 때 f⁻¹(27)을 구하세요.",
+      "answer": 5,
+      "hints": [
+        "5x+2=27을 푸세요.",
+        "27에서 2를 빼고 5로 나누세요."
+      ],
+      "explanation": "원래 입력은 5이므로 f⁻¹(27)=5입니다."
+    },
+    {
+      "id": "high-core-precalc-composition-inverses-p06",
+      "type": "choice",
+      "prompt": "서로 역함수인 두 그래프의 대칭축을 고르세요.",
+      "answer": "C",
+      "hints": [
+        "입력과 출력 좌표가 서로 바뀝니다.",
+        "점 (a,b)는 (b,a)로 이동합니다."
+      ],
+      "explanation": "좌표를 바꾸는 반사는 직선 y=x에 대한 대칭입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "x축"
+        },
+        {
+          "id": "B",
+          "label": "y축"
+        },
+        {
+          "id": "C",
+          "label": "y=x"
+        },
+        {
+          "id": "D",
+          "label": "y=-x"
+        }
+      ]
+    }
+  ]
+}

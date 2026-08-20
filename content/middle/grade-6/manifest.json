@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "title": "Grade 6 Mathematics (CCSS-M)",
+  "units": [
+    "grade-6-rp.json",
+    "grade-6-ns.json",
+    "grade-6-ee.json",
+    "grade-6-g.json",
+    "grade-6-sp.json"
+  ]
+}

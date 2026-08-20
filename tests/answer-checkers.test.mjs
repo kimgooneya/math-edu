@@ -22,6 +22,26 @@ async function readJson(path) {
   return JSON.parse(await readFile(path, "utf8"));
 }
 
+function entryPath(entry) {
+  return typeof entry === "string" ? entry : entry?.path || entry?.file || entry?.href || entry?.url;
+}
+
+async function collectUnitPaths(rootManifestPath) {
+  const visitedManifests = new Set();
+  const unitPaths = new Set();
+
+  async function visit(manifestPath) {
+    if (visitedManifests.has(manifestPath)) return;
+    visitedManifests.add(manifestPath);
+    const manifest = await readJson(manifestPath);
+    for (const entry of manifest.units || []) unitPaths.add(resolve(dirname(manifestPath), entryPath(entry)));
+    for (const entry of manifest.manifests || []) await visit(resolve(dirname(manifestPath), entryPath(entry)));
+  }
+
+  await visit(rootManifestPath);
+  return [...unitPaths];
+}
+
 function serializeComponent(value) {
   if (value !== null && typeof value === "object" && !Array.isArray(value)) {
     return `${value.numerator}/${value.denominator}`;
@@ -147,11 +167,10 @@ test("all manifest problems accept a serialized form of their own answer", async
 
   for (const stage of stageNames) {
     const manifestPath = join(projectRoot, "content", stage, "manifest.json");
-    const manifest = await readJson(manifestPath);
-    assert.ok(Array.isArray(manifest.units), `${stage} manifest의 units가 배열이어야 합니다.`);
+    const unitPaths = await collectUnitPaths(manifestPath);
+    assert.ok(unitPaths.length > 0, `${stage} 재귀 manifest에 단원이 필요합니다.`);
 
-    for (const relativeUnitPath of manifest.units) {
-      const unitPath = join(projectRoot, "content", stage, relativeUnitPath);
+    for (const unitPath of unitPaths) {
       const unit = await readJson(unitPath);
       assert.ok(Array.isArray(unit.problems), `${unitPath}: problems가 배열이어야 합니다.`);
 

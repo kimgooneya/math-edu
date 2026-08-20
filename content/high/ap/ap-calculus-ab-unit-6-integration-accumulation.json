@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-calculus-ab-unit-6-integration-accumulation","title":"Unit 6: Integration and Accumulation of Change","stage":"high","grade":"Grades 11–12","course":"AP Calculus AB","domain":"Integration and Accumulation of Change","framework":"College Board AP","level":"AP","standards":["AP Calculus AB Unit 6"],"aliases":["적분과 누적변화","AP Calculus AB U6"],"sources":["https://apcentral.collegeboard.org/courses/ap-calculus-ab"],
+  "description":"리만합, 정적분, 미적분학의 기본정리, 부정적분과 치환적분으로 순누적변화를 계산합니다.","estimatedMinutes":60,"prerequisites":["ap-calculus-ab-unit-5-analytical-applications"],"pathways":["ap-calculus-ab-unit-7-differential-equations"],
+  "objectives":["리만합과 정적분을 순변화와 부호 있는 넓이로 해석할 수 있다.","미적분학의 기본정리와 치환을 사용해 적분을 계산할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"리만합과 정적분","body":"구간을 잘게 나누어 함수값×폭을 합한 극한이 정적분입니다. x축 아래 부분은 음수로 누적됩니다."},
+    {"type":"formula","title":"미적분학의 기본정리","body":"누적함수의 도함수는 적분의 피적분함수이며, 정적분은 원시함수의 끝값 차입니다.","formula":"d/dx ∫[a,x]f(t)dt=f(x),  ∫[a,b]f=F(b)-F(a)"},
+    {"type":"concept","title":"부정적분과 초기조건","body":"부정적분은 도함수가 주어진 함수인 모든 원시함수의 모음이므로 적분상수 C가 필요합니다. 초기값으로 C를 정합니다."},
+    {"type":"concept","title":"치환적분","body":"합성함수와 그 안쪽 도함수가 함께 나타날 때 u를 안쪽 식으로 두면 역연쇄법칙으로 적분할 수 있습니다."}
+  ],
+  "problems":[
+    {"id":"ap-calculus-ab-unit-6-integration-accumulation-p01","type":"integer","prompt":"∫[0,2] 3x² dx의 값은?","answer":8,"hints":["원시함수는 x³입니다.","2³-0³을 계산하세요."],"explanation":"[x³]_0^2=8입니다."},
+    {"id":"ap-calculus-ab-unit-6-integration-accumulation-p02","type":"choice","prompt":"∫ x^4 dx는?","choices":[{"id":"a","label":"4x³+C"},{"id":"b","label":"x⁵/5+C"},{"id":"c","label":"x⁴/4+C"},{"id":"d","label":"5x⁵+C"}],"answer":"b","hints":["적분할 때 지수를 1 늘리세요.","새 지수 5로 나누세요."],"explanation":"∫x⁴dx=x⁵/5+C입니다."},
+    {"id":"ap-calculus-ab-unit-6-integration-accumulation-p03","type":"integer","prompt":"F(x)=∫[1,x](t²+1)dt일 때 F'(2)는?","answer":5,"hints":["기본정리로 F'(x)=x²+1입니다.","x=2를 대입하세요."],"explanation":"F'(2)=4+1=5입니다."},
+    {"id":"ap-calculus-ab-unit-6-integration-accumulation-p04","type":"integer","prompt":"속도 v(t)=2t+1일 때 t=0부터 3까지 위치의 순변화는?","answer":12,"hints":["속도를 시간에 대해 적분하세요.","[t²+t]_0^3을 계산하세요."],"explanation":"9+3=12입니다."},
+    {"id":"ap-calculus-ab-unit-6-integration-accumulation-p05","type":"choice","prompt":"∫ 2x cos(x²) dx는?","choices":[{"id":"a","label":"sin(x²)+C"},{"id":"b","label":"2sin x+C"},{"id":"c","label":"cos(x²)+C"},{"id":"d","label":"x²sin x+C"}],"answer":"a","hints":["u=x²로 두세요.","du=2x dx입니다."],"explanation":"∫cos u du=sin u+C이므로 sin(x²)+C입니다."},
+    {"id":"ap-calculus-ab-unit-6-integration-accumulation-p06","type":"choice","prompt":"연속함수 f가 [0,1]에서 항상 음수이면 ∫[0,1]f(x)dx는?","choices":[{"id":"a","label":"음수"},{"id":"b","label":"0"},{"id":"c","label":"양수"},{"id":"d","label":"항상 1"}],"answer":"a","hints":["정적분은 부호 있는 넓이입니다.","x축 아래 넓이는 음수입니다."],"explanation":"함수가 구간 전체에서 음수이므로 그 정적분도 음수입니다."}
+  ]
+}

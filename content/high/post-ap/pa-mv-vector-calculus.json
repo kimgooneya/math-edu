@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pa-mv-vector-calculus",
+  "title": "벡터해석과 적분정리",
+  "stage": "high",
+  "grade": "Grades 11–12",
+  "course": "Multivariable Calculus",
+  "domain": "Vector Calculus",
+  "framework": "Dual Enrollment",
+  "level": "Post-AP",
+  "standards": ["Content scope reference — MIT 18.02: line and surface integrals, conservative fields, Green, Stokes, and Divergence theorems"],
+  "pathways": ["Post-AP 대학 수준 심화 학습", "기관 협약이 있는 경우의 Dual Enrollment"],
+  "aliases": ["Vector Analysis", "선적분", "Green-Stokes-Gauss"],
+  "description": "미국 고교의 필수 과정이 아닌 AP 이후 대학 수준 심화 학습 단원으로, 벡터장·선적분·면적분과 주요 적분정리를 연결합니다. 정식 이중등록·학점 인정 여부는 학교와 대학의 협약 및 등록 조건에 따라 달라집니다.",
+  "sources": ["https://catalog.mit.edu/subjects/18/", "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/3.-double-integrals-and-line-integrals-in-the-plane/", "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/4.-triple-integrals-and-surface-integrals-in-3-space/"],
+  "estimatedMinutes": 240,
+  "prerequisites": ["pa-mv-multiple-integrals"],
+  "objectives": ["벡터장의 발산과 회전을 계산하고 물리적 의미를 설명할 수 있다.", "Green·Stokes·발산정리를 사용해 경계 적분과 내부 적분을 연결할 수 있다."],
+  "theory": [
+    {"type": "concept", "title": "벡터장과 선적분", "body": "벡터장은 공간의 각 점에 벡터를 배정합니다. 경로를 따라 벡터장의 접선 성분을 합한 선적분은 힘이 한 일을 나타낼 수 있습니다."},
+    {"type": "concept", "title": "보존장", "body": "어떤 스칼라 함수의 그래디언트인 벡터장은 보존장입니다. 단순연결 영역의 보존장에서는 선적분이 경로와 무관하고 시작점과 끝점의 퍼텐셜 차이만으로 정해집니다."},
+    {"type": "concept", "title": "발산과 회전", "body": "발산은 한 점에서 벡터장이 바깥으로 퍼지는 정도를, 회전은 국소적인 회전 경향을 나타냅니다. 각각 유량과 순환을 내부 미분량에 연결합니다."},
+    {"type": "concept", "title": "Green·Stokes·발산정리", "body": "세 정리는 경계에서의 적분을 영역 내부의 미분량 적분으로 바꿉니다. Green 정리는 평면, Stokes 정리는 곡면과 그 경계, 발산정리는 입체와 닫힌 표면을 연결합니다."}
+  ],
+  "problems": [
+    {"id": "pa-mv-vector-calculus-p01", "type": "integer", "prompt": "벡터장 F=(y,x)가 (0,0)에서 (1,2)로 가는 임의의 경로에서 한 일을 구하세요.", "answer": 2, "hints": ["F는 퍼텐셜 함수 xy의 그래디언트입니다.", "끝점과 시작점의 퍼텐셜 차이를 구하세요."], "explanation": "xy의 값은 끝점에서 2, 시작점에서 0이므로 일은 2입니다."},
+    {"id": "pa-mv-vector-calculus-p02", "type": "integer", "prompt": "F=(x^2,y^2,z^2)의 점 (1,1,1)에서 발산을 구하세요.", "answer": 6, "hints": ["각 성분을 대응 변수로 편미분해 더하세요.", "발산은 2x+2y+2z입니다."], "explanation": "점 (1,1,1)에서 2+2+2=6입니다."},
+    {"id": "pa-mv-vector-calculus-p03", "type": "vector", "prompt": "F=(-y,x,0)의 회전을 구하세요.", "answer": [0, 0, 2], "hints": ["회전의 z성분은 ∂F_y/∂x-∂F_x/∂y입니다.", "나머지 두 성분은 0입니다."], "explanation": "z성분은 1-(-1)=2이므로 회전은 (0,0,2)입니다."},
+    {"id": "pa-mv-vector-calculus-p04", "type": "choice", "prompt": "양의 방향으로 도는 단위원 경계에서 F=(-y,x)의 순환을 고르세요.", "choices": [{"id": "a", "label": "0"}, {"id": "b", "label": "π"}, {"id": "c", "label": "2π"}, {"id": "d", "label": "4π"}], "answer": "c", "hints": ["Green 정리에서 스칼라 회전은 2입니다.", "단위원의 넓이는 π입니다."], "explanation": "순환은 영역에서 2를 적분한 값이므로 2π입니다."},
+    {"id": "pa-mv-vector-calculus-p05", "type": "choice", "prompt": "F=(x,y,z)가 단위구의 바깥쪽 표면을 통과하는 총 유량을 고르세요.", "choices": [{"id": "a", "label": "π"}, {"id": "b", "label": "2π"}, {"id": "c", "label": "3π"}, {"id": "d", "label": "4π"}], "answer": "d", "hints": ["발산은 3입니다.", "단위구의 부피 4π/3에 발산을 곱하세요."], "explanation": "발산정리에 따라 유량은 3·(4π/3)=4π입니다."},
+    {"id": "pa-mv-vector-calculus-p06", "type": "integer", "prompt": "xy평면의 단위 정사각형 경계를 양의 방향으로 돌 때 F=(-y,x,0)의 선적분 값을 구하세요.", "answer": 2, "hints": ["Stokes 정리 또는 Green 정리를 사용하세요.", "회전의 z성분 2에 정사각형 넓이 1을 곱하세요."], "explanation": "경계 순환은 내부에서 회전 2를 적분한 값이므로 2입니다."}
+  ]
+}

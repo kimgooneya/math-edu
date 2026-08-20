@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-trig-modeling-identities",
+  "title": "Trigonometric Modeling and Identities",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Precalculus",
+  "domain": "Functions and Modeling",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": [
+    "HSF-IF.C.7.e",
+    "HSF-BF.B.3",
+    "HSF-TF.B.5",
+    "HSF-TF.C.8"
+  ],
+  "pathways": [
+    "Traditional: Precalculus",
+    "Integrated pathway follow-on: after Integrated Math III",
+    "Shared concept graph: traditional and integrated pathways"
+  ],
+  "aliases": [
+    "삼각함수 모델링과 항등식",
+    "Trigonometric Modeling",
+    "Trig Identities",
+    "주기 함수"
+  ],
+  "sources": [
+    "https://corestandards.org/mathematics-standards/",
+    "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"
+  ],
+  "description": "사인·코사인 그래프의 진폭, 주기, 위상 이동과 중간선을 해석하고 주기 현상을 모델링하며 항등식을 증명합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": [
+    "high-core-precalc-unit-circle-trigonometry",
+    "high-core-precalc-composition-inverses"
+  ],
+  "objectives": [
+    "삼각함수 그래프의 매개변수를 해석하고 주기 현상을 모델링할 수 있다.",
+    "기본 항등식과 덧셈·뺄셈 공식을 사용해 식을 변형하고 값을 구할 수 있다."
+  ],
+  "theory": [
+    {
+      "type": "concept",
+      "title": "사인파의 매개변수",
+      "body": "y=A sin(B(x-C))+D에서 |A|는 진폭, 2π/|B|는 주기, C는 수평 이동, D는 중간선입니다. 실제 모형에서는 각 매개변수의 단위를 해석합니다."
+    },
+    {
+      "type": "concept",
+      "title": "항등식 증명",
+      "body": "항등식은 공통 정의역의 모든 입력에서 참인 등식입니다. 한쪽 식을 기본 항등식, 인수분해, 공통분모로 변형해 다른 쪽과 같게 만드는 방식이 안전합니다."
+    },
+    {
+      "type": "concept",
+      "title": "모델 적합성 점검",
+      "body": "사인 모델의 주기는 자료의 반복 간격과 같아야 하고 중간선은 최대와 최소의 평균, 진폭은 그 차의 절반입니다. 실제 자료에서는 잔차와 맥락도 함께 확인합니다."
+    },
+    {
+      "type": "example",
+      "title": "주기 해석",
+      "prompt": "y=4cos(2t)+7의 진폭과 주기를 구하세요.",
+      "steps": [
+        "진폭은 |4|=4입니다.",
+        "B=2이므로 주기는 2π/2=π입니다.",
+        "중간선은 y=7입니다."
+      ],
+      "answer": "진폭 4, 주기 π"
+    }
+  ],
+  "problems": [
+    {
+      "id": "high-core-precalc-trig-modeling-identities-p01",
+      "type": "number",
+      "prompt": "y=3sin x의 진폭을 구하세요.",
+      "answer": 3,
+      "hints": [
+        "진폭은 sin 앞 계수의 절댓값입니다.",
+        "|3|을 계산하세요."
+      ],
+      "explanation": "진폭은 3입니다."
+    },
+    {
+      "id": "high-core-precalc-trig-modeling-identities-p02",
+      "type": "number",
+      "prompt": "y=sin(4x)의 주기가 kπ일 때 k를 구하세요.",
+      "answer": 0.5,
+      "hints": [
+        "주기는 2π/|B|입니다.",
+        "2π/4=π/2입니다."
+      ],
+      "explanation": "주기는 0.5π이므로 k=0.5입니다."
+    },
+    {
+      "id": "high-core-precalc-trig-modeling-identities-p03",
+      "type": "number",
+      "prompt": "y=5cos x-2의 중간선 y값을 구하세요.",
+      "answer": -2,
+      "hints": [
+        "상수 D가 중간선입니다.",
+        "수직 이동량을 읽으세요."
+      ],
+      "explanation": "중간선은 y=-2입니다."
+    },
+    {
+      "id": "high-core-precalc-trig-modeling-identities-p04",
+      "type": "choice",
+      "prompt": "1-sin²x와 동치인 식을 고르세요.",
+      "answer": "A",
+      "hints": [
+        "sin²x+cos²x=1을 사용하세요.",
+        "sin²x를 다른 쪽으로 옮기세요."
+      ],
+      "explanation": "1-sin²x=cos²x입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "cos²x"
+        },
+        {
+          "id": "B",
+          "label": "tan²x"
+        },
+        {
+          "id": "C",
+          "label": "sinx"
+        },
+        {
+          "id": "D",
+          "label": "1"
+        }
+      ]
+    },
+    {
+      "id": "high-core-precalc-trig-modeling-identities-p05",
+      "type": "number",
+      "prompt": "주기적 자료의 최댓값이 18, 최솟값이 6일 때 사인 모델의 진폭을 구하세요.",
+      "answer": 6,
+      "hints": [
+        "진폭은 최대와 최소 차의 절반입니다.",
+        "(18-6)/2를 계산하세요."
+      ],
+      "explanation": "진폭은 (18-6)/2=6입니다."
+    },
+    {
+      "id": "high-core-precalc-trig-modeling-identities-p06",
+      "type": "choice",
+      "prompt": "y=2sin(πt/6)+10이 하루 동안의 조수 높이를 모델링할 때 주기를 고르세요.",
+      "answer": "C",
+      "hints": [
+        "B=π/6입니다.",
+        "주기 2π/(π/6)을 계산하세요."
+      ],
+      "explanation": "주기는 12시간입니다.",
+      "choices": [
+        {
+          "id": "A",
+          "label": "3시간"
+        },
+        {
+          "id": "B",
+          "label": "6시간"
+        },
+        {
+          "id": "C",
+          "label": "12시간"
+        },
+        {
+          "id": "D",
+          "label": "24시간"
+        }
+      ]
+    }
+  ]
+}

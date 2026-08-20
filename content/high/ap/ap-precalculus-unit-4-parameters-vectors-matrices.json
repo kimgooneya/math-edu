@@ -1,0 +1,22 @@
+{
+  "schemaVersion":1,"id":"ap-precalculus-unit-4-parameters-vectors-matrices","title":"Unit 4: Functions Involving Parameters, Vectors, and Matrices","stage":"high","grade":"Grades 10–12","course":"AP Precalculus","domain":"Parameters, Vectors, and Matrices","framework":"College Board AP","level":"AP","standards":["AP Precalculus Unit 4"],"aliases":["매개변수·벡터·행렬 함수","AP Precalculus U4","비시험 단원"],"sources":["https://apcentral.collegeboard.org/courses/ap-precalculus"],
+  "description":"AP 시험 미평가 단원인 매개변수·음함수·원뿔곡선, 벡터값 함수, 행렬 함수·선형변환·상태 전이 모델을 학습합니다.","estimatedMinutes":80,"prerequisites":["ap-precalculus-unit-3-trigonometric-polar"],"pathways":["ap-calculus-ab-unit-1-limits-continuity"],
+  "objectives":["매개변수식, 음함수와 원뿔곡선으로 평면 곡선과 운동을 표현하고 변화 방향을 해석할 수 있다.","행렬을 함수와 선형변환으로 해석하고 합성·역변환 및 상태 전이 모델에 적용할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"매개변수 함수","body":"x=f(t), y=g(t)는 공통 매개변수 t에 따라 점의 위치와 이동 방향을 나타냅니다. t를 제거하면 직교좌표 관계를 얻을 수 있습니다."},
+    {"type":"concept","title":"음함수와 공변","body":"F(x,y)=0은 하나 이상의 함수를 암묵적으로 나타낼 수 있습니다. 해의 순서쌍을 그리거나 한 변수를 풀어 가지를 확인하고, 가까운 두 점의 Δy/Δx 부호로 두 양이 함께 증가하는지 반대로 변하는지 판단합니다."},
+    {"type":"formula","title":"원뿔곡선","body":"평행이동된 표준형으로 꼭짓점·중심·반지름과 쌍곡선의 점근선을 읽습니다.","formula":"(x-h)²/a²+(y-k)²/b²=1,  (x-h)²/a²-(y-k)²/b²=1"},
+    {"type":"concept","title":"벡터값 함수","body":"r(t)=<x(t),y(t)>는 위치 벡터입니다. 단위벡터는 방향만 나타내며, 속도 벡터의 성분 부호는 좌우·상하 운동을, 그 크기는 속력을 나타냅니다."},
+    {"type":"concept","title":"행렬과 선형변환 함수","body":"L(v)=Av는 영벡터를 영벡터로 보내는 선형변환입니다. 행렬곱 BA는 A를 먼저, B를 나중에 적용한 합성이고 회전·반사·확대의 결과와 넓이 배율 |det A|를 나타낼 수 있습니다."},
+    {"type":"formula","title":"2×2 역행렬","body":"행렬식 ad-bc가 0이 아닐 때만 역행렬이 존재하며 A^-1은 선형변환을 되돌립니다.","formula":"[[a,b],[c,d]]^-1 = (1/(ad-bc))[[d,-b],[-c,a]]"},
+    {"type":"concept","title":"행렬 맥락 모델","body":"상태 벡터에 전이행렬을 반복해서 곱하면 미래 상태를 예측하고, 분포가 변하지 않는 고정 상태를 찾을 수 있습니다. 역행렬이 존재하면 이전 상태도 추정할 수 있으며 전이율이 단계마다 일정하다는 가정을 밝혀야 합니다."}
+  ],
+  "problems":[
+    {"id":"ap-precalculus-unit-4-parameters-vectors-matrices-p01","type":"orderedPair","prompt":"x=2t+1, y=t^2에서 t=2일 때 점은?","answer":[5,4],"hints":["각 식에 t=2를 대입하세요.","x=5, y=4입니다."],"explanation":"x=2(2)+1=5, y=2²=4이므로 (5,4)입니다."},
+    {"id":"ap-precalculus-unit-4-parameters-vectors-matrices-p03","type":"integer","prompt":"벡터 <6,8>의 크기는?","answer":10,"hints":["√(6²+8²)를 계산하세요.","36+64=100입니다."],"explanation":"크기는 √100=10입니다."},
+    {"id":"ap-precalculus-unit-4-parameters-vectors-matrices-p07","type":"choice","prompt":"x²+y²=25가 암묵적으로 나타내는 두 함수는?","choices":[{"id":"a","label":"y=±√(25-x²)"},{"id":"b","label":"y=25-x²만"},{"id":"c","label":"y=±(25-x²)"},{"id":"d","label":"y=x±5"}],"answer":"a","hints":["y²=25-x²로 정리하세요.","제곱근에는 위·아래 두 가지 가지가 있습니다."],"explanation":"원 전체는 y=√(25-x²)와 y=-√(25-x²)의 두 함수 가지로 표현됩니다."},
+    {"id":"ap-precalculus-unit-4-parameters-vectors-matrices-p08","type":"choice","prompt":"(x-2)²/9+(y+1)²/4=1인 타원의 중심은?","choices":[{"id":"a","label":"(2,-1)"},{"id":"b","label":"(-2,1)"},{"id":"c","label":"(3,2)"},{"id":"d","label":"(9,4)"}],"answer":"a","hints":["표준형 (x-h)²/a²+(y-k)²/b²=1과 비교하세요.","y+1=y-(-1)입니다."],"explanation":"h=2, k=-1이므로 중심은 (2,-1)입니다."},
+    {"id":"ap-precalculus-unit-4-parameters-vectors-matrices-p09","type":"vector","prompt":"90° 반시계 회전 행렬 [[0,-1],[1,0]]을 벡터 <2,1>에 적용한 결과는?","answer":[-1,2],"hints":["행렬의 각 행과 벡터를 내적하세요.","첫 성분은 -1, 둘째 성분은 2입니다."],"explanation":"회전 결과는 <0·2-1·1,1·2+0·1>=<-1,2>입니다."},
+    {"id":"ap-precalculus-unit-4-parameters-vectors-matrices-p10","type":"vector","prompt":"전이행렬 [[0.8,0.3],[0.2,0.7]]과 상태 벡터 <100,0>의 한 단계 뒤 상태는?","answer":[80,20],"hints":["행렬과 상태 벡터를 곱하세요.","각 출력은 해당 행과 벡터의 내적입니다."],"explanation":"한 단계 뒤 상태는 <0.8·100+0.3·0,0.2·100+0.7·0>=<80,20>입니다."}
+  ]
+}

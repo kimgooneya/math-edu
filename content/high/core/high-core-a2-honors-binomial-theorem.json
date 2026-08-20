@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-a2-honors-binomial-theorem",
+  "title": "Honors Extension: Binomial Theorem",
+  "stage": "high", "grade": "Grades 9–12", "course": "Algebra II", "domain": "Algebra", "framework": "CCSS-M", "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSA-APR.C.5"],
+  "pathways": ["Traditional: Honors Algebra II", "Integrated: Integrated Math III extension", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["이항정리", "Binomial Theorem", "파스칼 삼각형", "이항계수"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "파스칼 삼각형과 조합으로 이항전개의 계수를 설명하고 일반항을 사용해 지정된 항과 계수를 구합니다.",
+  "estimatedMinutes": 35, "prerequisites": ["high-core-a2-polynomial-operations", "high-core-geo-honors-counting-probability"],
+  "objectives": ["파스칼 삼각형의 행과 이항계수의 관계를 설명할 수 있다.", "이항정리의 일반항으로 전개식의 특정 항과 계수를 구할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"파스칼 삼각형","body":"각 내부 수는 바로 위의 두 수의 합이며 n번째 행은 (x+y)^n의 계수를 줍니다."},
+    {"type":"formula","title":"이항정리","body":"k는 y를 선택한 인수의 수입니다.","formula":"(x+y)^n=Σ C(n,k)x^(n-k)y^k"},
+    {"type":"concept","title":"일반항","body":"(a+b)^n의 k+1번째 항은 C(n,k)a^(n-k)b^k입니다. 부호와 상수의 거듭제곱도 함께 계산합니다."},
+    {"type":"example","title":"특정 계수","prompt":"(x+2)^4에서 x²의 계수를 구하세요.","steps":["x의 지수가 2이면 k=2입니다.","항은 C(4,2)x²2²입니다.","계수는 6·4=24입니다."],"answer":"24"}
+  ],
+  "problems": [
+    {"id":"high-core-a2-honors-binomial-theorem-p01","type":"integer","prompt":"(x+1)^5에서 x³의 계수를 구하세요.","answer":10,"hints":["C(5,2) 또는 C(5,3)을 사용하세요.","값은 10입니다."],"explanation":"x³의 계수는 C(5,3)=10입니다."},
+    {"id":"high-core-a2-honors-binomial-theorem-p02","type":"integer","prompt":"(x+y)^6의 항 개수를 구하세요.","answer":7,"hints":["k는 0부터 6까지입니다.","양 끝을 모두 셉니다."],"explanation":"총 7개 항입니다."},
+    {"id":"high-core-a2-honors-binomial-theorem-p03","type":"integer","prompt":"(x+2)^3의 상수항을 구하세요.","answer":8,"hints":["x를 한 번도 고르지 않는 항입니다.","2³을 계산하세요."],"explanation":"상수항은 8입니다."},
+    {"id":"high-core-a2-honors-binomial-theorem-p04","type":"integer","prompt":"(2x-1)^4에서 x⁴의 계수를 구하세요.","answer":16,"hints":["x항을 네 번 선택하세요.","2⁴을 계산하세요."],"explanation":"x⁴의 계수는 16입니다."},
+    {"id":"high-core-a2-honors-binomial-theorem-p05","type":"integer","prompt":"파스칼 삼각형의 n=5 행에서 가장 큰 계수를 구하세요.","answer":10,"hints":["행은 1,5,10,10,5,1입니다.","최댓값을 고르세요."],"explanation":"가장 큰 계수는 10입니다."},
+    {"id":"high-core-a2-honors-binomial-theorem-p06","type":"choice","prompt":"(a+b)^n의 b^k를 포함하는 항의 계수를 고르세요.","answer":"B","hints":["n개 인수 중 b를 k개 고릅니다.","조합 기호를 사용하세요."],"explanation":"그 계수는 C(n,k)입니다.","choices":[{"id":"A","label":"n^k"},{"id":"B","label":"C(n,k)"},{"id":"C","label":"P(n,k)"},{"id":"D","label":"n+k"}]}
+  ],
+  "honorsBasis": "CCSS (+) standard HSA-APR.C.5."
+}

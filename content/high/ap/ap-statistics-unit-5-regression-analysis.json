@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,"id":"ap-statistics-unit-5-regression-analysis","title":"Unit 5: Regression Analysis","stage":"high","grade":"Grades 10–12","course":"AP Statistics","domain":"Regression Analysis","framework":"College Board AP","level":"AP","standards":["AP Statistics Unit 5 (Effective Fall 2026)"],"aliases":["회귀분석","AP Statistics U5","2026–27 revised framework"],"sources":["https://apcentral.collegeboard.org/courses/ap-statistics","https://apcentral.collegeboard.org/courses/ap-statistics/future-revisions"],
+  "description":"2026–27 개정 최종 단원으로 산점도, 상관, 최소제곱회귀선, 잔차, 결정계수와 영향점을 다루며 삭제된 기울기 추론은 포함하지 않습니다.","estimatedMinutes":50,"prerequisites":["ap-statistics-unit-4-inference-means"],"pathways":[],
+  "objectives":["두 정량 변수의 관계를 방향·형태·강도·특이점으로 설명하고 상관의 한계를 판단할 수 있다.","최소제곱회귀선의 기울기·절편·잔차·결정계수를 맥락에서 해석할 수 있다."],
+  "theory":[
+    {"type":"concept","title":"산점도와 상관","body":"산점도는 두 정량 변수 관계의 방향, 형태, 강도, 특이점을 보여 줍니다. 상관 r은 선형 관계의 방향과 강도를 -1부터 1 사이로 요약하며 단위가 없습니다."},
+    {"type":"concept","title":"최소제곱회귀선","body":"ŷ=a+bx는 잔차 제곱합을 최소화합니다. 기울기 b는 x 한 단위 증가에 따른 예측 y의 평균 변화이고 절편은 x=0이 맥락상 의미 있을 때 해석합니다."},
+    {"type":"concept","title":"잔차와 결정계수","body":"잔차는 관측값-예측값입니다. 잔차 그림에 패턴이 남으면 선형모형이 부적절할 수 있고 r²은 y 변동 중 선형모형으로 설명되는 비율입니다."},
+    {"type":"concept","title":"영향점과 인과","body":"x방향으로 멀리 떨어진 점은 회귀선에 큰 영향을 줄 수 있습니다. 강한 상관이나 회귀 관계만으로 인과를 결론내릴 수 없으며 맥락과 연구 설계를 확인해야 합니다."}
+  ],
+  "problems":[
+    {"id":"ap-statistics-unit-5-regression-analysis-p01","type":"choice","prompt":"상관계수 r=-0.92의 가장 적절한 해석은?","choices":[{"id":"a","label":"강한 음의 선형 관계"},{"id":"b","label":"강한 양의 선형 관계"},{"id":"c","label":"인과관계가 증명됨"},{"id":"d","label":"관계가 없음"}],"answer":"a","hints":["부호는 방향, 절댓값은 선형 강도입니다.","절댓값이 1에 가깝습니다."],"explanation":"-0.92는 강한 음의 선형 연관성을 나타냅니다."},
+    {"id":"ap-statistics-unit-5-regression-analysis-p02","type":"number","prompt":"회귀식 ŷ=5+2.5x에서 x가 1 증가할 때 예측 y의 변화량은?","answer":2.5,"hints":["회귀식의 기울기를 찾으세요.","x의 계수입니다."],"explanation":"기울기 2.5이므로 예측 y는 평균적으로 2.5 증가합니다."},
+    {"id":"ap-statistics-unit-5-regression-analysis-p03","type":"integer","prompt":"관측 y=18, 예측 ŷ=15일 때 잔차는?","answer":3,"hints":["잔차=관측값-예측값입니다.","18-15를 계산하세요."],"explanation":"잔차는 3입니다."},
+    {"id":"ap-statistics-unit-5-regression-analysis-p04","type":"choice","prompt":"r²=0.64의 올바른 해석은?","choices":[{"id":"a","label":"y 변동의 64%가 x와의 선형모형으로 설명됨"},{"id":"b","label":"관측값의 64%가 정확히 예측됨"},{"id":"c","label":"기울기가 0.64"},{"id":"d","label":"인과관계 확률이 64%"}],"answer":"a","hints":["r²은 설명된 변동의 비율입니다.","정확히 맞힌 관측치 비율이 아닙니다."],"explanation":"결정계수는 반응변수 변동 중 회귀모형으로 설명되는 비율입니다."},
+    {"id":"ap-statistics-unit-5-regression-analysis-p05","type":"choice","prompt":"잔차 그림에 뚜렷한 U자 패턴이 보이면?","choices":[{"id":"a","label":"선형모형이 부적절할 수 있다"},{"id":"b","label":"완벽한 선형모형이다"},{"id":"c","label":"모든 잔차가 0이다"},{"id":"d","label":"인과가 증명된다"}],"answer":"a","hints":["좋은 선형모형의 잔차는 무작위로 흩어집니다.","곡선 패턴은 남은 비선형 구조입니다."],"explanation":"U자 패턴은 선형모형이 설명하지 못한 곡선 관계가 남았음을 시사합니다."},
+    {"id":"ap-statistics-unit-5-regression-analysis-p06","type":"choice","prompt":"높은 상관만으로 결론낼 수 없는 것은?","choices":[{"id":"a","label":"한 변수가 다른 변수의 원인이다"},{"id":"b","label":"선형 연관성이 강하다"},{"id":"c","label":"상관의 부호가 방향을 나타낸다"},{"id":"d","label":"r은 단위가 없다"}],"answer":"a","hints":["연관성과 인과를 구분하세요.","잠재적 교란변수가 있을 수 있습니다."],"explanation":"높은 상관은 인과를 증명하지 않습니다."}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-precalc-parabolas",
+  "title": "Parabolas from Focus and Directrix",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Precalculus",
+  "domain": "Geometry",
+  "framework": "CCSS-M",
+  "level": "Core",
+  "standards": ["HSG-GPE.A.2"],
+  "pathways": ["Traditional: Precalculus", "Integrated pathway follow-on: after Integrated Math III", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["포물선", "Parabola", "초점과 준선", "포물선 방정식"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "초점과 준선까지 거리가 같은 점들의 집합에서 포물선 방정식을 유도하고 꼭짓점, 초점, 준선, 대칭축을 해석합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": ["high-core-geo-coordinate-geometry", "high-core-a2-polynomial-equations"],
+  "objectives": ["초점-준선 거리 조건에서 포물선 방정식을 유도할 수 있다.", "표준형에서 꼭짓점, 초점, 준선과 열린 방향을 구할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"포물선의 거리 정의","body":"포물선은 한 초점과 한 준선까지의 거리가 같은 점들의 집합입니다. 대칭축은 초점을 지나고 준선에 수직입니다."},
+    {"type":"formula","title":"세로축 표준형","body":"꼭짓점 (h,k), 초점 (h,k+p), 준선 y=k-p인 포물선입니다.","formula":"(x-h)²=4p(y-k)"},
+    {"type":"formula","title":"가로축 표준형","body":"초점 (h+p,k), 준선 x=h-p이며 p의 부호가 열린 방향을 정합니다.","formula":"(y-k)²=4p(x-h)"},
+    {"type":"example","title":"초점과 준선","prompt":"x²=8y의 초점과 준선을 구하세요.","steps":["4p=8이므로 p=2입니다.","꼭짓점은 (0,0)입니다.","초점은 (0,2), 준선은 y=-2입니다."],"answer":"초점 (0,2), 준선 y=-2"}
+  ],
+  "problems": [
+    {"id":"high-core-precalc-parabolas-p01","type":"choice","prompt":"한 점과 한 직선까지의 거리가 같은 점들의 집합을 고르세요.","answer":"B","hints":["점은 초점, 직선은 준선입니다.","거리 정의를 떠올리세요."],"explanation":"이 점들의 집합은 포물선입니다.","choices":[{"id":"A","label":"원"},{"id":"B","label":"포물선"},{"id":"C","label":"타원"},{"id":"D","label":"쌍곡선"}]},
+    {"id":"high-core-precalc-parabolas-p02","type":"orderedPair","prompt":"y=(x-3)²+2인 포물선의 꼭짓점을 구하세요.","answer":[3,2],"hints":["y=(x-h)²+k와 비교하세요.","h=3, k=2입니다."],"explanation":"꼭짓점은 (3,2)입니다."},
+    {"id":"high-core-precalc-parabolas-p03","type":"number","prompt":"x²=12y에서 p의 값을 구하세요.","answer":3,"hints":["x²=4py와 비교하세요.","4p=12를 푸세요."],"explanation":"p=3입니다."},
+    {"id":"high-core-precalc-parabolas-p04","type":"orderedPair","prompt":"x²=12y인 포물선의 초점을 구하세요.","answer":[0,3],"hints":["p=3입니다.","초점은 (0,p)입니다."],"explanation":"초점은 (0,3)입니다."},
+    {"id":"high-core-precalc-parabolas-p05","type":"choice","prompt":"(y-1)²=-8(x+2)의 열린 방향을 고르세요.","answer":"A","hints":["4p=-8이므로 p<0입니다.","가로축 포물선에서 음의 p 방향을 보세요."],"explanation":"p<0이므로 왼쪽으로 열립니다.","choices":[{"id":"A","label":"왼쪽"},{"id":"B","label":"오른쪽"},{"id":"C","label":"위"},{"id":"D","label":"아래"}]},
+    {"id":"high-core-precalc-parabolas-p06","type":"number","prompt":"(x-1)²=16(y+2)의 준선이 y=k일 때 k를 구하세요.","answer":-6,"hints":["꼭짓점의 k좌표는 -2이고 p=4입니다.","준선은 y=k-p입니다."],"explanation":"준선은 y=-2-4=-6입니다."}
+  ]
+}

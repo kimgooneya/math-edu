@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "high-core-geo-honors-counting-probability",
+  "title": "Honors Extension: Counting and Probability",
+  "stage": "high",
+  "grade": "Grades 9–12",
+  "course": "Geometry",
+  "domain": "Statistics and Probability",
+  "framework": "CCSS-M",
+  "level": "Honors",
+  "levelNote": "이 파일은 CCSS (+) 기준만 별도로 제공하여 Core 필터와 심화 콘텐츠의 경계를 보존합니다.",
+  "standards": ["HSS-CP.B.8", "HSS-CP.B.9"],
+  "pathways": ["Traditional: Honors Geometry", "Integrated: Integrated Math II extension", "Shared concept graph: traditional and integrated pathways"],
+  "aliases": ["순열과 조합", "Permutations and Combinations", "일반 곱셈법칙", "확률 계산"],
+  "sources": ["https://corestandards.org/mathematics-standards/", "https://corestandards.org/wp-content/uploads/2023/09/ADA-Compliant-Math-Standards.pdf"],
+  "description": "일반 곱셈법칙, 순열, 조합으로 복합 사건의 결과 수를 세고 이를 조건부확률과 독립 사건 계산에 적용합니다.",
+  "estimatedMinutes": 35,
+  "prerequisites": ["high-core-geo-probability"],
+  "objectives": ["순서의 중요성에 따라 순열과 조합을 선택할 수 있다.", "계수 결과를 곱셈법칙과 조건부확률에 연결해 복합 사건 확률을 구할 수 있다."],
+  "theory": [
+    {"type":"concept","title":"일반 곱셈법칙","body":"연속된 선택 단계의 가능한 수가 각각 m,n이면 전체 순서쌍은 mn개입니다. 각 단계의 선택지가 달라져도 가지마다 이어지는 결과 수를 합해 셉니다."},
+    {"type":"formula","title":"순열","body":"서로 다른 n개에서 순서를 고려해 r개를 배열하는 경우의 수입니다.","formula":"P(n,r)=n!/(n-r)!"},
+    {"type":"formula","title":"조합","body":"서로 다른 n개에서 순서 없이 r개를 고르는 경우의 수입니다.","formula":"C(n,r)=n!/[r!(n-r)!]"},
+    {"type":"example","title":"위원과 자리","prompt":"학생 5명 중 회장과 부회장을 정하는 경우의 수를 구하세요.","steps":["두 자리는 역할이 달라 순서가 중요합니다.","회장 5가지 뒤 부회장 4가지입니다.","5·4=20입니다."],"answer":"20"}
+  ],
+  "problems": [
+    {"id":"high-core-geo-honors-counting-probability-p01","type":"integer","prompt":"셔츠 4벌과 바지 3벌에서 한 벌씩 고르는 조합 수를 구하세요.","answer":12,"hints":["두 선택 단계의 수를 곱하세요.","4×3을 계산하세요."],"explanation":"일반 곱셈법칙으로 12가지입니다."},
+    {"id":"high-core-geo-honors-counting-probability-p02","type":"integer","prompt":"서로 다른 6명 중 회장과 부회장을 정하는 경우의 수를 구하세요.","answer":30,"hints":["직책이 달라 순서가 중요합니다.","6P2=6×5입니다."],"explanation":"순열 수는 30입니다."},
+    {"id":"high-core-geo-honors-counting-probability-p03","type":"integer","prompt":"학생 6명 중 대표 2명을 순서 없이 고르는 경우의 수를 구하세요.","answer":15,"hints":["순서가 없으므로 조합입니다.", "6C2=6×5/2입니다."],"explanation":"조합 수는 15입니다."},
+    {"id":"high-core-geo-honors-counting-probability-p04","type":"integer","prompt":"서로 다른 책 5권을 한 줄로 배열하는 경우의 수를 구하세요.","answer":120,"hints":["5개 모두의 순서를 정합니다.","5!을 계산하세요."],"explanation":"5!=120가지입니다."},
+    {"id":"high-core-geo-honors-counting-probability-p05","type":"rational","prompt":"학생 5명 중 무작위로 대표 2명을 고를 때 특정 두 학생이 함께 뽑힐 확률을 구하세요.","answer":{"numerator":1,"denominator":10},"hints":["전체 경우는 5C2입니다.","특정 두 명을 고르는 유리한 경우는 1개입니다."],"explanation":"확률은 1/(5C2)=1/10입니다."},
+    {"id":"high-core-geo-honors-counting-probability-p06","type":"choice","prompt":"10명 중 순서 없이 3명을 뽑을 때 사용할 식을 고르세요.","answer":"B","hints":["선택 순서는 결과를 바꾸지 않습니다.","조합 기호를 고르세요."],"explanation":"순서 없는 선택이므로 10C3을 사용합니다.","choices":[{"id":"A","label":"10P3"},{"id":"B","label":"10C3"},{"id":"C","label":"10³"},{"id":"D","label":"3C10"}]}
+  ],
+  "honorsBasis": "CCSS (+) standards HSS-CP.B.8 and HSS-CP.B.9."
+}
